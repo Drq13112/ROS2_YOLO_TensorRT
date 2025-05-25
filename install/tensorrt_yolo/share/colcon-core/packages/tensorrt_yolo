@@ -1,0 +1,1 @@
+cuda:libnvinfer-dev:libnvinfer-plugin-dev:libnvonnxparser-dev:opencv:rclcpp:rosidl_default_runtime:sensor_msgs:std_msgs
