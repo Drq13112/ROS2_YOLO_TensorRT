@@ -1,3 +1,8 @@
 src/TensorRT-YOLO/data/panoramic_02.avi
 src/yolocpp/data/panoramic_02.avi
 *.avi
+*.avi
+*.jpg
+*.engine
+*.onnx
+*.pt
