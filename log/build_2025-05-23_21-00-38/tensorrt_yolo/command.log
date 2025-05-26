@@ -1,2 +1,0 @@
-Invoking command in '/home/david/yolocpp_ws/build/tensorrt_yolo': CMAKE_PREFIX_PATH=/home/david/yolopy_ws/install/yolopy:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --build /home/david/yolocpp_ws/build/tensorrt_yolo -- -j32 -l32
-Invoked command in '/home/david/yolocpp_ws/build/tensorrt_yolo' returned '2': CMAKE_PREFIX_PATH=/home/david/yolopy_ws/install/yolopy:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --build /home/david/yolocpp_ws/build/tensorrt_yolo -- -j32 -l32

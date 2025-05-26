@@ -1,6 +1,0 @@
-{
-  "package_name": "tensorrt_yolo",
-  "non_idl_tuples": [
-    "/home/david/yolocpp_ws/src/TensorRT-YOLO:msg/SegmentationOutput.msg"
-  ]
-}
