@@ -1,0 +1,251 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-630b69af77d876b5944c.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				},
+				{
+					"build" : "tensorrt_yolo__py",
+					"jsonFile" : "directory-tensorrt_yolo__py-198c9f2f8f553ba4f302.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "/home/david/yolocpp_ws/build/tensorrt_yolo/tensorrt_yolo__py",
+					"targetIndexes" : 
+					[
+						6
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "tensorrt_yolo",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_build_tensorrt_yolo_egg::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_build_tensorrt_yolo_egg-2d1823e84aa957241480.json",
+					"name" : "ament_cmake_python_build_tensorrt_yolo_egg",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "ament_cmake_python_copy_tensorrt_yolo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-ament_cmake_python_copy_tensorrt_yolo-1244697e58694f061994.json",
+					"name" : "ament_cmake_python_copy_tensorrt_yolo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "deploy::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-deploy-60324ca15cb2f72c7538.json",
+					"name" : "deploy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "segment_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-segment_node-889999a4a7875a16ce79.json",
+					"name" : "segment_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tensorrt_yolo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tensorrt_yolo-5a2280a8615fd44af440.json",
+					"name" : "tensorrt_yolo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tensorrt_yolo__cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tensorrt_yolo__cpp-dbb2ae6c706c0155820e.json",
+					"name" : "tensorrt_yolo__cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "tensorrt_yolo__py::@d7cd26ee5532c7607995",
+					"jsonFile" : "target-tensorrt_yolo__py-9f5a22399cbffd1c03cf.json",
+					"name" : "tensorrt_yolo__py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tensorrt_yolo__rosidl_generator_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tensorrt_yolo__rosidl_generator_c-c4fd5b84c05df35a61b5.json",
+					"name" : "tensorrt_yolo__rosidl_generator_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tensorrt_yolo__rosidl_generator_py::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tensorrt_yolo__rosidl_generator_py-db36bf4e30949d4b0d11.json",
+					"name" : "tensorrt_yolo__rosidl_generator_py",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tensorrt_yolo__rosidl_typesupport_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tensorrt_yolo__rosidl_typesupport_c-e16daada75bce1d29eac.json",
+					"name" : "tensorrt_yolo__rosidl_typesupport_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tensorrt_yolo__rosidl_typesupport_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tensorrt_yolo__rosidl_typesupport_c__pyext-674121024f09fdf8fe32.json",
+					"name" : "tensorrt_yolo__rosidl_typesupport_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tensorrt_yolo__rosidl_typesupport_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tensorrt_yolo__rosidl_typesupport_cpp-c2bcdaadbb4cab00f6fb.json",
+					"name" : "tensorrt_yolo__rosidl_typesupport_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tensorrt_yolo__rosidl_typesupport_fastrtps_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tensorrt_yolo__rosidl_typesupport_fastrtps_c-e944494948a5ab8c81d7.json",
+					"name" : "tensorrt_yolo__rosidl_typesupport_fastrtps_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tensorrt_yolo__rosidl_typesupport_fastrtps_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tensorrt_yolo__rosidl_typesupport_fastrtps_c__pyext-187c3bd6dea8a4ad7a6d.json",
+					"name" : "tensorrt_yolo__rosidl_typesupport_fastrtps_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tensorrt_yolo__rosidl_typesupport_fastrtps_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tensorrt_yolo__rosidl_typesupport_fastrtps_cpp-8f6b83a47b790e525a92.json",
+					"name" : "tensorrt_yolo__rosidl_typesupport_fastrtps_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tensorrt_yolo__rosidl_typesupport_introspection_c::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tensorrt_yolo__rosidl_typesupport_introspection_c-07a00535e0ddab0b1d9a.json",
+					"name" : "tensorrt_yolo__rosidl_typesupport_introspection_c",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tensorrt_yolo__rosidl_typesupport_introspection_c__pyext::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tensorrt_yolo__rosidl_typesupport_introspection_c__pyext-53f54287abaa698b20b1.json",
+					"name" : "tensorrt_yolo__rosidl_typesupport_introspection_c__pyext",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tensorrt_yolo__rosidl_typesupport_introspection_cpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tensorrt_yolo__rosidl_typesupport_introspection_cpp-5fe96ee71e2c3bf55a2a.json",
+					"name" : "tensorrt_yolo__rosidl_typesupport_introspection_cpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tensorrt_yolo_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tensorrt_yolo_uninstall-fcdcd1735f52aab27e45.json",
+					"name" : "tensorrt_yolo_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-1cf9cfc05647b11ff60a.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/david/yolocpp_ws/build/tensorrt_yolo",
+		"source" : "/home/david/yolocpp_ws/src/TensorRT-YOLO"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

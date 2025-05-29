@@ -1,0 +1,307 @@
+[0.007s] Invoking command in '/home/david/yolocpp_ws/build/tensorrt_yolo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/david/yolopy_ws/install/yolopy:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --build /home/david/yolocpp_ws/build/tensorrt_yolo -- -j32 -l32
+[0.052s] [  7%] Built target tensorrt_yolo__rosidl_generator_c
+[0.052s] [  9%] Built target tensorrt_yolo__cpp
+[0.054s] [  9%] Built target ament_cmake_python_copy_tensorrt_yolo
+[0.056s] [ 29%] Built target deploy
+[0.062s] [ 36%] Built target tensorrt_yolo__rosidl_typesupport_c
+[0.062s] [ 43%] Built target tensorrt_yolo__rosidl_typesupport_introspection_cpp
+[0.062s] [ 53%] Built target tensorrt_yolo__rosidl_typesupport_fastrtps_c
+[0.062s] [ 58%] Built target tensorrt_yolo__rosidl_typesupport_introspection_c
+[0.064s] [ 65%] Built target tensorrt_yolo__rosidl_typesupport_cpp
+[0.064s] [ 73%] Built target tensorrt_yolo__rosidl_typesupport_fastrtps_cpp
+[0.068s] [ 75%] [32mBuilding CXX object CMakeFiles/segment_node.dir/src/segment_node.cpp.o[0m
+[0.072s] [ 75%] Built target tensorrt_yolo
+[0.080s] [ 78%] Built target tensorrt_yolo__py
+[0.091s] [ 82%] Built target tensorrt_yolo__rosidl_generator_py
+[0.101s] [ 97%] Built target tensorrt_yolo__rosidl_typesupport_c__pyext
+[0.101s] [ 97%] Built target tensorrt_yolo__rosidl_typesupport_fastrtps_c__pyext
+[0.102s] [ 97%] Built target tensorrt_yolo__rosidl_typesupport_introspection_c__pyext
+[0.277s] running egg_info
+[0.277s] writing tensorrt_yolo.egg-info/PKG-INFO
+[0.277s] writing dependency_links to tensorrt_yolo.egg-info/dependency_links.txt
+[0.277s] writing top-level names to tensorrt_yolo.egg-info/top_level.txt
+[0.279s] reading manifest file 'tensorrt_yolo.egg-info/SOURCES.txt'
+[0.279s] writing manifest file 'tensorrt_yolo.egg-info/SOURCES.txt'
+[0.295s] [ 97%] Built target ament_cmake_python_build_tensorrt_yolo_egg
+[1.773s] In file included from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.hpp:19[m[K,
+[1.773s]                  from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/model.hpp:17[m[K,
+[1.773s]                  from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:22[m[K:
+[1.774s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::DeviceBuffer::DeviceBuffer()[m[K’:
+[1.774s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:103:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::DeviceBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.774s]   103 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+[1.774s]       |            [01;35m[K^~~~~[m[K
+[1.774s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:102:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::DeviceBuffer::device_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.774s]   102 |     void*  [01;35m[Kdevice_[m[K;  // < 设备内存指针
+[1.774s]       |            [01;35m[K^~~~~~~[m[K
+[1.774s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:86:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.774s]    86 |     [01;35m[KDeviceBuffer[m[K() : size_(0), device_(nullptr) {}
+[1.774s]       |     [01;35m[K^~~~~~~~~~~~[m[K
+[1.774s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::DiscreteBuffer::DiscreteBuffer()[m[K’:
+[1.774s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:130:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::DiscreteBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.774s]   130 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+[1.774s]       |            [01;35m[K^~~~~[m[K
+[1.775s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:128:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::DiscreteBuffer::host_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.775s]   128 |     void*  [01;35m[Khost_[m[K;    // < 主机内存指针
+[1.775s]       |            [01;35m[K^~~~~[m[K
+[1.775s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:112:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.775s]   112 |     [01;35m[KDiscreteBuffer[m[K() : size_(0), host_(nullptr), device_(nullptr) {}
+[1.775s]       |     [01;35m[K^~~~~~~~~~~~~~[m[K
+[1.775s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::UnifiedBuffer::UnifiedBuffer()[m[K’:
+[1.775s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:157:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::UnifiedBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.775s]   157 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+[1.775s]       |            [01;35m[K^~~~~[m[K
+[1.775s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:155:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::UnifiedBuffer::host_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.775s]   155 |     void*  [01;35m[Khost_[m[K;    // < 主机内存指针
+[1.775s]       |            [01;35m[K^~~~~[m[K
+[1.775s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:139:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.775s]   139 |     [01;35m[KUnifiedBuffer[m[K() : size_(0), host_(nullptr), device_(nullptr) {}
+[1.775s]       |     [01;35m[K^~~~~~~~~~~~~[m[K
+[1.775s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::MappedBuffer::MappedBuffer()[m[K’:
+[1.775s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:184:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::MappedBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.775s]   184 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+[1.776s]       |            [01;35m[K^~~~~[m[K
+[1.776s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:182:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::MappedBuffer::host_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.776s]   182 |     void*  [01;35m[Khost_[m[K;    // < 主机内存指针
+[1.776s]       |            [01;35m[K^~~~~[m[K
+[1.776s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:166:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.776s]   166 |     [01;35m[KMappedBuffer[m[K() : size_(0), host_(nullptr), device_(nullptr) {}
+[1.776s]       |     [01;35m[K^~~~~~~~~~~~[m[K
+[1.777s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::TensorInfo::TensorInfo(std::string, const Dims&, nvinfer1::DataType, bool, deploy::BufferType)[m[K’:
+[1.777s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:224:33:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::TensorInfo::shape[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.777s]   224 |     nvinfer1::Dims              [01;35m[Kshape[m[K;   // < 张量形状
+[1.777s]       |                                 [01;35m[K^~~~~[m[K
+[1.777s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:219:24:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Knvinfer1::DataType deploy::TensorInfo::dtype_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.777s]   219 |     nvinfer1::DataType [01;35m[Kdtype_[m[K;           // < 张量数据类型
+[1.778s]       |                        [01;35m[K^~~~~~[m[K
+[1.778s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:236:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.778s]   236 |     [01;35m[KTensorInfo[m[K(const std::string name, const nvinfer1::Dims& shape, const nvinfer1::DataType dtype, const bool input, BufferType buffer_type)
+[1.778s]       |     [01;35m[K^~~~~~~~~~[m[K
+[1.881s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:[m[K In member function ‘[01m[Kvoid YoloBatchNode::processBatch()[m[K’:
+[1.882s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:331:33:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kbox[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[1.882s]   331 |                     const auto& [01;35m[Kbox[m[K = results[i].boxes[j]; // For logging box info
+[1.882s]       |                                 [01;35m[K^~~[m[K
+[5.662s] [100%] [32m[1mLinking CXX executable segment_node[0m
+[5.832s] /usr/bin/ld: warning: libopencv_imgcodecs.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgcodecs.so.3.4
+[5.832s] /usr/bin/ld: warning: libopencv_imgproc.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgproc.so.3.4
+[5.832s] /usr/bin/ld: warning: libopencv_core.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_core.so.3.4
+[6.092s] [100%] Built target segment_node
+[6.099s] Invoked command in '/home/david/yolocpp_ws/build/tensorrt_yolo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/david/yolopy_ws/install/yolopy:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --build /home/david/yolocpp_ws/build/tensorrt_yolo -- -j32 -l32
+[6.101s] Invoking command in '/home/david/yolocpp_ws/build/tensorrt_yolo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/david/yolopy_ws/install/yolopy:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --install /home/david/yolocpp_ws/build/tensorrt_yolo
+[6.119s] -- Install configuration: ""
+[6.119s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/ament_index/resource_index/rosidl_interfaces/tensorrt_yolo
+[6.119s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo
+[6.119s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg
+[6.119s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/rosidl_generator_c__visibility_control.h
+[6.119s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail
+[6.119s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__functions.h
+[6.119s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__functions.c
+[6.119s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__struct.h
+[6.119s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__type_support.h
+[6.119s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/segmentation_output.h
+[6.119s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/environment/library_path.sh
+[6.119s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/environment/library_path.dsv
+[6.119s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/lib/libtensorrt_yolo__rosidl_generator_c.so
+[6.119s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo
+[6.119s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg
+[6.119s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__rosidl_typesupport_fastrtps_c.h
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/lib/libtensorrt_yolo__rosidl_typesupport_fastrtps_c.so
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__type_support.hpp
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__struct.hpp
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__traits.hpp
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__builder.hpp
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/segmentation_output.hpp
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/rosidl_generator_cpp__visibility_control.hpp
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__rosidl_typesupport_fastrtps_cpp.hpp
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/dds_fastrtps
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/lib/libtensorrt_yolo__rosidl_typesupport_fastrtps_cpp.so
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__rosidl_typesupport_introspection_c.h
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__type_support.c
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/lib/libtensorrt_yolo__rosidl_typesupport_introspection_c.so
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/lib/libtensorrt_yolo__rosidl_typesupport_c.so
+[6.120s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo
+[6.121s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg
+[6.121s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail
+[6.121s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__type_support.cpp
+[6.121s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__rosidl_typesupport_introspection_cpp.hpp
+[6.121s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/lib/libtensorrt_yolo__rosidl_typesupport_introspection_cpp.so
+[6.121s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/lib/libtensorrt_yolo__rosidl_typesupport_cpp.so
+[6.121s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/environment/pythonpath.sh
+[6.121s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/environment/pythonpath.dsv
+[6.121s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo-0.0.0-py3.10.egg-info
+[6.121s] -- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo-0.0.0-py3.10.egg-info/PKG-INFO
+[6.121s] -- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo-0.0.0-py3.10.egg-info/SOURCES.txt
+[6.121s] -- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo-0.0.0-py3.10.egg-info/dependency_links.txt
+[6.121s] -- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo-0.0.0-py3.10.egg-info/top_level.txt
+[6.121s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo
+[6.121s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/tensorrt_yolo_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[6.121s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/_tensorrt_yolo_s.ep.rosidl_typesupport_fastrtps_c.c
+[6.121s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/_tensorrt_yolo_s.ep.rosidl_typesupport_c.c
+[6.121s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/_tensorrt_yolo_s.ep.rosidl_typesupport_introspection_c.c
+[6.121s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/tensorrt_yolo_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[6.121s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/__init__.py
+[6.121s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/msg
+[6.121s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/msg/_segmentation_output_s.c
+[6.121s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/msg/_segmentation_output.py
+[6.121s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/msg/__init__.py
+[6.121s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/tensorrt_yolo_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[6.121s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/libtensorrt_yolo__rosidl_generator_py.so
+[6.144s] Listing '/home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo'...
+[6.144s] Listing '/home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/msg'...
+[6.147s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/tensorrt_yolo_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[6.147s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/tensorrt_yolo_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[6.147s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/tensorrt_yolo_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[6.147s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/lib/libtensorrt_yolo__rosidl_generator_py.so
+[6.147s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/msg/SegmentationOutput.idl
+[6.147s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/msg/SegmentationOutput.msg
+[6.147s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/lib/tensorrt_yolo/libdeploy.so
+[6.147s] -- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/lib/tensorrt_yolo/segment_node
+[6.149s] -- Set runtime path of "/home/david/yolocpp_ws/install/tensorrt_yolo/lib/tensorrt_yolo/segment_node" to "$ORIGIN"
+[6.149s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy
+[6.149s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/result.hpp
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/pybind.cpp
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/model.hpp
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/option.hpp
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/core
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/core/buffer.cpp
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/core/macro.hpp
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/core/core.cpp
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/core/core.hpp
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/core/buffer.hpp
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/infer
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/infer/warpaffine.hpp
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/infer/backend.cpp
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/infer/warpaffine.cu
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/infer/backend.hpp
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/utils
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/utils/utils.hpp
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/utils/utils.cpp
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/model.cpp
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/common
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/common/checkMacrosPlugin.h
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/common/plugin.h
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/common/vfcCommon.h
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/common/bboxUtils.h
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSInference.h
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSParameters.h
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSPlugin.h
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSInference.h
+[6.150s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSPlugin.h
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSParameters.h
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/launch
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/launch/tensort_yolo.launch.py
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/result.hpp
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/pybind.cpp
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/model.hpp
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/option.hpp
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/core
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/core/buffer.cpp
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/core/macro.hpp
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/core/core.cpp
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/core/core.hpp
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/core/buffer.hpp
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/infer
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/infer/warpaffine.hpp
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/infer/backend.cpp
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/infer/warpaffine.cu
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/infer/backend.hpp
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/utils
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/utils/utils.hpp
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/utils/utils.cpp
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/model.cpp
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/TensorRT-YOLO
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common/checkMacrosPlugin.h
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common/vfcCommon.cpp
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common/plugin.h
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common/plugin.cpp
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common/vfcCommon.h
+[6.151s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common/checkMacrosPlugin.cpp
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common/common.cu
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common/bboxUtils.h
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSInference.cu
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSInference.h
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/README.md
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSPlugin.cpp
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSInference.cuh
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSParameters.h
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSPlugin.h
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/README.md
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSPlugin.cpp
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSInference.cuh
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSInference.h
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSPlugin.h
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSInference.cu
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSParameters.h
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/.keep
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/yolo11s-seg.engine
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/yolo11n-seg.engine
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/labels.txt
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/data
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/data/panoramic_02.avi
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/data/test.jpg
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/data/test1.jpg
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/data/.gitignore
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/msg
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/msg/SegmentationOutput.msg
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/ament_index/resource_index/package_run_dependencies/tensorrt_yolo
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/ament_index/resource_index/parent_prefix_path/tensorrt_yolo
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/environment/ament_prefix_path.sh
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/environment/ament_prefix_path.dsv
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/environment/path.sh
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/environment/path.dsv
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/local_setup.bash
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/local_setup.sh
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/local_setup.zsh
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/local_setup.dsv
+[6.152s] -- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/package.dsv
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/ament_index/resource_index/packages/tensorrt_yolo
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/export_tensorrt_yolo__rosidl_generator_cExport.cmake
+[6.152s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/export_tensorrt_yolo__rosidl_generator_cExport-noconfig.cmake
+[6.153s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/export_tensorrt_yolo__rosidl_typesupport_fastrtps_cExport.cmake
+[6.153s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/export_tensorrt_yolo__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[6.153s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/export_tensorrt_yolo__rosidl_generator_cppExport.cmake
+[6.153s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/export_tensorrt_yolo__rosidl_typesupport_fastrtps_cppExport.cmake
+[6.153s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/export_tensorrt_yolo__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[6.153s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/tensorrt_yolo__rosidl_typesupport_introspection_cExport.cmake
+[6.153s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/tensorrt_yolo__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[6.153s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/tensorrt_yolo__rosidl_typesupport_cExport.cmake
+[6.153s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/tensorrt_yolo__rosidl_typesupport_cExport-noconfig.cmake
+[6.153s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/tensorrt_yolo__rosidl_typesupport_introspection_cppExport.cmake
+[6.153s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/tensorrt_yolo__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[6.153s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/tensorrt_yolo__rosidl_typesupport_cppExport.cmake
+[6.153s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/tensorrt_yolo__rosidl_typesupport_cppExport-noconfig.cmake
+[6.153s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/export_tensorrt_yolo__rosidl_generator_pyExport.cmake
+[6.153s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/export_tensorrt_yolo__rosidl_generator_pyExport-noconfig.cmake
+[6.153s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/rosidl_cmake-extras.cmake
+[6.153s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/ament_cmake_export_dependencies-extras.cmake
+[6.153s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/ament_cmake_export_include_directories-extras.cmake
+[6.153s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/ament_cmake_export_libraries-extras.cmake
+[6.153s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/ament_cmake_export_targets-extras.cmake
+[6.153s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[6.153s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[6.153s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/tensorrt_yoloConfig.cmake
+[6.153s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/tensorrt_yoloConfig-version.cmake
+[6.153s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/package.xml
+[6.156s] Invoked command in '/home/david/yolocpp_ws/build/tensorrt_yolo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/david/yolopy_ws/install/yolopy:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --install /home/david/yolocpp_ws/build/tensorrt_yolo

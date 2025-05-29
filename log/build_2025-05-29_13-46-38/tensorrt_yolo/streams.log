@@ -1,0 +1,107 @@
+[0.008s] Invoking command in '/home/david/yolocpp_ws/build/tensorrt_yolo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/david/yolopy_ws/install/yolopy:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --build /home/david/yolocpp_ws/build/tensorrt_yolo -- -j32 -l32
+[0.053s] [  2%] Built target tensorrt_yolo__cpp
+[0.054s] [  9%] Built target tensorrt_yolo__rosidl_generator_c
+[0.057s] [  9%] Built target ament_cmake_python_copy_tensorrt_yolo
+[0.057s] [ 29%] Built target deploy
+[0.061s] [ 36%] Built target tensorrt_yolo__rosidl_typesupport_introspection_cpp
+[0.061s] [ 43%] Built target tensorrt_yolo__rosidl_typesupport_c
+[0.062s] [ 51%] Built target tensorrt_yolo__rosidl_typesupport_fastrtps_cpp
+[0.063s] [ 58%] Built target tensorrt_yolo__rosidl_typesupport_cpp
+[0.063s] [ 70%] Built target tensorrt_yolo__rosidl_typesupport_introspection_c
+[0.063s] [ 73%] Built target tensorrt_yolo__rosidl_typesupport_fastrtps_c
+[0.072s] [ 73%] Built target tensorrt_yolo
+[0.078s] [ 75%] [32mBuilding CXX object CMakeFiles/segment_node.dir/src/segment_node.cpp.o[0m
+[0.080s] [ 78%] Built target tensorrt_yolo__py
+[0.091s] [ 82%] Built target tensorrt_yolo__rosidl_generator_py
+[0.103s] [ 90%] Built target tensorrt_yolo__rosidl_typesupport_introspection_c__pyext
+[0.103s] [ 92%] Built target tensorrt_yolo__rosidl_typesupport_fastrtps_c__pyext
+[0.104s] [ 97%] Built target tensorrt_yolo__rosidl_typesupport_c__pyext
+[0.358s] running egg_info
+[0.359s] writing tensorrt_yolo.egg-info/PKG-INFO
+[0.359s] writing dependency_links to tensorrt_yolo.egg-info/dependency_links.txt
+[0.359s] writing top-level names to tensorrt_yolo.egg-info/top_level.txt
+[0.363s] reading manifest file 'tensorrt_yolo.egg-info/SOURCES.txt'
+[0.363s] writing manifest file 'tensorrt_yolo.egg-info/SOURCES.txt'
+[0.388s] [ 97%] Built target ament_cmake_python_build_tensorrt_yolo_egg
+[2.105s] In file included from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.hpp:19[m[K,
+[2.105s]                  from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/model.hpp:17[m[K,
+[2.105s]                  from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:22[m[K:
+[2.105s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::DeviceBuffer::DeviceBuffer()[m[K’:
+[2.105s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:103:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::DeviceBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[2.105s]   103 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+[2.105s]       |            [01;35m[K^~~~~[m[K
+[2.106s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:102:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::DeviceBuffer::device_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[2.106s]   102 |     void*  [01;35m[Kdevice_[m[K;  // < 设备内存指针
+[2.106s]       |            [01;35m[K^~~~~~~[m[K
+[2.106s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:86:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[2.106s]    86 |     [01;35m[KDeviceBuffer[m[K() : size_(0), device_(nullptr) {}
+[2.106s]       |     [01;35m[K^~~~~~~~~~~~[m[K
+[2.106s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::DiscreteBuffer::DiscreteBuffer()[m[K’:
+[2.106s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:130:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::DiscreteBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[2.106s]   130 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+[2.106s]       |            [01;35m[K^~~~~[m[K
+[2.106s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:128:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::DiscreteBuffer::host_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[2.106s]   128 |     void*  [01;35m[Khost_[m[K;    // < 主机内存指针
+[2.106s]       |            [01;35m[K^~~~~[m[K
+[2.106s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:112:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[2.107s]   112 |     [01;35m[KDiscreteBuffer[m[K() : size_(0), host_(nullptr), device_(nullptr) {}
+[2.107s]       |     [01;35m[K^~~~~~~~~~~~~~[m[K
+[2.107s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::UnifiedBuffer::UnifiedBuffer()[m[K’:
+[2.107s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:157:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::UnifiedBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[2.107s]   157 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+[2.107s]       |            [01;35m[K^~~~~[m[K
+[2.107s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:155:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::UnifiedBuffer::host_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[2.107s]   155 |     void*  [01;35m[Khost_[m[K;    // < 主机内存指针
+[2.107s]       |            [01;35m[K^~~~~[m[K
+[2.107s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:139:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[2.107s]   139 |     [01;35m[KUnifiedBuffer[m[K() : size_(0), host_(nullptr), device_(nullptr) {}
+[2.107s]       |     [01;35m[K^~~~~~~~~~~~~[m[K
+[2.107s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::MappedBuffer::MappedBuffer()[m[K’:
+[2.107s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:184:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::MappedBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[2.107s]   184 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+[2.107s]       |            [01;35m[K^~~~~[m[K
+[2.107s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:182:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::MappedBuffer::host_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[2.107s]   182 |     void*  [01;35m[Khost_[m[K;    // < 主机内存指针
+[2.108s]       |            [01;35m[K^~~~~[m[K
+[2.108s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:166:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[2.108s]   166 |     [01;35m[KMappedBuffer[m[K() : size_(0), host_(nullptr), device_(nullptr) {}
+[2.108s]       |     [01;35m[K^~~~~~~~~~~~[m[K
+[2.109s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::TensorInfo::TensorInfo(std::string, const Dims&, nvinfer1::DataType, bool, deploy::BufferType)[m[K’:
+[2.110s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:224:33:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::TensorInfo::shape[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[2.110s]   224 |     nvinfer1::Dims              [01;35m[Kshape[m[K;   // < 张量形状
+[2.110s]       |                                 [01;35m[K^~~~~[m[K
+[2.110s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:219:24:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Knvinfer1::DataType deploy::TensorInfo::dtype_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[2.110s]   219 |     nvinfer1::DataType [01;35m[Kdtype_[m[K;           // < 张量数据类型
+[2.110s]       |                        [01;35m[K^~~~~~[m[K
+[2.110s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:236:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[2.110s]   236 |     [01;35m[KTensorInfo[m[K(const std::string name, const nvinfer1::Dims& shape, const nvinfer1::DataType dtype, const bool input, BufferType buffer_type)
+[2.110s]       |     [01;35m[K^~~~~~~~~~[m[K
+[2.232s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:[m[K In member function ‘[01m[Kvoid YoloBatchNode::processBatch()[m[K’:
+[2.232s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:304:51:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst struct deploy::Box[m[K’ has no member named ‘[01m[Kscore[m[K’
+[2.232s]   304 |                     scores_msg.data.push_back(box.[01;31m[Kscore[m[K);
+[2.232s]       |                                                   [01;31m[K^~~~~[m[K
+[2.232s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:305:52:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst struct deploy::Box[m[K’ has no member named ‘[01m[Kclass_id[m[K’
+[2.232s]   305 |                     classes_msg.data.push_back(box.[01;31m[Kclass_id[m[K);
+[2.233s]       |                                                    [01;31m[K^~~~~~~~[m[K
+[2.233s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[2.233s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[2.233s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[2.233s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[2.233s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[2.233s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[2.233s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[2.233s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[2.233s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[2.233s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[2.233s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[2.233s]                  from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:14[m[K:
+[2.233s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:306:102:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst struct deploy::Box[m[K’ has no member named ‘[01m[Kscore[m[K’
+[2.233s]   306 |                     RCLCPP_INFO(this->get_logger(), "    Box detectada: Score=%.2f, ClassID=%d", box.[01;31m[Kscore[m[K, box.class_id);
+[2.233s]       |                                                                                                      [01;31m[K^~~~~[m[K
+[2.233s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:306:113:[m[K [01;31m[Kerror: [m[K‘[01m[Kconst struct deploy::Box[m[K’ has no member named ‘[01m[Kclass_id[m[K’
+[2.234s]   306 |                     RCLCPP_INFO(this->get_logger(), "    Box detectada: Score=%.2f, ClassID=%d", box.score, box.[01;31m[Kclass_id[m[K);
+[2.234s]       |                                                                                                                 [01;31m[K^~~~~~~~[m[K
+[4.014s] gmake[2]: *** [CMakeFiles/segment_node.dir/build.make:76: CMakeFiles/segment_node.dir/src/segment_node.cpp.o] Error 1
+[4.015s] gmake[1]: *** [CMakeFiles/Makefile2:210: CMakeFiles/segment_node.dir/all] Error 2
+[4.015s] gmake: *** [Makefile:146: all] Error 2
+[4.019s] Invoked command in '/home/david/yolocpp_ws/build/tensorrt_yolo' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/david/yolopy_ws/install/yolopy:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --build /home/david/yolocpp_ws/build/tensorrt_yolo -- -j32 -l32

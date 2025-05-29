@@ -1,0 +1,692 @@
+[0.000000] (-) TimerEvent: {}
+[0.000085] (bboxes_ex_msgs) JobQueued: {'identifier': 'bboxes_ex_msgs', 'dependencies': OrderedDict()}
+[0.000101] (tensorrt_yolo) JobQueued: {'identifier': 'tensorrt_yolo', 'dependencies': OrderedDict()}
+[0.000109] (yolocpp) JobQueued: {'identifier': 'yolocpp', 'dependencies': OrderedDict([('bboxes_ex_msgs', '/home/david/yolocpp_ws/install/bboxes_ex_msgs')])}
+[0.000119] (bboxes_ex_msgs) JobStarted: {'identifier': 'bboxes_ex_msgs'}
+[0.003403] (tensorrt_yolo) JobStarted: {'identifier': 'tensorrt_yolo'}
+[0.005958] (bboxes_ex_msgs) JobProgress: {'identifier': 'bboxes_ex_msgs', 'progress': 'cmake'}
+[0.006214] (bboxes_ex_msgs) JobProgress: {'identifier': 'bboxes_ex_msgs', 'progress': 'build'}
+[0.006675] (bboxes_ex_msgs) Command: {'cmd': ['/home/david/.local/bin/cmake', '--build', '/home/david/yolocpp_ws/build/bboxes_ex_msgs', '--', '-j32', '-l32'], 'cwd': '/home/david/yolocpp_ws/build/bboxes_ex_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'david'), ('LC_TIME', 'es_ES.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('__GLX_VENDOR_LIBRARY_NAME', 'nvidia'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/david/yolopy_ws/install/image_directory_publisher/lib:/home/david/yolocpp_ws/install/tensorrt_yolo/lib:/home/david/yolocpp_ws/install/bboxes_ex_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda-11.2/lib64:/usr/local/cuda-11.2/lib64::/home/david/onnxruntime-linux-x64-gpu-1.22.0/lib'), ('HOME', '/home/david'), ('OLDPWD', '/home/david'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_ES.UTF-8'), ('SYSTEMD_EXEC_PID', '4354'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/david/yolocpp_ws/install:/home/david/yolopy_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'david'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'david'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda/bin:/usr/local/cuda-11.2/bin:/usr/local/cuda-11.2/bin:/home/david/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/src/tensorrt/bin'), ('SESSION_MANAGER', 'local/david-Sword-16-HX-B14VFKG:@/tmp/.ICE-unix/4330,unix/david-Sword-16-HX-B14VFKG:/tmp/.ICE-unix/4330'), ('PAPERSIZE', 'a4'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_ES.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/a36a705c_59a8_4d87_b9a6_15679037a80a'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_ES.UTF-8'), ('__NV_PRIME_RENDER_OFFLOAD', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.118'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/david/yolopy_ws/install/yolopy:/home/david/yolopy_ws/install/image_directory_publisher:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolocpp_ws/install/bboxes_ex_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_ES.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('PROMPT_COMMAND', 'echo -n \\[$(date +%H:%M:%S)\\]\\'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_ES.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'es_ES.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/david/yolocpp_ws/build/bboxes_ex_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda-11.2'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('ONNXRUNTIME_DIR', '/home/david/onnxruntime-linux-x64-gpu-1.22.0'), ('PYTHONPATH', '/home/david/yolopy_ws/install/yolopy/lib/python3.10/site-packages:/home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages:/home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages::/home/david/Documents/deeplab2:/home/david/Documents/deeplab2'), ('LC_NUMERIC', 'es_ES.UTF-8'), ('LC_PAPER', 'es_ES.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/david/yolopy_ws/install/image_directory_publisher:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolocpp_ws/install/bboxes_ex_msgs:/home/david/yolopy_ws/install/yolopy:/opt/ros/humble')]), 'shell': False}
+[0.008924] (tensorrt_yolo) JobProgress: {'identifier': 'tensorrt_yolo', 'progress': 'cmake'}
+[0.009288] (tensorrt_yolo) JobProgress: {'identifier': 'tensorrt_yolo', 'progress': 'build'}
+[0.009433] (tensorrt_yolo) Command: {'cmd': ['/home/david/.local/bin/cmake', '--build', '/home/david/yolocpp_ws/build/tensorrt_yolo', '--', '-j32', '-l32'], 'cwd': '/home/david/yolocpp_ws/build/tensorrt_yolo', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'david'), ('LC_TIME', 'es_ES.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('__GLX_VENDOR_LIBRARY_NAME', 'nvidia'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/david/yolopy_ws/install/image_directory_publisher/lib:/home/david/yolocpp_ws/install/tensorrt_yolo/lib:/home/david/yolocpp_ws/install/bboxes_ex_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda-11.2/lib64:/usr/local/cuda-11.2/lib64::/home/david/onnxruntime-linux-x64-gpu-1.22.0/lib'), ('HOME', '/home/david'), ('OLDPWD', '/home/david'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_ES.UTF-8'), ('SYSTEMD_EXEC_PID', '4354'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/david/yolocpp_ws/install:/home/david/yolopy_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'david'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'david'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda/bin:/usr/local/cuda-11.2/bin:/usr/local/cuda-11.2/bin:/home/david/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/src/tensorrt/bin'), ('SESSION_MANAGER', 'local/david-Sword-16-HX-B14VFKG:@/tmp/.ICE-unix/4330,unix/david-Sword-16-HX-B14VFKG:/tmp/.ICE-unix/4330'), ('PAPERSIZE', 'a4'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_ES.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/a36a705c_59a8_4d87_b9a6_15679037a80a'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_ES.UTF-8'), ('__NV_PRIME_RENDER_OFFLOAD', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.118'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/david/yolopy_ws/install/yolopy:/home/david/yolopy_ws/install/image_directory_publisher:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolocpp_ws/install/bboxes_ex_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_ES.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('PROMPT_COMMAND', 'echo -n \\[$(date +%H:%M:%S)\\]\\'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_ES.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'es_ES.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/david/yolocpp_ws/build/tensorrt_yolo'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda-11.2'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('ONNXRUNTIME_DIR', '/home/david/onnxruntime-linux-x64-gpu-1.22.0'), ('PYTHONPATH', '/home/david/yolopy_ws/install/yolopy/lib/python3.10/site-packages:/home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages:/home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages::/home/david/Documents/deeplab2:/home/david/Documents/deeplab2'), ('LC_NUMERIC', 'es_ES.UTF-8'), ('LC_PAPER', 'es_ES.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/david/yolopy_ws/install/image_directory_publisher:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolocpp_ws/install/bboxes_ex_msgs:/home/david/yolopy_ws/install/yolopy:/opt/ros/humble')]), 'shell': False}
+[0.047817] (bboxes_ex_msgs) StdoutLine: {'line': b'[  2%] Built target bboxes_ex_msgs__cpp\n'}
+[0.050039] (bboxes_ex_msgs) StdoutLine: {'line': b'[ 12%] Built target bboxes_ex_msgs__rosidl_generator_c\n'}
+[0.051673] (bboxes_ex_msgs) StdoutLine: {'line': b'[ 12%] Built target ament_cmake_python_copy_bboxes_ex_msgs\n'}
+[0.052686] (tensorrt_yolo) StdoutLine: {'line': b'[  2%] Built target tensorrt_yolo__cpp\n'}
+[0.054228] (tensorrt_yolo) StdoutLine: {'line': b'[  9%] Built target tensorrt_yolo__rosidl_generator_c\n'}
+[0.055808] (tensorrt_yolo) StdoutLine: {'line': b'[  9%] Built target ament_cmake_python_copy_tensorrt_yolo\n'}
+[0.058650] (bboxes_ex_msgs) StdoutLine: {'line': b'[ 23%] Built target bboxes_ex_msgs__rosidl_typesupport_introspection_cpp\n'}
+[0.059378] (bboxes_ex_msgs) StdoutLine: {'line': b'[ 33%] Built target bboxes_ex_msgs__rosidl_typesupport_c\n'}
+[0.059553] (bboxes_ex_msgs) StdoutLine: {'line': b'[ 43%] Built target bboxes_ex_msgs__rosidl_typesupport_fastrtps_cpp\n'}
+[0.059766] (bboxes_ex_msgs) StdoutLine: {'line': b'[ 64%] Built target bboxes_ex_msgs__rosidl_typesupport_introspection_c\n'}
+[0.059915] (bboxes_ex_msgs) StdoutLine: {'line': b'[ 64%] Built target bboxes_ex_msgs__rosidl_typesupport_cpp\n'}
+[0.061422] (tensorrt_yolo) StdoutLine: {'line': b'[ 29%] Built target deploy\n'}
+[0.061657] (bboxes_ex_msgs) StdoutLine: {'line': b'[ 74%] Built target bboxes_ex_msgs__rosidl_typesupport_fastrtps_c\n'}
+[0.061868] (tensorrt_yolo) StdoutLine: {'line': b'[ 36%] Built target tensorrt_yolo__rosidl_typesupport_cpp\n'}
+[0.062286] (tensorrt_yolo) StdoutLine: {'line': b'[ 43%] Built target tensorrt_yolo__rosidl_typesupport_introspection_cpp\n'}
+[0.063060] (tensorrt_yolo) StdoutLine: {'line': b'[ 51%] Built target tensorrt_yolo__rosidl_typesupport_c\n'}
+[0.063959] (tensorrt_yolo) StdoutLine: {'line': b'[ 58%] Built target tensorrt_yolo__rosidl_typesupport_fastrtps_cpp\n'}
+[0.064102] (tensorrt_yolo) StdoutLine: {'line': b'[ 65%] Built target tensorrt_yolo__rosidl_typesupport_fastrtps_c\n'}
+[0.064473] (tensorrt_yolo) StdoutLine: {'line': b'[ 73%] Built target tensorrt_yolo__rosidl_typesupport_introspection_c\n'}
+[0.069915] (bboxes_ex_msgs) StdoutLine: {'line': b'[ 74%] Built target bboxes_ex_msgs\n'}
+[0.072642] (tensorrt_yolo) StdoutLine: {'line': b'[ 73%] Built target tensorrt_yolo\n'}
+[0.078497] (bboxes_ex_msgs) StdoutLine: {'line': b'[ 76%] Built target bboxes_ex_msgs__py\n'}
+[0.078986] (tensorrt_yolo) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/segment_node.dir/src/segment_node.cpp.o\x1b[0m\n'}
+[0.081468] (tensorrt_yolo) StdoutLine: {'line': b'[ 78%] Built target tensorrt_yolo__py\n'}
+[0.090213] (bboxes_ex_msgs) StdoutLine: {'line': b'[ 84%] Built target bboxes_ex_msgs__rosidl_generator_py\n'}
+[0.091334] (tensorrt_yolo) StdoutLine: {'line': b'[ 82%] Built target tensorrt_yolo__rosidl_generator_py\n'}
+[0.099455] (-) TimerEvent: {}
+[0.100368] (bboxes_ex_msgs) StdoutLine: {'line': b'[ 89%] Built target bboxes_ex_msgs__rosidl_typesupport_introspection_c__pyext\n'}
+[0.101295] (tensorrt_yolo) StdoutLine: {'line': b'[ 87%] Built target tensorrt_yolo__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.101596] (bboxes_ex_msgs) StdoutLine: {'line': b'[ 94%] Built target bboxes_ex_msgs__rosidl_typesupport_fastrtps_c__pyext\n'}
+[0.102226] (tensorrt_yolo) StdoutLine: {'line': b'[ 92%] Built target tensorrt_yolo__rosidl_typesupport_introspection_c__pyext\n'}
+[0.102341] (tensorrt_yolo) StdoutLine: {'line': b'[ 97%] Built target tensorrt_yolo__rosidl_typesupport_c__pyext\n'}
+[0.102475] (bboxes_ex_msgs) StdoutLine: {'line': b'[100%] Built target bboxes_ex_msgs__rosidl_typesupport_c__pyext\n'}
+[0.199551] (-) TimerEvent: {}
+[0.274464] (tensorrt_yolo) StdoutLine: {'line': b'running egg_info\n'}
+[0.274826] (tensorrt_yolo) StdoutLine: {'line': b'writing tensorrt_yolo.egg-info/PKG-INFO\n'}
+[0.274978] (tensorrt_yolo) StdoutLine: {'line': b'writing dependency_links to tensorrt_yolo.egg-info/dependency_links.txt\n'}
+[0.275094] (tensorrt_yolo) StdoutLine: {'line': b'writing top-level names to tensorrt_yolo.egg-info/top_level.txt\n'}
+[0.277000] (tensorrt_yolo) StdoutLine: {'line': b"reading manifest file 'tensorrt_yolo.egg-info/SOURCES.txt'\n"}
+[0.277384] (tensorrt_yolo) StdoutLine: {'line': b"writing manifest file 'tensorrt_yolo.egg-info/SOURCES.txt'\n"}
+[0.295236] (bboxes_ex_msgs) StdoutLine: {'line': b'running egg_info\n'}
+[0.295447] (tensorrt_yolo) StdoutLine: {'line': b'[ 97%] Built target ament_cmake_python_build_tensorrt_yolo_egg\n'}
+[0.295637] (bboxes_ex_msgs) StdoutLine: {'line': b'writing bboxes_ex_msgs.egg-info/PKG-INFO\n'}
+[0.295741] (bboxes_ex_msgs) StdoutLine: {'line': b'writing dependency_links to bboxes_ex_msgs.egg-info/dependency_links.txt\n'}
+[0.295839] (bboxes_ex_msgs) StdoutLine: {'line': b'writing top-level names to bboxes_ex_msgs.egg-info/top_level.txt\n'}
+[0.297752] (bboxes_ex_msgs) StdoutLine: {'line': b"reading manifest file 'bboxes_ex_msgs.egg-info/SOURCES.txt'\n"}
+[0.298154] (bboxes_ex_msgs) StdoutLine: {'line': b"writing manifest file 'bboxes_ex_msgs.egg-info/SOURCES.txt'\n"}
+[0.299610] (-) TimerEvent: {}
+[0.316265] (bboxes_ex_msgs) StdoutLine: {'line': b'[100%] Built target ament_cmake_python_build_bboxes_ex_msgs_egg\n'}
+[0.323820] (bboxes_ex_msgs) CommandEnded: {'returncode': 0}
+[0.324667] (bboxes_ex_msgs) JobProgress: {'identifier': 'bboxes_ex_msgs', 'progress': 'install'}
+[0.354135] (bboxes_ex_msgs) Command: {'cmd': ['/home/david/.local/bin/cmake', '--install', '/home/david/yolocpp_ws/build/bboxes_ex_msgs'], 'cwd': '/home/david/yolocpp_ws/build/bboxes_ex_msgs', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'david'), ('LC_TIME', 'es_ES.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('__GLX_VENDOR_LIBRARY_NAME', 'nvidia'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/david/yolopy_ws/install/image_directory_publisher/lib:/home/david/yolocpp_ws/install/tensorrt_yolo/lib:/home/david/yolocpp_ws/install/bboxes_ex_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda-11.2/lib64:/usr/local/cuda-11.2/lib64::/home/david/onnxruntime-linux-x64-gpu-1.22.0/lib'), ('HOME', '/home/david'), ('OLDPWD', '/home/david'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_ES.UTF-8'), ('SYSTEMD_EXEC_PID', '4354'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/david/yolocpp_ws/install:/home/david/yolopy_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'david'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'david'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda/bin:/usr/local/cuda-11.2/bin:/usr/local/cuda-11.2/bin:/home/david/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/src/tensorrt/bin'), ('SESSION_MANAGER', 'local/david-Sword-16-HX-B14VFKG:@/tmp/.ICE-unix/4330,unix/david-Sword-16-HX-B14VFKG:/tmp/.ICE-unix/4330'), ('PAPERSIZE', 'a4'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_ES.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/a36a705c_59a8_4d87_b9a6_15679037a80a'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_ES.UTF-8'), ('__NV_PRIME_RENDER_OFFLOAD', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.118'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/david/yolopy_ws/install/yolopy:/home/david/yolopy_ws/install/image_directory_publisher:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolocpp_ws/install/bboxes_ex_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_ES.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('PROMPT_COMMAND', 'echo -n \\[$(date +%H:%M:%S)\\]\\'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_ES.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'es_ES.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/david/yolocpp_ws/build/bboxes_ex_msgs'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda-11.2'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('ONNXRUNTIME_DIR', '/home/david/onnxruntime-linux-x64-gpu-1.22.0'), ('PYTHONPATH', '/home/david/yolopy_ws/install/yolopy/lib/python3.10/site-packages:/home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages:/home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages::/home/david/Documents/deeplab2:/home/david/Documents/deeplab2'), ('LC_NUMERIC', 'es_ES.UTF-8'), ('LC_PAPER', 'es_ES.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/david/yolopy_ws/install/image_directory_publisher:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolocpp_ws/install/bboxes_ex_msgs:/home/david/yolopy_ws/install/yolopy:/opt/ros/humble')]), 'shell': False}
+[0.380952] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.381254] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/ament_index/resource_index/rosidl_interfaces/bboxes_ex_msgs\n'}
+[0.381381] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs\n'}
+[0.381500] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg\n'}
+[0.381594] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/bounding_box.h\n'}
+[0.381674] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/rosidl_generator_c__visibility_control.h\n'}
+[0.381754] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail\n'}
+[0.381834] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_boxes__functions.c\n'}
+[0.381912] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_boxes__functions.h\n'}
+[0.381991] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_boxes__struct.h\n'}
+[0.382114] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_box__functions.h\n'}
+[0.382194] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_box__struct.h\n'}
+[0.382273] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_box__type_support.h\n'}
+[0.382352] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_box__functions.c\n'}
+[0.382479] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_boxes__type_support.h\n'}
+[0.382560] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/bounding_boxes.h\n'}
+[0.382636] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/environment/library_path.sh\n'}
+[0.382712] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/environment/library_path.dsv\n'}
+[0.382788] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/lib/libbboxes_ex_msgs__rosidl_generator_c.so\n'}
+[0.382863] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs\n'}
+[0.382963] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg\n'}
+[0.383049] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[0.383230] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail\n'}
+[0.383304] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_boxes__rosidl_typesupport_fastrtps_c.h\n'}
+[0.383412] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_box__rosidl_typesupport_fastrtps_c.h\n'}
+[0.383490] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/lib/libbboxes_ex_msgs__rosidl_typesupport_fastrtps_c.so\n'}
+[0.383567] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs\n'}
+[0.383680] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg\n'}
+[0.383756] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail\n'}
+[0.383832] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_box__builder.hpp\n'}
+[0.383910] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_box__traits.hpp\n'}
+[0.383987] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_boxes__builder.hpp\n'}
+[0.384110] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_box__struct.hpp\n'}
+[0.384205] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_boxes__struct.hpp\n'}
+[0.384282] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_boxes__type_support.hpp\n'}
+[0.384359] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_box__type_support.hpp\n'}
+[0.384450] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_boxes__traits.hpp\n'}
+[0.384529] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[0.384605] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/bounding_box.hpp\n'}
+[0.384683] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/bounding_boxes.hpp\n'}
+[0.384760] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs\n'}
+[0.384837] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg\n'}
+[0.384913] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail\n'}
+[0.384992] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_boxes__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.385137] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/dds_fastrtps\n'}
+[0.385213] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_box__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[0.385288] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[0.385361] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/lib/libbboxes_ex_msgs__rosidl_typesupport_fastrtps_cpp.so\n'}
+[0.385434] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs\n'}
+[0.385515] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg\n'}
+[0.385590] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[0.385663] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail\n'}
+[0.385741] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_box__type_support.c\n'}
+[0.385818] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_boxes__rosidl_typesupport_introspection_c.h\n'}
+[0.385891] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_boxes__type_support.c\n'}
+[0.385975] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_box__rosidl_typesupport_introspection_c.h\n'}
+[0.386062] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/lib/libbboxes_ex_msgs__rosidl_typesupport_introspection_c.so\n'}
+[0.386137] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/lib/libbboxes_ex_msgs__rosidl_typesupport_c.so\n'}
+[0.386212] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs\n'}
+[0.386285] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg\n'}
+[0.386358] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail\n'}
+[0.386432] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_boxes__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.386506] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_box__type_support.cpp\n'}
+[0.386580] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_box__rosidl_typesupport_introspection_cpp.hpp\n'}
+[0.386654] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/include/bboxes_ex_msgs/bboxes_ex_msgs/msg/detail/bounding_boxes__type_support.cpp\n'}
+[0.386728] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/lib/libbboxes_ex_msgs__rosidl_typesupport_introspection_cpp.so\n'}
+[0.386801] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/lib/libbboxes_ex_msgs__rosidl_typesupport_cpp.so\n'}
+[0.386873] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/environment/pythonpath.sh\n'}
+[0.386947] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/environment/pythonpath.dsv\n'}
+[0.387028] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages/bboxes_ex_msgs-0.0.0-py3.10.egg-info\n'}
+[0.387105] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages/bboxes_ex_msgs-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[0.387185] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages/bboxes_ex_msgs-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[0.387258] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages/bboxes_ex_msgs-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[0.387336] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages/bboxes_ex_msgs-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[0.387409] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages/bboxes_ex_msgs\n'}
+[0.387482] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages/bboxes_ex_msgs/_bboxes_ex_msgs_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[0.387555] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages/bboxes_ex_msgs/bboxes_ex_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.387628] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages/bboxes_ex_msgs/bboxes_ex_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.387702] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages/bboxes_ex_msgs/bboxes_ex_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.387777] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages/bboxes_ex_msgs/_bboxes_ex_msgs_s.ep.rosidl_typesupport_c.c\n'}
+[0.387849] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages/bboxes_ex_msgs/_bboxes_ex_msgs_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[0.387922] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages/bboxes_ex_msgs/libbboxes_ex_msgs__rosidl_generator_py.so\n'}
+[0.387998] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages/bboxes_ex_msgs/__init__.py\n'}
+[0.388077] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages/bboxes_ex_msgs/msg\n'}
+[0.388151] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages/bboxes_ex_msgs/msg/_bounding_boxes_s.c\n'}
+[0.388233] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages/bboxes_ex_msgs/msg/_bounding_boxes.py\n'}
+[0.388305] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages/bboxes_ex_msgs/msg/_bounding_box_s.c\n'}
+[0.388378] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages/bboxes_ex_msgs/msg/__init__.py\n'}
+[0.388449] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages/bboxes_ex_msgs/msg/_bounding_box.py\n'}
+[0.399750] (-) TimerEvent: {}
+[0.413756] (bboxes_ex_msgs) StdoutLine: {'line': b"Listing '/home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages/bboxes_ex_msgs'...\n"}
+[0.413927] (bboxes_ex_msgs) StdoutLine: {'line': b"Listing '/home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages/bboxes_ex_msgs/msg'...\n"}
+[0.417678] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages/bboxes_ex_msgs/bboxes_ex_msgs_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.417870] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages/bboxes_ex_msgs/bboxes_ex_msgs_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.417991] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages/bboxes_ex_msgs/bboxes_ex_msgs_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[0.418106] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/lib/libbboxes_ex_msgs__rosidl_generator_py.so\n'}
+[0.418214] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/msg/BoundingBox.idl\n'}
+[0.418350] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/msg/BoundingBoxes.idl\n'}
+[0.418432] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/msg/BoundingBox.msg\n'}
+[0.418511] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/msg/BoundingBoxes.msg\n'}
+[0.418589] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/ament_index/resource_index/package_run_dependencies/bboxes_ex_msgs\n'}
+[0.418668] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/ament_index/resource_index/parent_prefix_path/bboxes_ex_msgs\n'}
+[0.418757] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/environment/ament_prefix_path.sh\n'}
+[0.418837] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/environment/ament_prefix_path.dsv\n'}
+[0.418914] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/environment/path.sh\n'}
+[0.419073] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/environment/path.dsv\n'}
+[0.419183] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/local_setup.bash\n'}
+[0.419275] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/local_setup.sh\n'}
+[0.419347] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/local_setup.zsh\n'}
+[0.419449] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/local_setup.dsv\n'}
+[0.419527] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/package.dsv\n'}
+[0.419605] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/ament_index/resource_index/packages/bboxes_ex_msgs\n'}
+[0.419685] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake/export_bboxes_ex_msgs__rosidl_generator_cExport.cmake\n'}
+[0.419764] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake/export_bboxes_ex_msgs__rosidl_generator_cExport-noconfig.cmake\n'}
+[0.419842] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake/export_bboxes_ex_msgs__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[0.419921] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake/export_bboxes_ex_msgs__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[0.420069] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake/export_bboxes_ex_msgs__rosidl_generator_cppExport.cmake\n'}
+[0.420196] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake/export_bboxes_ex_msgs__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[0.420283] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake/export_bboxes_ex_msgs__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[0.420356] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake/bboxes_ex_msgs__rosidl_typesupport_introspection_cExport.cmake\n'}
+[0.420427] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake/bboxes_ex_msgs__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[0.420499] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake/bboxes_ex_msgs__rosidl_typesupport_cExport.cmake\n'}
+[0.420573] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake/bboxes_ex_msgs__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[0.420644] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake/bboxes_ex_msgs__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[0.420716] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake/bboxes_ex_msgs__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[0.420788] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake/bboxes_ex_msgs__rosidl_typesupport_cppExport.cmake\n'}
+[0.420859] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake/bboxes_ex_msgs__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[0.420930] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake/export_bboxes_ex_msgs__rosidl_generator_pyExport.cmake\n'}
+[0.421007] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake/export_bboxes_ex_msgs__rosidl_generator_pyExport-noconfig.cmake\n'}
+[0.421085] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake/rosidl_cmake-extras.cmake\n'}
+[0.421156] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[0.421233] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[0.421306] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[0.421377] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[0.421448] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[0.421520] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[0.421597] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake/bboxes_ex_msgsConfig.cmake\n'}
+[0.421668] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake/bboxes_ex_msgsConfig-version.cmake\n'}
+[0.421741] (bboxes_ex_msgs) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/package.xml\n'}
+[0.424517] (bboxes_ex_msgs) CommandEnded: {'returncode': 0}
+[0.439191] (bboxes_ex_msgs) JobEnded: {'identifier': 'bboxes_ex_msgs', 'rc': 0}
+[0.439650] (yolocpp) JobStarted: {'identifier': 'yolocpp'}
+[0.447167] (yolocpp) JobProgress: {'identifier': 'yolocpp', 'progress': 'cmake'}
+[0.447667] (yolocpp) JobProgress: {'identifier': 'yolocpp', 'progress': 'build'}
+[0.447865] (yolocpp) Command: {'cmd': ['/home/david/.local/bin/cmake', '--build', '/home/david/yolocpp_ws/build/yolocpp', '--', '-j32', '-l32'], 'cwd': '/home/david/yolocpp_ws/build/yolocpp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'david'), ('LC_TIME', 'es_ES.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('__GLX_VENDOR_LIBRARY_NAME', 'nvidia'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/david/yolocpp_ws/install/bboxes_ex_msgs/lib:/home/david/yolopy_ws/install/image_directory_publisher/lib:/home/david/yolocpp_ws/install/tensorrt_yolo/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda-11.2/lib64:/usr/local/cuda-11.2/lib64:/home/david/onnxruntime-linux-x64-gpu-1.22.0/lib'), ('HOME', '/home/david'), ('OLDPWD', '/home/david'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_ES.UTF-8'), ('SYSTEMD_EXEC_PID', '4354'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/david/yolocpp_ws/install:/home/david/yolopy_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'david'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'david'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda/bin:/usr/local/cuda-11.2/bin:/usr/local/cuda-11.2/bin:/home/david/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/src/tensorrt/bin'), ('SESSION_MANAGER', 'local/david-Sword-16-HX-B14VFKG:@/tmp/.ICE-unix/4330,unix/david-Sword-16-HX-B14VFKG:/tmp/.ICE-unix/4330'), ('PAPERSIZE', 'a4'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_ES.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/a36a705c_59a8_4d87_b9a6_15679037a80a'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_ES.UTF-8'), ('__NV_PRIME_RENDER_OFFLOAD', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.118'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/david/yolopy_ws/install/yolopy:/home/david/yolopy_ws/install/image_directory_publisher:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolocpp_ws/install/bboxes_ex_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_ES.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('PROMPT_COMMAND', 'echo -n \\[$(date +%H:%M:%S)\\]\\'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_ES.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'es_ES.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/david/yolocpp_ws/build/yolocpp'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda-11.2'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('ONNXRUNTIME_DIR', '/home/david/onnxruntime-linux-x64-gpu-1.22.0'), ('PYTHONPATH', '/home/david/yolopy_ws/install/yolopy/lib/python3.10/site-packages:/home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages:/home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages::/home/david/Documents/deeplab2:/home/david/Documents/deeplab2'), ('LC_NUMERIC', 'es_ES.UTF-8'), ('LC_PAPER', 'es_ES.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/david/yolocpp_ws/install/bboxes_ex_msgs:/home/david/yolopy_ws/install/image_directory_publisher:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolopy_ws/install/yolopy:/opt/ros/humble')]), 'shell': False}
+[0.499898] (-) TimerEvent: {}
+[0.505215] (yolocpp) StdoutLine: {'line': b'[100%] Built target yolocpp\n'}
+[0.513690] (yolocpp) CommandEnded: {'returncode': 0}
+[0.514447] (yolocpp) JobProgress: {'identifier': 'yolocpp', 'progress': 'install'}
+[0.514713] (yolocpp) Command: {'cmd': ['/home/david/.local/bin/cmake', '--install', '/home/david/yolocpp_ws/build/yolocpp'], 'cwd': '/home/david/yolocpp_ws/build/yolocpp', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'david'), ('LC_TIME', 'es_ES.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('__GLX_VENDOR_LIBRARY_NAME', 'nvidia'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/david/yolocpp_ws/install/bboxes_ex_msgs/lib:/home/david/yolopy_ws/install/image_directory_publisher/lib:/home/david/yolocpp_ws/install/tensorrt_yolo/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda-11.2/lib64:/usr/local/cuda-11.2/lib64:/home/david/onnxruntime-linux-x64-gpu-1.22.0/lib'), ('HOME', '/home/david'), ('OLDPWD', '/home/david'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_ES.UTF-8'), ('SYSTEMD_EXEC_PID', '4354'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/david/yolocpp_ws/install:/home/david/yolopy_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'david'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'david'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda/bin:/usr/local/cuda-11.2/bin:/usr/local/cuda-11.2/bin:/home/david/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/src/tensorrt/bin'), ('SESSION_MANAGER', 'local/david-Sword-16-HX-B14VFKG:@/tmp/.ICE-unix/4330,unix/david-Sword-16-HX-B14VFKG:/tmp/.ICE-unix/4330'), ('PAPERSIZE', 'a4'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_ES.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/a36a705c_59a8_4d87_b9a6_15679037a80a'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_ES.UTF-8'), ('__NV_PRIME_RENDER_OFFLOAD', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.118'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/david/yolopy_ws/install/yolopy:/home/david/yolopy_ws/install/image_directory_publisher:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolocpp_ws/install/bboxes_ex_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_ES.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('PROMPT_COMMAND', 'echo -n \\[$(date +%H:%M:%S)\\]\\'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_ES.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'es_ES.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/david/yolocpp_ws/build/yolocpp'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda-11.2'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('ONNXRUNTIME_DIR', '/home/david/onnxruntime-linux-x64-gpu-1.22.0'), ('PYTHONPATH', '/home/david/yolopy_ws/install/yolopy/lib/python3.10/site-packages:/home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages:/home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages::/home/david/Documents/deeplab2:/home/david/Documents/deeplab2'), ('LC_NUMERIC', 'es_ES.UTF-8'), ('LC_PAPER', 'es_ES.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/david/yolocpp_ws/install/bboxes_ex_msgs:/home/david/yolopy_ws/install/image_directory_publisher:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolopy_ws/install/yolopy:/opt/ros/humble')]), 'shell': False}
+[0.540179] (yolocpp) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[0.540483] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/launch\n'}
+[0.540591] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/launch/yolocpp_tensorrt.launch.py\n'}
+[0.542002] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/launch/__pycache__\n'}
+[0.542124] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/launch/__pycache__/yolocpp_onnx.launch.cpython-310.pyc\n'}
+[0.542351] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/launch/yolocpp_onnx.launch.py\n'}
+[0.542599] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include\n'}
+[0.542717] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files\n'}
+[0.542903] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/tools\n'}
+[0.543016] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/tools/Config.hpp\n'}
+[0.543258] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/tools/BoundedThreadSafeQueue.hpp\n'}
+[0.543448] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/tools/ScopedTimer.hpp\n'}
+[0.543582] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/tools/Debug.hpp\n'}
+[0.543825] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/det\n'}
+[0.543928] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/det/YOLO9.hpp\n'}
+[0.544059] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/det/YOLO12.hpp\n'}
+[0.544200] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/det/YOLO5.hpp\n'}
+[0.545076] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/det/YOLO7.hpp\n'}
+[0.545188] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/det/YOLO10.hpp\n'}
+[0.545324] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/det/YOLO8.hpp\n'}
+[0.545472] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/det/YOLO11.hpp\n'}
+[0.545607] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/pose\n'}
+[0.545707] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/pose/YOLO8-POSE.hpp\n'}
+[0.545825] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/pose/YOLO11-POSE.hpp\n'}
+[0.545967] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/quantized_models\n'}
+[0.546086] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/quantized_models/coco.names\n'}
+[0.546418] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/quantized_models/yolos_quantization.py\n'}
+[0.546723] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/quantized_models/your_model.onnx.file\n'}
+[0.546849] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/obb\n'}
+[0.546956] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/obb/YOLO8-OBB.hpp\n'}
+[0.547060] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/obb/YOLO11-OBB.hpp\n'}
+[0.547158] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/class\n'}
+[0.547255] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/class/YOLO11CLASS.hpp\n'}
+[0.547360] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/seg\n'}
+[0.547459] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/seg/YOLO11Seg.hpp\n'}
+[0.547563] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/seg/YOLO9Seg.hpp\n'}
+[0.547694] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/seg/YOLO8Seg.hpp\n'}
+[0.547827] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/models\n'}
+[0.547930] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/models/coco.names\n'}
+[0.548200] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/models/testonnx.py\n'}
+[0.548491] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/models/yolo11m-seg.onnx\n'}
+[0.600065] (-) TimerEvent: {}
+[0.693287] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/models/export_onnx.py\n'}
+[0.693657] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/models/Dota.names\n'}
+[0.693758] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/data\n'}
+[0.693831] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/data/panoramic_02.avi\n'}
+[0.700142] (-) TimerEvent: {}
+[0.800537] (-) TimerEvent: {}
+[0.900868] (-) TimerEvent: {}
+[1.001200] (-) TimerEvent: {}
+[1.101505] (-) TimerEvent: {}
+[1.201818] (-) TimerEvent: {}
+[1.302152] (-) TimerEvent: {}
+[1.402485] (-) TimerEvent: {}
+[1.502849] (-) TimerEvent: {}
+[1.603168] (-) TimerEvent: {}
+[1.703430] (-) TimerEvent: {}
+[1.803715] (-) TimerEvent: {}
+[1.904050] (-) TimerEvent: {}
+[2.004348] (-) TimerEvent: {}
+[2.051018] (tensorrt_yolo) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.hpp:19\x1b[m\x1b[K,\n'}
+[2.051323] (tensorrt_yolo) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/model.hpp:17\x1b[m\x1b[K,\n'}
+[2.051443] (tensorrt_yolo) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:21\x1b[m\x1b[K:\n'}
+[2.051491] (tensorrt_yolo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[Kdeploy::DeviceBuffer::DeviceBuffer()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.051535] (tensorrt_yolo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:103:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdeploy::DeviceBuffer::size_\x1b[m\x1b[K\xe2\x80\x99 will be initialized after [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.051570] (tensorrt_yolo) StderrLine: {'line': b'  103 |     size_t \x1b[01;35m\x1b[Ksize_\x1b[m\x1b[K;    // < \xe5\x86\x85\xe5\xad\x98\xe5\xa4\xa7\xe5\xb0\x8f\n'}
+[2.051674] (tensorrt_yolo) StderrLine: {'line': b'      |            \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.051709] (tensorrt_yolo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:102:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kvoid* deploy::DeviceBuffer::device_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.051742] (tensorrt_yolo) StderrLine: {'line': b'  102 |     void*  \x1b[01;35m\x1b[Kdevice_\x1b[m\x1b[K;  // < \xe8\xae\xbe\xe5\xa4\x87\xe5\x86\x85\xe5\xad\x98\xe6\x8c\x87\xe9\x92\x88\n'}
+[2.051772] (tensorrt_yolo) StderrLine: {'line': b'      |            \x1b[01;35m\x1b[K^~~~~~~\x1b[m\x1b[K\n'}
+[2.051842] (tensorrt_yolo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:86:5:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  when initialized here [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.051872] (tensorrt_yolo) StderrLine: {'line': b'   86 |     \x1b[01;35m\x1b[KDeviceBuffer\x1b[m\x1b[K() : size_(0), device_(nullptr) {}\n'}
+[2.051900] (tensorrt_yolo) StderrLine: {'line': b'      |     \x1b[01;35m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.051927] (tensorrt_yolo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[Kdeploy::DiscreteBuffer::DiscreteBuffer()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.051955] (tensorrt_yolo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:130:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdeploy::DiscreteBuffer::size_\x1b[m\x1b[K\xe2\x80\x99 will be initialized after [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.051991] (tensorrt_yolo) StderrLine: {'line': b'  130 |     size_t \x1b[01;35m\x1b[Ksize_\x1b[m\x1b[K;    // < \xe5\x86\x85\xe5\xad\x98\xe5\xa4\xa7\xe5\xb0\x8f\n'}
+[2.052027] (tensorrt_yolo) StderrLine: {'line': b'      |            \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.052055] (tensorrt_yolo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:128:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kvoid* deploy::DiscreteBuffer::host_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.052086] (tensorrt_yolo) StderrLine: {'line': b'  128 |     void*  \x1b[01;35m\x1b[Khost_\x1b[m\x1b[K;    // < \xe4\xb8\xbb\xe6\x9c\xba\xe5\x86\x85\xe5\xad\x98\xe6\x8c\x87\xe9\x92\x88\n'}
+[2.052114] (tensorrt_yolo) StderrLine: {'line': b'      |            \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.052139] (tensorrt_yolo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:112:5:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  when initialized here [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.052170] (tensorrt_yolo) StderrLine: {'line': b'  112 |     \x1b[01;35m\x1b[KDiscreteBuffer\x1b[m\x1b[K() : size_(0), host_(nullptr), device_(nullptr) {}\n'}
+[2.052198] (tensorrt_yolo) StderrLine: {'line': b'      |     \x1b[01;35m\x1b[K^~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.052224] (tensorrt_yolo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[Kdeploy::UnifiedBuffer::UnifiedBuffer()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.052251] (tensorrt_yolo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:157:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdeploy::UnifiedBuffer::size_\x1b[m\x1b[K\xe2\x80\x99 will be initialized after [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.052278] (tensorrt_yolo) StderrLine: {'line': b'  157 |     size_t \x1b[01;35m\x1b[Ksize_\x1b[m\x1b[K;    // < \xe5\x86\x85\xe5\xad\x98\xe5\xa4\xa7\xe5\xb0\x8f\n'}
+[2.052306] (tensorrt_yolo) StderrLine: {'line': b'      |            \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.052332] (tensorrt_yolo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:155:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kvoid* deploy::UnifiedBuffer::host_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.052361] (tensorrt_yolo) StderrLine: {'line': b'  155 |     void*  \x1b[01;35m\x1b[Khost_\x1b[m\x1b[K;    // < \xe4\xb8\xbb\xe6\x9c\xba\xe5\x86\x85\xe5\xad\x98\xe6\x8c\x87\xe9\x92\x88\n'}
+[2.052388] (tensorrt_yolo) StderrLine: {'line': b'      |            \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.052414] (tensorrt_yolo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:139:5:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  when initialized here [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.052443] (tensorrt_yolo) StderrLine: {'line': b'  139 |     \x1b[01;35m\x1b[KUnifiedBuffer\x1b[m\x1b[K() : size_(0), host_(nullptr), device_(nullptr) {}\n'}
+[2.052469] (tensorrt_yolo) StderrLine: {'line': b'      |     \x1b[01;35m\x1b[K^~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.052495] (tensorrt_yolo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[Kdeploy::MappedBuffer::MappedBuffer()\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.052524] (tensorrt_yolo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:184:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdeploy::MappedBuffer::size_\x1b[m\x1b[K\xe2\x80\x99 will be initialized after [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.052549] (tensorrt_yolo) StderrLine: {'line': b'  184 |     size_t \x1b[01;35m\x1b[Ksize_\x1b[m\x1b[K;    // < \xe5\x86\x85\xe5\xad\x98\xe5\xa4\xa7\xe5\xb0\x8f\n'}
+[2.052575] (tensorrt_yolo) StderrLine: {'line': b'      |            \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.052600] (tensorrt_yolo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:182:12:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Kvoid* deploy::MappedBuffer::host_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.052630] (tensorrt_yolo) StderrLine: {'line': b'  182 |     void*  \x1b[01;35m\x1b[Khost_\x1b[m\x1b[K;    // < \xe4\xb8\xbb\xe6\x9c\xba\xe5\x86\x85\xe5\xad\x98\xe6\x8c\x87\xe9\x92\x88\n'}
+[2.052657] (tensorrt_yolo) StderrLine: {'line': b'      |            \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.052685] (tensorrt_yolo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:166:5:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  when initialized here [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.052713] (tensorrt_yolo) StderrLine: {'line': b'  166 |     \x1b[01;35m\x1b[KMappedBuffer\x1b[m\x1b[K() : size_(0), host_(nullptr), device_(nullptr) {}\n'}
+[2.052739] (tensorrt_yolo) StderrLine: {'line': b'      |     \x1b[01;35m\x1b[K^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.055488] (tensorrt_yolo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:\x1b[m\x1b[K In constructor \xe2\x80\x98\x1b[01m\x1b[Kdeploy::TensorInfo::TensorInfo(std::string, const Dims&, nvinfer1::DataType, bool, deploy::BufferType)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.055547] (tensorrt_yolo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:224:33:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kdeploy::TensorInfo::shape\x1b[m\x1b[K\xe2\x80\x99 will be initialized after [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.055579] (tensorrt_yolo) StderrLine: {'line': b'  224 |     nvinfer1::Dims              \x1b[01;35m\x1b[Kshape\x1b[m\x1b[K;   // < \xe5\xbc\xa0\xe9\x87\x8f\xe5\xbd\xa2\xe7\x8a\xb6\n'}
+[2.055609] (tensorrt_yolo) StderrLine: {'line': b'      |                                 \x1b[01;35m\x1b[K^~~~~\x1b[m\x1b[K\n'}
+[2.055637] (tensorrt_yolo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:219:24:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  \xe2\x80\x98\x1b[01m\x1b[Knvinfer1::DataType deploy::TensorInfo::dtype_\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.055665] (tensorrt_yolo) StderrLine: {'line': b'  219 |     nvinfer1::DataType \x1b[01;35m\x1b[Kdtype_\x1b[m\x1b[K;           // < \xe5\xbc\xa0\xe9\x87\x8f\xe6\x95\xb0\xe6\x8d\xae\xe7\xb1\xbb\xe5\x9e\x8b\n'}
+[2.055693] (tensorrt_yolo) StderrLine: {'line': b'      |                        \x1b[01;35m\x1b[K^~~~~~\x1b[m\x1b[K\n'}
+[2.055725] (tensorrt_yolo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:236:5:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[K  when initialized here [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder\x07-Wreorder\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.055752] (tensorrt_yolo) StderrLine: {'line': b'  236 |     \x1b[01;35m\x1b[KTensorInfo\x1b[m\x1b[K(const std::string name, const nvinfer1::Dims& shape, const nvinfer1::DataType dtype, const bool input, BufferType buffer_type)\n'}
+[2.055780] (tensorrt_yolo) StderrLine: {'line': b'      |     \x1b[01;35m\x1b[K^~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.104460] (-) TimerEvent: {}
+[2.172917] (tensorrt_yolo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:\x1b[m\x1b[K In member function \xe2\x80\x98\x1b[01m\x1b[Kcv::Mat YoloBatchNode::generateSegMask(const deploy::SegmentRes&, const Size&, double)\x1b[m\x1b[K\xe2\x80\x99:\n'}
+[2.173093] (tensorrt_yolo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:160:30:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kcomparison of integer expressions of different signedness: \xe2\x80\x98\x1b[01m\x1b[Ksize_t\x1b[m\x1b[K\xe2\x80\x99 {aka \xe2\x80\x98\x1b[01m\x1b[Klong unsigned int\x1b[m\x1b[K\xe2\x80\x99} and \xe2\x80\x98\x1b[01m\x1b[Kconst int\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare\x07-Wsign-compare\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.173330] (tensorrt_yolo) StderrLine: {'line': b'  160 |         for (size_t i = 0; \x1b[01;35m\x1b[Ki < result.num\x1b[m\x1b[K; ++i) {\n'}
+[2.173371] (tensorrt_yolo) StderrLine: {'line': b'      |                            \x1b[01;35m\x1b[K~~^~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.173402] (tensorrt_yolo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:157:97:\x1b[m\x1b[K \x1b[01;35m\x1b[Kwarning: \x1b[m\x1b[Kunused parameter \xe2\x80\x98\x1b[01m\x1b[Kscale_up_factor\x1b[m\x1b[K\xe2\x80\x99 [\x1b[01;35m\x1b[K\x1b]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter\x07-Wunused-parameter\x1b]8;;\x07\x1b[m\x1b[K]\n'}
+[2.173443] (tensorrt_yolo) StderrLine: {'line': b'  157 |     cv::Mat generateSegMask(const deploy::SegmentRes &result, const cv::Size &orig_size, \x1b[01;35m\x1b[Kdouble scale_up_factor\x1b[m\x1b[K)\n'}
+[2.173474] (tensorrt_yolo) StderrLine: {'line': b'      |                                                                                          \x1b[01;35m\x1b[K~~~~~~~^~~~~~~~~~~~~~~\x1b[m\x1b[K\n'}
+[2.204585] (-) TimerEvent: {}
+[2.304930] (-) TimerEvent: {}
+[2.405163] (-) TimerEvent: {}
+[2.505422] (-) TimerEvent: {}
+[2.605692] (-) TimerEvent: {}
+[2.706133] (-) TimerEvent: {}
+[2.806395] (-) TimerEvent: {}
+[2.906637] (-) TimerEvent: {}
+[3.006943] (-) TimerEvent: {}
+[3.107191] (-) TimerEvent: {}
+[3.207610] (-) TimerEvent: {}
+[3.308108] (-) TimerEvent: {}
+[3.408509] (-) TimerEvent: {}
+[3.508914] (-) TimerEvent: {}
+[3.609330] (-) TimerEvent: {}
+[3.709718] (-) TimerEvent: {}
+[3.809985] (-) TimerEvent: {}
+[3.910223] (-) TimerEvent: {}
+[4.010457] (-) TimerEvent: {}
+[4.110713] (-) TimerEvent: {}
+[4.210991] (-) TimerEvent: {}
+[4.311236] (-) TimerEvent: {}
+[4.411475] (-) TimerEvent: {}
+[4.511723] (-) TimerEvent: {}
+[4.611975] (-) TimerEvent: {}
+[4.712206] (-) TimerEvent: {}
+[4.812480] (-) TimerEvent: {}
+[4.912719] (-) TimerEvent: {}
+[4.971945] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/data/test.jpg\n'}
+[4.973308] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/lib/yolocpp/yolocpp\n'}
+[4.974911] (yolocpp) StdoutLine: {'line': b'-- Set runtime path of "/home/david/yolocpp_ws/install/yolocpp/lib/yolocpp/yolocpp" to ""\n'}
+[4.975162] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/ament_index/resource_index/package_run_dependencies/yolocpp\n'}
+[4.975241] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/ament_index/resource_index/parent_prefix_path/yolocpp\n'}
+[4.975309] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/environment/ament_prefix_path.sh\n'}
+[4.975667] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/environment/ament_prefix_path.dsv\n'}
+[4.975783] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/environment/path.sh\n'}
+[4.975865] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/environment/path.dsv\n'}
+[4.975934] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/local_setup.bash\n'}
+[4.976010] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/local_setup.sh\n'}
+[4.976077] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/local_setup.zsh\n'}
+[4.976140] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/local_setup.dsv\n'}
+[4.976203] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/package.dsv\n'}
+[4.976273] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/ament_index/resource_index/packages/yolocpp\n'}
+[4.976336] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/cmake/yolocppConfig.cmake\n'}
+[4.976399] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/cmake/yolocppConfig-version.cmake\n'}
+[4.976461] (yolocpp) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/package.xml\n'}
+[4.980753] (yolocpp) CommandEnded: {'returncode': 0}
+[4.991793] (yolocpp) JobEnded: {'identifier': 'yolocpp', 'rc': 0}
+[5.012816] (-) TimerEvent: {}
+[5.113154] (-) TimerEvent: {}
+[5.213384] (-) TimerEvent: {}
+[5.313705] (-) TimerEvent: {}
+[5.413938] (-) TimerEvent: {}
+[5.514225] (-) TimerEvent: {}
+[5.614498] (-) TimerEvent: {}
+[5.714850] (-) TimerEvent: {}
+[5.815131] (-) TimerEvent: {}
+[5.915648] (-) TimerEvent: {}
+[6.015986] (-) TimerEvent: {}
+[6.116311] (-) TimerEvent: {}
+[6.216645] (-) TimerEvent: {}
+[6.316928] (-) TimerEvent: {}
+[6.417253] (-) TimerEvent: {}
+[6.507127] (tensorrt_yolo) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable segment_node\x1b[0m\n'}
+[6.517436] (-) TimerEvent: {}
+[6.617817] (-) TimerEvent: {}
+[6.680465] (tensorrt_yolo) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_imgcodecs.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgcodecs.so.3.4\n'}
+[6.682559] (tensorrt_yolo) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_imgproc.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgproc.so.3.4\n'}
+[6.684773] (tensorrt_yolo) StderrLine: {'line': b'/usr/bin/ld: warning: libopencv_core.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_core.so.3.4\n'}
+[6.718069] (-) TimerEvent: {}
+[6.818460] (-) TimerEvent: {}
+[6.918863] (-) TimerEvent: {}
+[7.002056] (tensorrt_yolo) StdoutLine: {'line': b'[100%] Built target segment_node\n'}
+[7.008847] (tensorrt_yolo) CommandEnded: {'returncode': 0}
+[7.009413] (tensorrt_yolo) JobProgress: {'identifier': 'tensorrt_yolo', 'progress': 'install'}
+[7.009940] (tensorrt_yolo) Command: {'cmd': ['/home/david/.local/bin/cmake', '--install', '/home/david/yolocpp_ws/build/tensorrt_yolo'], 'cwd': '/home/david/yolocpp_ws/build/tensorrt_yolo', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_US:en'), ('USER', 'david'), ('LC_TIME', 'es_ES.UTF-8'), ('XDG_SESSION_TYPE', 'x11'), ('__GLX_VENDOR_LIBRARY_NAME', 'nvidia'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/home/david/yolopy_ws/install/image_directory_publisher/lib:/home/david/yolocpp_ws/install/tensorrt_yolo/lib:/home/david/yolocpp_ws/install/bboxes_ex_msgs/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda-11.2/lib64:/usr/local/cuda-11.2/lib64::/home/david/onnxruntime-linux-x64-gpu-1.22.0/lib'), ('HOME', '/home/david'), ('OLDPWD', '/home/david'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'es_ES.UTF-8'), ('SYSTEMD_EXEC_PID', '4354'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('COLCON_PREFIX_PATH', '/home/david/yolocpp_ws/install:/home/david/yolopy_ws/install'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'david'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'david'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/humble/bin:/usr/local/cuda/bin:/usr/local/cuda-11.2/bin:/usr/local/cuda-11.2/bin:/home/david/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/usr/src/tensorrt/bin'), ('SESSION_MANAGER', 'local/david-Sword-16-HX-B14VFKG:@/tmp/.ICE-unix/4330,unix/david-Sword-16-HX-B14VFKG:/tmp/.ICE-unix/4330'), ('PAPERSIZE', 'a4'), ('GTK3_MODULES', 'xapp-gtk3-module'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'es_ES.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/a36a705c_59a8_4d87_b9a6_15679037a80a'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'es_ES.UTF-8'), ('__NV_PRIME_RENDER_OFFLOAD', '1'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.118'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/home/david/yolopy_ws/install/yolopy:/home/david/yolopy_ws/install/image_directory_publisher:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolocpp_ws/install/bboxes_ex_msgs:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LC_NAME', 'es_ES.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('PROMPT_COMMAND', 'echo -n \\[$(date +%H:%M:%S)\\]\\'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'es_ES.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('LC_IDENTIFICATION', 'es_ES.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/david/yolocpp_ws/build/tensorrt_yolo'), ('LC_ALL', 'en_US.UTF-8'), ('CUDA_HOME', '/usr/local/cuda-11.2'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('ONNXRUNTIME_DIR', '/home/david/onnxruntime-linux-x64-gpu-1.22.0'), ('PYTHONPATH', '/home/david/yolopy_ws/install/yolopy/lib/python3.10/site-packages:/home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages:/home/david/yolocpp_ws/install/bboxes_ex_msgs/local/lib/python3.10/dist-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages::/home/david/Documents/deeplab2:/home/david/Documents/deeplab2'), ('LC_NUMERIC', 'es_ES.UTF-8'), ('LC_PAPER', 'es_ES.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/home/david/yolopy_ws/install/image_directory_publisher:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolocpp_ws/install/bboxes_ex_msgs:/home/david/yolopy_ws/install/yolopy:/opt/ros/humble')]), 'shell': False}
+[7.019051] (-) TimerEvent: {}
+[7.032355] (tensorrt_yolo) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[7.032631] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/ament_index/resource_index/rosidl_interfaces/tensorrt_yolo\n'}
+[7.032750] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo\n'}
+[7.032822] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg\n'}
+[7.032888] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/rosidl_generator_c__visibility_control.h\n'}
+[7.032951] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail\n'}
+[7.033021] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__functions.h\n'}
+[7.033081] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__functions.c\n'}
+[7.033141] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__struct.h\n'}
+[7.033334] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__type_support.h\n'}
+[7.033409] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/segmentation_output.h\n'}
+[7.033479] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/environment/library_path.sh\n'}
+[7.033654] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/environment/library_path.dsv\n'}
+[7.033754] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/lib/libtensorrt_yolo__rosidl_generator_c.so\n'}
+[7.033853] (tensorrt_yolo) StdoutLine: {'line': b'-- Set runtime path of "/home/david/yolocpp_ws/install/tensorrt_yolo/lib/libtensorrt_yolo__rosidl_generator_c.so" to ""\n'}
+[7.033940] (tensorrt_yolo) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo\n'}
+[7.034033] (tensorrt_yolo) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg\n'}
+[7.034094] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/rosidl_typesupport_fastrtps_c__visibility_control.h\n'}
+[7.034215] (tensorrt_yolo) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail\n'}
+[7.034265] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__rosidl_typesupport_fastrtps_c.h\n'}
+[7.034299] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/lib/libtensorrt_yolo__rosidl_typesupport_fastrtps_c.so\n'}
+[7.034329] (tensorrt_yolo) StdoutLine: {'line': b'-- Set runtime path of "/home/david/yolocpp_ws/install/tensorrt_yolo/lib/libtensorrt_yolo__rosidl_typesupport_fastrtps_c.so" to ""\n'}
+[7.034359] (tensorrt_yolo) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo\n'}
+[7.034415] (tensorrt_yolo) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg\n'}
+[7.034473] (tensorrt_yolo) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail\n'}
+[7.034501] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__type_support.hpp\n'}
+[7.034529] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__struct.hpp\n'}
+[7.034558] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__traits.hpp\n'}
+[7.034589] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__builder.hpp\n'}
+[7.034616] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/segmentation_output.hpp\n'}
+[7.034644] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/rosidl_generator_cpp__visibility_control.hpp\n'}
+[7.034673] (tensorrt_yolo) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo\n'}
+[7.034701] (tensorrt_yolo) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg\n'}
+[7.034731] (tensorrt_yolo) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail\n'}
+[7.034761] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__rosidl_typesupport_fastrtps_cpp.hpp\n'}
+[7.034802] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/dds_fastrtps\n'}
+[7.034834] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h\n'}
+[7.034862] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/lib/libtensorrt_yolo__rosidl_typesupport_fastrtps_cpp.so\n'}
+[7.034888] (tensorrt_yolo) StdoutLine: {'line': b'-- Set runtime path of "/home/david/yolocpp_ws/install/tensorrt_yolo/lib/libtensorrt_yolo__rosidl_typesupport_fastrtps_cpp.so" to ""\n'}
+[7.034916] (tensorrt_yolo) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo\n'}
+[7.034978] (tensorrt_yolo) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg\n'}
+[7.035021] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/rosidl_typesupport_introspection_c__visibility_control.h\n'}
+[7.035047] (tensorrt_yolo) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail\n'}
+[7.035072] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__rosidl_typesupport_introspection_c.h\n'}
+[7.035098] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__type_support.c\n'}
+[7.035123] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/lib/libtensorrt_yolo__rosidl_typesupport_introspection_c.so\n'}
+[7.035150] (tensorrt_yolo) StdoutLine: {'line': b'-- Set runtime path of "/home/david/yolocpp_ws/install/tensorrt_yolo/lib/libtensorrt_yolo__rosidl_typesupport_introspection_c.so" to ""\n'}
+[7.035197] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/lib/libtensorrt_yolo__rosidl_typesupport_c.so\n'}
+[7.035224] (tensorrt_yolo) StdoutLine: {'line': b'-- Set runtime path of "/home/david/yolocpp_ws/install/tensorrt_yolo/lib/libtensorrt_yolo__rosidl_typesupport_c.so" to ""\n'}
+[7.035273] (tensorrt_yolo) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo\n'}
+[7.035298] (tensorrt_yolo) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg\n'}
+[7.035324] (tensorrt_yolo) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail\n'}
+[7.035351] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__type_support.cpp\n'}
+[7.035395] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/tensorrt_yolo/tensorrt_yolo/msg/detail/segmentation_output__rosidl_typesupport_introspection_cpp.hpp\n'}
+[7.035423] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/lib/libtensorrt_yolo__rosidl_typesupport_introspection_cpp.so\n'}
+[7.035450] (tensorrt_yolo) StdoutLine: {'line': b'-- Set runtime path of "/home/david/yolocpp_ws/install/tensorrt_yolo/lib/libtensorrt_yolo__rosidl_typesupport_introspection_cpp.so" to ""\n'}
+[7.035479] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/lib/libtensorrt_yolo__rosidl_typesupport_cpp.so\n'}
+[7.035504] (tensorrt_yolo) StdoutLine: {'line': b'-- Set runtime path of "/home/david/yolocpp_ws/install/tensorrt_yolo/lib/libtensorrt_yolo__rosidl_typesupport_cpp.so" to ""\n'}
+[7.035530] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/environment/pythonpath.sh\n'}
+[7.035558] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/environment/pythonpath.dsv\n'}
+[7.035596] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo-0.0.0-py3.10.egg-info\n'}
+[7.035624] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo-0.0.0-py3.10.egg-info/PKG-INFO\n'}
+[7.035651] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo-0.0.0-py3.10.egg-info/SOURCES.txt\n'}
+[7.035680] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo-0.0.0-py3.10.egg-info/dependency_links.txt\n'}
+[7.035739] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo-0.0.0-py3.10.egg-info/top_level.txt\n'}
+[7.035770] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo\n'}
+[7.035797] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/tensorrt_yolo_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[7.035825] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/_tensorrt_yolo_s.ep.rosidl_typesupport_fastrtps_c.c\n'}
+[7.035878] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/_tensorrt_yolo_s.ep.rosidl_typesupport_c.c\n'}
+[7.035908] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/_tensorrt_yolo_s.ep.rosidl_typesupport_introspection_c.c\n'}
+[7.035937] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/tensorrt_yolo_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[7.036009] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/__init__.py\n'}
+[7.036038] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/msg\n'}
+[7.036065] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/msg/_segmentation_output_s.c\n'}
+[7.036091] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/msg/_segmentation_output.py\n'}
+[7.036117] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/msg/__init__.py\n'}
+[7.036143] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/tensorrt_yolo_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[7.036169] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/libtensorrt_yolo__rosidl_generator_py.so\n'}
+[7.062768] (tensorrt_yolo) StdoutLine: {'line': b"Listing '/home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo'...\n"}
+[7.062847] (tensorrt_yolo) StdoutLine: {'line': b"Compiling '/home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/__init__.py'...\n"}
+[7.062875] (tensorrt_yolo) StdoutLine: {'line': b"Listing '/home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/msg'...\n"}
+[7.062901] (tensorrt_yolo) StdoutLine: {'line': b"Compiling '/home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/msg/__init__.py'...\n"}
+[7.062928] (tensorrt_yolo) StdoutLine: {'line': b"Compiling '/home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/msg/_segmentation_output.py'...\n"}
+[7.065884] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/tensorrt_yolo_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so\n'}
+[7.066010] (tensorrt_yolo) StdoutLine: {'line': b'-- Set runtime path of "/home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/tensorrt_yolo_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[7.066105] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/tensorrt_yolo_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so\n'}
+[7.066245] (tensorrt_yolo) StdoutLine: {'line': b'-- Set runtime path of "/home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/tensorrt_yolo_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[7.066359] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/tensorrt_yolo_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so\n'}
+[7.066478] (tensorrt_yolo) StdoutLine: {'line': b'-- Set runtime path of "/home/david/yolocpp_ws/install/tensorrt_yolo/local/lib/python3.10/dist-packages/tensorrt_yolo/tensorrt_yolo_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""\n'}
+[7.066511] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/lib/libtensorrt_yolo__rosidl_generator_py.so\n'}
+[7.066622] (tensorrt_yolo) StdoutLine: {'line': b'-- Set runtime path of "/home/david/yolocpp_ws/install/tensorrt_yolo/lib/libtensorrt_yolo__rosidl_generator_py.so" to ""\n'}
+[7.066674] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/msg/SegmentationOutput.idl\n'}
+[7.066722] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/msg/SegmentationOutput.msg\n'}
+[7.066768] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/lib/tensorrt_yolo/libdeploy.so\n'}
+[7.067419] (tensorrt_yolo) StdoutLine: {'line': b'-- Set runtime path of "/home/david/yolocpp_ws/install/tensorrt_yolo/lib/tensorrt_yolo/libdeploy.so" to ""\n'}
+[7.067479] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/lib/tensorrt_yolo/segment_node\n'}
+[7.069285] (tensorrt_yolo) StdoutLine: {'line': b'-- Set runtime path of "/home/david/yolocpp_ws/install/tensorrt_yolo/lib/tensorrt_yolo/segment_node" to "$ORIGIN"\n'}
+[7.069373] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy\n'}
+[7.069404] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/result.hpp\n'}
+[7.069449] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/pybind.cpp\n'}
+[7.070803] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/model.hpp\n'}
+[7.070872] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/option.hpp\n'}
+[7.070905] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/core\n'}
+[7.070933] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/core/buffer.cpp\n'}
+[7.070989] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/core/macro.hpp\n'}
+[7.071042] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/core/core.cpp\n'}
+[7.071076] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/core/core.hpp\n'}
+[7.071104] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/core/buffer.hpp\n'}
+[7.071160] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/infer\n'}
+[7.071188] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/infer/warpaffine.hpp\n'}
+[7.071215] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/infer/backend.cpp\n'}
+[7.071273] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/infer/warpaffine.cu\n'}
+[7.071302] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/infer/backend.hpp\n'}
+[7.071328] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/utils\n'}
+[7.071374] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/utils/utils.hpp\n'}
+[7.071420] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/utils/utils.cpp\n'}
+[7.071459] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/model.cpp\n'}
+[7.071486] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin\n'}
+[7.071538] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/common\n'}
+[7.071564] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/common/checkMacrosPlugin.h\n'}
+[7.071777] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/common/plugin.h\n'}
+[7.071929] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/common/vfcCommon.h\n'}
+[7.072073] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/common/bboxUtils.h\n'}
+[7.072214] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin\n'}
+[7.072265] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSInference.h\n'}
+[7.072398] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSParameters.h\n'}
+[7.072539] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSPlugin.h\n'}
+[7.072684] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin\n'}
+[7.072727] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSInference.h\n'}
+[7.072864] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSPlugin.h\n'}
+[7.072992] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSParameters.h\n'}
+[7.073157] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/launch\n'}
+[7.073206] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/launch/tensort_yolo.launch.py\n'}
+[7.073360] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include\n'}
+[7.073416] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy\n'}
+[7.073444] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/result.hpp\n'}
+[7.073490] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/pybind.cpp\n'}
+[7.073544] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/model.hpp\n'}
+[7.073573] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/option.hpp\n'}
+[7.073625] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/core\n'}
+[7.073654] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/core/buffer.cpp\n'}
+[7.073714] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/core/macro.hpp\n'}
+[7.073744] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/core/core.cpp\n'}
+[7.073771] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/core/core.hpp\n'}
+[7.073826] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/core/buffer.hpp\n'}
+[7.073854] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/infer\n'}
+[7.073882] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/infer/warpaffine.hpp\n'}
+[7.073929] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/infer/backend.cpp\n'}
+[7.073988] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/infer/warpaffine.cu\n'}
+[7.074020] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/infer/backend.hpp\n'}
+[7.074069] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/utils\n'}
+[7.074096] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/utils/utils.hpp\n'}
+[7.074125] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/utils/utils.cpp\n'}
+[7.074173] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/model.cpp\n'}
+[7.074220] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/TensorRT-YOLO\n'}
+[7.074252] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin\n'}
+[7.074307] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common\n'}
+[7.074334] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common/checkMacrosPlugin.h\n'}
+[7.074360] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common/vfcCommon.cpp\n'}
+[7.074412] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common/plugin.h\n'}
+[7.074457] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common/plugin.cpp\n'}
+[7.074592] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common/vfcCommon.h\n'}
+[7.074632] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common/checkMacrosPlugin.cpp\n'}
+[7.074771] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common/common.cu\n'}
+[7.074912] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common/bboxUtils.h\n'}
+[7.074958] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin\n'}
+[7.075008] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSInference.cu\n'}
+[7.075300] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSInference.h\n'}
+[7.075378] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/README.md\n'}
+[7.075487] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSPlugin.cpp\n'}
+[7.075746] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSInference.cuh\n'}
+[7.075929] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSParameters.h\n'}
+[7.075973] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSPlugin.h\n'}
+[7.076016] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin\n'}
+[7.076056] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/README.md\n'}
+[7.076206] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSPlugin.cpp\n'}
+[7.076442] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSInference.cuh\n'}
+[7.076729] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSInference.h\n'}
+[7.076775] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSPlugin.h\n'}
+[7.076823] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSInference.cu\n'}
+[7.077087] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSParameters.h\n'}
+[7.077138] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models\n'}
+[7.077196] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/.keep\n'}
+[7.077224] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/yolo11s-seg.engine\n'}
+[7.119132] (-) TimerEvent: {}
+[7.138443] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/yolo11m-seg.engine\n'}
+[7.219221] (-) TimerEvent: {}
+[7.255376] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/labels.txt\n'}
+[7.255785] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/data\n'}
+[7.255930] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/data/panoramic_02.avi\n'}
+[7.319314] (-) TimerEvent: {}
+[7.419558] (-) TimerEvent: {}
+[7.519865] (-) TimerEvent: {}
+[7.620164] (-) TimerEvent: {}
+[7.720407] (-) TimerEvent: {}
+[7.820749] (-) TimerEvent: {}
+[7.921073] (-) TimerEvent: {}
+[8.021309] (-) TimerEvent: {}
+[8.121578] (-) TimerEvent: {}
+[8.221820] (-) TimerEvent: {}
+[8.322079] (-) TimerEvent: {}
+[8.422291] (-) TimerEvent: {}
+[8.522548] (-) TimerEvent: {}
+[8.622867] (-) TimerEvent: {}
+[8.723135] (-) TimerEvent: {}
+[8.823360] (-) TimerEvent: {}
+[8.923675] (-) TimerEvent: {}
+[9.024010] (-) TimerEvent: {}
+[9.124269] (-) TimerEvent: {}
+[9.224518] (-) TimerEvent: {}
+[9.324830] (-) TimerEvent: {}
+[9.425079] (-) TimerEvent: {}
+[9.525288] (-) TimerEvent: {}
+[9.625526] (-) TimerEvent: {}
+[9.725771] (-) TimerEvent: {}
+[9.826098] (-) TimerEvent: {}
+[9.926320] (-) TimerEvent: {}
+[10.026577] (-) TimerEvent: {}
+[10.126899] (-) TimerEvent: {}
+[10.227156] (-) TimerEvent: {}
+[10.327406] (-) TimerEvent: {}
+[10.427645] (-) TimerEvent: {}
+[10.527971] (-) TimerEvent: {}
+[10.628199] (-) TimerEvent: {}
+[10.728460] (-) TimerEvent: {}
+[10.828793] (-) TimerEvent: {}
+[10.929125] (-) TimerEvent: {}
+[11.029346] (-) TimerEvent: {}
+[11.129597] (-) TimerEvent: {}
+[11.229928] (-) TimerEvent: {}
+[11.330155] (-) TimerEvent: {}
+[11.430374] (-) TimerEvent: {}
+[11.530622] (-) TimerEvent: {}
+[11.594775] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/data/test.jpg\n'}
+[11.596248] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/data/test1.jpg\n'}
+[11.596661] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/data/.gitignore\n'}
+[11.596728] (tensorrt_yolo) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/msg\n'}
+[11.596760] (tensorrt_yolo) StdoutLine: {'line': b'-- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/msg/SegmentationOutput.msg\n'}
+[11.596788] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/ament_index/resource_index/package_run_dependencies/tensorrt_yolo\n'}
+[11.596842] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/ament_index/resource_index/parent_prefix_path/tensorrt_yolo\n'}
+[11.596884] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/environment/ament_prefix_path.sh\n'}
+[11.596910] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/environment/ament_prefix_path.dsv\n'}
+[11.596934] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/environment/path.sh\n'}
+[11.596979] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/environment/path.dsv\n'}
+[11.597013] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/local_setup.bash\n'}
+[11.597039] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/local_setup.sh\n'}
+[11.597098] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/local_setup.zsh\n'}
+[11.597138] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/local_setup.dsv\n'}
+[11.597164] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/package.dsv\n'}
+[11.597214] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/ament_index/resource_index/packages/tensorrt_yolo\n'}
+[11.597264] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/export_tensorrt_yolo__rosidl_generator_cExport.cmake\n'}
+[11.597303] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/export_tensorrt_yolo__rosidl_generator_cExport-noconfig.cmake\n'}
+[11.597363] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/export_tensorrt_yolo__rosidl_typesupport_fastrtps_cExport.cmake\n'}
+[11.597411] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/export_tensorrt_yolo__rosidl_typesupport_fastrtps_cExport-noconfig.cmake\n'}
+[11.597465] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/export_tensorrt_yolo__rosidl_generator_cppExport.cmake\n'}
+[11.597520] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/export_tensorrt_yolo__rosidl_typesupport_fastrtps_cppExport.cmake\n'}
+[11.597567] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/export_tensorrt_yolo__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake\n'}
+[11.597621] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/tensorrt_yolo__rosidl_typesupport_introspection_cExport.cmake\n'}
+[11.597670] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/tensorrt_yolo__rosidl_typesupport_introspection_cExport-noconfig.cmake\n'}
+[11.597729] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/tensorrt_yolo__rosidl_typesupport_cExport.cmake\n'}
+[11.597778] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/tensorrt_yolo__rosidl_typesupport_cExport-noconfig.cmake\n'}
+[11.597833] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/tensorrt_yolo__rosidl_typesupport_introspection_cppExport.cmake\n'}
+[11.597881] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/tensorrt_yolo__rosidl_typesupport_introspection_cppExport-noconfig.cmake\n'}
+[11.597939] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/tensorrt_yolo__rosidl_typesupport_cppExport.cmake\n'}
+[11.597986] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/tensorrt_yolo__rosidl_typesupport_cppExport-noconfig.cmake\n'}
+[11.598044] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/export_tensorrt_yolo__rosidl_generator_pyExport.cmake\n'}
+[11.598091] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/export_tensorrt_yolo__rosidl_generator_pyExport-noconfig.cmake\n'}
+[11.598138] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/rosidl_cmake-extras.cmake\n'}
+[11.598184] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/ament_cmake_export_dependencies-extras.cmake\n'}
+[11.598233] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/ament_cmake_export_include_directories-extras.cmake\n'}
+[11.598278] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/ament_cmake_export_libraries-extras.cmake\n'}
+[11.598327] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/ament_cmake_export_targets-extras.cmake\n'}
+[11.598372] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake\n'}
+[11.598418] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake\n'}
+[11.598464] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/tensorrt_yoloConfig.cmake\n'}
+[11.598502] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/tensorrt_yoloConfig-version.cmake\n'}
+[11.598550] (tensorrt_yolo) StdoutLine: {'line': b'-- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/package.xml\n'}
+[11.602314] (tensorrt_yolo) CommandEnded: {'returncode': 0}
+[11.610821] (tensorrt_yolo) JobEnded: {'identifier': 'tensorrt_yolo', 'rc': 0}
+[11.611257] (-) EventReactorShutdown: {}

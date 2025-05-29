@@ -10,6 +10,7 @@ find_package(CUDAToolkit REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED) # If you plan to use sensor_msgs/Image directly
+find_package(cv_bridge REQUIRED) # For OpenCV image conversion in ROS 2
 
 
 # Configuración estándar de C++ 
@@ -215,7 +216,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
 
 
 # Dependencias de ROS 2 para el nodo
-ament_target_dependencies(segment_node rclcpp OpenCV rosidl_default_runtime std_msgs sensor_msgs)
+ament_target_dependencies(segment_node rclcpp OpenCV rosidl_default_runtime std_msgs sensor_msgs cv_bridge)
 
 # Directorios de inclusión para el nodo
 target_include_directories(segment_node PRIVATE

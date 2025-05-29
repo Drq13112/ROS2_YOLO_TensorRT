@@ -1,0 +1,46 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from tensorrt_yolo/msg/SegmentationOutput.msg
+// generated code does not contain a copyright notice
+
+#include "std_msgs/msg/Header.idl"
+
+module tensorrt_yolo {
+  module msg {
+    struct SegmentationOutput {
+      std_msgs::msg::Header header;
+
+      @verbatim (language="comment", text=
+        "Original height of the processed frame")
+      uint32 image_height;
+
+      @verbatim (language="comment", text=
+        "Original width of the processed frame")
+      uint32 image_width;
+
+      @verbatim (language="comment", text=
+        "Pixel-wise class ID map (flat array, row-major)" "\n"
+        "Each value is the class ID for the corresponding pixel." "\n"
+        "0 can be used for background or pixels with no assigned class.")
+      sequence<int32> class_id_map;
+
+      @verbatim (language="comment", text=
+        "Pixel-wise instance ID map (flat array, row-major)" "\n"
+        "Each value is a unique ID for the detected instance covering that pixel." "\n"
+        "0 can be used for background or pixels with no assigned instance.")
+      sequence<int32> instance_id_map;
+
+      @verbatim (language="comment", text=
+        "Confidence scores for each detected instance")
+      sequence<float> instance_confidences;
+
+      @verbatim (language="comment", text=
+        "Class IDs for each detected instance (corresponds to instance_confidences)")
+      sequence<int32> instance_class_ids;
+
+      @verbatim (language="comment", text=
+        "Unique instance IDs assigned (corresponds to instance_confidences)" "\n"
+        "These are the IDs used in instance_id_map")
+      sequence<int32> detected_instance_ids;
+    };
+  };
+};
