@@ -21,16 +21,48 @@ namespace msg
 namespace builder
 {
 
+class Init_InstanceSegmentationInfo_processing_node_monotonic_publish_time
+{
+public:
+  explicit Init_InstanceSegmentationInfo_processing_node_monotonic_publish_time(::yolo_custom_interfaces::msg::InstanceSegmentationInfo & msg)
+  : msg_(msg)
+  {}
+  ::yolo_custom_interfaces::msg::InstanceSegmentationInfo processing_node_monotonic_publish_time(::yolo_custom_interfaces::msg::InstanceSegmentationInfo::_processing_node_monotonic_publish_time_type arg)
+  {
+    msg_.processing_node_monotonic_publish_time = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::yolo_custom_interfaces::msg::InstanceSegmentationInfo msg_;
+};
+
+class Init_InstanceSegmentationInfo_image_source_monotonic_capture_time
+{
+public:
+  explicit Init_InstanceSegmentationInfo_image_source_monotonic_capture_time(::yolo_custom_interfaces::msg::InstanceSegmentationInfo & msg)
+  : msg_(msg)
+  {}
+  Init_InstanceSegmentationInfo_processing_node_monotonic_publish_time image_source_monotonic_capture_time(::yolo_custom_interfaces::msg::InstanceSegmentationInfo::_image_source_monotonic_capture_time_type arg)
+  {
+    msg_.image_source_monotonic_capture_time = std::move(arg);
+    return Init_InstanceSegmentationInfo_processing_node_monotonic_publish_time(msg_);
+  }
+
+private:
+  ::yolo_custom_interfaces::msg::InstanceSegmentationInfo msg_;
+};
+
 class Init_InstanceSegmentationInfo_classes
 {
 public:
   explicit Init_InstanceSegmentationInfo_classes(::yolo_custom_interfaces::msg::InstanceSegmentationInfo & msg)
   : msg_(msg)
   {}
-  ::yolo_custom_interfaces::msg::InstanceSegmentationInfo classes(::yolo_custom_interfaces::msg::InstanceSegmentationInfo::_classes_type arg)
+  Init_InstanceSegmentationInfo_image_source_monotonic_capture_time classes(::yolo_custom_interfaces::msg::InstanceSegmentationInfo::_classes_type arg)
   {
     msg_.classes = std::move(arg);
-    return std::move(msg_);
+    return Init_InstanceSegmentationInfo_image_source_monotonic_capture_time(msg_);
   }
 
 private:

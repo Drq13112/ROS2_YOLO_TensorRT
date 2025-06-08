@@ -1,0 +1,16 @@
+camera_name: "left_camera"
+camera_info:
+  width: 640
+  height: 480
+  K: [fx, 0, cx, 0, fy, cy, 0, 0, 1]  # Replace fx, fy, cx, cy with actual values
+  D: [k1, k2, p1, p2, k3]  # Replace k1, k2, p1, p2, k3 with actual distortion coefficients
+  R: [1, 0, 0, 0, 1, 0, 0, 0, 1]
+  P: [fx, 0, cx, 0, 0, fy, cy, 0, 0, 0, 1]  # Replace with actual projection matrix values
+  binning_x: 0
+  binning_y: 0
+  roi:
+    do_rectify: false
+    x_offset: 0
+    y_offset: 0
+    height: 0
+    width: 0

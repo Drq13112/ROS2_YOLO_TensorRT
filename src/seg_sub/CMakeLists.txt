@@ -32,16 +32,13 @@ target_include_directories(chrono PUBLIC
     $<INSTALL_INTERFACE:include> # Corresponds to the general include install directory
 )
 
-set_target_compile_options_custom(chrono)
 #-------------------------------------------------------------------------------
 
 add_executable(seg_sub_node src/seg_sub.cpp)
 ament_target_dependencies(seg_sub_node rclcpp yolo_custom_interfaces)
 
-target_link_libraries(segment_node
-    deploy          # Tu librería 'deploy' compilada
-    chrono           
-    CUDA::cudart    # Para el runtime de CUDA (si segment_node.cpp lo usa directamente o vía headers de deploy)
+target_link_libraries(seg_sub_node
+    chrono
     ${TRT_LIBS}     # Librerías de TensorRT (si son necesarias directamente por el nodo o por los headers de deploy)
 )
 #-------------------------------------------------------------------------------   

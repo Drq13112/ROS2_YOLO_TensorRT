@@ -228,8 +228,9 @@ private:
     {
         sensor_msgs::msg::Image::ConstSharedPtr msg;
         // std::chrono::steady_clock::time_point received_time; // Replaced by monotonic_entry_time
-        timespec monotonic_entry_time; // Time captured with clock_gettime(CLOCK_MONOTONIC, ...)
-        rclcpp::Time header_stamp;     // Original message header stamp
+        timespec monotonic_entry_time; // Time captured with clock_gettime(CLOCK_MONOTONIC, ...) in imageCallback
+        // rclcpp::Time header_stamp;     // Original message header stamp - this will now be the monotonic capture time from publisher
+        timespec image_source_monotonic_capture_ts; // To store the monotonic time from directory_publisher
     };
 
     std::queue<TimedImage> inference_queue_;
@@ -525,29 +526,55 @@ private:
 
     void imageCallback(const sensor_msgs::msg::Image::ConstSharedPtr &msg)
     {
+        // Capturar timestamp monotónico inmediatamente al recibir el mensaje
+        timespec monotonic_callback_entry_time;
+        clock_gettime(CLOCK_MONOTONIC, &monotonic_callback_entry_time);
+
         // Measure time between arrivals to this callback
-        timer_inter_callback_arrival_.GetElapsedTime(); // Measures from last Reset() or construction
-        if (timer_inter_callback_arrival_.cont > 0) { // Avoid computing stats on first implicit call if Reset wasn't used before loop
+        timer_inter_callback_arrival_.GetElapsedTime();
+        if (timer_inter_callback_arrival_.cont > 0) {
              timer_inter_callback_arrival_.ComputeStats();
-        } else { // First actual message, just record its time as start for next interval
-            timer_inter_callback_arrival_.measured_time = 0; // Or handle appropriately
-            timer_inter_callback_arrival_.cont = 0; // Will be incremented in ComputeStats
-            timer_inter_callback_arrival_.ComputeStats(); // Initialize stats
+        } else {
+            timer_inter_callback_arrival_.measured_time = 0;
+            timer_inter_callback_arrival_.cont = 0;
+            timer_inter_callback_arrival_.ComputeStats();
         }
-        timer_inter_callback_arrival_.Reset(); // Reset for next interval
+        timer_inter_callback_arrival_.Reset();
 
         TimedImage timed_msg;
         timed_msg.msg = msg;
-        clock_gettime(CLOCK_MONOTONIC, &timed_msg.monotonic_entry_time);
-        timed_msg.header_stamp = msg->header.stamp;
+        timed_msg.monotonic_entry_time = monotonic_callback_entry_time;
+        
+        //Ahora ambos timestamps deberían estar en la misma escala (CLOCK_MONOTONIC)
+        timed_msg.image_source_monotonic_capture_ts.tv_sec = msg->header.stamp.sec;
+        timed_msg.image_source_monotonic_capture_ts.tv_nsec = msg->header.stamp.nanosec;
 
-        // Calculate message age (header stamp vs. current ROS time at callback entry)
-        rclcpp::Time now_ros_time = this->now();
-        if (rclcpp::Time(msg->header.stamp) < now_ros_time) { // Ensure stamp is not in future
-            double age_ms = (now_ros_time - rclcpp::Time(msg->header.stamp)).seconds() * 1000.0;
-            stats_msg_age_.record(age_ms);
+        // Calcular latencia de comunicación DirPub -> SegNode
+        double latency_dirpub_to_segnode_ms = 
+            (monotonic_callback_entry_time.tv_sec - timed_msg.image_source_monotonic_capture_ts.tv_sec) * 1000.0 +
+            (monotonic_callback_entry_time.tv_nsec - timed_msg.image_source_monotonic_capture_ts.tv_nsec) / 1e6;
+
+        
+        RCLCPP_INFO(this->get_logger(), "[%s] Latency (DirPub@%ld.%09ld -> SegNodeCallback@%ld.%09ld): %.3f ms",
+                    this->get_name(),
+                    timed_msg.image_source_monotonic_capture_ts.tv_sec, timed_msg.image_source_monotonic_capture_ts.tv_nsec,
+                    monotonic_callback_entry_time.tv_sec, monotonic_callback_entry_time.tv_nsec,
+                    latency_dirpub_to_segnode_ms);
+        
+        // Validación para detectar problemas de sincronización
+        if (latency_dirpub_to_segnode_ms > 0 && latency_dirpub_to_segnode_ms < 1000) { // < 1 segundo es razonable
+            RCLCPP_INFO(this->get_logger(), "[%s] Latency (DirPub@%ld.%09ld -> SegNodeCallback@%ld.%09ld): %.3f ms",
+                        this->get_name(),
+                        timed_msg.image_source_monotonic_capture_ts.tv_sec, timed_msg.image_source_monotonic_capture_ts.tv_nsec,
+                        monotonic_callback_entry_time.tv_sec, monotonic_callback_entry_time.tv_nsec,
+                        latency_dirpub_to_segnode_ms);
+        } else {
+            RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 5000,
+                                "[%s] Invalid latency measurement: %.3f ms. DirPub_ts=%ld.%09ld, SegNode_ts=%ld.%09ld",
+                                this->get_name(), latency_dirpub_to_segnode_ms,
+                                timed_msg.image_source_monotonic_capture_ts.tv_sec, timed_msg.image_source_monotonic_capture_ts.tv_nsec,
+                                monotonic_callback_entry_time.tv_sec, monotonic_callback_entry_time.tv_nsec);
         }
-
 
         {
             std::lock_guard<std::mutex> lock(inference_mutex_);
@@ -594,12 +621,13 @@ private:
     {
         timer_process_image_func_.Reset(); // Start timing for the entire function
         timer_e2e_node_latency_.startTime = timed_msg.monotonic_entry_time; // Start E2E latency from callback entry
-        // Mostrar el timestamp de la imagen que se está procesando
-        // RCLCPP_INFO(this->get_logger(),
-        //             "[%s] Processing image with timestamp: %d.%09u",
-        //             this->get_name(),
-        //             timed_msg.msg->header.stamp.sec,
-        //             timed_msg.msg->header.stamp.nanosec);
+        // Calcular latencia total desde DirPub hasta inicio de procesamiento
+        timespec processing_start_time;
+        clock_gettime(CLOCK_MONOTONIC, &processing_start_time);
+
+        double total_latency_dirpub_to_processing_ms = 
+            (processing_start_time.tv_sec - timed_msg.image_source_monotonic_capture_ts.tv_sec) * 1000.0 +
+            (processing_start_time.tv_nsec - timed_msg.image_source_monotonic_capture_ts.tv_nsec) / 1e6;
 
 
         // Calcular y mostrar el delta en ms entre la imagen actual y la anterior
@@ -701,6 +729,11 @@ private:
         cv::Mat instance_id_mask_cv = generateInstanceIdMaskROI(result, original_size, network_input_target_size);
         auto instance_info_msg = std::make_unique<yolo_custom_interfaces::msg::InstanceSegmentationInfo>();
         instance_info_msg->header = current_header;
+
+        // Populate the image source monotonic timestamp (T1_mono)
+        instance_info_msg->image_source_monotonic_capture_time.sec = timed_msg.image_source_monotonic_capture_ts.tv_sec;
+        instance_info_msg->image_source_monotonic_capture_time.nanosec = timed_msg.image_source_monotonic_capture_ts.tv_nsec;
+
         cv_bridge::CvImage cv_img_mask_instance;
         cv_img_mask_instance.header = instance_info_msg->header;
         cv_img_mask_instance.encoding = this->mask_encoding_;
@@ -728,11 +761,17 @@ private:
 
         // --- Publicación ---
 
-        std_msgs::msg::UInt32 msg;
-        msg.data = static_cast<uint32_t>(this->now().nanoseconds());
-        seguidor_pub->publish(msg);
+        std_msgs::msg::UInt32 msg_seguidor; // Renamed to avoid conflict with timed_msg.msg
+        msg_seguidor.data = static_cast<uint32_t>(this->now().nanoseconds());
+        seguidor_pub->publish(msg_seguidor);
+
 
         auto t_pub_start = std::chrono::steady_clock::now();
+        // Get current monotonic time for publishing this result (T3_mono)
+        timespec ts_processing_node_publish;
+        clock_gettime(CLOCK_MONOTONIC, &ts_processing_node_publish);
+        instance_info_msg->processing_node_monotonic_publish_time.sec = ts_processing_node_publish.tv_sec;
+        instance_info_msg->processing_node_monotonic_publish_time.nanosec = ts_processing_node_publish.tv_nsec;
         instance_info_pub_->publish(std::move(instance_info_msg));
         auto t_pub_end = std::chrono::steady_clock::now();
         auto t_publish = std::chrono::duration_cast<std::chrono::microseconds>(t_pub_end - t_pub_start).count();
@@ -794,16 +833,13 @@ private:
         last_actual_publish_time_ = t_pub_end;
         first_publish_done_ = true;
 
-        // RCLCPP_INFO(this->get_logger(),
-        //     "[%s] Timings: Read=%ldus, Preproc=%ldus, Infer=%ldus, Postproc=%ldus, PubCall=%ldus. "
-        //     "Latency(cb_to_pub_end)=%ldus (Potent. %.2f Hz). "
-        //     "QueueT=%ldus. LoopIdle=%ldus. "
-        //     "ActualPubInterval=%ldus (Actual %.2f Hz)",
-        //     this->get_name(),
-        //     t_read, t_preproc, t_infer, t_postproc, t_publish, 
-        //     t_global_latency, potential_freq,
-        //     time_in_queue_us, loop_idle_time_us,
-        //     actual_inter_publish_us, actual_publish_freq);
+        // Al final del procesamiento, calcular latencia total
+        timespec processing_end_time;
+        clock_gettime(CLOCK_MONOTONIC, &processing_end_time);
+        
+        double total_latency_dirpub_to_publish_ms = 
+            (processing_end_time.tv_sec - timed_msg.image_source_monotonic_capture_ts.tv_sec) * 1000.0 +
+            (processing_end_time.tv_nsec - timed_msg.image_source_monotonic_capture_ts.tv_nsec) / 1e6;
 
         RCLCPP_INFO(this->get_logger(),
             "[%s] Timings(us): Read=%ld, Pre=%ld, Infer=%ld, Post=%ld, PubCall=%ld. LoopIdle=%ld. QSize=%zu. "
@@ -812,7 +848,8 @@ private:
             "QueueT(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "
             "E2ELat(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "
             "ProcFunc(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "
-            "InterPub(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. ",
+            "InterPub(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "
+            "TotalDirPub->Pub(ms): %.2f",
             this->get_name(),
             t_read, t_preproc, t_infer, t_postproc, t_publish, 
             loop_idle_time_us, current_queue_size_.load(),
@@ -821,7 +858,8 @@ private:
             timer_queue_duration_.measured_time, timer_queue_duration_.mean_time, timer_queue_duration_.max_time,
             timer_e2e_node_latency_.measured_time, timer_e2e_node_latency_.mean_time, timer_e2e_node_latency_.max_time,
             timer_process_image_func_.measured_time, timer_process_image_func_.mean_time, timer_process_image_func_.max_time,
-            timer_inter_publish_.measured_time, timer_inter_publish_.mean_time, timer_inter_publish_.max_time
+            timer_inter_publish_.measured_time, timer_inter_publish_.mean_time, timer_inter_publish_.max_time,
+            total_latency_dirpub_to_publish_ms
         );
 
         // Actualizar las variables de métrica:

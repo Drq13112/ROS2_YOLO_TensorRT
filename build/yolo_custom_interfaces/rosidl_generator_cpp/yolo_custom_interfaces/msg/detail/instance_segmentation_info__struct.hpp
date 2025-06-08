@@ -20,6 +20,9 @@
 #include "std_msgs/msg/detail/header__struct.hpp"
 // Member 'mask'
 #include "sensor_msgs/msg/detail/image__struct.hpp"
+// Member 'image_source_monotonic_capture_time'
+// Member 'processing_node_monotonic_publish_time'
+#include "builtin_interfaces/msg/detail/time__struct.hpp"
 
 #ifndef _WIN32
 # define DEPRECATED__yolo_custom_interfaces__msg__InstanceSegmentationInfo __attribute__((deprecated))
@@ -41,14 +44,18 @@ struct InstanceSegmentationInfo_
 
   explicit InstanceSegmentationInfo_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   : header(_init),
-    mask(_init)
+    mask(_init),
+    image_source_monotonic_capture_time(_init),
+    processing_node_monotonic_publish_time(_init)
   {
     (void)_init;
   }
 
   explicit InstanceSegmentationInfo_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   : header(_alloc, _init),
-    mask(_alloc, _init)
+    mask(_alloc, _init),
+    image_source_monotonic_capture_time(_alloc, _init),
+    processing_node_monotonic_publish_time(_alloc, _init)
   {
     (void)_init;
   }
@@ -66,6 +73,12 @@ struct InstanceSegmentationInfo_
   using _classes_type =
     std::vector<int32_t, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<int32_t>>;
   _classes_type classes;
+  using _image_source_monotonic_capture_time_type =
+    builtin_interfaces::msg::Time_<ContainerAllocator>;
+  _image_source_monotonic_capture_time_type image_source_monotonic_capture_time;
+  using _processing_node_monotonic_publish_time_type =
+    builtin_interfaces::msg::Time_<ContainerAllocator>;
+  _processing_node_monotonic_publish_time_type processing_node_monotonic_publish_time;
 
   // setters for named parameter idiom
   Type & set__header(
@@ -90,6 +103,18 @@ struct InstanceSegmentationInfo_
     const std::vector<int32_t, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<int32_t>> & _arg)
   {
     this->classes = _arg;
+    return *this;
+  }
+  Type & set__image_source_monotonic_capture_time(
+    const builtin_interfaces::msg::Time_<ContainerAllocator> & _arg)
+  {
+    this->image_source_monotonic_capture_time = _arg;
+    return *this;
+  }
+  Type & set__processing_node_monotonic_publish_time(
+    const builtin_interfaces::msg::Time_<ContainerAllocator> & _arg)
+  {
+    this->processing_node_monotonic_publish_time = _arg;
     return *this;
   }
 
@@ -145,6 +170,12 @@ struct InstanceSegmentationInfo_
       return false;
     }
     if (this->classes != other.classes) {
+      return false;
+    }
+    if (this->image_source_monotonic_capture_time != other.image_source_monotonic_capture_time) {
+      return false;
+    }
+    if (this->processing_node_monotonic_publish_time != other.processing_node_monotonic_publish_time) {
       return false;
     }
     return true;

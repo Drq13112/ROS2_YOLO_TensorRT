@@ -2,33 +2,24 @@
 // with input from yolo_custom_interfaces/msg/InstanceSegmentationInfo.msg
 // generated code does not contain a copyright notice
 
+#include "builtin_interfaces/msg/Time.idl"
 #include "sensor_msgs/msg/Image.idl"
 #include "std_msgs/msg/Header.idl"
 
 module yolo_custom_interfaces {
   module msg {
     struct InstanceSegmentationInfo {
-      @verbatim (language="comment", text=
-        "Header con timestamp y frame_id")
       std_msgs::msg::Header header;
 
-      @verbatim (language="comment", text=
-        "Máscara de segmentación. mask.data = instance_id" "\n"
-        "instance_id = 0 para fondo, 1 para la primera instancia, etc." "\n"
-        "mask.encoding será \"mono8\" o \"mono16\"")
-      @unit (value="i")
       sensor_msgs::msg::Image mask;
 
-      @verbatim (language="comment", text=
-        "Array de scores, scores es el score de la instancia j+1")
-      @unit (value="j")
       sequence<float> scores;
 
-      @verbatim (language="comment", text=
-        "Array de class_ids, classes es la clase de la instancia j+1" "\n"
-        "El tamaño de scores y classes debe ser igual al número de instancias detectadas.")
-      @unit (value="j")
       sequence<int32> classes;
+
+      builtin_interfaces::msg::Time image_source_monotonic_capture_time;
+
+      builtin_interfaces::msg::Time processing_node_monotonic_publish_time;
     };
   };
 };

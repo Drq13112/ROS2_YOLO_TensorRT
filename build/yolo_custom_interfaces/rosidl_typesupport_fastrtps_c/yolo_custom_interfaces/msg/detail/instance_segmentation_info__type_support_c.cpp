@@ -34,12 +34,27 @@ extern "C"
 {
 #endif
 
+#include "builtin_interfaces/msg/detail/time__functions.h"  // image_source_monotonic_capture_time, processing_node_monotonic_publish_time
 #include "rosidl_runtime_c/primitives_sequence.h"  // classes, scores
 #include "rosidl_runtime_c/primitives_sequence_functions.h"  // classes, scores
 #include "sensor_msgs/msg/detail/image__functions.h"  // mask
 #include "std_msgs/msg/detail/header__functions.h"  // header
 
 // forward declare type support functions
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_yolo_custom_interfaces
+size_t get_serialized_size_builtin_interfaces__msg__Time(
+  const void * untyped_ros_message,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_yolo_custom_interfaces
+size_t max_serialized_size_builtin_interfaces__msg__Time(
+  bool & full_bounded,
+  bool & is_plain,
+  size_t current_alignment);
+
+ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_yolo_custom_interfaces
+const rosidl_message_type_support_t *
+  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, builtin_interfaces, msg, Time)();
 ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_yolo_custom_interfaces
 size_t get_serialized_size_sensor_msgs__msg__Image(
   const void * untyped_ros_message,
@@ -125,6 +140,34 @@ static bool _InstanceSegmentationInfo__cdr_serialize(
     cdr.serializeArray(array_ptr, size);
   }
 
+  // Field name: image_source_monotonic_capture_time
+  {
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, builtin_interfaces, msg, Time
+      )()->data);
+    if (!callbacks->cdr_serialize(
+        &ros_message->image_source_monotonic_capture_time, cdr))
+    {
+      return false;
+    }
+  }
+
+  // Field name: processing_node_monotonic_publish_time
+  {
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, builtin_interfaces, msg, Time
+      )()->data);
+    if (!callbacks->cdr_serialize(
+        &ros_message->processing_node_monotonic_publish_time, cdr))
+    {
+      return false;
+    }
+  }
+
   return true;
 }
 
@@ -197,6 +240,34 @@ static bool _InstanceSegmentationInfo__cdr_deserialize(
     cdr.deserializeArray(array_ptr, size);
   }
 
+  // Field name: image_source_monotonic_capture_time
+  {
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, builtin_interfaces, msg, Time
+      )()->data);
+    if (!callbacks->cdr_deserialize(
+        cdr, &ros_message->image_source_monotonic_capture_time))
+    {
+      return false;
+    }
+  }
+
+  // Field name: processing_node_monotonic_publish_time
+  {
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, builtin_interfaces, msg, Time
+      )()->data);
+    if (!callbacks->cdr_deserialize(
+        cdr, &ros_message->processing_node_monotonic_publish_time))
+    {
+      return false;
+    }
+  }
+
   return true;
 }  // NOLINT(readability/fn_size)
 
@@ -244,6 +315,14 @@ size_t get_serialized_size_yolo_custom_interfaces__msg__InstanceSegmentationInfo
     current_alignment += array_size * item_size +
       eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
   }
+  // field.name image_source_monotonic_capture_time
+
+  current_alignment += get_serialized_size_builtin_interfaces__msg__Time(
+    &(ros_message->image_source_monotonic_capture_time), current_alignment);
+  // field.name processing_node_monotonic_publish_time
+
+  current_alignment += get_serialized_size_builtin_interfaces__msg__Time(
+    &(ros_message->processing_node_monotonic_publish_time), current_alignment);
 
   return current_alignment - initial_alignment;
 }
@@ -335,6 +414,44 @@ size_t max_serialized_size_yolo_custom_interfaces__msg__InstanceSegmentationInfo
     current_alignment += array_size * sizeof(uint32_t) +
       eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
   }
+  // member: image_source_monotonic_capture_time
+  {
+    size_t array_size = 1;
+
+
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size;
+      inner_size =
+        max_serialized_size_builtin_interfaces__msg__Time(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+  // member: processing_node_monotonic_publish_time
+  {
+    size_t array_size = 1;
+
+
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size;
+      inner_size =
+        max_serialized_size_builtin_interfaces__msg__Time(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -344,7 +461,7 @@ size_t max_serialized_size_yolo_custom_interfaces__msg__InstanceSegmentationInfo
     using DataType = yolo_custom_interfaces__msg__InstanceSegmentationInfo;
     is_plain =
       (
-      offsetof(DataType, classes) +
+      offsetof(DataType, processing_node_monotonic_publish_time) +
       last_member_size
       ) == ret_val;
   }

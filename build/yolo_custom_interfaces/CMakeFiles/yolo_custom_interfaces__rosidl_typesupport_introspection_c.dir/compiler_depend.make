@@ -81,8 +81,20 @@ CMakeFiles/yolo_custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__type_support.h \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__rosidl_typesupport_introspection_c.h \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h \
-  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h
+  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h \
+  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/time.h \
+  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__functions.h \
+  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/rosidl_generator_c__visibility_control.h \
+  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__type_support.h \
+  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__rosidl_typesupport_introspection_c.h \
+  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
 
+
+/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h:
+
+/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__type_support.h:
+
+/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/rosidl_generator_c__visibility_control.h:
 
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h:
 
@@ -116,6 +128,8 @@ rosidl_generator_c/yolo_custom_interfaces/msg/rosidl_generator_c__visibility_con
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
+/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__functions.h:
+
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/visibility_control.h:
@@ -137,6 +151,8 @@ rosidl_generator_c/yolo_custom_interfaces/msg/rosidl_generator_c__visibility_con
 /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__type_support.h:
 
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
+
+/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/time.h:
 
 rosidl_typesupport_introspection_c/yolo_custom_interfaces/msg/detail/instance_segmentation_info__type_support.c:
 
@@ -225,6 +241,8 @@ rosidl_generator_c/yolo_custom_interfaces/msg/detail/instance_segmentation_info_
 /usr/include/x86_64-linux-gnu/bits/floatn-common.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
+
+/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__rosidl_typesupport_introspection_c.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 

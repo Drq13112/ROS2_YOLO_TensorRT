@@ -125,6 +125,8 @@ CMakeFiles/yolo_custom_interfaces: /opt/ros/humble/share/sensor_msgs/msg/Relativ
 CMakeFiles/yolo_custom_interfaces: /opt/ros/humble/share/sensor_msgs/msg/Temperature.idl
 CMakeFiles/yolo_custom_interfaces: /opt/ros/humble/share/sensor_msgs/msg/TimeReference.idl
 CMakeFiles/yolo_custom_interfaces: /opt/ros/humble/share/sensor_msgs/srv/SetCameraInfo.idl
+CMakeFiles/yolo_custom_interfaces: /opt/ros/humble/share/builtin_interfaces/msg/Duration.idl
+CMakeFiles/yolo_custom_interfaces: /opt/ros/humble/share/builtin_interfaces/msg/Time.idl
 
 yolo_custom_interfaces: CMakeFiles/yolo_custom_interfaces
 yolo_custom_interfaces: CMakeFiles/yolo_custom_interfaces.dir/build.make

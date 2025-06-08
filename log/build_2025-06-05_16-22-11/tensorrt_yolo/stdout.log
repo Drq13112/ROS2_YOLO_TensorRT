@@ -1,7 +1,0 @@
-[  7%] [32mBuilding CXX object CMakeFiles/chrono.dir/include/chrono/ChronoTimer.cpp.o[0m
-[ 64%] Built target deploy
-[ 71%] [32m[1mLinking CXX shared library libchrono.so[0m
-[ 71%] Built target chrono
-[ 78%] [32m[1mLinking CXX executable segment_node[0m
-[ 85%] [32mBuilding CXX object CMakeFiles/segment_node_3P.dir/src/segment_node_3P.cpp.o[0m
-[ 92%] Built target segment_node

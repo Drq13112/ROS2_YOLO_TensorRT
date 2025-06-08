@@ -230,6 +230,8 @@ CMakeFiles/yolo_custom_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_type
   rosidl_generator_c/yolo_custom_interfaces/msg/detail/instance_segmentation_info__functions.h \
   /usr/include/c++/11/stdlib.h \
   rosidl_generator_c/yolo_custom_interfaces/msg/rosidl_generator_c__visibility_control.h \
+  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__functions.h \
+  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/rosidl_generator_c__visibility_control.h \
   /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__functions.h \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_c__visibility_control.h \
@@ -246,6 +248,8 @@ CMakeFiles/yolo_custom_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_type
 /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h:
 
 rosidl_generator_c/yolo_custom_interfaces/msg/rosidl_generator_c__visibility_control.h:
+
+/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/rosidl_generator_c__visibility_control.h:
 
 /usr/include/c++/11/stdlib.h:
 
@@ -292,6 +296,8 @@ rosidl_generator_c/yolo_custom_interfaces/msg/detail/instance_segmentation_info_
 /usr/include/c++/11/array:
 
 /usr/include/c++/11/ext/aligned_buffer.h:
+
+/opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__functions.h:
 
 /usr/include/c++/11/bits/locale_classes.tcc:
 

@@ -198,6 +198,19 @@ seg_sub_uninstall/fast:
 .PHONY : seg_sub_uninstall/fast
 
 #=============================================================================
+# Target rules for targets named chrono
+
+# Build rule for target.
+chrono: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 chrono
+.PHONY : chrono
+
+# fast build rule for target.
+chrono/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chrono.dir/build.make CMakeFiles/chrono.dir/build
+.PHONY : chrono/fast
+
+#=============================================================================
 # Target rules for targets named seg_sub_node
 
 # Build rule for target.
@@ -209,6 +222,30 @@ seg_sub_node: cmake_check_build_system
 seg_sub_node/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/seg_sub_node.dir/build.make CMakeFiles/seg_sub_node.dir/build
 .PHONY : seg_sub_node/fast
+
+include/chrono/ChronoTimer.o: include/chrono/ChronoTimer.cpp.o
+.PHONY : include/chrono/ChronoTimer.o
+
+# target to build an object file
+include/chrono/ChronoTimer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chrono.dir/build.make CMakeFiles/chrono.dir/include/chrono/ChronoTimer.cpp.o
+.PHONY : include/chrono/ChronoTimer.cpp.o
+
+include/chrono/ChronoTimer.i: include/chrono/ChronoTimer.cpp.i
+.PHONY : include/chrono/ChronoTimer.i
+
+# target to preprocess a source file
+include/chrono/ChronoTimer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chrono.dir/build.make CMakeFiles/chrono.dir/include/chrono/ChronoTimer.cpp.i
+.PHONY : include/chrono/ChronoTimer.cpp.i
+
+include/chrono/ChronoTimer.s: include/chrono/ChronoTimer.cpp.s
+.PHONY : include/chrono/ChronoTimer.s
+
+# target to generate assembly for a file
+include/chrono/ChronoTimer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/chrono.dir/build.make CMakeFiles/chrono.dir/include/chrono/ChronoTimer.cpp.s
+.PHONY : include/chrono/ChronoTimer.cpp.s
 
 src/seg_sub.o: src/seg_sub.cpp.o
 .PHONY : src/seg_sub.o
@@ -249,7 +286,11 @@ help:
 	@echo "... test"
 	@echo "... seg_sub_uninstall"
 	@echo "... uninstall"
+	@echo "... chrono"
 	@echo "... seg_sub_node"
+	@echo "... include/chrono/ChronoTimer.o"
+	@echo "... include/chrono/ChronoTimer.i"
+	@echo "... include/chrono/ChronoTimer.s"
 	@echo "... src/seg_sub.o"
 	@echo "... src/seg_sub.i"
 	@echo "... src/seg_sub.s"

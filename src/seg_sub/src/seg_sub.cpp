@@ -12,37 +12,79 @@ public:
     FrequencySubscriber()
     : Node("result_frequency_subscriber")
     {
+        auto callback = 
+            [this](const yolo_custom_interfaces::msg::InstanceSegmentationInfo::SharedPtr msg, const std::string& camera_id)
+            {
+                timespec ts_seg_sub_reception;
+                clock_gettime(CLOCK_MONOTONIC, &ts_seg_sub_reception); // T4_mono
+
+                // Latency from segment_node_3P publish to seg_sub reception (T4_mono - T3_mono)
+                timespec ts_processing_node_publish;
+                ts_processing_node_publish.tv_sec = msg->processing_node_monotonic_publish_time.sec;
+                ts_processing_node_publish.tv_nsec = msg->processing_node_monotonic_publish_time.nanosec;
+
+                double latency_segnode_to_segsub_ms = 0.0;
+                if (ts_processing_node_publish.tv_sec > 0) { // Check if timestamp is valid
+                    latency_segnode_to_segsub_ms =
+                        (ts_seg_sub_reception.tv_sec - ts_processing_node_publish.tv_sec) * 1000.0 +
+                        (ts_seg_sub_reception.tv_nsec - ts_processing_node_publish.tv_nsec) / 1e6;
+                }
+
+                // Total latency from directory_publisher to seg_sub reception (T4_mono - T1_mono)
+                timespec ts_image_source_capture;
+                ts_image_source_capture.tv_sec = msg->image_source_monotonic_capture_time.sec;
+                ts_image_source_capture.tv_nsec = msg->image_source_monotonic_capture_time.nanosec;
+                
+                double latency_total_ms = 0.0;
+                if (ts_image_source_capture.tv_sec > 0) { // Check if timestamp is valid
+                     latency_total_ms =
+                        (ts_seg_sub_reception.tv_sec - ts_image_source_capture.tv_sec) * 1000.0 +
+                        (ts_seg_sub_reception.tv_nsec - ts_image_source_capture.tv_nsec) / 1e6;
+                }
+
+                RCLCPP_INFO(this->get_logger(),
+                            "[%s] Latencies: SegNodePub->SegSubRecep: %.3f ms, Total DirPub->SegSubRecep: %.3f ms. "
+                            "DirPubMonoTS: %ld.%09ld, SegNodeMonoPubTS: %ld.%09ld, SegSubMonoRecepTS: %ld.%09ld",
+                            camera_id.c_str(),
+                            latency_segnode_to_segsub_ms,
+                            latency_total_ms,
+                            ts_image_source_capture.tv_sec, ts_image_source_capture.tv_nsec,
+                            ts_processing_node_publish.tv_sec, ts_processing_node_publish.tv_nsec,
+                            ts_seg_sub_reception.tv_sec, ts_seg_sub_reception.tv_nsec
+                            );
+
+                // Original frequency counting logic
+                if (camera_id == "left") {
+                    std::lock_guard<std::mutex> lock(mutex_left_);
+                    count_left_++;
+                } else if (camera_id == "front") {
+                    std::lock_guard<std::mutex> lock(mutex_front_);
+                    count_front_++;
+                } else if (camera_id == "right") {
+                    std::lock_guard<std::mutex> lock(mutex_right_);
+                    count_right_++;
+                }
+            };
+
         // Suscribirse a los tres tópicos referentes a resultados
         sub_left_ = this->create_subscription<yolo_custom_interfaces::msg::InstanceSegmentationInfo>(
-            // "/segmentation/left/instance_info", 5,
-            "/segmentation/instance_info_1", 5,
-            [this](const yolo_custom_interfaces::msg::InstanceSegmentationInfo::SharedPtr msg)
-            {
-                (void)msg;
-                std::lock_guard<std::mutex> lock(mutex_left_);
-                count_left_++;
+            "/segmentation/left/instance_info", 5, // Assuming original topic names
+            [callback, this](const yolo_custom_interfaces::msg::InstanceSegmentationInfo::SharedPtr msg){
+                callback(msg, "left");
             }
         );
 
         sub_front_ = this->create_subscription<yolo_custom_interfaces::msg::InstanceSegmentationInfo>(
-            // "/segmentation/front/instance_info", 5,
-            "/segmentation/instance_info_2", 5,
-            [this](const yolo_custom_interfaces::msg::InstanceSegmentationInfo::SharedPtr msg)
-            {
-                (void)msg;
-                std::lock_guard<std::mutex> lock(mutex_front_);
-                count_front_++;
+            "/segmentation/front/instance_info", 5, // Assuming original topic names
+            [callback, this](const yolo_custom_interfaces::msg::InstanceSegmentationInfo::SharedPtr msg){
+                callback(msg, "front");
             }
         );
 
         sub_right_ = this->create_subscription<yolo_custom_interfaces::msg::InstanceSegmentationInfo>(
-            // "/segmentation/right/instance_info", 5,
-            "/segmentation/instance_info_3", 5,
-            [this](const yolo_custom_interfaces::msg::InstanceSegmentationInfo::SharedPtr msg)
-            {
-                (void)msg;
-                std::lock_guard<std::mutex> lock(mutex_right_);
-                count_right_++;
+            "/segmentation/right/instance_info", 5, // Assuming original topic names
+            [callback, this](const yolo_custom_interfaces::msg::InstanceSegmentationInfo::SharedPtr msg){
+                callback(msg, "right");
             }
         );
 

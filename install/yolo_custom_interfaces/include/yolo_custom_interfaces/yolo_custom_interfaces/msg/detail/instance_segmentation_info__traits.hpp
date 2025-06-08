@@ -19,6 +19,9 @@
 #include "std_msgs/msg/detail/header__traits.hpp"
 // Member 'mask'
 #include "sensor_msgs/msg/detail/image__traits.hpp"
+// Member 'image_source_monotonic_capture_time'
+// Member 'processing_node_monotonic_publish_time'
+#include "builtin_interfaces/msg/detail/time__traits.hpp"
 
 namespace yolo_custom_interfaces
 {
@@ -78,6 +81,20 @@ inline void to_flow_style_yaml(
       }
       out << "]";
     }
+    out << ", ";
+  }
+
+  // member: image_source_monotonic_capture_time
+  {
+    out << "image_source_monotonic_capture_time: ";
+    to_flow_style_yaml(msg.image_source_monotonic_capture_time, out);
+    out << ", ";
+  }
+
+  // member: processing_node_monotonic_publish_time
+  {
+    out << "processing_node_monotonic_publish_time: ";
+    to_flow_style_yaml(msg.processing_node_monotonic_publish_time, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -142,6 +159,24 @@ inline void to_block_style_yaml(
         out << "\n";
       }
     }
+  }
+
+  // member: image_source_monotonic_capture_time
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "image_source_monotonic_capture_time:\n";
+    to_block_style_yaml(msg.image_source_monotonic_capture_time, out, indentation + 2);
+  }
+
+  // member: processing_node_monotonic_publish_time
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "processing_node_monotonic_publish_time:\n";
+    to_block_style_yaml(msg.processing_node_monotonic_publish_time, out, indentation + 2);
   }
 }  // NOLINT(readability/fn_size)
 

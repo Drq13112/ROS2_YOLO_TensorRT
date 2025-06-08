@@ -1,4 +1,3 @@
-﻿// NOLINT: This file starts with a BOM since it contain non-ASCII characters
 // generated from rosidl_generator_c/resource/idl__struct.h.em
 // with input from yolo_custom_interfaces:msg/InstanceSegmentationInfo.idl
 // generated code does not contain a copyright notice
@@ -26,21 +25,19 @@ extern "C"
 // Member 'scores'
 // Member 'classes'
 #include "rosidl_runtime_c/primitives_sequence.h"
+// Member 'image_source_monotonic_capture_time'
+// Member 'processing_node_monotonic_publish_time'
+#include "builtin_interfaces/msg/detail/time__struct.h"
 
 /// Struct defined in msg/InstanceSegmentationInfo in the package yolo_custom_interfaces.
 typedef struct yolo_custom_interfaces__msg__InstanceSegmentationInfo
 {
-  /// Header con timestamp y frame_id
   std_msgs__msg__Header header;
-  /// Máscara de segmentación. mask.data = instance_id
-  /// instance_id = 0 para fondo, 1 para la primera instancia, etc.
-  /// mask.encoding será "mono8" o "mono16"
   sensor_msgs__msg__Image mask;
-  /// Array de scores, scores es el score de la instancia j+1
   rosidl_runtime_c__float__Sequence scores;
-  /// Array de class_ids, classes es la clase de la instancia j+1
-  /// El tamaño de scores y classes debe ser igual al número de instancias detectadas.
   rosidl_runtime_c__int32__Sequence classes;
+  builtin_interfaces__msg__Time image_source_monotonic_capture_time;
+  builtin_interfaces__msg__Time processing_node_monotonic_publish_time;
 } yolo_custom_interfaces__msg__InstanceSegmentationInfo;
 
 // Struct for a sequence of yolo_custom_interfaces__msg__InstanceSegmentationInfo.

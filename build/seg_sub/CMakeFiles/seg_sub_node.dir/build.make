@@ -99,6 +99,7 @@ seg_sub_node: /home/david/yolocpp_ws/install/yolo_custom_interfaces/lib/libyolo_
 seg_sub_node: /home/david/yolocpp_ws/install/yolo_custom_interfaces/lib/libyolo_custom_interfaces__rosidl_typesupport_introspection_cpp.so
 seg_sub_node: /home/david/yolocpp_ws/install/yolo_custom_interfaces/lib/libyolo_custom_interfaces__rosidl_typesupport_cpp.so
 seg_sub_node: /home/david/yolocpp_ws/install/yolo_custom_interfaces/lib/libyolo_custom_interfaces__rosidl_generator_py.so
+seg_sub_node: libchrono.so
 seg_sub_node: /opt/ros/humble/lib/liblibstatistics_collector.so
 seg_sub_node: /opt/ros/humble/lib/librcl.so
 seg_sub_node: /opt/ros/humble/lib/librmw_implementation.so

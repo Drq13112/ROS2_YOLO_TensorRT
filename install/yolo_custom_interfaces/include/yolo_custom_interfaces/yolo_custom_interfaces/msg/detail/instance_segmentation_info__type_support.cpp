@@ -127,7 +127,7 @@ void resize_function__InstanceSegmentationInfo__classes(void * untyped_member, s
   member->resize(size);
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember InstanceSegmentationInfo_message_member_array[4] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember InstanceSegmentationInfo_message_member_array[6] = {
   {
     "header",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
@@ -195,13 +195,47 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember InstanceSegme
     fetch_function__InstanceSegmentationInfo__classes,  // fetch(index, &value) function pointer
     assign_function__InstanceSegmentationInfo__classes,  // assign(index, value) function pointer
     resize_function__InstanceSegmentationInfo__classes  // resize(index) function pointer
+  },
+  {
+    "image_source_monotonic_capture_time",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
+    0,  // upper bound of string
+    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<builtin_interfaces::msg::Time>(),  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(yolo_custom_interfaces::msg::InstanceSegmentationInfo, image_source_monotonic_capture_time),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "processing_node_monotonic_publish_time",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
+    0,  // upper bound of string
+    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<builtin_interfaces::msg::Time>(),  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(yolo_custom_interfaces::msg::InstanceSegmentationInfo, processing_node_monotonic_publish_time),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
   }
 };
 
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers InstanceSegmentationInfo_message_members = {
   "yolo_custom_interfaces::msg",  // message namespace
   "InstanceSegmentationInfo",  // message name
-  4,  // number of fields
+  6,  // number of fields
   sizeof(yolo_custom_interfaces::msg::InstanceSegmentationInfo),
   InstanceSegmentationInfo_message_member_array,  // message members
   InstanceSegmentationInfo_init_function,  // function to initialize message memory (memory has to be allocated)
