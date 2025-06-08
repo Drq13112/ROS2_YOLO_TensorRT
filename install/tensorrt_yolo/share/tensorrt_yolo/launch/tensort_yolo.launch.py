@@ -14,15 +14,24 @@ def generate_launch_description():
             name='segment_node',
             parameters=[
                 {
-                    'engine_path': model,
-                    'rescale_factor': 1.0,
-                    'input_width': 640,
-                    'input_height': 418,
-                    'image_topic_1': '/left/image_raw',
-                    'image_topic_2': '/front/image_raw',
-                    'image_topic_3': '/right/image_raw',
-                    'use_pinned_input_memory': True,
-                }
+            'engine_path': model,
+            'rescale_factor': 0.33,
+            'input_width': 640,
+            'input_height': 418,
+            'image_topic_1': '/camera_front_left/image_raw',
+            'image_topic_2': '/camera_front/image_raw',
+            'image_topic_3': '/camera_front_right/image_raw',
+            'use_pinned_input_memory': True,
+            'enable_mask_video_writing': False,
+            'enable_inferred_video_writing': False,
+            'video_output_path': '/home/david/ros_videos',
+            'inferred_video_filename': 'inferred_video.avi',
+            'mask_video_filename': 'mask_video.avi',
+            'video_fps': 10.0,
+            'video_frame_width': 1920*3,
+            'video_frame_height': 1200,
+            '_image_transport': 'compressed'
+            }
             ],
         ),
     ])

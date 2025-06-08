@@ -1,0 +1,206 @@
+// generated from rosidl_generator_cpp/resource/idl__traits.hpp.em
+// with input from yolo_custom_interfaces:msg/InstanceSegmentationInfo.idl
+// generated code does not contain a copyright notice
+
+#ifndef YOLO_CUSTOM_INTERFACES__MSG__DETAIL__INSTANCE_SEGMENTATION_INFO__TRAITS_HPP_
+#define YOLO_CUSTOM_INTERFACES__MSG__DETAIL__INSTANCE_SEGMENTATION_INFO__TRAITS_HPP_
+
+#include <stdint.h>
+
+#include <sstream>
+#include <string>
+#include <type_traits>
+
+#include "yolo_custom_interfaces/msg/detail/instance_segmentation_info__struct.hpp"
+#include "rosidl_runtime_cpp/traits.hpp"
+
+// Include directives for member types
+// Member 'header'
+#include "std_msgs/msg/detail/header__traits.hpp"
+// Member 'mask'
+#include "sensor_msgs/msg/detail/image__traits.hpp"
+
+namespace yolo_custom_interfaces
+{
+
+namespace msg
+{
+
+inline void to_flow_style_yaml(
+  const InstanceSegmentationInfo & msg,
+  std::ostream & out)
+{
+  out << "{";
+  // member: header
+  {
+    out << "header: ";
+    to_flow_style_yaml(msg.header, out);
+    out << ", ";
+  }
+
+  // member: mask
+  {
+    out << "mask: ";
+    to_flow_style_yaml(msg.mask, out);
+    out << ", ";
+  }
+
+  // member: scores
+  {
+    if (msg.scores.size() == 0) {
+      out << "scores: []";
+    } else {
+      out << "scores: [";
+      size_t pending_items = msg.scores.size();
+      for (auto item : msg.scores) {
+        rosidl_generator_traits::value_to_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+    out << ", ";
+  }
+
+  // member: classes
+  {
+    if (msg.classes.size() == 0) {
+      out << "classes: []";
+    } else {
+      out << "classes: [";
+      size_t pending_items = msg.classes.size();
+      for (auto item : msg.classes) {
+        rosidl_generator_traits::value_to_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
+  }
+  out << "}";
+}  // NOLINT(readability/fn_size)
+
+inline void to_block_style_yaml(
+  const InstanceSegmentationInfo & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  // member: header
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "header:\n";
+    to_block_style_yaml(msg.header, out, indentation + 2);
+  }
+
+  // member: mask
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "mask:\n";
+    to_block_style_yaml(msg.mask, out, indentation + 2);
+  }
+
+  // member: scores
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    if (msg.scores.size() == 0) {
+      out << "scores: []\n";
+    } else {
+      out << "scores:\n";
+      for (auto item : msg.scores) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "- ";
+        rosidl_generator_traits::value_to_yaml(item, out);
+        out << "\n";
+      }
+    }
+  }
+
+  // member: classes
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    if (msg.classes.size() == 0) {
+      out << "classes: []\n";
+    } else {
+      out << "classes:\n";
+      for (auto item : msg.classes) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "- ";
+        rosidl_generator_traits::value_to_yaml(item, out);
+        out << "\n";
+      }
+    }
+  }
+}  // NOLINT(readability/fn_size)
+
+inline std::string to_yaml(const InstanceSegmentationInfo & msg, bool use_flow_style = false)
+{
+  std::ostringstream out;
+  if (use_flow_style) {
+    to_flow_style_yaml(msg, out);
+  } else {
+    to_block_style_yaml(msg, out);
+  }
+  return out.str();
+}
+
+}  // namespace msg
+
+}  // namespace yolo_custom_interfaces
+
+namespace rosidl_generator_traits
+{
+
+[[deprecated("use yolo_custom_interfaces::msg::to_block_style_yaml() instead")]]
+inline void to_yaml(
+  const yolo_custom_interfaces::msg::InstanceSegmentationInfo & msg,
+  std::ostream & out, size_t indentation = 0)
+{
+  yolo_custom_interfaces::msg::to_block_style_yaml(msg, out, indentation);
+}
+
+[[deprecated("use yolo_custom_interfaces::msg::to_yaml() instead")]]
+inline std::string to_yaml(const yolo_custom_interfaces::msg::InstanceSegmentationInfo & msg)
+{
+  return yolo_custom_interfaces::msg::to_yaml(msg);
+}
+
+template<>
+inline const char * data_type<yolo_custom_interfaces::msg::InstanceSegmentationInfo>()
+{
+  return "yolo_custom_interfaces::msg::InstanceSegmentationInfo";
+}
+
+template<>
+inline const char * name<yolo_custom_interfaces::msg::InstanceSegmentationInfo>()
+{
+  return "yolo_custom_interfaces/msg/InstanceSegmentationInfo";
+}
+
+template<>
+struct has_fixed_size<yolo_custom_interfaces::msg::InstanceSegmentationInfo>
+  : std::integral_constant<bool, false> {};
+
+template<>
+struct has_bounded_size<yolo_custom_interfaces::msg::InstanceSegmentationInfo>
+  : std::integral_constant<bool, false> {};
+
+template<>
+struct is_message<yolo_custom_interfaces::msg::InstanceSegmentationInfo>
+  : std::true_type {};
+
+}  // namespace rosidl_generator_traits
+
+#endif  // YOLO_CUSTOM_INTERFACES__MSG__DETAIL__INSTANCE_SEGMENTATION_INFO__TRAITS_HPP_

@@ -14,6 +14,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/david/yolocpp_ws/build/tensorrt_yolo/CMakeFiles/deploy.dir/DependInfo.cmake"
+  "/home/david/yolocpp_ws/build/tensorrt_yolo/CMakeFiles/chrono.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

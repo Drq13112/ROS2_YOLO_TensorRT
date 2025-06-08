@@ -1,8 +1,0 @@
-setup.py
-tensorrt_yolo/__init__.py
-tensorrt_yolo.egg-info/PKG-INFO
-tensorrt_yolo.egg-info/SOURCES.txt
-tensorrt_yolo.egg-info/dependency_links.txt
-tensorrt_yolo.egg-info/top_level.txt
-tensorrt_yolo/msg/__init__.py
-tensorrt_yolo/msg/_segmentation_output.py

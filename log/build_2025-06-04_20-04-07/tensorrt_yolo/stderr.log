@@ -1,0 +1,103 @@
+In file included from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.hpp:19[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/model.hpp:17[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:21[m[K:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::DeviceBuffer::DeviceBuffer()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:103:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::DeviceBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  103 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:102:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::DeviceBuffer::device_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  102 |     void*  [01;35m[Kdevice_[m[K;  // < 设备内存指针
+      |            [01;35m[K^~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:86:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+   86 |     [01;35m[KDeviceBuffer[m[K() : size_(0), device_(nullptr) {}
+      |     [01;35m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::DiscreteBuffer::DiscreteBuffer()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:130:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::DiscreteBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  130 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:128:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::DiscreteBuffer::host_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  128 |     void*  [01;35m[Khost_[m[K;    // < 主机内存指针
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:112:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  112 |     [01;35m[KDiscreteBuffer[m[K() : size_(0), host_(nullptr), device_(nullptr) {}
+      |     [01;35m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::UnifiedBuffer::UnifiedBuffer()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:157:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::UnifiedBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  157 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:155:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::UnifiedBuffer::host_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  155 |     void*  [01;35m[Khost_[m[K;    // < 主机内存指针
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:139:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  139 |     [01;35m[KUnifiedBuffer[m[K() : size_(0), host_(nullptr), device_(nullptr) {}
+      |     [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::MappedBuffer::MappedBuffer()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:184:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::MappedBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  184 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:182:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::MappedBuffer::host_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  182 |     void*  [01;35m[Khost_[m[K;    // < 主机内存指针
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:166:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  166 |     [01;35m[KMappedBuffer[m[K() : size_(0), host_(nullptr), device_(nullptr) {}
+      |     [01;35m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::TensorInfo::TensorInfo(std::string, const Dims&, nvinfer1::DataType, bool, deploy::BufferType)[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:224:33:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::TensorInfo::shape[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  224 |     nvinfer1::Dims              [01;35m[Kshape[m[K;   // < 张量形状
+      |                                 [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:219:24:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Knvinfer1::DataType deploy::TensorInfo::dtype_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  219 |     nvinfer1::DataType [01;35m[Kdtype_[m[K;           // < 张量数据类型
+      |                        [01;35m[K^~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:236:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  236 |     [01;35m[KTensorInfo[m[K(const std::string name, const nvinfer1::Dims& shape, const nvinfer1::DataType dtype, const bool input, BufferType buffer_type)
+      |     [01;35m[K^~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:16[m[K:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:[m[K In constructor ‘[01m[KYoloBatchNode::YoloBatchNode()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:82:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass YoloBatchNode[m[K’ has no member named ‘[01m[Kget_lw1ogger[m[K’; did you mean ‘[01m[Kget_logger[m[K’?
+   82 |         RCLCPP_INFO(this->[01;31m[Kget_lw1ogger[m[K(), "Input resized image size: %dx%d", input_width_, input_height_);
+      |                           [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:82:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass YoloBatchNode[m[K’ has no member named ‘[01m[Kget_lw1ogger[m[K’; did you mean ‘[01m[Kget_logger[m[K’?
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:82:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   82 |         [01;31m[KRCLCPP_INFO[m[K(this->get_lw1ogger(), "Input resized image size: %dx%d", input_width_, input_height_);
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:82:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   82 |         [01;31m[KRCLCPP_INFO[m[K(this->get_lw1ogger(), "Input resized image size: %dx%d", input_width_, input_height_);
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:82:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   82 |         [01;31m[KRCLCPP_INFO[m[K(this->get_lw1ogger(), "Input resized image size: %dx%d", input_width_, input_height_);
+      |         [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:16[m[K:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:82:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass YoloBatchNode[m[K’ has no member named ‘[01m[Kget_lw1ogger[m[K’; did you mean ‘[01m[Kget_logger[m[K’?
+   82 |         RCLCPP_INFO(this->[01;31m[Kget_lw1ogger[m[K(), "Input resized image size: %dx%d", input_width_, input_height_);
+      |                           [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:82:27:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass YoloBatchNode[m[K’ has no member named ‘[01m[Kget_lw1ogger[m[K’; did you mean ‘[01m[Kget_logger[m[K’?
+   82 |         RCLCPP_INFO(this->[01;31m[Kget_lw1ogger[m[K(), "Input resized image size: %dx%d", input_width_, input_height_);
+      |                           [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:[m[K In member function ‘[01m[Kvoid YoloBatchNode::writeInferredImagesToVideo(const std::array<cv::Mat, 3>&, const std::vector<deploy::SegmentRes, std::allocator<deploy::SegmentRes> >&, const std::array<cv::Mat, 3>&, const std::array<cv::Size_<int>, 3>&, const Size&)[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node.cpp:903:25:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Knetwork_input_size[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  903 |         [01;35m[Kconst cv::Size& network_input_size[m[K) // network_input_size es net_input_size de generateInstanceIdMaskROI
+      |         [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/segment_node.dir/build.make:76: CMakeFiles/segment_node.dir/src/segment_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/segment_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

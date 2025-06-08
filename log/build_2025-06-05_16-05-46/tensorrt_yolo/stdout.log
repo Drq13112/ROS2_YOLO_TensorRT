@@ -1,0 +1,3 @@
+[ 66%] Built target deploy
+[ 83%] Built target segment_node
+[ 91%] [32mBuilding CXX object CMakeFiles/segment_node_3P.dir/src/segment_node_3P.cpp.o[0m

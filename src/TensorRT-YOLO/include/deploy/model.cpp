@@ -32,16 +32,16 @@ template <typename ResultType>
 std::vector<ResultType> BaseModel<ResultType>::predict(const std::vector<Image>& images) {
 
 
-    std::cout << "Preprocessing " << images.size() << " images..." << std::endl;
+    // std::cout << "Preprocessing " << images.size() << " images..." << std::endl;
     if (backend_->option.enable_performance_report) {
         total_request_ += (backend_->dynamic ? images.size() : backend_->max_shape.x);
         infer_cpu_trace_->start();
         infer_gpu_trace_->start();
     }
 
-    std::cout << "Predicting " << images.size() << " images..." << std::endl;
+    // std::cout << "Predicting " << images.size() << " images..." << std::endl;
     backend_->infer(images);  // 调用推理方法
-    std::cout << "Inference completed." << std::endl;
+    // std::cout << "Inference completed." << std::endl;
 
     // 预分配结果空间
     std::vector<ResultType> results(images.size());

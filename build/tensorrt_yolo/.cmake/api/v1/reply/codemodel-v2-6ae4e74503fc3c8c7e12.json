@@ -1,0 +1,106 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-8bfb3ce4e021b7477b3e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "tensorrt_yolo",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "chrono::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-chrono-28056cb7972b59cedb6a.json",
+					"name" : "chrono",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "deploy::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-deploy-af2cc5dd9886cd39e5c7.json",
+					"name" : "deploy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "segment_node::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-segment_node-f93033dc36f9d343e291.json",
+					"name" : "segment_node",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "segment_node_3P::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-segment_node_3P-f9b4b8fb336d3a4ec5c2.json",
+					"name" : "segment_node_3P",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tensorrt_yolo_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tensorrt_yolo_uninstall-fcdcd1735f52aab27e45.json",
+					"name" : "tensorrt_yolo_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-1cf9cfc05647b11ff60a.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/david/yolocpp_ws/build/tensorrt_yolo",
+		"source" : "/home/david/yolocpp_ws/src/TensorRT-YOLO"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 4
+	}
+}

@@ -1,0 +1,49 @@
+-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+-- Found sensor_msgs: 4.8.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+-- Found yolo_custom_interfaces: 0.0.0 (/home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake)
+-- Found image_transport: 3.1.11 (/opt/ros/humble/share/image_transport/cmake)
+-- Using TRT_PATH: /usr
+-- TensorRT libraries to link: nvinfer;nvinfer_plugin;nvonnxparser
+-- Source files for 'deploy': /home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.cpp;/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/core.cpp;/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp;/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu;/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/model.cpp;/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/utils/utils.cpp
+-- Plugin directory or its CMakeLists.txt not found at /home/david/yolocpp_ws/src/TensorRT-YOLO/include/plugin, skipping custom_plugins build.
+[33mCMake Warning at CMakeLists.txt:285 (message):
+  custom_plugins target does not exist.  segment_node will not be linked
+  against it.
+
+[0m
+[33mCMake Warning at CMakeLists.txt:340 (message):
+  custom_plugins target does not exist.  segment_node_3P will not be linked
+  against it.
+
+[0m
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/david/yolocpp_ws/build/tensorrt_yolo
+[  7%] [32mBuilding CXX object CMakeFiles/chrono.dir/include/chrono/ChronoTimer.cpp.o[0m
+[ 64%] Built target deploy
+[ 71%] [32m[1mLinking CXX shared library libchrono.so[0m
+[ 71%] Built target chrono
+[ 78%] [32mBuilding CXX object CMakeFiles/segment_node_3P.dir/src/segment_node_3P.cpp.o[0m
+[ 85%] [32m[1mLinking CXX executable segment_node[0m
+/usr/bin/ld: warning: libopencv_imgproc.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgproc.so.3.4
+/usr/bin/ld: warning: libopencv_core.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_core.so.3.4
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:38:10:[m[K [01;31m[Kfatal error: [m[K/chrono/chrono_timer.hpp: No such file or directory
+   38 | #include [01;31m[K"/chrono/chrono_timer.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/segment_node_3P.dir/build.make:76: CMakeFiles/segment_node_3P.dir/src/segment_node_3P.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:223: CMakeFiles/segment_node_3P.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+[ 92%] Built target segment_node
+gmake: *** [Makefile:146: all] Error 2

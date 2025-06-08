@@ -1,0 +1,20 @@
+[33mCMake Warning at CMakeLists.txt:285 (message):
+  custom_plugins target does not exist.  segment_node will not be linked
+  against it.
+
+[0m
+[33mCMake Warning at CMakeLists.txt:340 (message):
+  custom_plugins target does not exist.  segment_node_3P will not be linked
+  against it.
+
+[0m
+/usr/bin/ld: warning: libopencv_imgproc.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_imgproc.so.3.4
+/usr/bin/ld: warning: libopencv_core.so.4.5d, needed by /opt/ros/humble/lib/libcv_bridge.so, may conflict with libopencv_core.so.3.4
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:38:10:[m[K [01;31m[Kfatal error: [m[K/chrono/chrono_timer.hpp: No such file or directory
+   38 | #include [01;31m[K"/chrono/chrono_timer.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/segment_node_3P.dir/build.make:76: CMakeFiles/segment_node_3P.dir/src/segment_node_3P.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:223: CMakeFiles/segment_node_3P.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2

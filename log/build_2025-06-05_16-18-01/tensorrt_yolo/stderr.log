@@ -1,0 +1,7 @@
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:38:10:[m[K [01;31m[Kfatal error: [m[Kchrono/chrono_timer.hpp: No such file or directory
+   38 | #include [01;31m[K"chrono/chrono_timer.hpp"[m[K
+      |          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+compilation terminated.
+gmake[2]: *** [CMakeFiles/segment_node_3P.dir/build.make:76: CMakeFiles/segment_node_3P.dir/src/segment_node_3P.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:223: CMakeFiles/segment_node_3P.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

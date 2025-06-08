@@ -1,0 +1,11 @@
+/home/david/yolocpp_ws/build/pylon_instant_camera/CMakeFiles/uninstall.dir
+/home/david/yolocpp_ws/build/pylon_instant_camera/CMakeFiles/pylon_instant_camera_uninstall.dir
+/home/david/yolocpp_ws/build/pylon_instant_camera/CMakeFiles/PylonCameraNode.dir
+/home/david/yolocpp_ws/build/pylon_instant_camera/CMakeFiles/node.dir
+/home/david/yolocpp_ws/build/pylon_instant_camera/CMakeFiles/test.dir
+/home/david/yolocpp_ws/build/pylon_instant_camera/CMakeFiles/edit_cache.dir
+/home/david/yolocpp_ws/build/pylon_instant_camera/CMakeFiles/rebuild_cache.dir
+/home/david/yolocpp_ws/build/pylon_instant_camera/CMakeFiles/list_install_components.dir
+/home/david/yolocpp_ws/build/pylon_instant_camera/CMakeFiles/install.dir
+/home/david/yolocpp_ws/build/pylon_instant_camera/CMakeFiles/install/local.dir
+/home/david/yolocpp_ws/build/pylon_instant_camera/CMakeFiles/install/strip.dir

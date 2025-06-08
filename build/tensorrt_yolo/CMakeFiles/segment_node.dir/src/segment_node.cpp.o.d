@@ -199,7 +199,10 @@ CMakeFiles/segment_node.dir/src/segment_node.cpp.o: \
  /usr/include/c++/11/bits/enable_special_members.h \
  /usr/include/c++/11/bits/node_handle.h \
  /usr/include/c++/11/bits/unordered_map.h \
- /usr/include/c++/11/bits/erase_if.h \
+ /usr/include/c++/11/bits/erase_if.h /usr/include/c++/11/thread \
+ /usr/include/c++/11/bits/std_thread.h \
+ /usr/include/c++/11/bits/this_thread_sleep.h \
+ /usr/include/c++/11/condition_variable /usr/include/c++/11/atomic \
  /opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp \
  /usr/include/c++/11/csignal /usr/include/signal.h \
  /usr/include/x86_64-linux-gnu/bits/signum-generic.h \
@@ -231,14 +234,11 @@ CMakeFiles/segment_node.dir/src/segment_node.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/sigthread.h \
  /usr/include/x86_64-linux-gnu/bits/signal_ext.h \
  /opt/ros/humble/include/rclcpp/rclcpp/executors.hpp \
- /usr/include/c++/11/future /usr/include/c++/11/condition_variable \
- /usr/include/c++/11/atomic /usr/include/c++/11/bits/atomic_futex.h \
- /usr/include/c++/11/bits/std_thread.h \
+ /usr/include/c++/11/future /usr/include/c++/11/bits/atomic_futex.h \
  /opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp \
  /usr/include/c++/11/set /usr/include/c++/11/bits/stl_tree.h \
  /usr/include/c++/11/bits/stl_set.h \
- /usr/include/c++/11/bits/stl_multiset.h /usr/include/c++/11/thread \
- /usr/include/c++/11/bits/this_thread_sleep.h \
+ /usr/include/c++/11/bits/stl_multiset.h \
  /opt/ros/humble/include/rclcpp/rclcpp/executor.hpp \
  /usr/include/c++/11/cassert /usr/include/assert.h \
  /usr/include/c++/11/iostream /usr/include/c++/11/list \
@@ -630,21 +630,6 @@ CMakeFiles/segment_node.dir/src/segment_node.cpp.o: \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__type_support.hpp \
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/float32_multi_array.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32_multi_array__struct.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_layout__struct.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_dimension__struct.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32_multi_array__builder.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32_multi_array__traits.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_layout__traits.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/multi_array_dimension__traits.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/float32_multi_array__type_support.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/int32_multi_array.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32_multi_array__struct.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32_multi_array__builder.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32_multi_array__traits.hpp \
- /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/int32_multi_array__type_support.hpp \
  /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h \
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/compressed_image.hpp \
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__struct.hpp \
@@ -846,4 +831,27 @@ CMakeFiles/segment_node.dir/src/segment_node.cpp.o: \
  /home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp \
  /usr/local/cuda-12.9/include/vector_functions.hpp \
  /home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/result.hpp \
- /home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/utils/utils.hpp
+ /home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/utils/utils.hpp \
+ /opt/ros/humble/include/image_transport/image_transport/image_transport.hpp \
+ /opt/ros/humble/include/image_transport/image_transport/camera_publisher.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/camera_info.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/camera_info__struct.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/region_of_interest__struct.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/camera_info__builder.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/camera_info__traits.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/region_of_interest__traits.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/camera_info__type_support.hpp \
+ /opt/ros/humble/include/image_transport/image_transport/single_subscriber_publisher.hpp \
+ /opt/ros/humble/include/image_transport/image_transport/visibility_control.hpp \
+ /opt/ros/humble/include/image_transport/image_transport/camera_subscriber.hpp \
+ /opt/ros/humble/include/image_transport/image_transport/publisher.hpp \
+ /opt/ros/humble/include/image_transport/image_transport/exception.hpp \
+ /opt/ros/humble/include/image_transport/image_transport/loader_fwds.hpp \
+ /opt/ros/humble/include/image_transport/image_transport/subscriber.hpp \
+ /opt/ros/humble/include/image_transport/image_transport/transport_hints.hpp \
+ /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/instance_segmentation_info.hpp \
+ /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/instance_segmentation_info__struct.hpp \
+ /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/instance_segmentation_info__builder.hpp \
+ /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/instance_segmentation_info__traits.hpp \
+ /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/instance_segmentation_info__type_support.hpp \
+ /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp

@@ -11,7 +11,9 @@ find_package(rosidl_default_generators REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED) # If you plan to use sensor_msgs/Image directly
 find_package(cv_bridge REQUIRED) # For OpenCV image conversion in ROS 2
-
+find_package(yolo_custom_interfaces REQUIRED)
+find_package(image_transport REQUIRED) # For image transport in ROS 2
+#-------------------------------------------------------------------------------
 
 # Configuración estándar de C++ 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -203,20 +205,40 @@ else()
     message(STATUS "Plugin directory or its CMakeLists.txt not found at ${PLUGIN_DIR_PATH}, skipping custom_plugins build.")
 endif()
 
+
+#-------------------------------------------------------------------------------
+# CONSTRUCCIÓN DE LA LIBRERÍA 'chrono'
+#-------------------------------------------------------------------------------
+set(CHRONO_SRC_DIR "${CMAKE_CURRENT_SOURCE_DIR}/include/chrono")
+set(CHRONO_INCLUDE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/include") # This is for targets that link chrono
+
+if(NOT EXISTS "${CHRONO_SRC_DIR}/ChronoTimer.cpp")
+    message(FATAL_ERROR "ChronoTimer.cpp not found in ${CHRONO_SRC_DIR}. Please check the path.")
+endif()
+# Corrected path for the hpp existence check
+if(NOT EXISTS "${CHRONO_SRC_DIR}/ChronoTimer.hpp") 
+    message(FATAL_ERROR "ChronoTimer.hpp not found in ${CHRONO_SRC_DIR}. Please check the path.")
+endif()
+
+add_library(chrono SHARED
+    "${CHRONO_SRC_DIR}/ChronoTimer.cpp"
+)
+
+target_include_directories(chrono PUBLIC
+    $<BUILD_INTERFACE:${CHRONO_INCLUDE_DIR}> # Allows #include "chrono/ChronoTimer.hpp"
+    $<INSTALL_INTERFACE:include> # Corresponds to the general include install directory
+)
+
+set_target_compile_options_custom(chrono)
+
 #-------------------------------------------------------------------------------
 # CONSTRUCCIÓN DEL NODO ROS 2 'segment_node'
 #-------------------------------------------------------------------------------
 add_executable(segment_node src/segment_node.cpp)
 
 
-rosidl_generate_interfaces(${PROJECT_NAME}
-  "msg/SegmentationOutput.msg"
-  DEPENDENCIES std_msgs
-)
-
-
 # Dependencias de ROS 2 para el nodo
-ament_target_dependencies(segment_node rclcpp OpenCV rosidl_default_runtime std_msgs sensor_msgs cv_bridge)
+ament_target_dependencies(segment_node rclcpp OpenCV rosidl_default_runtime std_msgs sensor_msgs cv_bridge yolo_custom_interfaces image_transport)
 
 # Directorios de inclusión para el nodo
 target_include_directories(segment_node PRIVATE
@@ -231,6 +253,7 @@ target_include_directories(segment_node PRIVATE
 # Usamos la signatura "plain" para target_link_libraries para ser compatible con ament_cmake.
 target_link_libraries(segment_node
     deploy          # Tu librería 'deploy' compilada
+    chrono           
     CUDA::cudart    # Para el runtime de CUDA (si segment_node.cpp lo usa directamente o vía headers de deploy)
     ${TRT_LIBS}     # Librerías de TensorRT (si son necesarias directamente por el nodo o por los headers de deploy)
 )
@@ -249,6 +272,7 @@ set_target_properties(segment_node PROPERTIES
 #-------------------------------------------------------------------------------
 install(TARGETS
     deploy          # Instala la librería libdeploy.so
+    chrono
     segment_node    # Instala el ejecutable del nodo
     DESTINATION lib/${PROJECT_NAME}
 )
@@ -261,7 +285,59 @@ else()
     message(WARNING "custom_plugins target does not exist. segment_node will not be linked against it.")
 endif()
 
-# Instala los encabezados de 'deploy' para que otros paquetes puedan usarlos si es necesario
+#-------------------------------------------------------------------------------
+# CONSTRUCCIÓN DEL NODO ROS 2 'segment_node_3P'
+#-------------------------------------------------------------------------------
+add_executable(segment_node_3P src/segment_node_3P.cpp)
+
+# Dependencias de ROS 2 para el nodo
+ament_target_dependencies(segment_node_3P rclcpp OpenCV rosidl_default_runtime std_msgs sensor_msgs cv_bridge yolo_custom_interfaces image_transport)
+
+# Directorios de inclusión para el nodo
+target_include_directories(segment_node_3P PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/include  # Donde están "deploy/model.hpp", etc.
+    ${TRT_INCLUDE_DIR}                   # Para los encabezados de TensorRT (NvInfer.h, etc.)
+    ${PLUGIN_DIR_PATH}                   # Si el nodo necesita directamente headers de plugin
+    ${CMAKE_CURRENT_BINARY_DIR}/rosidl_generator_cpp # Para los encabezados de mensajes generados
+)
+
+# Enlaza las librerías necesarias al nodo
+# `ament_target_dependencies` ya maneja rclcpp y OpenCV.
+# Usamos la signatura "plain" para target_link_libraries para ser compatible con ament_cmake.
+target_link_libraries(segment_node_3P
+    deploy          # Tu librería 'deploy' compilada
+    chrono
+    CUDA::cudart    # Para el runtime de CUDA (si segment_node.cpp lo usa directamente o vía headers de deploy)
+    ${TRT_LIBS}     # Librerías de TensorRT (si son necesarias directamente por el nodo o por los headers de deploy)
+)
+# Asegura que el enlazador encuentre las librerías de TensorRT
+target_link_directories(segment_node_3P PRIVATE ${TRT_LIB_DIR})
+
+
+# Explicitly set RPATH for the segment_node target
+set_target_properties(segment_node_3P PROPERTIES
+    INSTALL_RPATH "$ORIGIN" # Look in the executable's own directory
+    BUILD_RPATH "$ORIGIN"   # Also useful for running from the build directory
+)
+
+#-------------------------------------------------------------------------------
+# INSTALACIÓN
+#-------------------------------------------------------------------------------
+install(TARGETS
+    deploy          # Instala la librería libdeploy.so
+    chrono
+    segment_node_3P # Instala el ejecutable del nodo
+    DESTINATION lib/${PROJECT_NAME}
+)
+
+# Link custom plugins if the target exists
+if(TARGET custom_plugins)
+    target_link_libraries(segment_node_3P PRIVATE custom_plugins)
+    message(STATUS "Linking segment_node_3P with custom_plugins.")
+else()
+    message(WARNING "custom_plugins target does not exist. segment_node_3P will not be linked against it.")
+endif()
+
 install(
     DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/deploy/
     DESTINATION include/deploy
@@ -280,10 +356,8 @@ install (DIRECTORY
   include
   models
   data
-  msg
   DESTINATION share/${PROJECT_NAME}
 )
-
 
 #-------------------------------------------------------------------------------
 # FINALIZACIÓN DEL PAQUETE ROS 2
