@@ -296,6 +296,13 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/ros/humble/share/builtin_interfaces/cmake/rosidl_cmake-extras.cmake"
   "/opt/ros/humble/share/builtin_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake"
   "/opt/ros/humble/share/builtin_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake"
+  "/opt/ros/humble/share/cv_bridge/cmake/ament_cmake_export_dependencies-extras.cmake"
+  "/opt/ros/humble/share/cv_bridge/cmake/ament_cmake_export_targets-extras.cmake"
+  "/opt/ros/humble/share/cv_bridge/cmake/cv_bridge-extras.cmake"
+  "/opt/ros/humble/share/cv_bridge/cmake/cv_bridgeConfig-version.cmake"
+  "/opt/ros/humble/share/cv_bridge/cmake/cv_bridgeConfig.cmake"
+  "/opt/ros/humble/share/cv_bridge/cmake/export_cv_bridgeExport-none.cmake"
+  "/opt/ros/humble/share/cv_bridge/cmake/export_cv_bridgeExport.cmake"
   "/opt/ros/humble/share/fastrtps/cmake/fast-discovery-server-targets-none.cmake"
   "/opt/ros/humble/share/fastrtps/cmake/fast-discovery-server-targets.cmake"
   "/opt/ros/humble/share/fastrtps/cmake/fastrtps-config-version.cmake"
@@ -724,6 +731,10 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/lib/x86_64-linux-gnu/cmake/spdlog/spdlogConfigTargets-none.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/spdlog/spdlogConfigTargets.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/spdlog/spdlogConfigVersion.cmake"
+  "/usr/local/share/OpenCV/OpenCVConfig-version.cmake"
+  "/usr/local/share/OpenCV/OpenCVConfig.cmake"
+  "/usr/local/share/OpenCV/OpenCVModules-release.cmake"
+  "/usr/local/share/OpenCV/OpenCVModules.cmake"
   )
 
 # The corresponding makefile is:

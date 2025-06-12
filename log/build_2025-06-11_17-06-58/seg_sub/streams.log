@@ -1,0 +1,33 @@
+[0.020s] Invoking command in '/home/david/yolocpp_ws/build/seg_sub': AMENT_PREFIX_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces/lib:/opt/pylon/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda-11.2/lib64:/usr/local/cuda-11.2/lib64:/home/david/onnxruntime-linux-x64-gpu-1.22.0/lib PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ PYTHONPATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /home/david/.local/bin/cmake --build /home/david/yolocpp_ws/build/seg_sub -- -j32 -l32
+[0.055s] [ 50%] Built target chrono
+[0.072s] [ 75%] [32mBuilding CXX object CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o[0m
+[4.552s] [100%] [32m[1mLinking CXX executable seg_sub_node[0m
+[4.777s] [100%] Built target seg_sub_node
+[4.783s] Invoked command in '/home/david/yolocpp_ws/build/seg_sub' returned '0': AMENT_PREFIX_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces/lib:/opt/pylon/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda-11.2/lib64:/usr/local/cuda-11.2/lib64:/home/david/onnxruntime-linux-x64-gpu-1.22.0/lib PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ PYTHONPATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /home/david/.local/bin/cmake --build /home/david/yolocpp_ws/build/seg_sub -- -j32 -l32
+[4.784s] Invoking command in '/home/david/yolocpp_ws/build/seg_sub': AMENT_PREFIX_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces/lib:/opt/pylon/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda-11.2/lib64:/usr/local/cuda-11.2/lib64:/home/david/onnxruntime-linux-x64-gpu-1.22.0/lib PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ PYTHONPATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /home/david/.local/bin/cmake --install /home/david/yolocpp_ws/build/seg_sub
+[4.800s] -- Install configuration: ""
+[4.800s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/lib/seg_sub/libchrono.so
+[4.800s] -- Installing: /home/david/yolocpp_ws/install/seg_sub/lib/seg_sub/seg_sub_node
+[4.802s] -- Set runtime path of "/home/david/yolocpp_ws/install/seg_sub/lib/seg_sub/seg_sub_node" to ""
+[4.802s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/launch
+[4.802s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/launch/seg_sub.launch.py
+[4.802s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/include
+[4.802s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/include/chrono
+[4.802s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/include/chrono/ChronoTimer.hpp
+[4.802s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/include/chrono/ChronoTimer.cpp
+[4.802s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/ament_index/resource_index/package_run_dependencies/seg_sub
+[4.803s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/ament_index/resource_index/parent_prefix_path/seg_sub
+[4.803s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/environment/ament_prefix_path.sh
+[4.803s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/environment/ament_prefix_path.dsv
+[4.803s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/environment/path.sh
+[4.803s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/environment/path.dsv
+[4.803s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/local_setup.bash
+[4.803s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/local_setup.sh
+[4.803s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/local_setup.zsh
+[4.803s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/local_setup.dsv
+[4.803s] -- Installing: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/package.dsv
+[4.803s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/ament_index/resource_index/packages/seg_sub
+[4.803s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/cmake/seg_subConfig.cmake
+[4.803s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/cmake/seg_subConfig-version.cmake
+[4.803s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/package.xml
+[4.805s] Invoked command in '/home/david/yolocpp_ws/build/seg_sub' returned '0': AMENT_PREFIX_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces:/opt/ros/humble LD_LIBRARY_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces/lib:/opt/pylon/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda-11.2/lib64:/usr/local/cuda-11.2/lib64:/home/david/onnxruntime-linux-x64-gpu-1.22.0/lib PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ PYTHONPATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages:${PYTHONPATH} /home/david/.local/bin/cmake --install /home/david/yolocpp_ws/build/seg_sub

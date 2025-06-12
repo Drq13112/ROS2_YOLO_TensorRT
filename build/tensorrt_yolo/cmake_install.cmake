@@ -180,6 +180,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     "/home/david/yolocpp_ws/src/TensorRT-YOLO/include"
     "/home/david/yolocpp_ws/src/TensorRT-YOLO/models"
     "/home/david/yolocpp_ws/src/TensorRT-YOLO/data"
+    "/home/david/yolocpp_ws/src/TensorRT-YOLO/config"
     )
 endif()
 

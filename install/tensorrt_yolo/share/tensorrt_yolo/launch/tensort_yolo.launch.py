@@ -30,7 +30,7 @@ def generate_launch_description():
             'video_fps': 10.0,
             'video_frame_width': 1920*3,
             'video_frame_height': 1200,
-            '_image_transport': 'compressed'
+            'image_transport': 'compressed'
             }
             ],
         ),

@@ -21,6 +21,7 @@
 // Member 'mask'
 #include "sensor_msgs/msg/detail/image__struct.hpp"
 // Member 'image_source_monotonic_capture_time'
+// Member 'processing_node_monotonic_entry_time'
 // Member 'processing_node_monotonic_publish_time'
 #include "builtin_interfaces/msg/detail/time__struct.hpp"
 
@@ -46,6 +47,7 @@ struct InstanceSegmentationInfo_
   : header(_init),
     mask(_init),
     image_source_monotonic_capture_time(_init),
+    processing_node_monotonic_entry_time(_init),
     processing_node_monotonic_publish_time(_init)
   {
     (void)_init;
@@ -55,6 +57,7 @@ struct InstanceSegmentationInfo_
   : header(_alloc, _init),
     mask(_alloc, _init),
     image_source_monotonic_capture_time(_alloc, _init),
+    processing_node_monotonic_entry_time(_alloc, _init),
     processing_node_monotonic_publish_time(_alloc, _init)
   {
     (void)_init;
@@ -76,6 +79,9 @@ struct InstanceSegmentationInfo_
   using _image_source_monotonic_capture_time_type =
     builtin_interfaces::msg::Time_<ContainerAllocator>;
   _image_source_monotonic_capture_time_type image_source_monotonic_capture_time;
+  using _processing_node_monotonic_entry_time_type =
+    builtin_interfaces::msg::Time_<ContainerAllocator>;
+  _processing_node_monotonic_entry_time_type processing_node_monotonic_entry_time;
   using _processing_node_monotonic_publish_time_type =
     builtin_interfaces::msg::Time_<ContainerAllocator>;
   _processing_node_monotonic_publish_time_type processing_node_monotonic_publish_time;
@@ -109,6 +115,12 @@ struct InstanceSegmentationInfo_
     const builtin_interfaces::msg::Time_<ContainerAllocator> & _arg)
   {
     this->image_source_monotonic_capture_time = _arg;
+    return *this;
+  }
+  Type & set__processing_node_monotonic_entry_time(
+    const builtin_interfaces::msg::Time_<ContainerAllocator> & _arg)
+  {
+    this->processing_node_monotonic_entry_time = _arg;
     return *this;
   }
   Type & set__processing_node_monotonic_publish_time(
@@ -173,6 +185,9 @@ struct InstanceSegmentationInfo_
       return false;
     }
     if (this->image_source_monotonic_capture_time != other.image_source_monotonic_capture_time) {
+      return false;
+    }
+    if (this->processing_node_monotonic_entry_time != other.processing_node_monotonic_entry_time) {
       return false;
     }
     if (this->processing_node_monotonic_publish_time != other.processing_node_monotonic_publish_time) {

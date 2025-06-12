@@ -71,9 +71,10 @@ public:
         this->declare_parameter<std::string>("engine_path", "yolo11m-seg.engine");
         this->declare_parameter<int>("input_width", 640);
         this->declare_parameter<int>("input_height", 416);
-        this->declare_parameter<std::string>("mask_encoding", "mono16");
-        this->declare_parameter<bool>("use_pinned_input_memory", false);
+        this->declare_parameter<std::string>("mask_encoding", "mono8");
+        this->declare_parameter<bool>("use_pinned_input_memory", true);
         this->declare_parameter<int>("input_channels", 3);
+        this->declare_parameter<std::string>("image_transport", "compressed");
 
         auto engine_path = this->get_parameter("engine_path").get_value<std::string>();
         input_width_ = this->get_parameter("input_width").get_value<int>();
@@ -81,6 +82,7 @@ public:
         mask_encoding_ = this->get_parameter("mask_encoding").get_value<std::string>();
         use_pinned_input_memory_ = this->get_parameter("use_pinned_input_memory").get_value<bool>();
         input_channels_ = this->get_parameter("input_channels").get_value<int>();
+        image_transport_type_ = this->get_parameter("image_transport").get_value<std::string>();
 
         RCLCPP_INFO(this->get_logger(), "Engine path: %s", engine_path.c_str());
         RCLCPP_INFO(this->get_logger(), "Input resized image size: %dx%d", input_width_, input_height_);
@@ -168,18 +170,16 @@ public:
             this,
             image_topic_name_,
             std::bind(&YoloBatchNode::imageCallback, this, std::placeholders::_1),
-            "raw",
+            image_transport_type_,
             qos_sensors.get_rmw_qos_profile());
 
-        // Crear publicador
-
+        // Crear publicadores
         seguidor_pub = this->create_publisher<std_msgs::msg::UInt32>("/seguidor", qos_sensors_pub);
         std::string instance_info_topic_name = "/segmentation/" + output_topic_suffix_ + "/instance_info";
         instance_info_pub_ = this->create_publisher<yolo_custom_interfaces::msg::InstanceSegmentationInfo>(instance_info_topic_name, qos_sensors_pub);
         RCLCPP_INFO(this->get_logger(), "Publishing instance info to: [%s]", instance_info_topic_name.c_str());
 
         RCLCPP_INFO(this->get_logger(), "%s initialized successfully.", node_name.c_str());
-
 
         // Iniciar el hilo de inferencia
         inference_thread_ = std::thread(&YoloBatchNode::inferenceLoop, this);
@@ -209,11 +209,10 @@ public:
         RCLCPP_INFO(this->get_logger(), "%s shutdown complete.", this->get_name());
     }
 
-
-    void getMetrics(double &read_freq, double &pub_freq) const 
+    void getMetrics(double &read_freq, double &pub_freq) const
     {
-      read_freq = reading_frequency_.load();
-      pub_freq = publish_frequency_.load();
+        read_freq = reading_frequency_.load();
+        pub_freq = publish_frequency_.load();
     }
 
 private:
@@ -228,9 +227,9 @@ private:
     {
         sensor_msgs::msg::Image::ConstSharedPtr msg;
         // std::chrono::steady_clock::time_point received_time; // Replaced by monotonic_entry_time
-        timespec monotonic_entry_time; // Time captured with clock_gettime(CLOCK_MONOTONIC, ...) in imageCallback
-        // rclcpp::Time header_stamp;     // Original message header stamp - this will now be the monotonic capture time from publisher
-        timespec image_source_monotonic_capture_ts; // To store the monotonic time from directory_publisher
+        timespec monotonic_entry_time;                          // Time captured with clock_gettime(CLOCK_MONOTONIC, ...) in imageCallback
+        // rclcpp::Time header_stamp;                           // Original message header stamp - this will now be the monotonic capture time from publisher
+        timespec image_source_monotonic_capture_ts;             // To store the monotonic time from directory_publisher
     };
 
     std::queue<TimedImage> inference_queue_;
@@ -240,8 +239,8 @@ private:
     int input_height_;
     std::string mask_encoding_;
     std::string image_topic_name_;
-    std::string output_topic_suffix_; // Para nombres de archivo de vídeo
-    bool use_pinned_input_memory_ = false;
+    std::string output_topic_suffix_; 
+    bool use_pinned_input_memory_ = true;
     // cv_img_mask_instance.encoding = this->mask_encoding_;
     unsigned char *h_pinned_input_buffer_ = nullptr;
     size_t single_image_pinned_bytes_ = 0;
@@ -253,40 +252,46 @@ private:
     cv::VideoWriter video_writer_inferred_;
     cv::VideoWriter video_writer_instance_mask_;
     std::string video_output_path_str_;
-    std::string inferred_video_filename_; // Nombre de archivo específico del nodo
-    std::string mask_video_filename_;     // Nombre de archivo específico del nodo
+    std::string inferred_video_filename_; 
+    std::string mask_video_filename_;     
     double video_fps_;
     cv::Size single_video_frame_size_;
     bool enable_inferred_video_writing_ = false;
     bool enable_mask_video_writing_ = false;
     bool video_writers_initialized_ = false;
     std::vector<cv::Scalar> class_colors_;
+    std::string image_transport_type_ = "compressed"; // Default to compressed images
 
     // ROS Comms
     image_transport::Subscriber image_sub_;
     rclcpp::Publisher<yolo_custom_interfaces::msg::InstanceSegmentationInfo>::SharedPtr instance_info_pub_;
     rclcpp::Publisher<std_msgs::msg::UInt32>::SharedPtr seguidor_pub;
 
-    // Agrega estas variables privadas:
-    std::atomic<double> reading_frequency_{0.0};   // Hz (calculada por delta entre imágenes)
-    std::atomic<double> publish_frequency_{0.0};   // Hz (calculada por intervalo entre publicaciones)
+    std::atomic<double> reading_frequency_{0.0}; // Hz (calculada por delta entre imágenes)
+    std::atomic<double> publish_frequency_{0.0}; // Hz (calculada por intervalo entre publicaciones)
 
     // ChronoTimer instances for metrics
-    ChronoTimer timer_inter_callback_arrival_; // Time between arrivals in imageCallback
-    ChronoTimer timer_queue_duration_;         // Time message spent in queue
-    ChronoTimer timer_e2e_node_latency_;       // From callback entry to publish completion
-    ChronoTimer timer_process_image_func_;     // Full duration of processImage function call
-    ChronoTimer timer_inter_publish_;          // Time between publish calls
+    ChronoTimer timer_inter_callback_arrival_;  // Time between arrivals in imageCallback
+    ChronoTimer timer_queue_duration_;          // Time message spent in queue
+    ChronoTimer timer_e2e_node_latency_;        // From callback entry to publish completion
+    ChronoTimer timer_process_image_func_;      // Full duration of processImage function call
+    ChronoTimer timer_inter_publish_;           // Time between publish calls
 
     // Modelo de segmentación
     std::unique_ptr<deploy::SegmentModel> model_;
 
-    struct SimpleStats {
+    struct SimpleStats
+    {
         double current_ms = 0.0, sum_ms = 0.0, mean_ms = 0.0, max_ms = 0.0;
         long count = 0;
-        void record(double val) {
-            current_ms = val; sum_ms += val; count++; mean_ms = sum_ms / count;
-            if (count == 1 || val > max_ms) max_ms = val;
+        void record(double val)
+        {
+            current_ms = val;
+            sum_ms += val;
+            count++;
+            mean_ms = sum_ms / count;
+            if (count == 1 || val > max_ms)
+                max_ms = val;
         }
     } stats_msg_age_;
     std::atomic<size_t> current_queue_size_{0};
@@ -399,131 +404,6 @@ private:
         return instance_id_mask;
     }
 
-    // void imageCallback(const sensor_msgs::msg::Image::ConstSharedPtr & msg)
-    // {
-    //     auto t_start_cb = std::chrono::steady_clock::now();
-    //     RCLCPP_DEBUG(this->get_logger(), "[%s] Received image on %s with TS: %d.%09u",
-    //                 this->get_name(), image_topic_name_.c_str(), msg->header.stamp.sec, msg->header.stamp.nanosec);
-
-    //     cv_bridge::CvImagePtr cv_ptr;
-    //     try {
-    //         // Usar msg directamente con toCvShare para evitar copia si es posible, o toCvCopy si se necesita modificar
-    //         cv_ptr = cv_bridge::toCvCopy(msg, sensor_msgs::image_encodings::BGR8);
-    //     } catch (cv_bridge::Exception &e) {
-    //         RCLCPP_ERROR(this->get_logger(), "[%s] cv_bridge exception: %s", this->get_name(), e.what());
-    //         return;
-    //     }
-
-    //     if (!cv_ptr || cv_ptr->image.empty()) {
-    //         RCLCPP_WARN(this->get_logger(), "[%s] Received empty image on topic %s", this->get_name(), image_topic_name_.c_str());
-    //         return;
-    //     }
-
-    //     cv::Mat original_image = cv_ptr->image;
-    //     cv::Size original_size = original_image.size();
-    //     std_msgs::msg::Header current_header = msg->header;
-
-    //     // Preprocessing
-    //     auto t_pre_start = std::chrono::steady_clock::now();
-    //     cv::Mat resized_img;
-    //     cv::Size network_input_target_size(input_width_, input_height_);
-    //     cv::resize(original_image, resized_img, network_input_target_size, 0, 0, cv::INTER_LINEAR);
-
-    //     if (resized_img.empty()) {
-    //         RCLCPP_ERROR(this->get_logger(), "[%s] Resized image is empty. Skipping inference.", this->get_name());
-    //         return;
-    //     }
-
-    //     std::vector<deploy::Image> img_batch;
-    //     unsigned char* image_data_ptr = resized_img.data;
-
-    //     if (use_pinned_input_memory_ && h_pinned_input_buffer_) {
-    //         if (resized_img.isContinuous() && resized_img.total() * resized_img.elemSize() == single_image_pinned_bytes_) {
-    //             std::memcpy(h_pinned_input_buffer_, resized_img.data, single_image_pinned_bytes_);
-    //             image_data_ptr = h_pinned_input_buffer_;
-    //         } else {
-    //              RCLCPP_WARN_ONCE(this->get_logger(), "[%s] Resized image properties (continuous: %d, bytes: %zu, expected: %zu) not suitable for pinned memory. Using its own data.",
-    //                 this->get_name(), resized_img.isContinuous(), resized_img.total() * resized_img.elemSize(), single_image_pinned_bytes_);
-
-    //         }
-    //     }
-    //     img_batch.emplace_back(image_data_ptr, resized_img.cols, resized_img.rows);
-    //     auto t_pre_end = std::chrono::steady_clock::now();
-
-    //     // Inference
-    //     auto t_inf_start = std::chrono::steady_clock::now();
-    //     std::vector<deploy::SegmentRes> results;
-    //     try {
-    //         results = model_->predict(img_batch);
-    //     } catch (const std::exception& e) {
-    //         RCLCPP_ERROR(this->get_logger(), "[%s] Exception during model_->predict(): %s. Processing aborted.", this->get_name(), e.what());
-    //         return;
-    //     }
-    //     auto t_inf_end = std::chrono::steady_clock::now();
-
-    //     if (results.empty()) {
-    //         RCLCPP_WARN(this->get_logger(), "[%s] Inference returned no results.", this->get_name());
-    //         return;
-    //     }
-    //     deploy::SegmentRes &result = results[0];
-
-    //     // Postprocessing
-    //     auto t_post_start = std::chrono::steady_clock::now();
-    //     cv::Mat instance_id_mask_cv = generateInstanceIdMaskROI(result, original_size, network_input_target_size);
-
-    //     auto instance_info_msg = std::make_unique<yolo_custom_interfaces::msg::InstanceSegmentationInfo>();
-    //     instance_info_msg->header = current_header;
-
-    //     cv_bridge::CvImage cv_img_mask_instance;
-    //     cv_img_mask_instance.header = instance_info_msg->header;
-    //     cv_img_mask_instance.encoding = this->mask_encoding_;
-    //     cv_img_mask_instance.image = instance_id_mask_cv;
-
-    //     try {
-    //         instance_info_msg->mask = *cv_img_mask_instance.toImageMsg();
-    //     } catch (const cv_bridge::Exception& e) {
-    //         RCLCPP_ERROR(this->get_logger(), "[%s] cv_bridge exception during mask toImageMsg: %s", this->get_name(), e.what());
-    //         return;
-    //     }
-
-    //     size_t num_detected_instances = static_cast<size_t>(result.num);
-    //     num_detected_instances = std::min({num_detected_instances, result.scores.size(), result.classes.size()});
-
-    //     instance_info_msg->scores.reserve(num_detected_instances);
-    //     instance_info_msg->classes.reserve(num_detected_instances);
-
-    //     for (size_t j = 0; j < num_detected_instances; ++j) {
-    //         instance_info_msg->scores.push_back(result.scores[j]);
-    //         instance_info_msg->classes.push_back(result.classes[j]);
-    //     }
-    //     auto t_post_end = std::chrono::steady_clock::now();
-
-    //     // Publish
-    //     instance_info_pub_->publish(std::move(instance_info_msg));
-
-    //     // Video Writing
-    //     if (!video_writers_initialized_ && (enable_inferred_video_writing_ || enable_mask_video_writing_)) {
-    //         initializeVideoWriters();
-    //     }
-    //     if (video_writers_initialized_) {
-    //         if (enable_inferred_video_writing_ && video_writer_inferred_.isOpened()) {
-    //             writeInferredImageToVideo(original_image, result, instance_id_mask_cv, original_size, network_input_target_size);
-    //         }
-    //         if (enable_mask_video_writing_ && video_writer_instance_mask_.isOpened()) {
-    //             writeInstanceMaskToVideo(instance_id_mask_cv, result, original_size);
-    //         }
-    //     }
-    //     auto t_end_cb = std::chrono::steady_clock::now();
-
-    //     RCLCPP_DEBUG(this->get_logger(),
-    //                 "[%s] Processing Times: Preproc=%ldus, Infer=%ldus, Postproc=%ldus, TotalCB=%ldus",
-    //                 this->get_name(),
-    //                 std::chrono::duration_cast<std::chrono::microseconds>(t_pre_end - t_pre_start).count(),
-    //                 std::chrono::duration_cast<std::chrono::microseconds>(t_inf_end - t_inf_start).count(),
-    //                 std::chrono::duration_cast<std::chrono::microseconds>(t_post_end - t_post_start).count(),
-    //                 std::chrono::duration_cast<std::chrono::microseconds>(t_end_cb - t_start_cb).count());
-    // }
-
     void imageCallback(const sensor_msgs::msg::Image::ConstSharedPtr &msg)
     {
         // Capturar timestamp monotónico inmediatamente al recibir el mensaje
@@ -532,9 +412,12 @@ private:
 
         // Measure time between arrivals to this callback
         timer_inter_callback_arrival_.GetElapsedTime();
-        if (timer_inter_callback_arrival_.cont > 0) {
-             timer_inter_callback_arrival_.ComputeStats();
-        } else {
+        if (timer_inter_callback_arrival_.cont > 0)
+        {
+            timer_inter_callback_arrival_.ComputeStats();
+        }
+        else
+        {
             timer_inter_callback_arrival_.measured_time = 0;
             timer_inter_callback_arrival_.cont = 0;
             timer_inter_callback_arrival_.ComputeStats();
@@ -544,36 +427,33 @@ private:
         TimedImage timed_msg;
         timed_msg.msg = msg;
         timed_msg.monotonic_entry_time = monotonic_callback_entry_time;
-        
-        //Ahora ambos timestamps deberían estar en la misma escala (CLOCK_MONOTONIC)
+
+        // Ahora ambos timestamps deberían estar en la misma escala (CLOCK_MONOTONIC)
         timed_msg.image_source_monotonic_capture_ts.tv_sec = msg->header.stamp.sec;
         timed_msg.image_source_monotonic_capture_ts.tv_nsec = msg->header.stamp.nanosec;
 
         // Calcular latencia de comunicación DirPub -> SegNode
-        double latency_dirpub_to_segnode_ms = 
+        double latency_dirpub_to_segnode_ms =
             (monotonic_callback_entry_time.tv_sec - timed_msg.image_source_monotonic_capture_ts.tv_sec) * 1000.0 +
             (monotonic_callback_entry_time.tv_nsec - timed_msg.image_source_monotonic_capture_ts.tv_nsec) / 1e6;
 
-        
-        RCLCPP_INFO(this->get_logger(), "[%s] Latency (DirPub@%ld.%09ld -> SegNodeCallback@%ld.%09ld): %.3f ms",
-                    this->get_name(),
-                    timed_msg.image_source_monotonic_capture_ts.tv_sec, timed_msg.image_source_monotonic_capture_ts.tv_nsec,
-                    monotonic_callback_entry_time.tv_sec, monotonic_callback_entry_time.tv_nsec,
-                    latency_dirpub_to_segnode_ms);
-        
+
         // Validación para detectar problemas de sincronización
-        if (latency_dirpub_to_segnode_ms > 0 && latency_dirpub_to_segnode_ms < 1000) { // < 1 segundo es razonable
+        if (latency_dirpub_to_segnode_ms < 1000)
+        { 
             RCLCPP_INFO(this->get_logger(), "[%s] Latency (DirPub@%ld.%09ld -> SegNodeCallback@%ld.%09ld): %.3f ms",
                         this->get_name(),
                         timed_msg.image_source_monotonic_capture_ts.tv_sec, timed_msg.image_source_monotonic_capture_ts.tv_nsec,
                         monotonic_callback_entry_time.tv_sec, monotonic_callback_entry_time.tv_nsec,
                         latency_dirpub_to_segnode_ms);
-        } else {
+        }
+        else
+        {
             RCLCPP_WARN_THROTTLE(this->get_logger(), *this->get_clock(), 5000,
-                                "[%s] Invalid latency measurement: %.3f ms. DirPub_ts=%ld.%09ld, SegNode_ts=%ld.%09ld",
-                                this->get_name(), latency_dirpub_to_segnode_ms,
-                                timed_msg.image_source_monotonic_capture_ts.tv_sec, timed_msg.image_source_monotonic_capture_ts.tv_nsec,
-                                monotonic_callback_entry_time.tv_sec, monotonic_callback_entry_time.tv_nsec);
+                                 "[%s] Invalid latency measurement: %.3f ms. DirPub_ts=%ld.%09ld, SegNode_ts=%ld.%09ld",
+                                 this->get_name(), latency_dirpub_to_segnode_ms,
+                                 timed_msg.image_source_monotonic_capture_ts.tv_sec, timed_msg.image_source_monotonic_capture_ts.tv_nsec,
+                                 monotonic_callback_entry_time.tv_sec, monotonic_callback_entry_time.tv_nsec);
         }
 
         {
@@ -592,7 +472,7 @@ private:
             TimedImage timed_msg;
             long long loop_idle_time_us = 0;
             long long time_in_queue_us = 0; // Will be replaced by ChronoTimer
-            
+
             {
                 std::unique_lock<std::mutex> lock(inference_mutex_);
                 auto t_before_wait = std::chrono::steady_clock::now();
@@ -603,14 +483,14 @@ private:
 
                 if (stop_inference_thread_)
                     break;
-                
+
                 timed_msg = inference_queue_.front();
                 inference_queue_.pop();
                 current_queue_size_.store(inference_queue_.size(), std::memory_order_relaxed);
 
                 // Measure time in queue
                 timer_queue_duration_.startTime = timed_msg.monotonic_entry_time; // Set start time to when it entered callback
-                timer_queue_duration_.GetElapsedTime(); // Measures up to now
+                timer_queue_duration_.GetElapsedTime();                           // Measures up to now
                 timer_queue_duration_.ComputeStats();
             }
             processImage(timed_msg, loop_idle_time_us, static_cast<long long>(timer_queue_duration_.measured_time * 1000.0)); // Pass measured queue time in us
@@ -619,38 +499,36 @@ private:
 
     void processImage(const TimedImage &timed_msg, long long loop_idle_time_us, long long time_in_queue_us_val)
     {
-        timer_process_image_func_.Reset(); // Start timing for the entire function
+        timer_process_image_func_.Reset();                                  // Start timing for the entire function
         timer_e2e_node_latency_.startTime = timed_msg.monotonic_entry_time; // Start E2E latency from callback entry
         // Calcular latencia total desde DirPub hasta inicio de procesamiento
         timespec processing_start_time;
         clock_gettime(CLOCK_MONOTONIC, &processing_start_time);
 
-        double total_latency_dirpub_to_processing_ms = 
+        double total_latency_dirpub_to_processing_ms =
             (processing_start_time.tv_sec - timed_msg.image_source_monotonic_capture_ts.tv_sec) * 1000.0 +
             (processing_start_time.tv_nsec - timed_msg.image_source_monotonic_capture_ts.tv_nsec) / 1e6;
-
 
         // Calcular y mostrar el delta en ms entre la imagen actual y la anterior
         rclcpp::Time current_msg_time(timed_msg.msg->header.stamp.sec, timed_msg.msg->header.stamp.nanosec);
         double current_read_freq = 0.0;
-        if (has_last_timestamp_) {
+        if (has_last_timestamp_)
+        {
             auto delta_ns = (current_msg_time - last_image_timestamp_).nanoseconds();
             double delta_ms = static_cast<double>(delta_ns) / 1e6;
             current_read_freq = (delta_ms > 0) ? 1000.0 / delta_ms : 0.0; // Hz
-            // RCLCPP_INFO(this->get_logger(), "[%s] Time delta between images: %.2f ms (%.2f Hz)", 
+            // RCLCPP_INFO(this->get_logger(), "[%s] Time delta between images: %.2f ms (%.2f Hz)",
             //             this->get_name(), delta_ms, current_read_freq);
-        } else {
+        }
+        else
+        {
             RCLCPP_INFO(this->get_logger(), "[%s] First image received", this->get_name());
         }
         last_image_timestamp_ = current_msg_time;
         has_last_timestamp_ = true;
-                    
-        // Inicio del timing global: desde la recepción en el callback
-        // auto t_start_global = timed_msg.received_time;
 
         // --- Lectura de imagen ---
         auto t_read_start = std::chrono::steady_clock::now();
-        // RCLCPP_DEBUG(this->get_logger(), "[%s] Starting image read...", this->get_name());
         cv_bridge::CvImagePtr cv_ptr;
         try
         {
@@ -659,7 +537,7 @@ private:
         catch (cv_bridge::Exception &e)
         {
             RCLCPP_ERROR(this->get_logger(), "[%s] cv_bridge exception during image read: %s",
-                        this->get_name(), e.what());
+                         this->get_name(), e.what());
             return;
         }
         auto t_read_end = std::chrono::steady_clock::now();
@@ -705,15 +583,9 @@ private:
         // --- Inferencia ---
         auto t_inf_start = std::chrono::steady_clock::now();
         std::vector<deploy::SegmentRes> results;
-        try
-        {
-            results = model_->predict(img_batch);
-        }
-        catch (const std::exception &e)
-        {
-            RCLCPP_ERROR(this->get_logger(), "[%s] Exception during model_->predict(): %s. Processing aborted.", this->get_name(), e.what());
-            return;
-        }
+        
+        results = model_->predict(img_batch);
+     
         auto t_inf_end = std::chrono::steady_clock::now();
         auto t_infer = std::chrono::duration_cast<std::chrono::microseconds>(t_inf_end - t_inf_start).count();
 
@@ -733,20 +605,17 @@ private:
         // Populate the image source monotonic timestamp (T1_mono)
         instance_info_msg->image_source_monotonic_capture_time.sec = timed_msg.image_source_monotonic_capture_ts.tv_sec;
         instance_info_msg->image_source_monotonic_capture_time.nanosec = timed_msg.image_source_monotonic_capture_ts.tv_nsec;
+        // Populate the monotonic entry time (T2_mono)
+        instance_info_msg->processing_node_monotonic_entry_time.sec = timed_msg.monotonic_entry_time.tv_sec;
+        instance_info_msg->processing_node_monotonic_entry_time.nanosec = timed_msg.monotonic_entry_time.tv_nsec;
 
         cv_bridge::CvImage cv_img_mask_instance;
         cv_img_mask_instance.header = instance_info_msg->header;
         cv_img_mask_instance.encoding = this->mask_encoding_;
         cv_img_mask_instance.image = instance_id_mask_cv;
-        try
-        {
-            instance_info_msg->mask = *cv_img_mask_instance.toImageMsg();
-        }
-        catch (const cv_bridge::Exception &e)
-        {
-            RCLCPP_ERROR(this->get_logger(), "[%s] cv_bridge exception during mask toImageMsg: %s", this->get_name(), e.what());
-            return;
-        }
+  
+        instance_info_msg->mask = *cv_img_mask_instance.toImageMsg();
+
         size_t num_detected_instances = static_cast<size_t>(result.num);
         num_detected_instances = std::min({num_detected_instances, result.scores.size(), result.classes.size()});
         instance_info_msg->scores.reserve(num_detected_instances);
@@ -760,13 +629,15 @@ private:
         auto t_postproc = std::chrono::duration_cast<std::chrono::microseconds>(t_post_end - t_post_start).count();
 
         // --- Publicación ---
-
-        std_msgs::msg::UInt32 msg_seguidor; // Renamed to avoid conflict with timed_msg.msg
+        // Calcular la frecuencia del nodo sin verse afectado por la latencia del envio de imagenes 
+        std_msgs::msg::UInt32 msg_seguidor; 
         msg_seguidor.data = static_cast<uint32_t>(this->now().nanoseconds());
         seguidor_pub->publish(msg_seguidor);
 
 
+
         auto t_pub_start = std::chrono::steady_clock::now();
+
         // Get current monotonic time for publishing this result (T3_mono)
         timespec ts_processing_node_publish;
         clock_gettime(CLOCK_MONOTONIC, &ts_processing_node_publish);
@@ -775,7 +646,6 @@ private:
         instance_info_pub_->publish(std::move(instance_info_msg));
         auto t_pub_end = std::chrono::steady_clock::now();
         auto t_publish = std::chrono::duration_cast<std::chrono::microseconds>(t_pub_end - t_pub_start).count();
-        
 
         // Measure E2E Node Latency (from callback entry to publish completion)
         timer_e2e_node_latency_.GetElapsedTime(); // Uses its startTime (monotonic_entry_time) and current time
@@ -783,17 +653,26 @@ private:
 
         // Measure inter-publish time
         timer_inter_publish_.GetElapsedTime(); // Measures from last Reset() or construction
-        if(timer_inter_publish_.cont > 0 || timer_e2e_node_latency_.cont == 1) { // Similar logic to inter_callback_arrival
+        if (timer_inter_publish_.cont > 0 || timer_e2e_node_latency_.cont == 1)
+        { // Similar logic to inter_callback_arrival
             timer_inter_publish_.ComputeStats();
-        } else {
+        }
+        else
+        {
             timer_inter_publish_.measured_time = 0;
             timer_inter_publish_.cont = 0;
             timer_inter_publish_.ComputeStats();
         }
         timer_inter_publish_.Reset(); // Reset for next publish interval
 
-
+        RCLCPP_INFO(this->get_logger(), "[%s] Video Writing", this->get_name());
         // Video Writing
+        if (video_output_path_str_.empty())
+        {
+            RCLCPP_WARN(this->get_logger(), "[%s] Video output path is empty. Skipping video writing.", this->get_name());
+            video_writers_initialized_ = false;
+            return;
+        }
         if (!video_writers_initialized_ && (enable_inferred_video_writing_ || enable_mask_video_writing_))
         {
             initializeVideoWriters();
@@ -802,31 +681,28 @@ private:
         {
             if (enable_inferred_video_writing_ && video_writer_inferred_.isOpened())
             {
+                RCLCPP_INFO(this->get_logger(), "[%s] Writing inferred image to video...", this->get_name());
                 writeInferredImageToVideo(original_image, result, instance_id_mask_cv, original_size, network_input_target_size);
             }
             if (enable_mask_video_writing_ && video_writer_instance_mask_.isOpened())
             {
+                RCLCPP_INFO(this->get_logger(), "[%s] Writing instance mask to video...", this->get_name());
                 writeInstanceMaskToVideo(instance_id_mask_cv, result, original_size);
             }
         }
-
-        // Tiempo global: desde que se recibió el mensaje en el callback hasta finalizar la publicación
-        // auto t_end_global = std::chrono::steady_clock::now();
-        // auto t_global_latency = std::chrono::duration_cast<std::chrono::microseconds>(t_end_global - t_start_global).count();
-        // double potential_freq = (t_global_latency > 0) ? (1e6 / static_cast<double>(t_global_latency)) : 0.0;
-
 
         // Measure full processImage function duration
         timer_process_image_func_.GetElapsedTime();
         timer_process_image_func_.ComputeStats();
 
-
         // Calcular frecuencia de publicación real
         long long actual_inter_publish_us = 0;
         double actual_publish_freq = 0.0;
-        if (first_publish_done_) {
+        if (first_publish_done_)
+        {
             actual_inter_publish_us = std::chrono::duration_cast<std::chrono::microseconds>(t_pub_end - last_actual_publish_time_).count();
-            if (actual_inter_publish_us > 0) {
+            if (actual_inter_publish_us > 0)
+            {
                 actual_publish_freq = 1e6 / static_cast<double>(actual_inter_publish_us);
             }
         }
@@ -836,31 +712,30 @@ private:
         // Al final del procesamiento, calcular latencia total
         timespec processing_end_time;
         clock_gettime(CLOCK_MONOTONIC, &processing_end_time);
-        
-        double total_latency_dirpub_to_publish_ms = 
+
+        double total_latency_dirpub_to_publish_ms =
             (processing_end_time.tv_sec - timed_msg.image_source_monotonic_capture_ts.tv_sec) * 1000.0 +
             (processing_end_time.tv_nsec - timed_msg.image_source_monotonic_capture_ts.tv_nsec) / 1e6;
 
         RCLCPP_INFO(this->get_logger(),
-            "[%s] Timings(us): Read=%ld, Pre=%ld, Infer=%ld, Post=%ld, PubCall=%ld. LoopIdle=%ld. QSize=%zu. "
-            "MsgAge(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "
-            "InterCB(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "
-            "QueueT(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "
-            "E2ELat(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "
-            "ProcFunc(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "
-            "InterPub(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "
-            "TotalDirPub->Pub(ms): %.2f",
-            this->get_name(),
-            t_read, t_preproc, t_infer, t_postproc, t_publish, 
-            loop_idle_time_us, current_queue_size_.load(),
-            stats_msg_age_.current_ms, stats_msg_age_.mean_ms, stats_msg_age_.max_ms,
-            timer_inter_callback_arrival_.measured_time, timer_inter_callback_arrival_.mean_time, timer_inter_callback_arrival_.max_time,
-            timer_queue_duration_.measured_time, timer_queue_duration_.mean_time, timer_queue_duration_.max_time,
-            timer_e2e_node_latency_.measured_time, timer_e2e_node_latency_.mean_time, timer_e2e_node_latency_.max_time,
-            timer_process_image_func_.measured_time, timer_process_image_func_.mean_time, timer_process_image_func_.max_time,
-            timer_inter_publish_.measured_time, timer_inter_publish_.mean_time, timer_inter_publish_.max_time,
-            total_latency_dirpub_to_publish_ms
-        );
+                    "[%s] Timings(us): Read=%ld, Pre=%ld, Infer=%ld, Post=%ld, PubCall=%ld. LoopIdle=%ld. QSize=%zu. "
+                    "MsgAge(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "
+                    "InterCB(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "
+                    "QueueT(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "
+                    "E2ELat(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "
+                    "ProcFunc(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "
+                    "InterPub(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "
+                    "TotalDirPub->Pub(ms): %.2f",
+                    this->get_name(),
+                    t_read, t_preproc, t_infer, t_postproc, t_publish,
+                    loop_idle_time_us, current_queue_size_.load(),
+                    stats_msg_age_.current_ms, stats_msg_age_.mean_ms, stats_msg_age_.max_ms,
+                    timer_inter_callback_arrival_.measured_time, timer_inter_callback_arrival_.mean_time, timer_inter_callback_arrival_.max_time,
+                    timer_queue_duration_.measured_time, timer_queue_duration_.mean_time, timer_queue_duration_.max_time,
+                    timer_e2e_node_latency_.measured_time, timer_e2e_node_latency_.mean_time, timer_e2e_node_latency_.max_time,
+                    timer_process_image_func_.measured_time, timer_process_image_func_.mean_time, timer_process_image_func_.max_time,
+                    timer_inter_publish_.measured_time, timer_inter_publish_.mean_time, timer_inter_publish_.max_time,
+                    total_latency_dirpub_to_publish_ms);
 
         // Actualizar las variables de métrica:
         publish_frequency_.store(actual_publish_freq);
@@ -1059,7 +934,7 @@ int main(int argc, char **argv)
                                                      "left",
                                                      enable_inferred_video_main,
                                                      enable_mask_video_main,
-                                                     output_video_path + "_left.avi",
+                                                     output_video_path,
                                                      video_fps_main,
                                                      single_cam_video_size);
     auto front_node = std::make_shared<YoloBatchNode>("yolo_segment_node_front",
@@ -1067,7 +942,7 @@ int main(int argc, char **argv)
                                                       "front",
                                                       enable_inferred_video_main,
                                                       enable_mask_video_main,
-                                                      output_video_path + "_front.avi",
+                                                      output_video_path,
                                                       video_fps_main,
                                                       single_cam_video_size);
     auto right_node = std::make_shared<YoloBatchNode>("yolo_segment_node_right",
@@ -1075,7 +950,7 @@ int main(int argc, char **argv)
                                                       "right",
                                                       enable_inferred_video_main,
                                                       enable_mask_video_main,
-                                                      output_video_path + "_right.avi",
+                                                      output_video_path,
                                                       video_fps_main,
                                                       single_cam_video_size);
 
@@ -1086,7 +961,8 @@ int main(int argc, char **argv)
     // Hilo supervisor: cada 5 segundos muestra las métricas de cada nodo
     std::atomic<bool> stop_supervisor{false};
 
-    std::thread supervisor_thread([&](){
+    std::thread supervisor_thread([&]()
+                                  {
         while (!stop_supervisor.load()) {
             double left_read=0.0, left_pub=0.0;
             double front_read=0.0, front_pub=0.0;
@@ -1098,15 +974,15 @@ int main(int argc, char **argv)
                         "Supervisor: Left node: Read=%.2f Hz, Pub=%.2f Hz; Front node: Read=%.2f Hz, Pub=%.2f Hz; Right node: Read=%.2f Hz, Pub=%.2f Hz",
                         left_read, left_pub, front_read, front_pub, right_read, right_pub);
             std::this_thread::sleep_for(std::chrono::seconds(5));
-        }
-    });
+        } });
 
     RCLCPP_INFO(rclcpp::get_logger("main"), "Spinning nodes with MultiThreadedExecutor.");
     executor->spin();
 
     // Al salir:
     stop_supervisor.store(true);
-    if (supervisor_thread.joinable()) {
+    if (supervisor_thread.joinable())
+    {
         supervisor_thread.join();
     }
 

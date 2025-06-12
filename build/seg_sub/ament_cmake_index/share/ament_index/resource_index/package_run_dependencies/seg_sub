@@ -1,1 +1,1 @@
-rclcpp;yolo_custom_interfaces
+rclcpp;yolo_custom_interfaces;sensor_msgs;cv_bridge;image_transport;opencv

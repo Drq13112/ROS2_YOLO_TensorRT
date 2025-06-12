@@ -1,0 +1,12 @@
+camera_front_left.image_raw.mode: unchanged
+engine_path: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/yolo11s-seg.engine
+input_channels: 3
+input_height: 418
+input_width: 640
+mask_encoding: mono8
+qos_overrides./parameter_events.publisher.depth: 1000
+qos_overrides./parameter_events.publisher.durability: volatile
+qos_overrides./parameter_events.publisher.history: keep_last
+qos_overrides./parameter_events.publisher.reliability: reliable
+use_pinned_input_memory: true
+use_sim_time: false

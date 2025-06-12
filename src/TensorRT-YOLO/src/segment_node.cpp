@@ -23,7 +23,7 @@
 #include "deploy/result.hpp"     
 #include <cuda_runtime_api.h>
 #include <image_transport/image_transport.hpp>
-#include <rclcpp/callback_group.hpp> // Añadir include para CallbackGroup
+#include <rclcpp/callback_group.hpp> 
 #include "yolo_custom_interfaces/msg/instance_segmentation_info.hpp"
 
 // Helper macro para simplificar la revisión de errores CUDA en el constructor/destructor
@@ -238,13 +238,14 @@ private:
     std::vector<cv::Scalar> class_colors_;
 
     // Subscriptores y publicadores
-    std::array<image_transport::Subscriber, 3> image_subs_; // Tipo NUEVO y CORRECTO
+    std::array<image_transport::Subscriber, 3> image_subs_; 
     std::array<rclcpp::Publisher<yolo_custom_interfaces::msg::InstanceSegmentationInfo>::SharedPtr, 3> instance_info_pubs_;
     rclcpp::CallbackGroup::SharedPtr image_callback_group_; // CallbackGroup para suscriptores de imagen
 
     // Buffers para guardar imágenes recibidas y sus headers
     std::array<cv::Mat, 3> image_buffers_;
     std::array<std_msgs::msg::Header, 3> image_headers_;
+    std::array<timespec, 3> image_monotonic_entry_times_; // para T2_mono
     std::array<bool, 3> received_{false, false, false};
     std::mutex buffer_mutex_;   // Mutex para proteger el acceso a buffers y flags
 

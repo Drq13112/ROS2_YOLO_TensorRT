@@ -11,6 +11,7 @@
 #include <pylon/PylonIncludes.h>
 #include <pylon/BaslerUniversalInstantCamera.h>
 #include <pylon/DeviceInfo.h>
+#include <time.h>
 #pragma GCC diagnostic pop
 
 namespace pylon_instant_camera {
@@ -209,10 +210,21 @@ public:
     }
     void grab_and_publish() {
         sensor_msgs::msg::Image * img_msg = pylon_result_to_image_message(camera->grab_frame());
-        img_msg->header.stamp = this->now();
+        
+        // Obtener el tiempo MONOTONIC actual
+        timespec ts_monotonic_capture;
+        clock_gettime(CLOCK_MONOTONIC, &ts_monotonic_capture);
+
+        // Asignar el tiempo monotónico al header del mensaje de imagen
+        img_msg->header.stamp.sec = ts_monotonic_capture.tv_sec;
+        img_msg->header.stamp.nanosec = ts_monotonic_capture.tv_nsec;
         img_msg->header.frame_id = frame_id;
-        camera_info_msg.header.stamp = img_msg->header.stamp;
-        camera_info_msg.header.frame_id = img_msg->header.frame_id;
+
+        // Asignar el mismo tiempo monotónico al header del mensaje de CameraInfo
+        camera_info_msg.header.stamp.sec = ts_monotonic_capture.tv_sec;
+        camera_info_msg.header.stamp.nanosec = ts_monotonic_capture.tv_nsec;
+        camera_info_msg.header.frame_id = img_msg->header.frame_id; // Mantener consistencia de frame_id también
+
         image_publisher.publish(*img_msg, camera_info_msg);
     }
 private:

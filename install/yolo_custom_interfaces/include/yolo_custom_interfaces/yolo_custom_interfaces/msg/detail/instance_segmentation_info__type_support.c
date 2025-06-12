@@ -25,9 +25,11 @@
 // Member `classes`
 #include "rosidl_runtime_c/primitives_sequence_functions.h"
 // Member `image_source_monotonic_capture_time`
+// Member `processing_node_monotonic_entry_time`
 // Member `processing_node_monotonic_publish_time`
 #include "builtin_interfaces/msg/time.h"
 // Member `image_source_monotonic_capture_time`
+// Member `processing_node_monotonic_entry_time`
 // Member `processing_node_monotonic_publish_time`
 #include "builtin_interfaces/msg/detail/time__rosidl_typesupport_introspection_c.h"
 
@@ -160,7 +162,7 @@ bool yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_i
   return rosidl_runtime_c__int32__Sequence__init(member, size);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_message_member_array[6] = {
+static rosidl_typesupport_introspection_c__MessageMember yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_message_member_array[7] = {
   {
     "header",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
@@ -247,6 +249,23 @@ static rosidl_typesupport_introspection_c__MessageMember yolo_custom_interfaces_
     NULL  // resize(index) function pointer
   },
   {
+    "processing_node_monotonic_entry_time",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message (initialized later)
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(yolo_custom_interfaces__msg__InstanceSegmentationInfo, processing_node_monotonic_entry_time),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
     "processing_node_monotonic_publish_time",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
     0,  // upper bound of string
@@ -268,7 +287,7 @@ static rosidl_typesupport_introspection_c__MessageMember yolo_custom_interfaces_
 static const rosidl_typesupport_introspection_c__MessageMembers yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_message_members = {
   "yolo_custom_interfaces__msg",  // message namespace
   "InstanceSegmentationInfo",  // message name
-  6,  // number of fields
+  7,  // number of fields
   sizeof(yolo_custom_interfaces__msg__InstanceSegmentationInfo),
   yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_message_member_array,  // message members
   yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_init_function,  // function to initialize message memory (memory has to be allocated)
@@ -293,6 +312,8 @@ ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspecti
   yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_message_member_array[4].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, builtin_interfaces, msg, Time)();
   yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_message_member_array[5].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, builtin_interfaces, msg, Time)();
+  yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_message_member_array[6].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, builtin_interfaces, msg, Time)();
   if (!yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_message_type_support_handle.typesupport_identifier) {
     yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_message_type_support_handle.typesupport_identifier =

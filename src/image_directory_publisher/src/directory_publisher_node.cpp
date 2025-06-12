@@ -10,7 +10,7 @@
 #include <vector>    // Para std::vector
 #include <chrono>    // Para la medición de tiempo
 #include <unordered_set> // Para el filtrado eficiente de archivos
-#include <time.h> // <--- AÑADIDO para clock_gettime
+#include <time.h> 
 
 namespace image_directory_publisher {
 
@@ -39,8 +39,6 @@ public:
         this->get_parameter("frame_id_front", frame_id_front_);
         this->declare_parameter<std::string>("frame_id_right", "camera_right_link");
         this->get_parameter("frame_id_right", frame_id_right_);
-        this->declare_parameter<int>("jpeg_quality", 95); // Default JPEG quality
-        this->get_parameter("jpeg_quality", jpeg_quality);
 
 
         RCLCPP_INFO(this->get_logger(), "Image directory: %s", image_directory_.c_str());
@@ -55,9 +53,18 @@ public:
             return;
         }
 
-        left_publisher_ = image_transport::create_publisher(this, "/camera_front_left/image_raw");
-        front_publisher_ = image_transport::create_publisher(this, "/camera_front/image_raw");
-        right_publisher_ = image_transport::create_publisher(this, "/camera_front_right/image_raw");
+       
+        // Crear un perfil QoS personalizado
+        rclcpp::QoS custom_qos_profile(rclcpp::KeepLast(5)); // History: KEEP_LAST, Depth: 5
+        custom_qos_profile.reliable();                      // Reliability: RELIABLE
+        custom_qos_profile.durability_volatile();           // Durability: VOLATILE (implícito si no se especifica TRANSIENT_LOCAL)
+                                                            // Para ser explícito:
+                                                            // custom_qos_profile.durability(RMW_QOS_POLICY_DURABILITY_VOLATILE);
+
+
+        left_publisher_ = image_transport::create_publisher(this, "/camera_front_left/image_raw", custom_qos_profile.get_rmw_qos_profile());
+        front_publisher_ = image_transport::create_publisher(this, "/camera_front/image_raw", custom_qos_profile.get_rmw_qos_profile());
+        right_publisher_ = image_transport::create_publisher(this, "/camera_front_right/image_raw", custom_qos_profile.get_rmw_qos_profile());
         
         RCLCPP_INFO(this->get_logger(), "Publishing to /camera_front_left/image_raw, /camera_front/image_raw, /camera_front_right/image_raw");
 
@@ -133,19 +140,7 @@ private:
         // Convertir cv::Mat a sensor_msgs::msg::Image usando cv_bridge
         // Asumimos que la imagen es BGR8.
         auto msg_ptr = cv_bridge::CvImage(header, "bgr8", image_to_publish).toImageMsg();
-        
-        // Si se requiere compresión JPEG
-        if (publisher.getTopic().find("compressed") != std::string::npos) {
-            std::vector<int> params;
-            params.push_back(cv::IMWRITE_JPEG_QUALITY);
-            params.push_back(jpeg_quality); // Calidad JPEG
-            // cv_bridge no maneja la compresión directamente al crear el mensaje.
-            // Para publicar como compressedDepth o compressed, el image_transport se encarga
-            // si el suscriptor lo pide. Si queremos forzar la compresión aquí,
-            // necesitaríamos crear un sensor_msgs::msg::CompressedImage.
-            // Por ahora, confiamos en que image_transport maneje la compresión si es necesario.
-        }
-
+    
         publisher.publish(std::move(msg_ptr)); // Publicar el mensaje único
 
         RCLCPP_INFO(this->get_logger(), "Published %s image: %s with MONOTONIC TS: %ld.%09ld",
@@ -194,7 +189,6 @@ private:
     std::string image_directory_;
     std::string left_image_pattern_, front_image_pattern_, right_image_pattern_;
     bool loop_playback_;
-    int jpeg_quality; // Added for JPEG quality parameter
 
     std::vector<std::string> left_image_files_;
     std::vector<std::string> front_image_files_;

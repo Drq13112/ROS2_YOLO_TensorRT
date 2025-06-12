@@ -1,0 +1,39 @@
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:[m[K In constructor ‘[01m[KFrequencySubscriber::FrequencySubscriber()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:76:9:[m[K [01;31m[Kerror: [m[K‘[01m[Klatency_log_file_[m[K’ was not declared in this scope
+   76 |         [01;31m[Klatency_log_file_[m[K.open("latency_log.csv", std::ios_base::out | std::ios_base::trunc);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:[m[K In lambda function:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:150:17:[m[K [01;31m[Kerror: [m[K‘[01m[Klatency_log_file_[m[K’ is not captured
+  150 |             if ([01;31m[Klatency_log_file_[m[K.is_open())
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:91:18:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+   91 |             [this[01;36m[K][m[K(const yolo_custom_interfaces::msg::InstanceSegmentationInfo::SharedPtr msg, const std::string &camera_id)
+      |                  [01;36m[K^[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:76:9:[m[K [01;36m[Knote: [m[K‘[01m[K<typeprefixerror>latency_log_file_[m[K’ declared here
+   76 |         [01;36m[Klatency_log_file_[m[K.open("latency_log.csv", std::ios_base::out | std::ios_base::trunc);
+      |         [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:152:54:[m[K [01;31m[Kerror: [m[K‘[01m[Kcsv_mutex_[m[K’ was not declared in this scope
+  152 | d<std::mutex> csv_lock([01;31m[Kcsv_mutex_[m[K); // Proteger escritura al archivo
+      |                        [01;31m[K^~~~~~~~~~[m[K
+
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:153:17:[m[K [01;31m[Kerror: [m[K‘[01m[Klatency_log_file_[m[K’ is not captured
+  153 |                 [01;31m[Klatency_log_file_[m[K << std::fixed << std::setprecision(3)
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:91:18:[m[K [01;36m[Knote: [m[Kthe lambda has no capture-default
+   91 |             [this[01;36m[K][m[K(const yolo_custom_interfaces::msg::InstanceSegmentationInfo::SharedPtr msg, const std::string &camera_id)
+      |                  [01;36m[K^[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:76:9:[m[K [01;36m[Knote: [m[K‘[01m[K<typeprefixerror>latency_log_file_[m[K’ declared here
+   76 |         [01;36m[Klatency_log_file_[m[K.open("latency_log.csv", std::ios_base::out | std::ios_base::trunc);
+      |         [01;36m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:[m[K In member function ‘[01m[Kvoid FrequencySubscriber::csvWriterLoop()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:291:17:[m[K [01;31m[Kerror: [m[K‘[01m[Klatency_log_file[m[K’ was not declared in this scope; did you mean ‘[01m[Klatency_log_file_[m[K’?
+  291 |                 [01;31m[Klatency_log_file[m[K << line_to_write << "\n";
+      |                 [01;31m[K^~~~~~~~~~~~~~~~[m[K
+      |                 [32m[Klatency_log_file_[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:295:13:[m[K [01;31m[Kerror: [m[K‘[01m[Klatency_log_file[m[K’ was not declared in this scope; did you mean ‘[01m[Klatency_log_file_[m[K’?
+  295 |         if ([01;31m[Klatency_log_file[m[K.is_open())
+      |             [01;31m[K^~~~~~~~~~~~~~~~[m[K
+      |             [32m[Klatency_log_file_[m[K
+gmake[2]: *** [CMakeFiles/seg_sub_node.dir/build.make:76: CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/seg_sub_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

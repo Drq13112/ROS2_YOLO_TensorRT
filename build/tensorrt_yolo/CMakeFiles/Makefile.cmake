@@ -365,6 +365,8 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/ros/humble/share/image_transport/cmake/export_image_transportExport.cmake"
   "/opt/ros/humble/share/image_transport/cmake/image_transportConfig-version.cmake"
   "/opt/ros/humble/share/image_transport/cmake/image_transportConfig.cmake"
+  "/opt/ros/humble/share/image_transport_plugins/cmake/image_transport_pluginsConfig-version.cmake"
+  "/opt/ros/humble/share/image_transport_plugins/cmake/image_transport_pluginsConfig.cmake"
   "/opt/ros/humble/share/libstatistics_collector/cmake/ament_cmake_export_dependencies-extras.cmake"
   "/opt/ros/humble/share/libstatistics_collector/cmake/ament_cmake_export_include_directories-extras.cmake"
   "/opt/ros/humble/share/libstatistics_collector/cmake/ament_cmake_export_libraries-extras.cmake"

@@ -37,16 +37,32 @@ private:
   ::yolo_custom_interfaces::msg::InstanceSegmentationInfo msg_;
 };
 
+class Init_InstanceSegmentationInfo_processing_node_monotonic_entry_time
+{
+public:
+  explicit Init_InstanceSegmentationInfo_processing_node_monotonic_entry_time(::yolo_custom_interfaces::msg::InstanceSegmentationInfo & msg)
+  : msg_(msg)
+  {}
+  Init_InstanceSegmentationInfo_processing_node_monotonic_publish_time processing_node_monotonic_entry_time(::yolo_custom_interfaces::msg::InstanceSegmentationInfo::_processing_node_monotonic_entry_time_type arg)
+  {
+    msg_.processing_node_monotonic_entry_time = std::move(arg);
+    return Init_InstanceSegmentationInfo_processing_node_monotonic_publish_time(msg_);
+  }
+
+private:
+  ::yolo_custom_interfaces::msg::InstanceSegmentationInfo msg_;
+};
+
 class Init_InstanceSegmentationInfo_image_source_monotonic_capture_time
 {
 public:
   explicit Init_InstanceSegmentationInfo_image_source_monotonic_capture_time(::yolo_custom_interfaces::msg::InstanceSegmentationInfo & msg)
   : msg_(msg)
   {}
-  Init_InstanceSegmentationInfo_processing_node_monotonic_publish_time image_source_monotonic_capture_time(::yolo_custom_interfaces::msg::InstanceSegmentationInfo::_image_source_monotonic_capture_time_type arg)
+  Init_InstanceSegmentationInfo_processing_node_monotonic_entry_time image_source_monotonic_capture_time(::yolo_custom_interfaces::msg::InstanceSegmentationInfo::_image_source_monotonic_capture_time_type arg)
   {
     msg_.image_source_monotonic_capture_time = std::move(arg);
-    return Init_InstanceSegmentationInfo_processing_node_monotonic_publish_time(msg_);
+    return Init_InstanceSegmentationInfo_processing_node_monotonic_entry_time(msg_);
   }
 
 private:

@@ -8,6 +8,9 @@ endif()
 find_package(ament_cmake REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(yolo_custom_interfaces REQUIRED)
+find_package(cv_bridge REQUIRED)
+find_package(sensor_msgs REQUIRED)
+find_package(OpenCV REQUIRED)
 
 
 # CONSTRUCCIÓN DE LA LIBRERÍA 'chrono'
@@ -35,7 +38,7 @@ target_include_directories(chrono PUBLIC
 #-------------------------------------------------------------------------------
 
 add_executable(seg_sub_node src/seg_sub.cpp)
-ament_target_dependencies(seg_sub_node rclcpp yolo_custom_interfaces)
+ament_target_dependencies(seg_sub_node OpenCV cv_bridge rclcpp yolo_custom_interfaces)
 
 target_link_libraries(seg_sub_node
     chrono

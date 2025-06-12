@@ -20,6 +20,7 @@
 // Member 'mask'
 #include "sensor_msgs/msg/detail/image__traits.hpp"
 // Member 'image_source_monotonic_capture_time'
+// Member 'processing_node_monotonic_entry_time'
 // Member 'processing_node_monotonic_publish_time'
 #include "builtin_interfaces/msg/detail/time__traits.hpp"
 
@@ -88,6 +89,13 @@ inline void to_flow_style_yaml(
   {
     out << "image_source_monotonic_capture_time: ";
     to_flow_style_yaml(msg.image_source_monotonic_capture_time, out);
+    out << ", ";
+  }
+
+  // member: processing_node_monotonic_entry_time
+  {
+    out << "processing_node_monotonic_entry_time: ";
+    to_flow_style_yaml(msg.processing_node_monotonic_entry_time, out);
     out << ", ";
   }
 
@@ -168,6 +176,15 @@ inline void to_block_style_yaml(
     }
     out << "image_source_monotonic_capture_time:\n";
     to_block_style_yaml(msg.image_source_monotonic_capture_time, out, indentation + 2);
+  }
+
+  // member: processing_node_monotonic_entry_time
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "processing_node_monotonic_entry_time:\n";
+    to_block_style_yaml(msg.processing_node_monotonic_entry_time, out, indentation + 2);
   }
 
   // member: processing_node_monotonic_publish_time

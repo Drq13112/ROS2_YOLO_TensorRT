@@ -693,8 +693,359 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
   /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
   /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__traits.hpp \
   /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/instance_segmentation_info__type_support.hpp \
-  /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+  /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /usr/include/c++/11/fstream \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
+  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
+  /usr/include/c++/11/bits/fstream.tcc \
+  /usr/include/c++/11/filesystem \
+  /usr/include/c++/11/bits/fs_fwd.h \
+  /usr/include/c++/11/bits/fs_path.h \
+  /usr/include/c++/11/bits/fs_dir.h \
+  /usr/include/c++/11/bits/fs_ops.h \
+  /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__builder.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__type_support.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/compressed_image.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__struct.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__builder.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__traits.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__type_support.hpp \
+  /opt/ros/humble/include/sensor_msgs/sensor_msgs/image_encodings.hpp \
+  /usr/local/include/opencv2/core/core.hpp \
+  /usr/local/include/opencv2/core.hpp \
+  /usr/local/include/opencv2/core/cvdef.h \
+  /usr/local/include/opencv2/core/version.hpp \
+  /usr/local/include/opencv2/core/hal/interface.h \
+  /usr/include/c++/11/cstddef \
+  /usr/local/include/opencv2/core/cv_cpu_dispatch.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/emmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h \
+  /usr/local/include/opencv2/core/base.hpp \
+  /usr/local/include/opencv2/opencv_modules.hpp \
+  /usr/include/c++/11/climits \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h \
+  /usr/include/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/local_lim.h \
+  /usr/include/linux/limits.h \
+  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
+  /usr/local/include/opencv2/core/cvstd.hpp \
+  /usr/local/include/opencv2/core/ptr.inl.hpp \
+  /usr/local/include/opencv2/core/neon_utils.hpp \
+  /usr/local/include/opencv2/core/vsx_utils.hpp \
+  /usr/local/include/opencv2/core/check.hpp \
+  /usr/local/include/opencv2/core/traits.hpp \
+  /usr/local/include/opencv2/core/matx.hpp \
+  /usr/local/include/opencv2/core/saturate.hpp \
+  /usr/local/include/opencv2/core/fast_math.hpp \
+  /usr/local/include/opencv2/core/types.hpp \
+  /usr/include/c++/11/cfloat \
+  /usr/lib/gcc/x86_64-linux-gnu/11/include/float.h \
+  /usr/local/include/opencv2/core/mat.hpp \
+  /usr/local/include/opencv2/core/bufferpool.hpp \
+  /usr/local/include/opencv2/core/mat.inl.hpp \
+  /usr/local/include/opencv2/core/persistence.hpp \
+  /usr/local/include/opencv2/core/operations.hpp \
+  /usr/local/include/opencv2/core/cvstd.inl.hpp \
+  /usr/include/c++/11/complex \
+  /usr/local/include/opencv2/core/utility.hpp \
+  /usr/local/include/opencv2/core/core_c.h \
+  /usr/local/include/opencv2/core/types_c.h \
+  /usr/local/include/opencv2/core/optim.hpp \
+  /usr/local/include/opencv2/core/ovx.hpp \
+  /usr/local/include/opencv2/core/cvdef.h \
+  /usr/local/include/opencv2/imgproc/imgproc.hpp \
+  /usr/local/include/opencv2/imgproc.hpp \
+  /usr/local/include/opencv2/imgproc/imgproc_c.h \
+  /usr/local/include/opencv2/imgproc/types_c.h \
+  /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge_export.h \
+  /usr/local/include/opencv2/opencv.hpp \
+  /usr/local/include/opencv2/calib3d.hpp \
+  /usr/local/include/opencv2/features2d.hpp \
+  /usr/local/include/opencv2/flann/miniflann.hpp \
+  /usr/local/include/opencv2/flann/defines.h \
+  /usr/local/include/opencv2/flann/config.h \
+  /usr/local/include/opencv2/core/affine.hpp \
+  /usr/local/include/opencv2/calib3d/calib3d_c.h \
+  /usr/local/include/opencv2/dnn.hpp \
+  /usr/local/include/opencv2/dnn/dnn.hpp \
+  /usr/local/include/opencv2/core/async.hpp \
+  /usr/local/include/opencv2/dnn/dict.hpp \
+  /usr/local/include/opencv2/dnn/layer.hpp \
+  /usr/local/include/opencv2/dnn/dnn.inl.hpp \
+  /usr/local/include/opencv2/dnn/utils/inference_engine.hpp \
+  /usr/local/include/opencv2/dnn/dnn.hpp \
+  /usr/local/include/opencv2/flann.hpp \
+  /usr/local/include/opencv2/flann/flann_base.hpp \
+  /usr/local/include/opencv2/flann/general.h \
+  /usr/local/include/opencv2/flann/matrix.h \
+  /usr/local/include/opencv2/flann/params.h \
+  /usr/local/include/opencv2/flann/any.h \
+  /usr/local/include/opencv2/flann/defines.h \
+  /usr/local/include/opencv2/flann/saving.h \
+  /usr/local/include/opencv2/flann/nn_index.h \
+  /usr/local/include/opencv2/flann/result_set.h \
+  /usr/local/include/opencv2/flann/all_indices.h \
+  /usr/local/include/opencv2/flann/kdtree_index.h \
+  /usr/local/include/opencv2/flann/dynamic_bitset.h \
+  /usr/local/include/opencv2/flann/dist.h \
+  /usr/local/include/opencv2/flann/heap.h \
+  /usr/local/include/opencv2/flann/allocator.h \
+  /usr/local/include/opencv2/flann/random.h \
+  /usr/local/include/opencv2/flann/kdtree_single_index.h \
+  /usr/local/include/opencv2/flann/kmeans_index.h \
+  /usr/local/include/opencv2/flann/logger.h \
+  /usr/local/include/opencv2/flann/composite_index.h \
+  /usr/local/include/opencv2/flann/linear_index.h \
+  /usr/local/include/opencv2/flann/hierarchical_clustering_index.h \
+  /usr/local/include/opencv2/flann/lsh_index.h \
+  /usr/local/include/opencv2/flann/lsh_table.h \
+  /usr/include/c++/11/math.h \
+  /usr/local/include/opencv2/flann/autotuned_index.h \
+  /usr/local/include/opencv2/flann/ground_truth.h \
+  /usr/local/include/opencv2/flann/index_testing.h \
+  /usr/local/include/opencv2/flann/timer.h \
+  /usr/local/include/opencv2/flann/sampling.h \
+  /usr/local/include/opencv2/highgui.hpp \
+  /usr/local/include/opencv2/imgcodecs.hpp \
+  /usr/local/include/opencv2/videoio.hpp \
+  /usr/local/include/opencv2/highgui/highgui_c.h \
+  /usr/local/include/opencv2/imgcodecs/imgcodecs_c.h \
+  /usr/local/include/opencv2/videoio/videoio_c.h \
+  /usr/local/include/opencv2/ml.hpp \
+  /usr/local/include/opencv2/ml/ml.inl.hpp \
+  /usr/local/include/opencv2/objdetect.hpp \
+  /usr/local/include/opencv2/objdetect/detection_based_tracker.hpp \
+  /usr/local/include/opencv2/objdetect/objdetect_c.h \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc \
+  /usr/local/include/opencv2/photo.hpp \
+  /usr/local/include/opencv2/photo/photo_c.h \
+  /usr/local/include/opencv2/shape.hpp \
+  /usr/local/include/opencv2/shape/emdL1.hpp \
+  /usr/local/include/opencv2/shape/shape_transformer.hpp \
+  /usr/local/include/opencv2/shape/hist_cost.hpp \
+  /usr/local/include/opencv2/shape/shape_distance.hpp \
+  /usr/local/include/opencv2/stitching.hpp \
+  /usr/local/include/opencv2/stitching/warpers.hpp \
+  /usr/local/include/opencv2/stitching/detail/warpers.hpp \
+  /usr/local/include/opencv2/core/cuda.hpp \
+  /usr/local/include/opencv2/core/cuda_types.hpp \
+  /usr/local/include/opencv2/core/cuda.inl.hpp \
+  /usr/local/include/opencv2/stitching/detail/warpers_inl.hpp \
+  /usr/local/include/opencv2/stitching/detail/warpers.hpp \
+  /usr/local/include/opencv2/stitching/detail/matchers.hpp \
+  /usr/local/include/opencv2/xfeatures2d/cuda.hpp \
+  /usr/local/include/opencv2/stitching/detail/motion_estimators.hpp \
+  /usr/local/include/opencv2/stitching/detail/matchers.hpp \
+  /usr/local/include/opencv2/stitching/detail/util.hpp \
+  /usr/local/include/opencv2/stitching/detail/util_inl.hpp \
+  /usr/include/c++/11/queue \
+  /usr/include/c++/11/bits/stl_queue.h \
+  /usr/local/include/opencv2/stitching/detail/camera.hpp \
+  /usr/local/include/opencv2/stitching/detail/exposure_compensate.hpp \
+  /usr/local/include/opencv2/stitching/detail/seam_finders.hpp \
+  /usr/local/include/opencv2/stitching/detail/blenders.hpp \
+  /usr/local/include/opencv2/stitching/detail/camera.hpp \
+  /usr/local/include/opencv2/superres.hpp \
+  /usr/local/include/opencv2/superres/optical_flow.hpp \
+  /usr/local/include/opencv2/video.hpp \
+  /usr/local/include/opencv2/video/tracking.hpp \
+  /usr/local/include/opencv2/video/background_segm.hpp \
+  /usr/local/include/opencv2/video/tracking_c.h \
+  /usr/local/include/opencv2/videostab.hpp \
+  /usr/local/include/opencv2/videostab/stabilizer.hpp \
+  /usr/local/include/opencv2/videostab/global_motion.hpp \
+  /usr/local/include/opencv2/videostab/optical_flow.hpp \
+  /usr/local/include/opencv2/videostab/motion_core.hpp \
+  /usr/local/include/opencv2/videostab/outlier_rejection.hpp \
+  /usr/local/include/opencv2/videostab/motion_stabilizing.hpp \
+  /usr/local/include/opencv2/videostab/frame_source.hpp \
+  /usr/local/include/opencv2/videostab/log.hpp \
+  /usr/local/include/opencv2/videostab/inpainting.hpp \
+  /usr/local/include/opencv2/videostab/fast_marching.hpp \
+  /usr/local/include/opencv2/videostab/fast_marching_inl.hpp \
+  /usr/local/include/opencv2/videostab/deblurring.hpp \
+  /usr/local/include/opencv2/videostab/wobble_suppression.hpp \
+  /usr/local/include/opencv2/videostab/ring_buffer.hpp
 
+
+/usr/local/include/opencv2/videostab/ring_buffer.hpp:
+
+/usr/local/include/opencv2/videostab/fast_marching.hpp:
+
+/usr/local/include/opencv2/videostab/frame_source.hpp:
+
+/usr/local/include/opencv2/videostab/outlier_rejection.hpp:
+
+/usr/local/include/opencv2/videostab/motion_core.hpp:
+
+/usr/local/include/opencv2/videostab/optical_flow.hpp:
+
+/usr/local/include/opencv2/video/tracking.hpp:
+
+/usr/local/include/opencv2/superres/optical_flow.hpp:
+
+/usr/local/include/opencv2/superres.hpp:
+
+/usr/include/c++/11/bits/stl_queue.h:
+
+/usr/include/c++/11/queue:
+
+/usr/local/include/opencv2/stitching/detail/util_inl.hpp:
+
+/usr/local/include/opencv2/core/cuda.inl.hpp:
+
+/usr/local/include/opencv2/core/cuda_types.hpp:
+
+/usr/local/include/opencv2/shape/emdL1.hpp:
+
+/usr/local/include/opencv2/photo/photo_c.h:
+
+/usr/local/include/opencv2/photo.hpp:
+
+/usr/include/c++/11/deque:
+
+/usr/local/include/opencv2/objdetect/detection_based_tracker.hpp:
+
+/usr/local/include/opencv2/videoio/videoio_c.h:
+
+/usr/local/include/opencv2/highgui/highgui_c.h:
+
+/usr/local/include/opencv2/imgcodecs.hpp:
+
+/usr/local/include/opencv2/highgui.hpp:
+
+/usr/local/include/opencv2/flann/hierarchical_clustering_index.h:
+
+/usr/local/include/opencv2/flann/linear_index.h:
+
+/usr/local/include/opencv2/flann/logger.h:
+
+/usr/local/include/opencv2/flann/kmeans_index.h:
+
+/usr/local/include/opencv2/flann/heap.h:
+
+/usr/local/include/opencv2/flann/dist.h:
+
+/usr/local/include/opencv2/flann/dynamic_bitset.h:
+
+/usr/local/include/opencv2/flann/kdtree_index.h:
+
+/usr/local/include/opencv2/flann/result_set.h:
+
+/usr/local/include/opencv2/flann/nn_index.h:
+
+/usr/local/include/opencv2/flann/params.h:
+
+/usr/local/include/opencv2/flann/matrix.h:
+
+/usr/local/include/opencv2/flann/general.h:
+
+/usr/local/include/opencv2/flann/flann_base.hpp:
+
+/usr/local/include/opencv2/dnn/layer.hpp:
+
+/usr/local/include/opencv2/dnn.hpp:
+
+/usr/local/include/opencv2/core/affine.hpp:
+
+/usr/local/include/opencv2/flann/config.h:
+
+/usr/local/include/opencv2/flann/defines.h:
+
+/usr/local/include/opencv2/flann/miniflann.hpp:
+
+/usr/local/include/opencv2/calib3d.hpp:
+
+/usr/local/include/opencv2/opencv.hpp:
+
+/usr/local/include/opencv2/imgproc/types_c.h:
+
+/usr/local/include/opencv2/imgproc.hpp:
+
+/usr/local/include/opencv2/core/ovx.hpp:
+
+/usr/local/include/opencv2/core/types_c.h:
+
+/usr/local/include/opencv2/core/utility.hpp:
+
+/usr/local/include/opencv2/core/cvstd.inl.hpp:
+
+/usr/local/include/opencv2/core/persistence.hpp:
+
+/usr/local/include/opencv2/core/mat.inl.hpp:
+
+/usr/local/include/opencv2/core/bufferpool.hpp:
+
+/usr/local/include/opencv2/core/mat.hpp:
+
+/usr/local/include/opencv2/core/types.hpp:
+
+/usr/local/include/opencv2/core/saturate.hpp:
+
+/usr/local/include/opencv2/core/matx.hpp:
+
+/usr/local/include/opencv2/core/vsx_utils.hpp:
+
+/usr/local/include/opencv2/core/ptr.inl.hpp:
+
+/usr/include/linux/limits.h:
+
+/usr/include/limits.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/syslimits.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/limits.h:
+
+/usr/local/include/opencv2/flann/allocator.h:
+
+/usr/local/include/opencv2/opencv_modules.hpp:
+
+/usr/local/include/opencv2/core/base.hpp:
+
+/usr/local/include/opencv2/core/cv_cpu_dispatch.h:
+
+/usr/local/include/opencv2/core/hal/interface.h:
+
+/usr/local/include/opencv2/core/version.hpp:
+
+/usr/local/include/opencv2/core.hpp:
+
+/usr/local/include/opencv2/core/core.hpp:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/image_encodings.hpp:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__type_support.hpp:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__builder.hpp:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/compressed_image.hpp:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__builder.hpp:
+
+/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h:
+
+/usr/include/c++/11/bits/fs_ops.h:
+
+/usr/include/c++/11/bits/fs_dir.h:
+
+/usr/include/c++/11/bits/fs_fwd.h:
+
+/usr/include/c++/11/bits/fstream.tcc:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h:
+
+/usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h:
 
 /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp:
 
@@ -714,6 +1065,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /opt/ros/humble/include/rclcpp/rclcpp/subscription_wait_set_mask.hpp:
 
+/usr/local/include/opencv2/core/async.hpp:
+
 /opt/ros/humble/include/rclcpp/rclcpp/wait_set_policies/dynamic_storage.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/wait_set.hpp:
@@ -723,6 +1076,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 /opt/ros/humble/include/rcl_yaml_param_parser/rcl_yaml_param_parser/visibility_control.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/set_parameters_atomically__struct.hpp:
+
+/usr/local/include/opencv2/videoio.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/set_parameters_atomically.hpp:
 
@@ -738,6 +1093,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__struct.hpp:
 
+/usr/local/include/opencv2/videostab/wobble_suppression.hpp:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__type_support.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__traits.hpp:
@@ -745,6 +1102,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__builder.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/get_parameters__struct.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/get_parameters.hpp:
 
@@ -761,6 +1120,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__traits.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/describe_parameters.hpp:
+
+/usr/local/include/opencv2/videostab/inpainting.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/executors/static_executor_entities_collector.hpp:
 
@@ -794,9 +1155,17 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_value__type_support.hpp:
 
+/usr/include/x86_64-linux-gnu/bits/posix2_lim.h:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_type__traits.hpp:
 
+/usr/local/include/opencv2/stitching/detail/warpers_inl.hpp:
+
+/usr/local/include/opencv2/shape/hist_cost.hpp:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_type__builder.hpp:
+
+/usr/local/include/opencv2/stitching/detail/blenders.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_type__struct.hpp:
 
@@ -818,7 +1187,11 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_timers_interface.hpp:
 
+/usr/local/include/opencv2/imgcodecs/imgcodecs_c.h:
+
 /opt/ros/humble/include/rcutils/rcutils/shared_library.h:
+
+/usr/local/include/opencv2/videostab/motion_stabilizing.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/generic_publisher.hpp:
 
@@ -828,17 +1201,25 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__traits.hpp:
 
+/usr/include/c++/11/bits/deque.tcc:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_value__struct.hpp:
+
+/usr/include/x86_64-linux-gnu/bits/local_lim.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__struct.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/parameter_event.hpp:
+
+/usr/local/include/opencv2/core/optim.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__type_support.hpp:
 
 /opt/ros/humble/include/rcpputils/rcpputils/pointer_traits.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__traits.hpp:
+
+/usr/local/include/opencv2/flann/any.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_descriptor__builder.hpp:
 
@@ -848,6 +1229,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/parameter_descriptor.hpp:
 
+/usr/local/include/opencv2/imgproc/imgproc_c.h:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__type_support.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__traits.hpp:
@@ -856,15 +1239,23 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__struct.hpp:
 
+/usr/local/include/opencv2/stitching/detail/util.hpp:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/list_parameters_result.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/node.hpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/mm_malloc.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/parameter_value.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/executors/single_threaded_executor.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/detail/rmw_implementation_specific_publisher_payload.hpp:
+
+/usr/local/include/opencv2/calib3d/calib3d_c.h:
+
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/publisher.hpp:
 
@@ -916,6 +1307,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /usr/include/x86_64-linux-gnu/sys/types.h:
 
+/usr/include/c++/11/filesystem:
+
 /usr/include/linux/errno.h:
 
 /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/instance_segmentation_info__type_support.hpp:
@@ -940,6 +1333,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
+/usr/local/include/opencv2/dnn/utils/inference_engine.hpp:
+
 /usr/include/alloca.h:
 
 /usr/include/c++/11/limits:
@@ -960,7 +1355,11 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/set_parameters_result__struct.hpp:
 
+/usr/local/include/opencv2/core/fast_math.hpp:
+
 /usr/include/c++/11/backward/auto_ptr.h:
+
+/usr/local/include/opencv2/shape/shape_transformer.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/detail/rmw_implementation_specific_subscription_payload.hpp:
 
@@ -1008,6 +1407,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /usr/include/locale.h:
 
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
+
 /usr/include/c++/11/tr1/poly_hermite.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/cpu-set.h:
@@ -1016,15 +1417,21 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /usr/include/c++/11/bits/uses_allocator.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/11/include/emmintrin.h:
+
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/moving_average_statistics/types.hpp:
 
 /usr/include/c++/11/string_view:
 
 /opt/ros/humble/include/rcutils/rcutils/time.h:
 
+/usr/include/c++/11/bits/stl_deque.h:
+
 /opt/ros/humble/include/rcl/rcl/client.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
+
+/usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_topics_interface.hpp:
 
@@ -1054,6 +1461,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /opt/ros/humble/include/rmw/rmw/visibility_control.h:
 
+/usr/local/include/opencv2/core/neon_utils.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
 /usr/include/c++/11/pstl/pstl_config.h:
@@ -1067,6 +1476,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/visibility_control.hpp:
+
+/opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge_export.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
 
@@ -1116,15 +1527,21 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_sigstack.h:
 
+/usr/local/include/opencv2/ml/ml.inl.hpp:
+
 /opt/ros/humble/include/rclcpp/rclcpp/publisher_factory.hpp:
 
 /usr/include/c++/11/cstdint:
 
 /usr/include/c++/11/bits/std_mutex.h:
 
+/usr/local/include/opencv2/features2d.hpp:
+
 /usr/include/c++/11/ext/atomicity.h:
 
 /usr/include/c++/11/bits/exception_defines.h:
+
+/usr/local/include/opencv2/stitching/detail/motion_estimators.hpp:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/list_parameters_result__builder.hpp:
 
@@ -1158,9 +1575,13 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /usr/include/x86_64-linux-gnu/bits/sigcontext.h:
 
+/usr/include/c++/11/math.h:
+
 /usr/include/assert.h:
 
 /usr/include/x86_64-linux-gnu/bits/siginfo-consts-arch.h:
+
+/usr/local/include/opencv2/ml.hpp:
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
@@ -1186,7 +1607,11 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /usr/include/c++/11/bits/align.h:
 
+/usr/local/include/opencv2/flann/sampling.h:
+
 /usr/include/c++/11/bits/functional_hash.h:
+
+/usr/local/include/opencv2/flann/random.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h:
 
@@ -1194,13 +1619,23 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
 
+/usr/local/include/opencv2/video.hpp:
+
 /opt/ros/humble/include/rclcpp/rclcpp/serialized_message.hpp:
 
 /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.hpp:
 
+/usr/local/include/opencv2/flann/index_testing.h:
+
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
+/usr/local/include/opencv2/stitching/detail/seam_finders.hpp:
+
+/usr/local/include/opencv2/stitching/detail/warpers.hpp:
+
 /usr/include/c++/11/locale:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__type_support.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/parameter_service.hpp:
 
@@ -1217,6 +1652,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /usr/include/x86_64-linux-gnu/bits/sigaction.h:
+
+/usr/local/include/opencv2/shape/shape_distance.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/function_traits.hpp:
 
@@ -1244,6 +1681,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /usr/lib/gcc/x86_64-linux-gnu/11/include/stdint.h:
 
+/usr/local/include/opencv2/shape.hpp:
+
 /opt/ros/humble/include/rcl/rcl/time.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigval_t.h:
@@ -1254,6 +1693,12 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /usr/include/endian.h:
 
+/usr/local/include/opencv2/flann/timer.h:
+
+/usr/local/include/opencv2/dnn/dnn.inl.hpp:
+
+/usr/include/c++/11/complex:
+
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/sched.h:
@@ -1261,6 +1706,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 /opt/ros/humble/include/rcutils/rcutils/types/hash_map.h:
 
 /usr/include/c++/11/future:
+
+/usr/local/include/opencv2/video/tracking_c.h:
 
 /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp:
 
@@ -1270,9 +1717,13 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /usr/include/x86_64-linux-gnu/bits/signum-arch.h:
 
+/usr/local/include/opencv2/flann/all_indices.h:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter__builder.hpp:
 
 /usr/include/c++/11/bits/hash_bytes.h:
+
+/usr/local/include/opencv2/core/traits.hpp:
 
 /opt/ros/humble/include/rcl/rcl/service.h:
 
@@ -1296,17 +1747,23 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /opt/ros/humble/include/rcutils/rcutils/types.h:
 
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__traits.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/types/sig_atomic_t.h:
 
 /usr/include/c++/11/bits/stl_set.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
+/usr/local/include/opencv2/videostab/deblurring.hpp:
+
 /usr/include/c++/11/bits/predefined_ops.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__builder.hpp:
 
 /usr/include/c++/11/bits/sstream.tcc:
+
+/usr/local/include/opencv2/videostab/global_motion.hpp:
 
 /usr/include/c++/11/bits/stl_pair.h:
 
@@ -1340,6 +1797,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /usr/include/c++/11/bits/alloc_traits.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/11/include/xmmintrin.h:
+
 /usr/include/stdlib.h:
 
 /usr/include/x86_64-linux-gnu/bits/sigstack.h:
@@ -1348,9 +1807,13 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/detail/statistic_data_point__struct.hpp:
 
+/usr/local/include/opencv2/xfeatures2d/cuda.hpp:
+
 /usr/include/c++/11/tr1/legendre_function.tcc:
 
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/topic_statistics_collector/topic_statistics_collector.hpp:
+
+/usr/include/c++/11/cstddef:
 
 /usr/include/c++/11/bits/std_abs.h:
 
@@ -1368,6 +1831,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /usr/include/c++/11/bits/functexcept.h:
 
+/usr/local/include/opencv2/flann/kdtree_single_index.h:
+
 /usr/include/c++/11/bits/algorithmfwd.h:
 
 /opt/ros/humble/include/statistics_msgs/statistics_msgs/msg/rosidl_generator_cpp__visibility_control.hpp:
@@ -1377,6 +1842,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 /opt/ros/humble/include/rclcpp/rclcpp/qos_overriding_options.hpp:
 
 /usr/include/c++/11/cstdlib:
+
+/usr/local/include/opencv2/stitching/detail/matchers.hpp:
 
 /usr/include/c++/11/set:
 
@@ -1395,6 +1862,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 /usr/include/c++/11/bits/localefwd.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/wint_t.h:
+
+/usr/local/include/opencv2/flann/lsh_index.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/create_timer.hpp:
 
@@ -1470,6 +1939,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/error_constants.h:
 
+/usr/local/include/opencv2/stitching/detail/exposure_compensate.hpp:
+
 /usr/include/c++/11/bits/shared_ptr.h:
 
 /usr/include/c++/11/bits/stl_construct.h:
@@ -1496,6 +1967,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
+/usr/include/c++/11/cfloat:
+
 /usr/include/c++/11/bits/unordered_map.h:
 
 /usr/include/c++/11/bits/parse_numbers.h:
@@ -1513,6 +1986,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 /usr/include/stdint.h:
 
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
+
+/usr/local/include/opencv2/stitching/warpers.hpp:
 
 /usr/include/c++/11/bits/locale_classes.h:
 
@@ -1534,11 +2009,15 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:
 
+/usr/local/include/opencv2/stitching/detail/camera.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
 /opt/ros/humble/include/rcl/rcl/types.h:
 
 /usr/include/c++/11/array:
+
+/usr/local/include/opencv2/core/cvstd.hpp:
 
 /usr/include/c++/11/csignal:
 
@@ -1566,7 +2045,13 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /usr/include/stdio.h:
 
+/usr/local/include/opencv2/flann/lsh_table.h:
+
+/usr/local/include/opencv2/flann/saving.h:
+
 /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/message_type_support_decl.hpp:
+
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/get_node_topics_interface.hpp:
 
@@ -1604,6 +2089,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /usr/include/c++/11/bits/locale_classes.tcc:
 
+/usr/local/include/opencv2/dnn/dict.hpp:
+
 /usr/include/c++/11/codecvt:
 
 /usr/include/c++/11/bits/streambuf.tcc:
@@ -1626,11 +2113,17 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/ctype_inline.h:
 
+/usr/local/include/opencv2/core/cuda.hpp:
+
 /usr/include/c++/11/bits/ostream.tcc:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/describe_parameters__struct.hpp:
 
 /opt/ros/humble/include/rmw/rmw/time.h:
+
+/usr/local/include/opencv2/videostab.hpp:
+
+/usr/include/c++/11/bits/fs_path.h:
 
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp:
 
@@ -1668,6 +2161,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /opt/ros/humble/include/rclcpp/rclcpp/message_memory_strategy.hpp:
 
+/usr/local/include/opencv2/objdetect/objdetect_c.h:
+
 /opt/ros/humble/include/rclcpp/rclcpp/node_interfaces/node_services_interface.hpp:
 
 /usr/include/c++/11/pstl/glue_numeric_defs.h:
@@ -1696,6 +2191,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /opt/ros/humble/include/rcutils/rcutils/visibility_control_macros.h:
 
+/usr/local/include/opencv2/stitching.hpp:
+
 /opt/ros/humble/include/rclcpp/rclcpp/type_support_decl.hpp:
 
 /opt/ros/humble/include/rmw/rmw/init.h:
@@ -1712,6 +2209,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /opt/ros/humble/include/rmw/rmw/ret_types.h:
 
+/usr/local/include/opencv2/flann/composite_index.h:
+
 /opt/ros/humble/include/rclcpp/rclcpp/get_message_type_support_handle.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:
@@ -1724,9 +2223,13 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /usr/include/c++/11/unordered_set:
 
+/usr/local/include/opencv2/core/core_c.h:
+
 /opt/ros/humble/include/rclcpp/rclcpp/subscription_factory.hpp:
 
 /usr/include/strings.h:
+
+/usr/local/include/opencv2/flann/ground_truth.h:
 
 /opt/ros/humble/include/rcutils/rcutils/snprintf.h:
 
@@ -1786,6 +2289,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /opt/ros/humble/include/rmw/rmw/message_sequence.h:
 
+/usr/local/include/opencv2/videostab/log.hpp:
+
 /opt/ros/humble/include/rcl/rcl/timer.h:
 
 /usr/include/x86_64-linux-gnu/bits/siginfo-arch.h:
@@ -1814,6 +2319,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /opt/ros/humble/include/rcl/rcl/event.h:
 
+/usr/include/c++/11/fstream:
+
 /usr/include/c++/11/debug/debug.h:
 
 /opt/ros/humble/include/rcl/rcl/publisher.h:
@@ -1821,6 +2328,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
 /opt/ros/humble/include/rcpputils/rcpputils/scope_exit.hpp:
+
+/usr/include/c++/11/climits:
 
 /opt/ros/humble/include/rclcpp/rclcpp/context.hpp:
 
@@ -1847,6 +2356,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 /opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/exceptions.hpp:
+
+/usr/local/include/opencv2/flann/autotuned_index.h:
 
 /opt/ros/humble/include/rcpputils/rcpputils/join.hpp:
 
@@ -1892,9 +2403,15 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /opt/ros/humble/include/rosidl_runtime_cpp/rosidl_runtime_cpp/traits.hpp:
 
+/usr/local/include/opencv2/objdetect.hpp:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/mmintrin.h:
+
 /opt/ros/humble/include/rclcpp/rclcpp/service.hpp:
 
 /usr/include/c++/11/iomanip:
+
+/usr/local/include/opencv2/videostab/stabilizer.hpp:
 
 /opt/ros/humble/include/rcl/rcl/event_callback.h:
 
@@ -1903,6 +2420,10 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/srv/detail/list_parameters__type_support.hpp:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/time_members.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/11/include/float.h:
+
+/usr/local/include/opencv2/core/check.hpp:
 
 /usr/include/libintl.h:
 
@@ -1950,6 +2471,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /opt/ros/humble/include/rcl/rcl/network_flow_endpoints.h:
 
+/opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/compressed_image__struct.hpp:
+
 /opt/ros/humble/include/rcl_interfaces/rcl_interfaces/msg/detail/parameter_event__builder.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/contexts/default_context.hpp:
@@ -1957,6 +2480,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 /opt/ros/humble/include/rmw/rmw/network_flow_endpoint.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/qos_event.hpp:
+
+/usr/local/include/opencv2/video/background_segm.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/waitable.hpp:
 
@@ -1986,6 +2511,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /opt/ros/humble/include/rclcpp/rclcpp/type_adapter.hpp:
 
+/usr/local/include/opencv2/videostab/fast_marching_inl.hpp:
+
 /opt/ros/humble/include/rclcpp/rclcpp/experimental/intra_process_manager.hpp:
 
 /opt/ros/humble/include/rclcpp/rclcpp/experimental/ros_message_intra_process_buffer.hpp:
@@ -2014,6 +2541,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /opt/ros/humble/include/rclcpp/rclcpp/clock.hpp:
 
+/usr/local/include/opencv2/core/operations.hpp:
+
 /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__builder.hpp:
 
 /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__traits.hpp:
@@ -2022,6 +2551,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /opt/ros/humble/include/rclcpp/rclcpp/subscription.hpp:
 
+/usr/local/include/opencv2/dnn/dnn.hpp:
+
 /opt/ros/humble/include/rclcpp/rclcpp/intra_process_setting.hpp:
 
 /usr/include/c++/11/bits/std_thread.h:
@@ -2029,6 +2560,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 /usr/include/c++/11/bits/stl_algobase.h:
 
 /opt/ros/humble/include/rclcpp/rclcpp/topic_statistics/subscription_topic_statistics.hpp:
+
+/usr/local/include/opencv2/core/cvdef.h:
 
 /opt/ros/humble/include/libstatistics_collector/libstatistics_collector/collector/generate_statistics_message.hpp:
 
@@ -2046,6 +2579,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
 
+/usr/local/include/opencv2/imgproc/imgproc.hpp:
+
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
@@ -2053,6 +2588,8 @@ CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o: /home/david/yolocpp_ws/src/seg_su
 /usr/include/c++/11/tr1/ell_integral.tcc:
 
 /usr/include/c++/11/tr1/gamma.tcc:
+
+/usr/local/include/opencv2/flann.hpp:
 
 /usr/include/c++/11/atomic:
 

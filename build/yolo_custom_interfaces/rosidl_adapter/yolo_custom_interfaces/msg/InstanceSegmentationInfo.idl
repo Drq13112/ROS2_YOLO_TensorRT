@@ -17,8 +17,16 @@ module yolo_custom_interfaces {
 
       sequence<int32> classes;
 
+      @verbatim (language="comment", text=
+        "T1: Instante en el que se publica la imagen en el driver")
       builtin_interfaces::msg::Time image_source_monotonic_capture_time;
 
+      @verbatim (language="comment", text=
+        "T2: Instante en el que se recibe la imagen en el segment_node")
+      builtin_interfaces::msg::Time processing_node_monotonic_entry_time;
+
+      @verbatim (language="comment", text=
+        "T3: Instante en el que se publica la imagen en el segment_node")
       builtin_interfaces::msg::Time processing_node_monotonic_publish_time;
     };
   };

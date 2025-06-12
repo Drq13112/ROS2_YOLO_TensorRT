@@ -13,6 +13,7 @@ find_package(sensor_msgs REQUIRED) # If you plan to use sensor_msgs/Image direct
 find_package(cv_bridge REQUIRED) # For OpenCV image conversion in ROS 2
 find_package(yolo_custom_interfaces REQUIRED)
 find_package(image_transport REQUIRED) # For image transport in ROS 2
+find_package(image_transport_plugins REQUIRED) # For image transport plugins
 #-------------------------------------------------------------------------------
 
 # Configuración estándar de C++ 
@@ -356,6 +357,7 @@ install (DIRECTORY
   include
   models
   data
+  config
   DESTINATION share/${PROJECT_NAME}
 )
 

@@ -73,7 +73,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/seg_sub/seg_sub_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/seg_sub/seg_sub_node"
-         OLD_RPATH "/opt/ros/humble/lib:/home/david/yolocpp_ws/install/yolo_custom_interfaces/lib:/home/david/yolocpp_ws/build/seg_sub:"
+         OLD_RPATH "/opt/ros/humble/lib:/home/david/yolocpp_ws/install/yolo_custom_interfaces/lib:/usr/local/lib:/home/david/yolocpp_ws/build/seg_sub:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/seg_sub/seg_sub_node")

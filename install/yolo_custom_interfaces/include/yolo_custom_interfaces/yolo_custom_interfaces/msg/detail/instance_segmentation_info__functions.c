@@ -20,6 +20,7 @@
 // Member `classes`
 #include "rosidl_runtime_c/primitives_sequence_functions.h"
 // Member `image_source_monotonic_capture_time`
+// Member `processing_node_monotonic_entry_time`
 // Member `processing_node_monotonic_publish_time`
 #include "builtin_interfaces/msg/detail/time__functions.h"
 
@@ -54,6 +55,11 @@ yolo_custom_interfaces__msg__InstanceSegmentationInfo__init(yolo_custom_interfac
     yolo_custom_interfaces__msg__InstanceSegmentationInfo__fini(msg);
     return false;
   }
+  // processing_node_monotonic_entry_time
+  if (!builtin_interfaces__msg__Time__init(&msg->processing_node_monotonic_entry_time)) {
+    yolo_custom_interfaces__msg__InstanceSegmentationInfo__fini(msg);
+    return false;
+  }
   // processing_node_monotonic_publish_time
   if (!builtin_interfaces__msg__Time__init(&msg->processing_node_monotonic_publish_time)) {
     yolo_custom_interfaces__msg__InstanceSegmentationInfo__fini(msg);
@@ -78,6 +84,8 @@ yolo_custom_interfaces__msg__InstanceSegmentationInfo__fini(yolo_custom_interfac
   rosidl_runtime_c__int32__Sequence__fini(&msg->classes);
   // image_source_monotonic_capture_time
   builtin_interfaces__msg__Time__fini(&msg->image_source_monotonic_capture_time);
+  // processing_node_monotonic_entry_time
+  builtin_interfaces__msg__Time__fini(&msg->processing_node_monotonic_entry_time);
   // processing_node_monotonic_publish_time
   builtin_interfaces__msg__Time__fini(&msg->processing_node_monotonic_publish_time);
 }
@@ -115,6 +123,12 @@ yolo_custom_interfaces__msg__InstanceSegmentationInfo__are_equal(const yolo_cust
   // image_source_monotonic_capture_time
   if (!builtin_interfaces__msg__Time__are_equal(
       &(lhs->image_source_monotonic_capture_time), &(rhs->image_source_monotonic_capture_time)))
+  {
+    return false;
+  }
+  // processing_node_monotonic_entry_time
+  if (!builtin_interfaces__msg__Time__are_equal(
+      &(lhs->processing_node_monotonic_entry_time), &(rhs->processing_node_monotonic_entry_time)))
   {
     return false;
   }
@@ -162,6 +176,12 @@ yolo_custom_interfaces__msg__InstanceSegmentationInfo__copy(
   // image_source_monotonic_capture_time
   if (!builtin_interfaces__msg__Time__copy(
       &(input->image_source_monotonic_capture_time), &(output->image_source_monotonic_capture_time)))
+  {
+    return false;
+  }
+  // processing_node_monotonic_entry_time
+  if (!builtin_interfaces__msg__Time__copy(
+      &(input->processing_node_monotonic_entry_time), &(output->processing_node_monotonic_entry_time)))
   {
     return false;
   }

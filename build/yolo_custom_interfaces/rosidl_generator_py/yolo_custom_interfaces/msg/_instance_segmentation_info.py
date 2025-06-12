@@ -78,6 +78,7 @@ class InstanceSegmentationInfo(metaclass=Metaclass_InstanceSegmentationInfo):
         '_scores',
         '_classes',
         '_image_source_monotonic_capture_time',
+        '_processing_node_monotonic_entry_time',
         '_processing_node_monotonic_publish_time',
     ]
 
@@ -87,6 +88,7 @@ class InstanceSegmentationInfo(metaclass=Metaclass_InstanceSegmentationInfo):
         'scores': 'sequence<float>',
         'classes': 'sequence<int32>',
         'image_source_monotonic_capture_time': 'builtin_interfaces/Time',
+        'processing_node_monotonic_entry_time': 'builtin_interfaces/Time',
         'processing_node_monotonic_publish_time': 'builtin_interfaces/Time',
     }
 
@@ -95,6 +97,7 @@ class InstanceSegmentationInfo(metaclass=Metaclass_InstanceSegmentationInfo):
         rosidl_parser.definition.NamespacedType(['sensor_msgs', 'msg'], 'Image'),  # noqa: E501
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('float')),  # noqa: E501
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('int32')),  # noqa: E501
+        rosidl_parser.definition.NamespacedType(['builtin_interfaces', 'msg'], 'Time'),  # noqa: E501
         rosidl_parser.definition.NamespacedType(['builtin_interfaces', 'msg'], 'Time'),  # noqa: E501
         rosidl_parser.definition.NamespacedType(['builtin_interfaces', 'msg'], 'Time'),  # noqa: E501
     )
@@ -111,6 +114,8 @@ class InstanceSegmentationInfo(metaclass=Metaclass_InstanceSegmentationInfo):
         self.classes = array.array('i', kwargs.get('classes', []))
         from builtin_interfaces.msg import Time
         self.image_source_monotonic_capture_time = kwargs.get('image_source_monotonic_capture_time', Time())
+        from builtin_interfaces.msg import Time
+        self.processing_node_monotonic_entry_time = kwargs.get('processing_node_monotonic_entry_time', Time())
         from builtin_interfaces.msg import Time
         self.processing_node_monotonic_publish_time = kwargs.get('processing_node_monotonic_publish_time', Time())
 
@@ -152,6 +157,8 @@ class InstanceSegmentationInfo(metaclass=Metaclass_InstanceSegmentationInfo):
         if self.classes != other.classes:
             return False
         if self.image_source_monotonic_capture_time != other.image_source_monotonic_capture_time:
+            return False
+        if self.processing_node_monotonic_entry_time != other.processing_node_monotonic_entry_time:
             return False
         if self.processing_node_monotonic_publish_time != other.processing_node_monotonic_publish_time:
             return False
@@ -259,6 +266,20 @@ class InstanceSegmentationInfo(metaclass=Metaclass_InstanceSegmentationInfo):
                 isinstance(value, Time), \
                 "The 'image_source_monotonic_capture_time' field must be a sub message of type 'Time'"
         self._image_source_monotonic_capture_time = value
+
+    @builtins.property
+    def processing_node_monotonic_entry_time(self):
+        """Message field 'processing_node_monotonic_entry_time'."""
+        return self._processing_node_monotonic_entry_time
+
+    @processing_node_monotonic_entry_time.setter
+    def processing_node_monotonic_entry_time(self, value):
+        if __debug__:
+            from builtin_interfaces.msg import Time
+            assert \
+                isinstance(value, Time), \
+                "The 'processing_node_monotonic_entry_time' field must be a sub message of type 'Time'"
+        self._processing_node_monotonic_entry_time = value
 
     @builtins.property
     def processing_node_monotonic_publish_time(self):

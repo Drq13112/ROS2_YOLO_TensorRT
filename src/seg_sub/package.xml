@@ -10,6 +10,10 @@
   
   <depend>rclcpp</depend>
   <depend>yolo_custom_interfaces</depend>
+  <depend>sensor_msgs</depend>
+  <depend>cv_bridge</depend>
+  <depend>image_transport</depend>
+  <depend>opencv</depend>
   
   <export>
     <build_type>ament_cmake</build_type>

@@ -5,7 +5,7 @@ set(tensorrt_yolo_BUILD_DEPENDS "rosidl_default_generators" "std_msgs" "sensor_m
 set(tensorrt_yolo_BUILDTOOL_DEPENDS "ament_cmake")
 set(tensorrt_yolo_BUILD_EXPORT_DEPENDS "std_msgs" "sensor_msgs" "rclcpp" "opencv" "cuda" "libnvinfer-dev" "libnvinfer-plugin-dev" "libnvonnxparser-dev" "cv_bridge" "yolo_custom_interfaces" "image_transport")
 set(tensorrt_yolo_BUILDTOOL_EXPORT_DEPENDS )
-set(tensorrt_yolo_EXEC_DEPENDS "rosidl_default_runtime" "std_msgs" "sensor_msgs" "rclcpp" "opencv" "cuda" "libnvinfer-dev" "libnvinfer-plugin-dev" "libnvonnxparser-dev" "cv_bridge" "yolo_custom_interfaces" "image_transport")
+set(tensorrt_yolo_EXEC_DEPENDS "rosidl_default_runtime" "image_transport_plugins" "std_msgs" "sensor_msgs" "rclcpp" "opencv" "cuda" "libnvinfer-dev" "libnvinfer-plugin-dev" "libnvonnxparser-dev" "cv_bridge" "yolo_custom_interfaces" "image_transport")
 set(tensorrt_yolo_TEST_DEPENDS "ament_lint_auto" "ament_lint_common")
 set(tensorrt_yolo_GROUP_DEPENDS )
 set(tensorrt_yolo_MEMBER_OF_GROUPS "rosidl_interface_packages")

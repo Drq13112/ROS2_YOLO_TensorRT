@@ -35,6 +35,10 @@ ROSIDL_GENERATOR_C_IMPORT
 bool builtin_interfaces__msg__time__convert_from_py(PyObject * _pymsg, void * _ros_message);
 ROSIDL_GENERATOR_C_IMPORT
 PyObject * builtin_interfaces__msg__time__convert_to_py(void * raw_ros_message);
+ROSIDL_GENERATOR_C_IMPORT
+bool builtin_interfaces__msg__time__convert_from_py(PyObject * _pymsg, void * _ros_message);
+ROSIDL_GENERATOR_C_IMPORT
+PyObject * builtin_interfaces__msg__time__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool yolo_custom_interfaces__msg__instance_segmentation_info__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -226,6 +230,17 @@ bool yolo_custom_interfaces__msg__instance_segmentation_info__convert_from_py(Py
     }
     Py_DECREF(field);
   }
+  {  // processing_node_monotonic_entry_time
+    PyObject * field = PyObject_GetAttrString(_pymsg, "processing_node_monotonic_entry_time");
+    if (!field) {
+      return false;
+    }
+    if (!builtin_interfaces__msg__time__convert_from_py(field, &ros_message->processing_node_monotonic_entry_time)) {
+      Py_DECREF(field);
+      return false;
+    }
+    Py_DECREF(field);
+  }
   {  // processing_node_monotonic_publish_time
     PyObject * field = PyObject_GetAttrString(_pymsg, "processing_node_monotonic_publish_time");
     if (!field) {
@@ -409,6 +424,20 @@ PyObject * yolo_custom_interfaces__msg__instance_segmentation_info__convert_to_p
     }
     {
       int rc = PyObject_SetAttrString(_pymessage, "image_source_monotonic_capture_time", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // processing_node_monotonic_entry_time
+    PyObject * field = NULL;
+    field = builtin_interfaces__msg__time__convert_to_py(&ros_message->processing_node_monotonic_entry_time);
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "processing_node_monotonic_entry_time", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

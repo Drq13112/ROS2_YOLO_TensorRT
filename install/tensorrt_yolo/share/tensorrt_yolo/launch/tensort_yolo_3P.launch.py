@@ -25,6 +25,7 @@ def generate_launch_description():
                     'mask_encoding': 'mono8', # 'mono8' o 'mono16'
                     'use_pinned_input_memory': True,
                     'input_channels': 3,
+                    'image_transport': 'raw', # 'raw' o 'compressed'
                 }
             ],
         ),

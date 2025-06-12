@@ -1,0 +1,37 @@
+[0.014s] Invoking command in '/home/david/yolocpp_ws/build/image_directory_publisher': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --build /home/david/yolocpp_ws/build/image_directory_publisher -- -j32 -l32
+[0.055s] [100%] Built target directory_publisher_node
+[0.077s] Invoked command in '/home/david/yolocpp_ws/build/image_directory_publisher' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --build /home/david/yolocpp_ws/build/image_directory_publisher -- -j32 -l32
+[0.078s] Invoking command in '/home/david/yolocpp_ws/build/image_directory_publisher': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --install /home/david/yolocpp_ws/build/image_directory_publisher
+[0.097s] -- Install configuration: ""
+[0.097s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/lib/libdirectory_publisher_node.so
+[0.097s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/launch
+[0.097s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/launch/directory_publisher.launch.py
+[0.097s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/include
+[0.097s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/include/chrono
+[0.097s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/include/chrono/ChronoTimer.hpp
+[0.097s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/include/chrono/ChronoTimer.cpp
+[0.097s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/include/image_directory_publisher
+[0.097s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/include/image_directory_publisher/directory_publisher_node.hpp
+[0.097s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/config
+[0.098s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/config/params.yaml
+[0.098s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/config/right_camera_info.yaml
+[0.098s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/config/front_camera_info.yaml
+[0.098s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/config/config.yaml
+[0.098s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/config/left_camera_info.yaml
+[0.098s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/ament_index/resource_index/package_run_dependencies/image_directory_publisher
+[0.098s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/ament_index/resource_index/parent_prefix_path/image_directory_publisher
+[0.098s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/environment/ament_prefix_path.sh
+[0.098s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/environment/ament_prefix_path.dsv
+[0.098s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/environment/path.sh
+[0.098s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/environment/path.dsv
+[0.098s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/local_setup.bash
+[0.098s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/local_setup.sh
+[0.098s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/local_setup.zsh
+[0.098s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/local_setup.dsv
+[0.098s] -- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/package.dsv
+[0.098s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/ament_index/resource_index/packages/image_directory_publisher
+[0.098s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/ament_index/resource_index/rclcpp_components/image_directory_publisher
+[0.098s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/cmake/image_directory_publisherConfig.cmake
+[0.098s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/cmake/image_directory_publisherConfig-version.cmake
+[0.098s] -- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/package.xml
+[0.103s] Invoked command in '/home/david/yolocpp_ws/build/image_directory_publisher' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --install /home/david/yolocpp_ws/build/image_directory_publisher
