@@ -21,6 +21,8 @@
 #include "sensor_msgs/msg/detail/image__traits.hpp"
 // Member 'image_source_monotonic_capture_time'
 // Member 'processing_node_monotonic_entry_time'
+// Member 'processing_node_inference_start_time'
+// Member 'processing_node_inference_end_time'
 // Member 'processing_node_monotonic_publish_time'
 #include "builtin_interfaces/msg/detail/time__traits.hpp"
 
@@ -99,10 +101,31 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
+  // member: processing_node_inference_start_time
+  {
+    out << "processing_node_inference_start_time: ";
+    to_flow_style_yaml(msg.processing_node_inference_start_time, out);
+    out << ", ";
+  }
+
+  // member: processing_node_inference_end_time
+  {
+    out << "processing_node_inference_end_time: ";
+    to_flow_style_yaml(msg.processing_node_inference_end_time, out);
+    out << ", ";
+  }
+
   // member: processing_node_monotonic_publish_time
   {
     out << "processing_node_monotonic_publish_time: ";
     to_flow_style_yaml(msg.processing_node_monotonic_publish_time, out);
+    out << ", ";
+  }
+
+  // member: packet_sequence_number
+  {
+    out << "packet_sequence_number: ";
+    rosidl_generator_traits::value_to_yaml(msg.packet_sequence_number, out);
   }
   out << "}";
 }  // NOLINT(readability/fn_size)
@@ -187,6 +210,24 @@ inline void to_block_style_yaml(
     to_block_style_yaml(msg.processing_node_monotonic_entry_time, out, indentation + 2);
   }
 
+  // member: processing_node_inference_start_time
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "processing_node_inference_start_time:\n";
+    to_block_style_yaml(msg.processing_node_inference_start_time, out, indentation + 2);
+  }
+
+  // member: processing_node_inference_end_time
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "processing_node_inference_end_time:\n";
+    to_block_style_yaml(msg.processing_node_inference_end_time, out, indentation + 2);
+  }
+
   // member: processing_node_monotonic_publish_time
   {
     if (indentation > 0) {
@@ -194,6 +235,16 @@ inline void to_block_style_yaml(
     }
     out << "processing_node_monotonic_publish_time:\n";
     to_block_style_yaml(msg.processing_node_monotonic_publish_time, out, indentation + 2);
+  }
+
+  // member: packet_sequence_number
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "packet_sequence_number: ";
+    rosidl_generator_traits::value_to_yaml(msg.packet_sequence_number, out);
+    out << "\n";
   }
 }  // NOLINT(readability/fn_size)
 

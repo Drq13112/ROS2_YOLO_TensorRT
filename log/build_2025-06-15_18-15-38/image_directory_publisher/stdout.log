@@ -1,0 +1,36 @@
+[ 50%] [32mBuilding CXX object CMakeFiles/directory_publisher_node.dir/src/directory_publisher_node.cpp.o[0m
+[100%] [32m[1mLinking CXX shared library libdirectory_publisher_node.so[0m
+[100%] Built target directory_publisher_node
+-- Install configuration: ""
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/lib/libdirectory_publisher_node.so
+-- Set runtime path of "/home/david/yolocpp_ws/install/image_directory_publisher/lib/libdirectory_publisher_node.so" to ""
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/launch
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/launch/directory_publisher.launch.py
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/include
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/include/chrono
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/include/chrono/ChronoTimer.hpp
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/include/chrono/ChronoTimer.cpp
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/include/image_directory_publisher
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/include/image_directory_publisher/directory_publisher_node.hpp
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/config
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/config/params.yaml
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/config/right_camera_info.yaml
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/config/front_camera_info.yaml
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/config/config.yaml
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/config/left_camera_info.yaml
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/ament_index/resource_index/package_run_dependencies/image_directory_publisher
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/ament_index/resource_index/parent_prefix_path/image_directory_publisher
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/environment/ament_prefix_path.sh
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/environment/path.sh
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/environment/path.dsv
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/local_setup.bash
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/local_setup.sh
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/local_setup.zsh
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/local_setup.dsv
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/package.dsv
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/ament_index/resource_index/packages/image_directory_publisher
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/ament_index/resource_index/rclcpp_components/image_directory_publisher
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/cmake/image_directory_publisherConfig.cmake
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/cmake/image_directory_publisherConfig-version.cmake
+-- Up-to-date: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/package.xml

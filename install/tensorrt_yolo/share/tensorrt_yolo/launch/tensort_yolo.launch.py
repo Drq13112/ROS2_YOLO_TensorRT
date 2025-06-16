@@ -17,7 +17,7 @@ def generate_launch_description():
             'engine_path': model,
             'rescale_factor': 0.33,
             'input_width': 640,
-            'input_height': 418,
+            'input_height': 416,
             'image_topic_1': '/camera_front_left/image_raw',
             'image_topic_2': '/camera_front/image_raw',
             'image_topic_3': '/camera_front_right/image_raw',
@@ -30,7 +30,7 @@ def generate_launch_description():
             'video_fps': 10.0,
             'video_frame_width': 1920*3,
             'video_frame_height': 1200,
-            'image_transport': 'compressed'
+            'image_transport': 'raw'
             }
             ],
         ),

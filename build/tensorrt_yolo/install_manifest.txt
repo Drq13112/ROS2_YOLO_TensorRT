@@ -74,6 +74,7 @@
 /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSParameters.h
 /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/.keep
 /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/yolo11s-seg.engine
+/home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/yolo11s-seg_03_b1.engine
 /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/yolo11n-seg.engine
 /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/labels.txt
 /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/data/panoramic_02.avi

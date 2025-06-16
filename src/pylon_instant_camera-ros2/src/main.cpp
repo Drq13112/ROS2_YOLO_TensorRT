@@ -116,6 +116,8 @@ private:
     // background thread
     std::unique_ptr<std::thread> grabbing_thread;
 
+    uint32_t image_sequence_counter_ = 0; // Contador para el número de secuencia
+
 public:
     PylonCameraNode(const rclcpp::NodeOptions & options) : 
         Node("pylon_instant_camera", options)
@@ -218,7 +220,9 @@ public:
         // Asignar el tiempo monotónico al header del mensaje de imagen
         img_msg->header.stamp.sec = ts_monotonic_capture.tv_sec;
         img_msg->header.stamp.nanosec = ts_monotonic_capture.tv_nsec;
-        img_msg->header.frame_id = frame_id;
+        // img_msg->header.frame_id = frame_id;
+        // Usar frame_id para el número de secuencia
+        img_msg->header.frame_id = std::to_string(image_sequence_counter_++); 
 
         // Asignar el mismo tiempo monotónico al header del mensaje de CameraInfo
         camera_info_msg.header.stamp.sec = ts_monotonic_capture.tv_sec;

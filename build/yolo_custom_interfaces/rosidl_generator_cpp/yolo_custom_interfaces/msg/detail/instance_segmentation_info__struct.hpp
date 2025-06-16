@@ -22,6 +22,8 @@
 #include "sensor_msgs/msg/detail/image__struct.hpp"
 // Member 'image_source_monotonic_capture_time'
 // Member 'processing_node_monotonic_entry_time'
+// Member 'processing_node_inference_start_time'
+// Member 'processing_node_inference_end_time'
 // Member 'processing_node_monotonic_publish_time'
 #include "builtin_interfaces/msg/detail/time__struct.hpp"
 
@@ -48,9 +50,15 @@ struct InstanceSegmentationInfo_
     mask(_init),
     image_source_monotonic_capture_time(_init),
     processing_node_monotonic_entry_time(_init),
+    processing_node_inference_start_time(_init),
+    processing_node_inference_end_time(_init),
     processing_node_monotonic_publish_time(_init)
   {
-    (void)_init;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->packet_sequence_number = 0ull;
+    }
   }
 
   explicit InstanceSegmentationInfo_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
@@ -58,9 +66,15 @@ struct InstanceSegmentationInfo_
     mask(_alloc, _init),
     image_source_monotonic_capture_time(_alloc, _init),
     processing_node_monotonic_entry_time(_alloc, _init),
+    processing_node_inference_start_time(_alloc, _init),
+    processing_node_inference_end_time(_alloc, _init),
     processing_node_monotonic_publish_time(_alloc, _init)
   {
-    (void)_init;
+    if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
+      rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
+    {
+      this->packet_sequence_number = 0ull;
+    }
   }
 
   // field types and members
@@ -82,9 +96,18 @@ struct InstanceSegmentationInfo_
   using _processing_node_monotonic_entry_time_type =
     builtin_interfaces::msg::Time_<ContainerAllocator>;
   _processing_node_monotonic_entry_time_type processing_node_monotonic_entry_time;
+  using _processing_node_inference_start_time_type =
+    builtin_interfaces::msg::Time_<ContainerAllocator>;
+  _processing_node_inference_start_time_type processing_node_inference_start_time;
+  using _processing_node_inference_end_time_type =
+    builtin_interfaces::msg::Time_<ContainerAllocator>;
+  _processing_node_inference_end_time_type processing_node_inference_end_time;
   using _processing_node_monotonic_publish_time_type =
     builtin_interfaces::msg::Time_<ContainerAllocator>;
   _processing_node_monotonic_publish_time_type processing_node_monotonic_publish_time;
+  using _packet_sequence_number_type =
+    uint64_t;
+  _packet_sequence_number_type packet_sequence_number;
 
   // setters for named parameter idiom
   Type & set__header(
@@ -123,10 +146,28 @@ struct InstanceSegmentationInfo_
     this->processing_node_monotonic_entry_time = _arg;
     return *this;
   }
+  Type & set__processing_node_inference_start_time(
+    const builtin_interfaces::msg::Time_<ContainerAllocator> & _arg)
+  {
+    this->processing_node_inference_start_time = _arg;
+    return *this;
+  }
+  Type & set__processing_node_inference_end_time(
+    const builtin_interfaces::msg::Time_<ContainerAllocator> & _arg)
+  {
+    this->processing_node_inference_end_time = _arg;
+    return *this;
+  }
   Type & set__processing_node_monotonic_publish_time(
     const builtin_interfaces::msg::Time_<ContainerAllocator> & _arg)
   {
     this->processing_node_monotonic_publish_time = _arg;
+    return *this;
+  }
+  Type & set__packet_sequence_number(
+    const uint64_t & _arg)
+  {
+    this->packet_sequence_number = _arg;
     return *this;
   }
 
@@ -190,7 +231,16 @@ struct InstanceSegmentationInfo_
     if (this->processing_node_monotonic_entry_time != other.processing_node_monotonic_entry_time) {
       return false;
     }
+    if (this->processing_node_inference_start_time != other.processing_node_inference_start_time) {
+      return false;
+    }
+    if (this->processing_node_inference_end_time != other.processing_node_inference_end_time) {
+      return false;
+    }
     if (this->processing_node_monotonic_publish_time != other.processing_node_monotonic_publish_time) {
+      return false;
+    }
+    if (this->packet_sequence_number != other.packet_sequence_number) {
       return false;
     }
     return true;

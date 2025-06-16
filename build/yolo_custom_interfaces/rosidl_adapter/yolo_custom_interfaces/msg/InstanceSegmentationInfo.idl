@@ -18,16 +18,28 @@ module yolo_custom_interfaces {
       sequence<int32> classes;
 
       @verbatim (language="comment", text=
-        "T1: Instante en el que se publica la imagen en el driver")
+        "T0 (SegNode Callback Entry)")
       builtin_interfaces::msg::Time image_source_monotonic_capture_time;
 
       @verbatim (language="comment", text=
-        "T2: Instante en el que se recibe la imagen en el segment_node")
+        "T1 (SegNode Batch Processing Start)")
       builtin_interfaces::msg::Time processing_node_monotonic_entry_time;
 
       @verbatim (language="comment", text=
-        "T3: Instante en el que se publica la imagen en el segment_node")
+        "T2a (SegNode Inference Start)")
+      builtin_interfaces::msg::Time processing_node_inference_start_time;
+
+      @verbatim (language="comment", text=
+        "T2b (SegNode Inference End)")
+      builtin_interfaces::msg::Time processing_node_inference_end_time;
+
+      @verbatim (language="comment", text=
+        "T3 (SegNode Result Publish)")
       builtin_interfaces::msg::Time processing_node_monotonic_publish_time;
+
+      @verbatim (language="comment", text=
+        "Corresponds to source_image_seq from TimedImage")
+      uint64 packet_sequence_number;
     };
   };
 };

@@ -21,16 +21,64 @@ namespace msg
 namespace builder
 {
 
+class Init_InstanceSegmentationInfo_packet_sequence_number
+{
+public:
+  explicit Init_InstanceSegmentationInfo_packet_sequence_number(::yolo_custom_interfaces::msg::InstanceSegmentationInfo & msg)
+  : msg_(msg)
+  {}
+  ::yolo_custom_interfaces::msg::InstanceSegmentationInfo packet_sequence_number(::yolo_custom_interfaces::msg::InstanceSegmentationInfo::_packet_sequence_number_type arg)
+  {
+    msg_.packet_sequence_number = std::move(arg);
+    return std::move(msg_);
+  }
+
+private:
+  ::yolo_custom_interfaces::msg::InstanceSegmentationInfo msg_;
+};
+
 class Init_InstanceSegmentationInfo_processing_node_monotonic_publish_time
 {
 public:
   explicit Init_InstanceSegmentationInfo_processing_node_monotonic_publish_time(::yolo_custom_interfaces::msg::InstanceSegmentationInfo & msg)
   : msg_(msg)
   {}
-  ::yolo_custom_interfaces::msg::InstanceSegmentationInfo processing_node_monotonic_publish_time(::yolo_custom_interfaces::msg::InstanceSegmentationInfo::_processing_node_monotonic_publish_time_type arg)
+  Init_InstanceSegmentationInfo_packet_sequence_number processing_node_monotonic_publish_time(::yolo_custom_interfaces::msg::InstanceSegmentationInfo::_processing_node_monotonic_publish_time_type arg)
   {
     msg_.processing_node_monotonic_publish_time = std::move(arg);
-    return std::move(msg_);
+    return Init_InstanceSegmentationInfo_packet_sequence_number(msg_);
+  }
+
+private:
+  ::yolo_custom_interfaces::msg::InstanceSegmentationInfo msg_;
+};
+
+class Init_InstanceSegmentationInfo_processing_node_inference_end_time
+{
+public:
+  explicit Init_InstanceSegmentationInfo_processing_node_inference_end_time(::yolo_custom_interfaces::msg::InstanceSegmentationInfo & msg)
+  : msg_(msg)
+  {}
+  Init_InstanceSegmentationInfo_processing_node_monotonic_publish_time processing_node_inference_end_time(::yolo_custom_interfaces::msg::InstanceSegmentationInfo::_processing_node_inference_end_time_type arg)
+  {
+    msg_.processing_node_inference_end_time = std::move(arg);
+    return Init_InstanceSegmentationInfo_processing_node_monotonic_publish_time(msg_);
+  }
+
+private:
+  ::yolo_custom_interfaces::msg::InstanceSegmentationInfo msg_;
+};
+
+class Init_InstanceSegmentationInfo_processing_node_inference_start_time
+{
+public:
+  explicit Init_InstanceSegmentationInfo_processing_node_inference_start_time(::yolo_custom_interfaces::msg::InstanceSegmentationInfo & msg)
+  : msg_(msg)
+  {}
+  Init_InstanceSegmentationInfo_processing_node_inference_end_time processing_node_inference_start_time(::yolo_custom_interfaces::msg::InstanceSegmentationInfo::_processing_node_inference_start_time_type arg)
+  {
+    msg_.processing_node_inference_start_time = std::move(arg);
+    return Init_InstanceSegmentationInfo_processing_node_inference_end_time(msg_);
   }
 
 private:
@@ -43,10 +91,10 @@ public:
   explicit Init_InstanceSegmentationInfo_processing_node_monotonic_entry_time(::yolo_custom_interfaces::msg::InstanceSegmentationInfo & msg)
   : msg_(msg)
   {}
-  Init_InstanceSegmentationInfo_processing_node_monotonic_publish_time processing_node_monotonic_entry_time(::yolo_custom_interfaces::msg::InstanceSegmentationInfo::_processing_node_monotonic_entry_time_type arg)
+  Init_InstanceSegmentationInfo_processing_node_inference_start_time processing_node_monotonic_entry_time(::yolo_custom_interfaces::msg::InstanceSegmentationInfo::_processing_node_monotonic_entry_time_type arg)
   {
     msg_.processing_node_monotonic_entry_time = std::move(arg);
-    return Init_InstanceSegmentationInfo_processing_node_monotonic_publish_time(msg_);
+    return Init_InstanceSegmentationInfo_processing_node_inference_start_time(msg_);
   }
 
 private:

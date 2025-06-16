@@ -34,7 +34,7 @@ extern "C"
 {
 #endif
 
-#include "builtin_interfaces/msg/detail/time__functions.h"  // image_source_monotonic_capture_time, processing_node_monotonic_entry_time, processing_node_monotonic_publish_time
+#include "builtin_interfaces/msg/detail/time__functions.h"  // image_source_monotonic_capture_time, processing_node_inference_end_time, processing_node_inference_start_time, processing_node_monotonic_entry_time, processing_node_monotonic_publish_time
 #include "rosidl_runtime_c/primitives_sequence.h"  // classes, scores
 #include "rosidl_runtime_c/primitives_sequence_functions.h"  // classes, scores
 #include "sensor_msgs/msg/detail/image__functions.h"  // mask
@@ -168,6 +168,34 @@ static bool _InstanceSegmentationInfo__cdr_serialize(
     }
   }
 
+  // Field name: processing_node_inference_start_time
+  {
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, builtin_interfaces, msg, Time
+      )()->data);
+    if (!callbacks->cdr_serialize(
+        &ros_message->processing_node_inference_start_time, cdr))
+    {
+      return false;
+    }
+  }
+
+  // Field name: processing_node_inference_end_time
+  {
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, builtin_interfaces, msg, Time
+      )()->data);
+    if (!callbacks->cdr_serialize(
+        &ros_message->processing_node_inference_end_time, cdr))
+    {
+      return false;
+    }
+  }
+
   // Field name: processing_node_monotonic_publish_time
   {
     const message_type_support_callbacks_t * callbacks =
@@ -180,6 +208,11 @@ static bool _InstanceSegmentationInfo__cdr_serialize(
     {
       return false;
     }
+  }
+
+  // Field name: packet_sequence_number
+  {
+    cdr << ros_message->packet_sequence_number;
   }
 
   return true;
@@ -282,6 +315,34 @@ static bool _InstanceSegmentationInfo__cdr_deserialize(
     }
   }
 
+  // Field name: processing_node_inference_start_time
+  {
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, builtin_interfaces, msg, Time
+      )()->data);
+    if (!callbacks->cdr_deserialize(
+        cdr, &ros_message->processing_node_inference_start_time))
+    {
+      return false;
+    }
+  }
+
+  // Field name: processing_node_inference_end_time
+  {
+    const message_type_support_callbacks_t * callbacks =
+      static_cast<const message_type_support_callbacks_t *>(
+      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
+        rosidl_typesupport_fastrtps_c, builtin_interfaces, msg, Time
+      )()->data);
+    if (!callbacks->cdr_deserialize(
+        cdr, &ros_message->processing_node_inference_end_time))
+    {
+      return false;
+    }
+  }
+
   // Field name: processing_node_monotonic_publish_time
   {
     const message_type_support_callbacks_t * callbacks =
@@ -294,6 +355,11 @@ static bool _InstanceSegmentationInfo__cdr_deserialize(
     {
       return false;
     }
+  }
+
+  // Field name: packet_sequence_number
+  {
+    cdr >> ros_message->packet_sequence_number;
   }
 
   return true;
@@ -351,10 +417,24 @@ size_t get_serialized_size_yolo_custom_interfaces__msg__InstanceSegmentationInfo
 
   current_alignment += get_serialized_size_builtin_interfaces__msg__Time(
     &(ros_message->processing_node_monotonic_entry_time), current_alignment);
+  // field.name processing_node_inference_start_time
+
+  current_alignment += get_serialized_size_builtin_interfaces__msg__Time(
+    &(ros_message->processing_node_inference_start_time), current_alignment);
+  // field.name processing_node_inference_end_time
+
+  current_alignment += get_serialized_size_builtin_interfaces__msg__Time(
+    &(ros_message->processing_node_inference_end_time), current_alignment);
   // field.name processing_node_monotonic_publish_time
 
   current_alignment += get_serialized_size_builtin_interfaces__msg__Time(
     &(ros_message->processing_node_monotonic_publish_time), current_alignment);
+  // field.name packet_sequence_number
+  {
+    size_t item_size = sizeof(ros_message->packet_sequence_number);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -484,6 +564,44 @@ size_t max_serialized_size_yolo_custom_interfaces__msg__InstanceSegmentationInfo
       is_plain &= inner_is_plain;
     }
   }
+  // member: processing_node_inference_start_time
+  {
+    size_t array_size = 1;
+
+
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size;
+      inner_size =
+        max_serialized_size_builtin_interfaces__msg__Time(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+  // member: processing_node_inference_end_time
+  {
+    size_t array_size = 1;
+
+
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size;
+      inner_size =
+        max_serialized_size_builtin_interfaces__msg__Time(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
   // member: processing_node_monotonic_publish_time
   {
     size_t array_size = 1;
@@ -503,6 +621,14 @@ size_t max_serialized_size_yolo_custom_interfaces__msg__InstanceSegmentationInfo
       is_plain &= inner_is_plain;
     }
   }
+  // member: packet_sequence_number
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
 
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
@@ -512,7 +638,7 @@ size_t max_serialized_size_yolo_custom_interfaces__msg__InstanceSegmentationInfo
     using DataType = yolo_custom_interfaces__msg__InstanceSegmentationInfo;
     is_plain =
       (
-      offsetof(DataType, processing_node_monotonic_publish_time) +
+      offsetof(DataType, packet_sequence_number) +
       last_member_size
       ) == ret_val;
   }

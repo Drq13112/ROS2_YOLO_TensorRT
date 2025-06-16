@@ -11,6 +11,7 @@
 #include <chrono>    // Para la medición de tiempo
 #include <unordered_set> // Para el filtrado eficiente de archivos
 #include <time.h> 
+#include <string>
 
 namespace image_directory_publisher {
 
@@ -55,7 +56,7 @@ public:
 
        
         // Crear un perfil QoS personalizado
-        rclcpp::QoS custom_qos_profile(rclcpp::KeepLast(5)); // History: KEEP_LAST, Depth: 5
+        rclcpp::QoS custom_qos_profile(rclcpp::KeepLast(1)); // History: KEEP_LAST, Depth: 1
         custom_qos_profile.reliable();                      // Reliability: RELIABLE
         custom_qos_profile.durability_volatile();           // Durability: VOLATILE (implícito si no se especifica TRANSIENT_LOCAL)
                                                             // Para ser explícito:
@@ -117,8 +118,7 @@ private:
     void publish_image_set(
         const std::string& image_path,
         image_transport::Publisher& publisher,
-        const std::string& frame_id,
-        // const rclcpp::Time& stamp, // <--- PARÁMETRO ELIMINADO
+        const std::string& packet_sequence_frame_id,
         const std::string& camera_name_log)
     {
         cv::Mat image_to_publish = cv::imread(image_path, cv::IMREAD_COLOR);
@@ -128,8 +128,8 @@ private:
         }
 
         std_msgs::msg::Header header;
-        // header.stamp = stamp; // <--- LÍNEA ELIMINADA
-        header.frame_id = frame_id;
+        
+        header.frame_id = std::to_string(current_image_set_index_);
 
         // Obtener el tiempo MONOTONIC actual y asignarlo al header
         timespec ts_monotonic_capture;
@@ -170,20 +170,30 @@ private:
                 return;
             }
         }
+
+        if (current_image_set_index_ < 1500) {
         
-        // auto now = this->get_clock()->now(); // Ya no se pasa a publish_image_set
 
-        if (!left_image_files_.empty() && current_image_set_index_ < left_image_files_.size()) {
-            publish_image_set(left_image_files_[current_image_set_index_], left_publisher_, frame_id_left_, /* now, */ "LEFT");
-        }
-        if (!front_image_files_.empty() && current_image_set_index_ < front_image_files_.size()) {
-            publish_image_set(front_image_files_[current_image_set_index_], front_publisher_, frame_id_front_, /* now, */ "FRONT");
-        }
-        if (!right_image_files_.empty() && current_image_set_index_ < right_image_files_.size()) {
-            publish_image_set(right_image_files_[current_image_set_index_], right_publisher_, frame_id_right_, /* now, */ "RIGHT");
-        }
+            if (!left_image_files_.empty() && current_image_set_index_ < left_image_files_.size()) {
+                publish_image_set(left_image_files_[current_image_set_index_], left_publisher_, frame_id_left_, /* now, */ "LEFT");
+                published_packet_count_1++;
+            }
+            if (!front_image_files_.empty() && current_image_set_index_ < front_image_files_.size()) {
+                publish_image_set(front_image_files_[current_image_set_index_], front_publisher_, frame_id_front_, /* now, */ "FRONT");
+                published_packet_count_2++;
+            }
+            if (!right_image_files_.empty() && current_image_set_index_ < right_image_files_.size()) {
+                publish_image_set(right_image_files_[current_image_set_index_], right_publisher_, frame_id_right_, /* now, */ "RIGHT");
+                published_packet_count_3++;
+            }
 
-        current_image_set_index_++;
+            current_image_set_index_++;}
+            RCLCPP_INFO(this->get_logger(), "Total image sets (packet 1) sent: %u", published_packet_count_1);
+            RCLCPP_INFO(this->get_logger(), "Total image sets (packet 2) sent: %u", published_packet_count_2);
+            RCLCPP_INFO(this->get_logger(), "Total image sets (packet 3) sent: %u", published_packet_count_3);
+
+        
+        
     }
 
     std::string image_directory_;
@@ -193,7 +203,10 @@ private:
     std::vector<std::string> left_image_files_;
     std::vector<std::string> front_image_files_;
     std::vector<std::string> right_image_files_;
-    size_t current_image_set_index_;
+    uint32_t current_image_set_index_ = 0;
+    uint32_t published_packet_count_1 = 0;
+    uint32_t published_packet_count_2 = 0;
+    uint32_t published_packet_count_3 = 0;
 
     std::string frame_id_left_, frame_id_front_, frame_id_right_;
 

@@ -1,0 +1,7 @@
+[0.433s] Invoking command in '/home/david/yolocpp_ws/build/vulcanexus_base': PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --build /home/david/yolocpp_ws/build/vulcanexus_base -- -j32 -l32
+[0.483s] Invoked command in '/home/david/yolocpp_ws/build/vulcanexus_base' returned '0': PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --build /home/david/yolocpp_ws/build/vulcanexus_base -- -j32 -l32
+[0.485s] Invoking command in '/home/david/yolocpp_ws/build/vulcanexus_base': PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --install /home/david/yolocpp_ws/build/vulcanexus_base
+[0.518s] -- Install configuration: ""
+[0.518s] -- Up-to-date: /home/david/yolocpp_ws/install/vulcanexus_base/share/ament_index/resource_index/packages/vulcanexus_base
+[0.519s] -- Installing: /home/david/yolocpp_ws/install/vulcanexus_base/share/vulcanexus_base/package.dsv
+[0.547s] Invoked command in '/home/david/yolocpp_ws/build/vulcanexus_base' returned '0': PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --install /home/david/yolocpp_ws/build/vulcanexus_base

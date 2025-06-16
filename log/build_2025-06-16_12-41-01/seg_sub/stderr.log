@@ -1,0 +1,4 @@
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:[m[K In lambda function:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:134:20:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Klat_batch_start_to_res_pub_ms[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  134 |             double [01;35m[Klat_batch_start_to_res_pub_ms[m[K = calculate_latency_ms(ts_t3_segnode_res_pub, ts_t2_segnode_batch_start);
+      |                    [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K

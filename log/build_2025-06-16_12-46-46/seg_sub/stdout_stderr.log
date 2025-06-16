@@ -1,0 +1,10 @@
+[ 50%] Built target chrono
+[ 75%] [32mBuilding CXX object CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o[0m
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:[m[K In lambda function:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:188:96:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimespec_less_than[m[K’ was not declared in this scope
+  188 |     auto min_t_it = std::min_element(t_stamps.begin(), t_stamps.end(), [01;31m[Ktimespec_less_than[m[K);
+      |                                                                        [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+
+gmake[2]: *** [CMakeFiles/seg_sub_node.dir/build.make:76: CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/seg_sub_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

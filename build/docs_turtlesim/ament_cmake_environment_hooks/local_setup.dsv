@@ -1,0 +1,4 @@
+source;share/docs_turtlesim/environment/ament_prefix_path.sh
+source;share/docs_turtlesim/environment/library_path.sh
+source;share/docs_turtlesim/environment/path.sh
+source;share/docs_turtlesim/environment/pythonpath.sh

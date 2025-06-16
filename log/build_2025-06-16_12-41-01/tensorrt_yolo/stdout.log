@@ -1,0 +1,6 @@
+[ 14%] Built target chrono
+[ 71%] Built target deploy
+[ 78%] [32mBuilding CXX object CMakeFiles/segment_node.dir/src/segment_node.cpp.o[0m
+[ 85%] [32mBuilding CXX object CMakeFiles/segment_node_3P.dir/src/segment_node_3P.cpp.o[0m
+[ 92%] [32m[1mLinking CXX executable segment_node[0m
+[ 92%] Built target segment_node

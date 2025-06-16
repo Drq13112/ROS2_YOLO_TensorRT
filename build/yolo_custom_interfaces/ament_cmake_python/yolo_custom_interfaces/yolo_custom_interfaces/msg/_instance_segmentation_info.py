@@ -79,7 +79,10 @@ class InstanceSegmentationInfo(metaclass=Metaclass_InstanceSegmentationInfo):
         '_classes',
         '_image_source_monotonic_capture_time',
         '_processing_node_monotonic_entry_time',
+        '_processing_node_inference_start_time',
+        '_processing_node_inference_end_time',
         '_processing_node_monotonic_publish_time',
+        '_packet_sequence_number',
     ]
 
     _fields_and_field_types = {
@@ -89,7 +92,10 @@ class InstanceSegmentationInfo(metaclass=Metaclass_InstanceSegmentationInfo):
         'classes': 'sequence<int32>',
         'image_source_monotonic_capture_time': 'builtin_interfaces/Time',
         'processing_node_monotonic_entry_time': 'builtin_interfaces/Time',
+        'processing_node_inference_start_time': 'builtin_interfaces/Time',
+        'processing_node_inference_end_time': 'builtin_interfaces/Time',
         'processing_node_monotonic_publish_time': 'builtin_interfaces/Time',
+        'packet_sequence_number': 'uint64',
     }
 
     SLOT_TYPES = (
@@ -100,6 +106,9 @@ class InstanceSegmentationInfo(metaclass=Metaclass_InstanceSegmentationInfo):
         rosidl_parser.definition.NamespacedType(['builtin_interfaces', 'msg'], 'Time'),  # noqa: E501
         rosidl_parser.definition.NamespacedType(['builtin_interfaces', 'msg'], 'Time'),  # noqa: E501
         rosidl_parser.definition.NamespacedType(['builtin_interfaces', 'msg'], 'Time'),  # noqa: E501
+        rosidl_parser.definition.NamespacedType(['builtin_interfaces', 'msg'], 'Time'),  # noqa: E501
+        rosidl_parser.definition.NamespacedType(['builtin_interfaces', 'msg'], 'Time'),  # noqa: E501
+        rosidl_parser.definition.BasicType('uint64'),  # noqa: E501
     )
 
     def __init__(self, **kwargs):
@@ -117,7 +126,12 @@ class InstanceSegmentationInfo(metaclass=Metaclass_InstanceSegmentationInfo):
         from builtin_interfaces.msg import Time
         self.processing_node_monotonic_entry_time = kwargs.get('processing_node_monotonic_entry_time', Time())
         from builtin_interfaces.msg import Time
+        self.processing_node_inference_start_time = kwargs.get('processing_node_inference_start_time', Time())
+        from builtin_interfaces.msg import Time
+        self.processing_node_inference_end_time = kwargs.get('processing_node_inference_end_time', Time())
+        from builtin_interfaces.msg import Time
         self.processing_node_monotonic_publish_time = kwargs.get('processing_node_monotonic_publish_time', Time())
+        self.packet_sequence_number = kwargs.get('packet_sequence_number', int())
 
     def __repr__(self):
         typename = self.__class__.__module__.split('.')
@@ -160,7 +174,13 @@ class InstanceSegmentationInfo(metaclass=Metaclass_InstanceSegmentationInfo):
             return False
         if self.processing_node_monotonic_entry_time != other.processing_node_monotonic_entry_time:
             return False
+        if self.processing_node_inference_start_time != other.processing_node_inference_start_time:
+            return False
+        if self.processing_node_inference_end_time != other.processing_node_inference_end_time:
+            return False
         if self.processing_node_monotonic_publish_time != other.processing_node_monotonic_publish_time:
+            return False
+        if self.packet_sequence_number != other.packet_sequence_number:
             return False
         return True
 
@@ -282,6 +302,34 @@ class InstanceSegmentationInfo(metaclass=Metaclass_InstanceSegmentationInfo):
         self._processing_node_monotonic_entry_time = value
 
     @builtins.property
+    def processing_node_inference_start_time(self):
+        """Message field 'processing_node_inference_start_time'."""
+        return self._processing_node_inference_start_time
+
+    @processing_node_inference_start_time.setter
+    def processing_node_inference_start_time(self, value):
+        if __debug__:
+            from builtin_interfaces.msg import Time
+            assert \
+                isinstance(value, Time), \
+                "The 'processing_node_inference_start_time' field must be a sub message of type 'Time'"
+        self._processing_node_inference_start_time = value
+
+    @builtins.property
+    def processing_node_inference_end_time(self):
+        """Message field 'processing_node_inference_end_time'."""
+        return self._processing_node_inference_end_time
+
+    @processing_node_inference_end_time.setter
+    def processing_node_inference_end_time(self, value):
+        if __debug__:
+            from builtin_interfaces.msg import Time
+            assert \
+                isinstance(value, Time), \
+                "The 'processing_node_inference_end_time' field must be a sub message of type 'Time'"
+        self._processing_node_inference_end_time = value
+
+    @builtins.property
     def processing_node_monotonic_publish_time(self):
         """Message field 'processing_node_monotonic_publish_time'."""
         return self._processing_node_monotonic_publish_time
@@ -294,3 +342,18 @@ class InstanceSegmentationInfo(metaclass=Metaclass_InstanceSegmentationInfo):
                 isinstance(value, Time), \
                 "The 'processing_node_monotonic_publish_time' field must be a sub message of type 'Time'"
         self._processing_node_monotonic_publish_time = value
+
+    @builtins.property
+    def packet_sequence_number(self):
+        """Message field 'packet_sequence_number'."""
+        return self._packet_sequence_number
+
+    @packet_sequence_number.setter
+    def packet_sequence_number(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'packet_sequence_number' field must be of type 'int'"
+            assert value >= 0 and value < 18446744073709551616, \
+                "The 'packet_sequence_number' field must be an unsigned integer in [0, 18446744073709551615]"
+        self._packet_sequence_number = value

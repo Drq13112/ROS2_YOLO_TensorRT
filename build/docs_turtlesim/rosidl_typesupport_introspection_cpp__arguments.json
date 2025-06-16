@@ -1,0 +1,23 @@
+{
+  "package_name": "docs_turtlesim",
+  "output_dir": "/home/david/yolocpp_ws/build/docs_turtlesim/rosidl_typesupport_introspection_cpp/docs_turtlesim",
+  "template_dir": "/opt/vulcanexus/humble/share/rosidl_typesupport_introspection_cpp/resource",
+  "idl_tuples": [
+    "/home/david/yolocpp_ws/vulcanexus/code/turtlesim:msg/Vector3.idl",
+    "/home/david/yolocpp_ws/vulcanexus/code/turtlesim:msg/KeyedTwist.idl",
+    "/home/david/yolocpp_ws/vulcanexus/code/turtlesim:msg/KeyedPose.idl"
+  ],
+  "target_dependencies": [
+    "/opt/vulcanexus/humble/lib/rosidl_typesupport_introspection_cpp/rosidl_typesupport_introspection_cpp",
+    "/opt/vulcanexus/humble/local/lib/python3.10/dist-packages/rosidl_typesupport_introspection_cpp/__init__.py",
+    "/opt/vulcanexus/humble/share/rosidl_typesupport_introspection_cpp/resource/idl__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/opt/vulcanexus/humble/share/rosidl_typesupport_introspection_cpp/resource/idl__type_support.cpp.em",
+    "/opt/vulcanexus/humble/share/rosidl_typesupport_introspection_cpp/resource/msg__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/opt/vulcanexus/humble/share/rosidl_typesupport_introspection_cpp/resource/msg__type_support.cpp.em",
+    "/opt/vulcanexus/humble/share/rosidl_typesupport_introspection_cpp/resource/srv__rosidl_typesupport_introspection_cpp.hpp.em",
+    "/opt/vulcanexus/humble/share/rosidl_typesupport_introspection_cpp/resource/srv__type_support.cpp.em",
+    "/home/david/yolocpp_ws/vulcanexus/code/turtlesim/msg/Vector3.idl",
+    "/home/david/yolocpp_ws/vulcanexus/code/turtlesim/msg/KeyedTwist.idl",
+    "/home/david/yolocpp_ws/vulcanexus/code/turtlesim/msg/KeyedPose.idl"
+  ]
+}

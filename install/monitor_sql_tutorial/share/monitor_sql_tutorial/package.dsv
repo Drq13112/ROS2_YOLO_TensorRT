@@ -1,0 +1,8 @@
+source;share/monitor_sql_tutorial/hook/cmake_prefix_path.ps1
+source;share/monitor_sql_tutorial/hook/cmake_prefix_path.dsv
+source;share/monitor_sql_tutorial/hook/cmake_prefix_path.sh
+source;share/monitor_sql_tutorial/local_setup.bash
+source;share/monitor_sql_tutorial/local_setup.dsv
+source;share/monitor_sql_tutorial/local_setup.ps1
+source;share/monitor_sql_tutorial/local_setup.sh
+source;share/monitor_sql_tutorial/local_setup.zsh

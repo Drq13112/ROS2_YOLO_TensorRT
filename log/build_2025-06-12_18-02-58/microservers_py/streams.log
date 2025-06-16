@@ -1,0 +1,23 @@
+[0.717s] Invoking command in '/home/david/yolocpp_ws/vulcanexus/code/microservices/microservers_py': PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ PYTHONPATH=/home/david/yolocpp_ws/build/microservers_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/david/yolocpp_ws/install/microservers_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/microservers_py build --build-base /home/david/yolocpp_ws/build/microservers_py/build install --record /home/david/yolocpp_ws/build/microservers_py/install.log --single-version-externally-managed install_data
+[0.880s] running egg_info
+[0.880s] writing ../../../../build/microservers_py/microservers_py.egg-info/PKG-INFO
+[0.880s] writing dependency_links to ../../../../build/microservers_py/microservers_py.egg-info/dependency_links.txt
+[0.880s] writing entry points to ../../../../build/microservers_py/microservers_py.egg-info/entry_points.txt
+[0.880s] writing requirements to ../../../../build/microservers_py/microservers_py.egg-info/requires.txt
+[0.880s] writing top-level names to ../../../../build/microservers_py/microservers_py.egg-info/top_level.txt
+[0.881s] reading manifest file '../../../../build/microservers_py/microservers_py.egg-info/SOURCES.txt'
+[0.881s] adding license file 'LICENSE'
+[0.881s] writing manifest file '../../../../build/microservers_py/microservers_py.egg-info/SOURCES.txt'
+[0.881s] running build
+[0.881s] running build_py
+[0.881s] running install
+[0.882s] running install_lib
+[0.882s] running install_data
+[0.882s] running install_egg_info
+[0.883s] removing '/home/david/yolocpp_ws/install/microservers_py/lib/python3.10/site-packages/microservers_py-0.0.0-py3.10.egg-info' (and everything under it)
+[0.883s] Copying ../../../../build/microservers_py/microservers_py.egg-info to /home/david/yolocpp_ws/install/microservers_py/lib/python3.10/site-packages/microservers_py-0.0.0-py3.10.egg-info
+[0.883s] running install_scripts
+[0.893s] Installing server_addition script to /home/david/yolocpp_ws/install/microservers_py/lib/microservers_py
+[0.893s] Installing server_subtraction script to /home/david/yolocpp_ws/install/microservers_py/lib/microservers_py
+[0.893s] writing list of installed files to '/home/david/yolocpp_ws/build/microservers_py/install.log'
+[0.905s] Invoked command in '/home/david/yolocpp_ws/vulcanexus/code/microservices/microservers_py' returned '0': PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ PYTHONPATH=/home/david/yolocpp_ws/build/microservers_py/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/david/yolocpp_ws/install/microservers_py/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../../../build/microservers_py build --build-base /home/david/yolocpp_ws/build/microservers_py/build install --record /home/david/yolocpp_ws/build/microservers_py/install.log --single-version-externally-managed install_data

@@ -1,0 +1,59 @@
+[0.020s] Invoking command in '/home/david/yolocpp_ws/build/seg_sub': CMAKE_PREFIX_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces:/home/david/yolocpp_ws/install/zoe_bringup:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolocpp_ws/install/seg_sub:/home/david/yolocpp_ws/install/pylon_instant_camera:/home/david/yolocpp_ws/install/monitor_tutorial:/home/david/yolocpp_ws/install/monitor_sql_tutorial:/home/david/yolocpp_ws/install/image_directory_publisher:/home/david/yolocpp_ws/install/docs_turtlesim:/home/david/yolocpp_ws/install/bboxes_ex_msgs:/opt/vulcanexus/humble:/home/david/yolocpp_ws/install/microservers_py:/home/david/yolocpp_ws/install/clients_py:/opt/ros/humble LD_LIBRARY_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces/lib:/home/david/yolocpp_ws/install/pylon_instant_camera/lib:/home/david/yolocpp_ws/install/image_directory_publisher/lib:/home/david/yolocpp_ws/install/docs_turtlesim/lib:/home/david/yolocpp_ws/install/bboxes_ex_msgs/lib:/opt/vulcanexus/humble/lib:/opt/pylon/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda-11.2/lib64:/usr/local/cuda-11.2/lib64:/home/david/onnxruntime-linux-x64-gpu-1.22.0/lib PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --build /home/david/yolocpp_ws/build/seg_sub -- -j32 -l32
+[0.065s] [ 50%] Built target chrono
+[0.084s] [ 75%] [32mBuilding CXX object CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o[0m
+[1.573s] [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:[m[K In lambda function:
+[1.573s] [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:135:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kbatch_t4_mutex_[m[K’ was not declared in this scope; did you mean ‘[01m[Kbatch_data_mutex_[m[K’?
+[1.573s]   135 |                 std::lock_guard<std::mutex> lock([01;31m[Kbatch_t4_mutex_[m[K);
+[1.573s]       |                                                  [01;31m[K^~~~~~~~~~~~~~~[m[K
+[1.573s]       |                                                  [32m[Kbatch_data_mutex_[m[K
+[1.580s] [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:136:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kreceived_batch_t4_timestamps_[m[K’ was not declared in this scope; did you mean ‘[01m[Kpending_batch_t0_timestamps_[m[K’?
+[1.580s]   136 |                 [01;31m[Kreceived_batch_t4_timestamps_[m[K[packet_seq_num][camera_id] = ts_t4_segsub_res_recv;
+[1.580s]       |                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.580s]       |                 [32m[Kpending_batch_t0_timestamps_[m[K
+[1.589s] [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:138:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kbatch_t4_reception_spread_ms_[m[K’ was not declared in this scope
+[1.589s]   138 |                 if ([01;31m[Kbatch_t4_reception_spread_ms_[m[K.find(packet_seq_num) == batch_t4_reception_spread_ms_.end()) {
+[1.589s]       |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.600s] [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:159:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kt4_reception_spread_this_batch_ms[m[K’ was not declared in this scope
+[1.600s]   159 |                            [01;31m[Kt4_reception_spread_this_batch_ms[m[K = calculate_latency_ms(*max_t4_it, *min_t4_it);
+[1.600s]       |                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.609s] [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:161:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kt4_spread_calculated_this_call[m[K’ was not declared in this scope; did you mean ‘[01m[Kbatch_offsets_calculated_this_call[m[K’?
+[1.609s]   161 |                            [01;31m[Kt4_spread_calculated_this_call[m[K = true;
+[1.609s]       |                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.609s]       |                            [32m[Kbatch_offsets_calculated_this_call[m[K
+[1.619s] [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:166:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kt4_reception_spread_this_batch_ms[m[K’ was not declared in this scope
+[1.619s]   166 |                     [01;31m[Kt4_reception_spread_this_batch_ms[m[K = batch_t4_reception_spread_ms_[packet_seq_num];
+[1.619s]       |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.619s] [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:202:13:[m[K [01;31m[Kerror: [m[Kunable to find numeric literal operator ‘[01m[Koperator""std[m[K’
+[1.619s]   202 |             [01;31m[K47std[m[K::string offsets_log_str = "";
+[1.619s]       |             [01;31m[K^~~~~[m[K
+[1.625s] [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:204:17:[m[K [01;31m[Kerror: [m[K‘[01m[Koffsets_log_str[m[K’ was not declared in this scope
+[1.625s]   204 |                 [01;31m[Koffsets_log_str[m[K += " | T0 Offsets (vs Left): Front=" + std::to_string(offset_T0_front_vs_left_ms) + "ms";
+[1.625s]       |                 [01;31m[K^~~~~~~~~~~~~~~[m[K
+[1.632s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[1.632s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[1.632s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[1.632s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[1.632s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[1.632s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[1.632s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[1.632s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[1.632s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[1.632s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[1.632s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.632s]                  from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:1[m[K:
+[1.632s] [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:228:25:[m[K [01;31m[Kerror: [m[K‘[01m[Koffsets_log_str[m[K’ was not declared in this scope
+[1.632s]   228 |                         [01;31m[Koffsets_log_str[m[K.c_str());
+[1.632s]       |                         [01;31m[K^~~~~~~~~~~~~~~[m[K
+[1.634s] [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:262:13:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kcsv_line_stream[m[K’
+[1.634s]   262 |             [01;31m[Kcsv_line_stream[m[K << "," // Coma antes de las nuevas columnas de pérdida
+[1.634s]       |             [01;31m[K^~~~~~~~~~~~~~~[m[K
+[1.634s] [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:261:1:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+[1.634s]   261 | [01;35m[K7[m[K
+[1.634s]       | [01;35m[K^[m[K
+[1.637s] [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:126:22:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kt2_batch_key[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[1.637s]   126 |             uint64_t [01;35m[Kt2_batch_key[m[K = static_cast<uint64_t>(ts_t2_segnode_batch_start.tv_sec) * 1000000000ULL + ts_t2_segnode_batch_start.tv_nsec;
+[1.637s]       |                      [01;35m[K^~~~~~~~~~~~[m[K
+[2.844s] gmake[2]: *** [CMakeFiles/seg_sub_node.dir/build.make:76: CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o] Error 1
+[2.844s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/seg_sub_node.dir/all] Error 2
+[2.844s] gmake: *** [Makefile:146: all] Error 2
+[2.848s] Invoked command in '/home/david/yolocpp_ws/build/seg_sub' returned '2': CMAKE_PREFIX_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces:/home/david/yolocpp_ws/install/zoe_bringup:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolocpp_ws/install/seg_sub:/home/david/yolocpp_ws/install/pylon_instant_camera:/home/david/yolocpp_ws/install/monitor_tutorial:/home/david/yolocpp_ws/install/monitor_sql_tutorial:/home/david/yolocpp_ws/install/image_directory_publisher:/home/david/yolocpp_ws/install/docs_turtlesim:/home/david/yolocpp_ws/install/bboxes_ex_msgs:/opt/vulcanexus/humble:/home/david/yolocpp_ws/install/microservers_py:/home/david/yolocpp_ws/install/clients_py:/opt/ros/humble LD_LIBRARY_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces/lib:/home/david/yolocpp_ws/install/pylon_instant_camera/lib:/home/david/yolocpp_ws/install/image_directory_publisher/lib:/home/david/yolocpp_ws/install/docs_turtlesim/lib:/home/david/yolocpp_ws/install/bboxes_ex_msgs/lib:/opt/vulcanexus/humble/lib:/opt/pylon/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda-11.2/lib64:/usr/local/cuda-11.2/lib64:/home/david/onnxruntime-linux-x64-gpu-1.22.0/lib PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --build /home/david/yolocpp_ws/build/seg_sub -- -j32 -l32

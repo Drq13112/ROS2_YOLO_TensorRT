@@ -1,0 +1,157 @@
+[0.015s] Invoking command in '/home/david/yolocpp_ws/build/tensorrt_yolo': CMAKE_PREFIX_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces:/opt/vulcanexus/humble:/home/david/yolocpp_ws/install/zoe_bringup:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolocpp_ws/install/seg_sub:/home/david/yolocpp_ws/install/pylon_instant_camera:/home/david/yolocpp_ws/install/image_directory_publisher:/home/david/yolocpp_ws/install/bboxes_ex_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces/lib:/opt/vulcanexus/humble/lib:/home/david/yolocpp_ws/install/pylon_instant_camera/lib:/home/david/yolocpp_ws/install/image_directory_publisher/lib:/home/david/yolocpp_ws/install/bboxes_ex_msgs/lib:/opt/pylon/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda-11.2/lib64:/usr/local/cuda-11.2/lib64:/home/david/onnxruntime-linux-x64-gpu-1.22.0/lib PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --build /home/david/yolocpp_ws/build/tensorrt_yolo -- -j32 -l32
+[0.054s] [ 14%] Built target chrono
+[0.055s] [ 71%] Built target deploy
+[0.073s] [ 85%] Built target segment_node
+[0.073s] [ 92%] [32mBuilding CXX object CMakeFiles/segment_node_3P.dir/src/segment_node_3P.cpp.o[0m
+[1.484s] In file included from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.hpp:19[m[K,
+[1.484s]                  from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/model.hpp:17[m[K,
+[1.484s]                  from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:30[m[K:
+[1.484s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::DeviceBuffer::DeviceBuffer()[m[K’:
+[1.484s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:103:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::DeviceBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.484s]   103 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+[1.484s]       |            [01;35m[K^~~~~[m[K
+[1.484s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:102:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::DeviceBuffer::device_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.484s]   102 |     void*  [01;35m[Kdevice_[m[K;  // < 设备内存指针
+[1.485s]       |            [01;35m[K^~~~~~~[m[K
+[1.485s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:86:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.485s]    86 |     [01;35m[KDeviceBuffer[m[K() : size_(0), device_(nullptr) {}
+[1.485s]       |     [01;35m[K^~~~~~~~~~~~[m[K
+[1.485s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::DiscreteBuffer::DiscreteBuffer()[m[K’:
+[1.485s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:130:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::DiscreteBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.485s]   130 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+[1.485s]       |            [01;35m[K^~~~~[m[K
+[1.485s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:128:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::DiscreteBuffer::host_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.485s]   128 |     void*  [01;35m[Khost_[m[K;    // < 主机内存指针
+[1.485s]       |            [01;35m[K^~~~~[m[K
+[1.485s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:112:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.485s]   112 |     [01;35m[KDiscreteBuffer[m[K() : size_(0), host_(nullptr), device_(nullptr) {}
+[1.485s]       |     [01;35m[K^~~~~~~~~~~~~~[m[K
+[1.485s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::UnifiedBuffer::UnifiedBuffer()[m[K’:
+[1.485s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:157:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::UnifiedBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.485s]   157 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+[1.485s]       |            [01;35m[K^~~~~[m[K
+[1.485s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:155:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::UnifiedBuffer::host_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.485s]   155 |     void*  [01;35m[Khost_[m[K;    // < 主机内存指针
+[1.485s]       |            [01;35m[K^~~~~[m[K
+[1.485s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:139:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.485s]   139 |     [01;35m[KUnifiedBuffer[m[K() : size_(0), host_(nullptr), device_(nullptr) {}
+[1.485s]       |     [01;35m[K^~~~~~~~~~~~~[m[K
+[1.485s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::MappedBuffer::MappedBuffer()[m[K’:
+[1.485s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:184:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::MappedBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.485s]   184 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+[1.485s]       |            [01;35m[K^~~~~[m[K
+[1.485s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:182:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::MappedBuffer::host_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.485s]   182 |     void*  [01;35m[Khost_[m[K;    // < 主机内存指针
+[1.485s]       |            [01;35m[K^~~~~[m[K
+[1.485s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:166:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.485s]   166 |     [01;35m[KMappedBuffer[m[K() : size_(0), host_(nullptr), device_(nullptr) {}
+[1.485s]       |     [01;35m[K^~~~~~~~~~~~[m[K
+[1.488s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::TensorInfo::TensorInfo(std::string, const Dims&, nvinfer1::DataType, bool, deploy::BufferType)[m[K’:
+[1.488s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:224:33:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::TensorInfo::shape[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.488s]   224 |     nvinfer1::Dims              [01;35m[Kshape[m[K;   // < 张量形状
+[1.488s]       |                                 [01;35m[K^~~~~[m[K
+[1.488s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:219:24:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Knvinfer1::DataType deploy::TensorInfo::dtype_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.488s]   219 |     nvinfer1::DataType [01;35m[Kdtype_[m[K;           // < 张量数据类型
+[1.488s]       |                        [01;35m[K^~~~~~[m[K
+[1.488s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:236:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.488s]   236 |     [01;35m[KTensorInfo[m[K(const std::string name, const nvinfer1::Dims& shape, const nvinfer1::DataType dtype, const bool input, BufferType buffer_type)
+[1.488s]       |     [01;35m[K^~~~~~~~~~[m[K
+[1.558s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:[m[K In constructor ‘[01m[KYoloBatchNode::YoloBatchNode(const string&, const string&, const string&, bool, bool, const string&, double, const Size&)[m[K’:
+[1.558s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:261:10:[m[K [01;35m[Kwarning: [m[K‘[01m[KYoloBatchNode::enable_mask_video_writing_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.558s]   261 |     bool [01;35m[Kenable_mask_video_writing_[m[K = false;
+[1.558s]       |          [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.558s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:255:17:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kstd::string YoloBatchNode::video_output_path_str_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.558s]   255 |     std::string [01;35m[Kvideo_output_path_str_[m[K;
+[1.558s]       |                 [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.558s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:52:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+[1.558s]    52 |     [01;35m[KYoloBatchNode[m[K(const std::string &node_name,
+[1.558s]       |     [01;35m[K^~~~~~~~~~~~~[m[K
+[1.566s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:82:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kthuint32_t[m[K’ was not declared in this scope; did you mean ‘[01m[Kuint32_t[m[K’?
+[1.566s]    82 |         mask_encoding_ = [01;31m[Kthuint32_t[m[K source_image_seq; is->get_parameter("mask_encoding").get_value<std::string>();
+[1.566s]       |                          [01;31m[K^~~~~~~~~~[m[K
+[1.566s]       |                          [32m[Kuint32_t[m[K
+[1.570s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:82:55:[m[K [01;31m[Kerror: [m[K‘[01m[Kis[m[K’ was not declared in this scope; did you mean ‘[01m[Kfs[m[K’?
+[1.570s]    82 |         mask_encoding_ = thuint32_t source_image_seq; [01;31m[Kis[m[K->get_parameter("mask_encoding").get_value<std::string>();
+[1.570s]       |                                                       [01;31m[K^~[m[K
+[1.570s]       |                                                       [32m[Kfs[m[K
+[1.570s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:82:111:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K>[m[K’ token
+[1.570s]    82 |         mask_encoding_ = thuint32_t source_image_seq; is->get_parameter("mask_encoding").get_value<std::string[01;31m[K>[m[K();
+[1.570s]       |                                                                                                               [01;31m[K^[m[K
+[1.571s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:82:113:[m[K [01;31m[Kerror: [m[Kexpected primary-expression before ‘[01m[K)[m[K’ token
+[1.571s]    82 |         mask_encoding_ = thuint32_t source_image_seq; is->get_parameter("mask_encoding").get_value<std::string>([01;31m[K)[m[K;
+[1.571s]       |                                                                                                                 [01;31m[K^[m[K
+[1.589s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:[m[K In member function ‘[01m[Kvoid YoloBatchNode::imageCallback(const ConstSharedPtr&)[m[K’:
+[1.589s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:440:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimed_item[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+[1.589s]   440 |             [01;31m[Ktimed_item[m[K.source_image_seq = static_cast<uint32_t>(std::stoul(msg->header.frame_id));
+[1.589s]       |             [01;31m[K^~~~~~~~~~[m[K
+[1.589s]       |             [32m[Ktimer_t[m[K
+[1.595s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:444:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimed_item[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+[1.595s]   444 |             [01;31m[Ktimed_item[m[K.source_image_seq = 0; // O algún valor de error
+[1.595s]       |             [01;31m[K^~~~~~~~~~[m[K
+[1.595s]       |             [32m[Ktimer_t[m[K
+[1.601s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:448:13:[m[K [01;31m[Kerror: [m[K‘[01m[Ktimed_item[m[K’ was not declared in this scope; did you mean ‘[01m[Ktimer_t[m[K’?
+[1.601s]   448 |             [01;31m[Ktimed_item[m[K.source_image_seq = 0; // O algún valor de error
+[1.601s]       |             [01;31m[K^~~~~~~~~~[m[K
+[1.601s]       |             [32m[Ktimer_t[m[K
+[1.603s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:[m[K In member function ‘[01m[Kvoid YoloBatchNode::inferenceLoop()[m[K’:
+[1.603s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:491:23:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktime_in_queue_us[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[1.603s]   491 |             long long [01;35m[Ktime_in_queue_us[m[K = 0; // Will be replaced by ChronoTimer
+[1.603s]       |                       [01;35m[K^~~~~~~~~~~~~~~~[m[K
+[1.616s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[1.616s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[1.616s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[1.616s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[1.616s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[1.616s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[1.616s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[1.616s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[1.616s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[1.616s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[1.616s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.616s]                  from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:18[m[K:
+[1.616s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:[m[K In member function ‘[01m[Kvoid YoloBatchNode::processImage(const YoloBatchNode::TimedImage&, long long int, long long int)[m[K’:
+[1.616s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:741:21:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%ld[m[K’ expects argument of type ‘[01m[Klong int[m[K’, but argument 11 has type ‘[01m[Klong long int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[1.616s]   741 |                     [01;35m[K"[%s] Timings(us): Read=%ld, Pre=%ld, Infer=%ld, Post=%ld, PubCall=%ld. LoopIdle=%ld. QSize=%zu. "[m[K
+[1.616s]       |                     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.616s]   742 | [01;35m[K                    "MsgAge(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "[m[K
+[1.616s]       |                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.616s]   743 | [01;35m[K                    "InterCB(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "[m[K
+[1.616s]       |                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.617s]   744 | [01;35m[K                    "QueueT(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "[m[K
+[1.617s]       |                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.617s]   745 | [01;35m[K                    "E2ELat(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "[m[K
+[1.617s]       |                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.617s]   746 | [01;35m[K                    "ProcFunc(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "[m[K
+[1.617s]       |                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.617s]   747 | [01;35m[K                    "InterPub(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "[m[K
+[1.617s]       |                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.617s]   748 | [01;35m[K                    "TotalDirPub->Pub(ms): %.2f"[m[K,
+[1.617s]       |                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.617s] ......
+[1.617s]   751 |                     [32m[Kloop_idle_time_us[m[K, current_queue_size_.load(),
+[1.617s]       |                     [32m[K~~~~~~~~~~~~~~~~~[m[K
+[1.617s]       |                     [32m[K|[m[K
+[1.617s]       |                     [32m[Klong long int[m[K
+[1.617s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:741:104:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[1.617s]   741 |                     "[%s] Timings(us): Read=%ld, Pre=%ld, Infer=%ld, Post=%ld, PubCall=%ld. LoopIdle=[01;36m[K%ld[m[K. QSize=%zu. "
+[1.617s]       |                                                                                                      [01;36m[K~~^[m[K
+[1.617s]       |                                                                                                        [01;36m[K|[m[K
+[1.617s]       |                                                                                                        [01;36m[Klong int[m[K
+[1.617s]       |                                                                                                      [32m[K%lld[m[K
+[1.617s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:525:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktotal_latency_dirpub_to_processing_ms[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+[1.617s]   525 |         double [01;35m[Ktotal_latency_dirpub_to_processing_ms[m[K =
+[1.617s]       |                [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.617s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:517:91:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktime_in_queue_us_val[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.617s]   517 |     void processImage(const TimedImage &timed_msg, long long loop_idle_time_us, [01;35m[Klong long time_in_queue_us_val[m[K)
+[1.617s]       |                                                                                 [01;35m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[1.619s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:[m[K In member function ‘[01m[Kvoid YoloBatchNode::writeInferredImageToVideo(const cv::Mat&, const deploy::SegmentRes&, const cv::Mat&, const Size&, const Size&)[m[K’:
+[1.619s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:821:25:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Koriginal_size[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.619s]   821 |         [01;35m[Kconst cv::Size &original_size[m[K,    // Tamaño original de esta imagen
+[1.619s]       |         [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[1.619s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:822:25:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Knetwork_input_size[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+[1.619s]   822 |         [01;35m[Kconst cv::Size &network_input_size[m[K)
+[1.619s]       |         [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[2.434s] gmake[2]: *** [CMakeFiles/segment_node_3P.dir/build.make:76: CMakeFiles/segment_node_3P.dir/src/segment_node_3P.cpp.o] Error 1
+[2.435s] gmake[1]: *** [CMakeFiles/Makefile2:223: CMakeFiles/segment_node_3P.dir/all] Error 2
+[2.435s] gmake: *** [Makefile:146: all] Error 2
+[2.439s] Invoked command in '/home/david/yolocpp_ws/build/tensorrt_yolo' returned '2': CMAKE_PREFIX_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces:/opt/vulcanexus/humble:/home/david/yolocpp_ws/install/zoe_bringup:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolocpp_ws/install/seg_sub:/home/david/yolocpp_ws/install/pylon_instant_camera:/home/david/yolocpp_ws/install/image_directory_publisher:/home/david/yolocpp_ws/install/bboxes_ex_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces/lib:/opt/vulcanexus/humble/lib:/home/david/yolocpp_ws/install/pylon_instant_camera/lib:/home/david/yolocpp_ws/install/image_directory_publisher/lib:/home/david/yolocpp_ws/install/bboxes_ex_msgs/lib:/opt/pylon/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda-11.2/lib64:/usr/local/cuda-11.2/lib64:/home/david/onnxruntime-linux-x64-gpu-1.22.0/lib PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --build /home/david/yolocpp_ws/build/tensorrt_yolo -- -j32 -l32

@@ -1,0 +1,4 @@
+[console_scripts]
+client_addition = clients_py.microservice_client_addition:main
+client_subtraction = clients_py.microservice_client_subtraction:main
+

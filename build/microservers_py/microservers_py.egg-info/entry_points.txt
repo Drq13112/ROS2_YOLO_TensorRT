@@ -1,0 +1,4 @@
+[console_scripts]
+server_addition = microservers_py.microservice_server_addition:main
+server_subtraction = microservers_py.microservice_server_subtraction:main
+

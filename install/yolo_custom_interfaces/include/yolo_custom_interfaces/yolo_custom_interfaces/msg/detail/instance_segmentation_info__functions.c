@@ -21,6 +21,8 @@
 #include "rosidl_runtime_c/primitives_sequence_functions.h"
 // Member `image_source_monotonic_capture_time`
 // Member `processing_node_monotonic_entry_time`
+// Member `processing_node_inference_start_time`
+// Member `processing_node_inference_end_time`
 // Member `processing_node_monotonic_publish_time`
 #include "builtin_interfaces/msg/detail/time__functions.h"
 
@@ -60,11 +62,22 @@ yolo_custom_interfaces__msg__InstanceSegmentationInfo__init(yolo_custom_interfac
     yolo_custom_interfaces__msg__InstanceSegmentationInfo__fini(msg);
     return false;
   }
+  // processing_node_inference_start_time
+  if (!builtin_interfaces__msg__Time__init(&msg->processing_node_inference_start_time)) {
+    yolo_custom_interfaces__msg__InstanceSegmentationInfo__fini(msg);
+    return false;
+  }
+  // processing_node_inference_end_time
+  if (!builtin_interfaces__msg__Time__init(&msg->processing_node_inference_end_time)) {
+    yolo_custom_interfaces__msg__InstanceSegmentationInfo__fini(msg);
+    return false;
+  }
   // processing_node_monotonic_publish_time
   if (!builtin_interfaces__msg__Time__init(&msg->processing_node_monotonic_publish_time)) {
     yolo_custom_interfaces__msg__InstanceSegmentationInfo__fini(msg);
     return false;
   }
+  // packet_sequence_number
   return true;
 }
 
@@ -86,8 +99,13 @@ yolo_custom_interfaces__msg__InstanceSegmentationInfo__fini(yolo_custom_interfac
   builtin_interfaces__msg__Time__fini(&msg->image_source_monotonic_capture_time);
   // processing_node_monotonic_entry_time
   builtin_interfaces__msg__Time__fini(&msg->processing_node_monotonic_entry_time);
+  // processing_node_inference_start_time
+  builtin_interfaces__msg__Time__fini(&msg->processing_node_inference_start_time);
+  // processing_node_inference_end_time
+  builtin_interfaces__msg__Time__fini(&msg->processing_node_inference_end_time);
   // processing_node_monotonic_publish_time
   builtin_interfaces__msg__Time__fini(&msg->processing_node_monotonic_publish_time);
+  // packet_sequence_number
 }
 
 bool
@@ -132,10 +150,26 @@ yolo_custom_interfaces__msg__InstanceSegmentationInfo__are_equal(const yolo_cust
   {
     return false;
   }
+  // processing_node_inference_start_time
+  if (!builtin_interfaces__msg__Time__are_equal(
+      &(lhs->processing_node_inference_start_time), &(rhs->processing_node_inference_start_time)))
+  {
+    return false;
+  }
+  // processing_node_inference_end_time
+  if (!builtin_interfaces__msg__Time__are_equal(
+      &(lhs->processing_node_inference_end_time), &(rhs->processing_node_inference_end_time)))
+  {
+    return false;
+  }
   // processing_node_monotonic_publish_time
   if (!builtin_interfaces__msg__Time__are_equal(
       &(lhs->processing_node_monotonic_publish_time), &(rhs->processing_node_monotonic_publish_time)))
   {
+    return false;
+  }
+  // packet_sequence_number
+  if (lhs->packet_sequence_number != rhs->packet_sequence_number) {
     return false;
   }
   return true;
@@ -185,12 +219,26 @@ yolo_custom_interfaces__msg__InstanceSegmentationInfo__copy(
   {
     return false;
   }
+  // processing_node_inference_start_time
+  if (!builtin_interfaces__msg__Time__copy(
+      &(input->processing_node_inference_start_time), &(output->processing_node_inference_start_time)))
+  {
+    return false;
+  }
+  // processing_node_inference_end_time
+  if (!builtin_interfaces__msg__Time__copy(
+      &(input->processing_node_inference_end_time), &(output->processing_node_inference_end_time)))
+  {
+    return false;
+  }
   // processing_node_monotonic_publish_time
   if (!builtin_interfaces__msg__Time__copy(
       &(input->processing_node_monotonic_publish_time), &(output->processing_node_monotonic_publish_time)))
   {
     return false;
   }
+  // packet_sequence_number
+  output->packet_sequence_number = input->packet_sequence_number;
   return true;
 }
 

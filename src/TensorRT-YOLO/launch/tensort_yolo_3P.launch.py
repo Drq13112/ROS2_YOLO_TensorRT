@@ -7,7 +7,7 @@ def generate_launch_description():
     pkg_share = get_package_share_directory('tensorrt_yolo')
     # Asegúrate que el nombre del modelo aquí coincide con el que quieres usar.
     # El C++ tiene "yolo11m-seg.engine" como default si no se especifica este parámetro.
-    default_model_path = os.path.join(pkg_share, 'models', 'yolo11s-seg.engine')
+    default_model_path = os.path.join(pkg_share, 'models', 'yolo11s-seg_03_b1.engine')
 
     node_executable = 'segment_node_3P' 
 
@@ -21,7 +21,7 @@ def generate_launch_description():
                 {
                     'engine_path': default_model_path,
                     'input_width': 640,
-                    'input_height': 418, # El C++ usa 416 por defecto
+                    'input_height': 416, # El C++ usa 416 por defecto
                     'mask_encoding': 'mono8', # 'mono8' o 'mono16'
                     'use_pinned_input_memory': True,
                     'input_channels': 3,

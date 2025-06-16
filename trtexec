@@ -1,3 +1,19 @@
+[15:43:30] david@david-Sword-16-HX-B14VFKG:~/TensorRT-YOLO/demo$ trtyolo export -w models/yolo11s-seg.pt -v yolo11 -o models -s --imgsz 640 416 -b 1
+[I] Starting export with Pytorch.
+[W612 15:44:45.114771299 shape_type_inference.cpp:1995] Warning: The shape inference of TRT::EfficientIdxNMS_TRT type is missing, so it may result in wrong shape inference for the exported graph. Please consider adding it in symbolic function. (function UpdateReliable)
+[W612 15:44:45.115477995 shape_type_inference.cpp:1995] Warning: The shape inference of TRT::EfficientIdxNMS_TRT type is missing, so it may result in wrong shape inference for the exported graph. Please consider adding it in symbolic function. (function UpdateReliable)
+[W612 15:44:45.115785842 shape_type_inference.cpp:1995] Warning: The shape inference of TRT::EfficientIdxNMS_TRT type is missing, so it may result in wrong shape inference for the exported graph. Please consider adding it in symbolic function. (function UpdateReliable)
+[W612 15:44:45.116620922 shape_type_inference.cpp:1995] Warning: The shape inference of TRT::EfficientIdxNMS_TRT type is missing, so it may result in wrong shape inference for the exported graph. Please consider adding it in symbolic function. (function UpdateReliable)
+[W612 15:44:45.116930345 shape_type_inference.cpp:1995] Warning: The shape inference of TRT::EfficientIdxNMS_TRT type is missing, so it may result in wrong shape inference for the exported graph. Please consider adding it in symbolic function. (function UpdateReliable)
+[S] Simplifying ONNX model with onnxsim version 0.4.36...
+[S] Export complete, results saved to models, visualize at https://netron.app
+
+
+
+
+
+
+
 [06/02/2025-00:09:31] [I] Timing trace has 228 queries over 3.03426 s
 [06/02/2025-00:09:31] [I] 
 [06/02/2025-00:09:31] [I] === Trace details ===

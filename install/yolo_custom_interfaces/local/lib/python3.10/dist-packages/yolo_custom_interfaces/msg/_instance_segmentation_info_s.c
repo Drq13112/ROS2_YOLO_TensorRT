@@ -39,6 +39,14 @@ ROSIDL_GENERATOR_C_IMPORT
 bool builtin_interfaces__msg__time__convert_from_py(PyObject * _pymsg, void * _ros_message);
 ROSIDL_GENERATOR_C_IMPORT
 PyObject * builtin_interfaces__msg__time__convert_to_py(void * raw_ros_message);
+ROSIDL_GENERATOR_C_IMPORT
+bool builtin_interfaces__msg__time__convert_from_py(PyObject * _pymsg, void * _ros_message);
+ROSIDL_GENERATOR_C_IMPORT
+PyObject * builtin_interfaces__msg__time__convert_to_py(void * raw_ros_message);
+ROSIDL_GENERATOR_C_IMPORT
+bool builtin_interfaces__msg__time__convert_from_py(PyObject * _pymsg, void * _ros_message);
+ROSIDL_GENERATOR_C_IMPORT
+PyObject * builtin_interfaces__msg__time__convert_to_py(void * raw_ros_message);
 
 ROSIDL_GENERATOR_C_EXPORT
 bool yolo_custom_interfaces__msg__instance_segmentation_info__convert_from_py(PyObject * _pymsg, void * _ros_message)
@@ -241,6 +249,28 @@ bool yolo_custom_interfaces__msg__instance_segmentation_info__convert_from_py(Py
     }
     Py_DECREF(field);
   }
+  {  // processing_node_inference_start_time
+    PyObject * field = PyObject_GetAttrString(_pymsg, "processing_node_inference_start_time");
+    if (!field) {
+      return false;
+    }
+    if (!builtin_interfaces__msg__time__convert_from_py(field, &ros_message->processing_node_inference_start_time)) {
+      Py_DECREF(field);
+      return false;
+    }
+    Py_DECREF(field);
+  }
+  {  // processing_node_inference_end_time
+    PyObject * field = PyObject_GetAttrString(_pymsg, "processing_node_inference_end_time");
+    if (!field) {
+      return false;
+    }
+    if (!builtin_interfaces__msg__time__convert_from_py(field, &ros_message->processing_node_inference_end_time)) {
+      Py_DECREF(field);
+      return false;
+    }
+    Py_DECREF(field);
+  }
   {  // processing_node_monotonic_publish_time
     PyObject * field = PyObject_GetAttrString(_pymsg, "processing_node_monotonic_publish_time");
     if (!field) {
@@ -250,6 +280,15 @@ bool yolo_custom_interfaces__msg__instance_segmentation_info__convert_from_py(Py
       Py_DECREF(field);
       return false;
     }
+    Py_DECREF(field);
+  }
+  {  // packet_sequence_number
+    PyObject * field = PyObject_GetAttrString(_pymsg, "packet_sequence_number");
+    if (!field) {
+      return false;
+    }
+    assert(PyLong_Check(field));
+    ros_message->packet_sequence_number = PyLong_AsUnsignedLongLong(field);
     Py_DECREF(field);
   }
 
@@ -444,6 +483,34 @@ PyObject * yolo_custom_interfaces__msg__instance_segmentation_info__convert_to_p
       }
     }
   }
+  {  // processing_node_inference_start_time
+    PyObject * field = NULL;
+    field = builtin_interfaces__msg__time__convert_to_py(&ros_message->processing_node_inference_start_time);
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "processing_node_inference_start_time", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // processing_node_inference_end_time
+    PyObject * field = NULL;
+    field = builtin_interfaces__msg__time__convert_to_py(&ros_message->processing_node_inference_end_time);
+    if (!field) {
+      return NULL;
+    }
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "processing_node_inference_end_time", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
   {  // processing_node_monotonic_publish_time
     PyObject * field = NULL;
     field = builtin_interfaces__msg__time__convert_to_py(&ros_message->processing_node_monotonic_publish_time);
@@ -452,6 +519,17 @@ PyObject * yolo_custom_interfaces__msg__instance_segmentation_info__convert_to_p
     }
     {
       int rc = PyObject_SetAttrString(_pymessage, "processing_node_monotonic_publish_time", field);
+      Py_DECREF(field);
+      if (rc) {
+        return NULL;
+      }
+    }
+  }
+  {  // packet_sequence_number
+    PyObject * field = NULL;
+    field = PyLong_FromUnsignedLongLong(ros_message->packet_sequence_number);
+    {
+      int rc = PyObject_SetAttrString(_pymessage, "packet_sequence_number", field);
       Py_DECREF(field);
       if (rc) {
         return NULL;

@@ -99,11 +99,11 @@ public:
         // qos_sensors.reliability(RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
         // qos_sensors.keep_last(1);
         qos_sensors.reliability(RMW_QOS_POLICY_RELIABILITY_RELIABLE);
-        qos_sensors.keep_last(5);
+        qos_sensors.keep_last(1);
 
         rclcpp::QoS qos_sensors_pub(rclcpp::QoSInitialization::from_rmw(rmw_qos_profile_sensor_data));
         // qos_sensors_pub.reliability(RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
-        qos_sensors.reliability(RMW_QOS_POLICY_RELIABILITY_RELIABLE);
+        qos_sensors_pub.reliability(RMW_QOS_POLICY_RELIABILITY_RELIABLE);
         qos_sensors_pub.keep_last(5);
 
         // Inicializar paleta de colores
@@ -225,11 +225,12 @@ private:
 
     struct TimedImage
     {
-        sensor_msgs::msg::Image::ConstSharedPtr msg;
+        sensor_msgs::msg::Image::ConstSharedPtr msg; // Leer el número de secuencia de la imagen original
         // std::chrono::steady_clock::time_point received_time; // Replaced by monotonic_entry_time
         timespec monotonic_entry_time;                          // Time captured with clock_gettime(CLOCK_MONOTONIC, ...) in imageCallback
         // rclcpp::Time header_stamp;                           // Original message header stamp - this will now be the monotonic capture time from publisher
         timespec image_source_monotonic_capture_ts;             // To store the monotonic time from directory_publisher
+        uint32_t source_image_seq; 
     };
 
     std::queue<TimedImage> inference_queue_;
@@ -279,6 +280,7 @@ private:
 
     // Modelo de segmentación
     std::unique_ptr<deploy::SegmentModel> model_;
+    std::atomic<bool> stop_processing_thread_{false};
 
     struct SimpleStats
     {
@@ -431,6 +433,21 @@ private:
         // Ahora ambos timestamps deberían estar en la misma escala (CLOCK_MONOTONIC)
         timed_msg.image_source_monotonic_capture_ts.tv_sec = msg->header.stamp.sec;
         timed_msg.image_source_monotonic_capture_ts.tv_nsec = msg->header.stamp.nanosec;
+        
+        // Leer el número de secuencia desde frame_id y convertirlo
+        try {
+            // Usar std::stoul para uint32_t o std::stoull para uint64_t si el contador pudiera ser muy grande
+            timed_msg.source_image_seq = static_cast<uint32_t>(std::stoul(msg->header.frame_id));
+        } catch (const std::invalid_argument& ia) {
+            RCLCPP_ERROR(this->get_logger(), "[%s] Invalid argument: Cannot convert frame_id ('%s') to sequence number. %s",
+                         this->get_name(), msg->header.frame_id.c_str(), ia.what());
+            timed_msg.source_image_seq = 0; // O algún valor de error
+        } catch (const std::out_of_range& oor) {
+            RCLCPP_ERROR(this->get_logger(), "[%s] Out of range: Cannot convert frame_id ('%s') to sequence number. %s",
+                         this->get_name(), msg->header.frame_id.c_str(), oor.what());
+            timed_msg.source_image_seq = 0; // O algún valor de error
+        }
+
 
         // Calcular latencia de comunicación DirPub -> SegNode
         double latency_dirpub_to_segnode_ms =
@@ -551,6 +568,8 @@ private:
         cv::Mat original_image = cv_ptr->image;
         cv::Size original_size = original_image.size();
         std_msgs::msg::Header current_header = timed_msg.msg->header;
+        auto instance_info_msg = std::make_unique<yolo_custom_interfaces::msg::InstanceSegmentationInfo>();
+        instance_info_msg->header = current_header;
 
         // --- Preprocesado ---
         auto t_pre_start = std::chrono::steady_clock::now();
@@ -583,9 +602,22 @@ private:
         // --- Inferencia ---
         auto t_inf_start = std::chrono::steady_clock::now();
         std::vector<deploy::SegmentRes> results;
+
+        timespec inference_start_ts;
+        clock_gettime(CLOCK_MONOTONIC, &inference_start_ts);
         
         results = model_->predict(img_batch);
-     
+
+        timespec inference_end_ts;
+        clock_gettime(CLOCK_MONOTONIC, &inference_end_ts);
+
+        // Populate new inference time fields
+        instance_info_msg->processing_node_inference_start_time.sec = inference_start_ts.tv_sec;
+        instance_info_msg->processing_node_inference_start_time.nanosec = inference_start_ts.tv_nsec;
+        instance_info_msg->processing_node_inference_end_time.sec = inference_end_ts.tv_sec;
+        instance_info_msg->processing_node_inference_end_time.nanosec = inference_end_ts.tv_nsec;
+
+
         auto t_inf_end = std::chrono::steady_clock::now();
         auto t_infer = std::chrono::duration_cast<std::chrono::microseconds>(t_inf_end - t_inf_start).count();
 
@@ -599,12 +631,11 @@ private:
         // --- Postprocesado ---
         auto t_post_start = std::chrono::steady_clock::now();
         cv::Mat instance_id_mask_cv = generateInstanceIdMaskROI(result, original_size, network_input_target_size);
-        auto instance_info_msg = std::make_unique<yolo_custom_interfaces::msg::InstanceSegmentationInfo>();
-        instance_info_msg->header = current_header;
 
         // Populate the image source monotonic timestamp (T1_mono)
         instance_info_msg->image_source_monotonic_capture_time.sec = timed_msg.image_source_monotonic_capture_ts.tv_sec;
         instance_info_msg->image_source_monotonic_capture_time.nanosec = timed_msg.image_source_monotonic_capture_ts.tv_nsec;
+        instance_info_msg->header.frame_id = timed_msg.msg->header.frame_id; // Propagar frame_id
         // Populate the monotonic entry time (T2_mono)
         instance_info_msg->processing_node_monotonic_entry_time.sec = timed_msg.monotonic_entry_time.tv_sec;
         instance_info_msg->processing_node_monotonic_entry_time.nanosec = timed_msg.monotonic_entry_time.tv_nsec;
@@ -643,6 +674,8 @@ private:
         clock_gettime(CLOCK_MONOTONIC, &ts_processing_node_publish);
         instance_info_msg->processing_node_monotonic_publish_time.sec = ts_processing_node_publish.tv_sec;
         instance_info_msg->processing_node_monotonic_publish_time.nanosec = ts_processing_node_publish.tv_nsec;
+        instance_info_msg->packet_sequence_number = static_cast<uint64_t>(timed_msg.source_image_seq);
+        
         instance_info_pub_->publish(std::move(instance_info_msg));
         auto t_pub_end = std::chrono::steady_clock::now();
         auto t_publish = std::chrono::duration_cast<std::chrono::microseconds>(t_pub_end - t_pub_start).count();

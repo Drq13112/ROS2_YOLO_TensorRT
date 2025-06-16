@@ -1,0 +1,116 @@
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:[m[K In lambda function:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:135:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kbatch_t4_mutex_[m[K’ was not declared in this scope; did you mean ‘[01m[Kbatch_data_mutex_[m[K’?
+  135 |                 std::lock_guard<std::mutex> lock([01;31m[Kbatch_t4_mutex_[m[K);
+      |                                                  [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |                                                  [32m[Kbatch_data_mutex_[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:136:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kreceived_batch_t4_timestamps_[m[K’ was not declared in this scope; did you mean ‘[01m[Kpending_batch_t0_timestamps_[m[K’?
+  136 |                 [01;31m[Kreceived_batch_t4_timestamps_[m[K[packet_seq_num][camera_id] = ts_t4_segsub_res_recv;
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                 [32m[Kpending_batch_t0_timestamps_[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:138:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kbatch_t4_reception_spread_ms_[m[K’ was not declared in this scope
+  138 |                 if ([01;31m[Kbatch_t4_reception_spread_ms_[m[K.find(packet_seq_num) == batch_t4_reception_spread_ms_.end()) {
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:159:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kt4_reception_spread_this_batch_ms[m[K’ was not declared in this scope
+  159 |                            [01;31m[Kt4_reception_spread_this_batch_ms[m[K = calculate_latency_ms(*max_t4_it, *min_t4_it);
+      |                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:161:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kt4_spread_calculated_this_call[m[K’ was not declared in this scope; did you mean ‘[01m[Kbatch_offsets_calculated_this_call[m[K’?
+  161 |                            [01;31m[Kt4_spread_calculated_this_call[m[K = true;
+      |                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                            [32m[Kbatch_offsets_calculated_this_call[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:166:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kt4_reception_spread_this_batch_ms[m[K’ was not declared in this scope
+  166 |                     [01;31m[Kt4_reception_spread_this_batch_ms[m[K = batch_t4_reception_spread_ms_[packet_seq_num];
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:1[m[K:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:211:25:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%ld[m[K’ expects argument of type ‘[01m[Klong int[m[K’, but argument 7 has type ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_sec_type[m[K’ {aka ‘[01m[Kint[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  211 |                         [01;35m[K"[%s Pkt#%lu] Latency Breakdown (ms) ImgPub OriginalTS: %ld.%09ld\n" // Añadido Pkt#[m[K
+      |                         [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  212 | [01;35m[K                        "  T0_ImgPubTime ....................: %ld.%09ld\n"[m[K
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  213 | [01;35m[K                        "  T1_SegNode_CBCallTime ............: %ld.%09ld  |  T0->T1 (ImgPub to CB): %.3f ms\n"[m[K
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  214 | [01;35m[K                        "  T2_SegNode_BatchProcStartTime ....: %ld.%09ld  |  T1->T2 (CB to BatchStart): %.3f ms\n"[m[K
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  215 | [01;35m[K                        "  T3_SegNode_ResultPubTime .........: %ld.%09ld  |  T2->T3 (BatchStart to ResPub): %.3f ms\n"[m[K
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  216 | [01;35m[K                        "  T4_SegSub_ResultRecvTime .........: %ld.%09ld  |  T3->T4 (ResPub to SegSubRecv): %.3f ms\n"[m[K
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  217 | [01;35m[K                        "  --------------------------------------------------------------------------------------\n"[m[K
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  218 | [01;35m[K                        "  Cumulative T1->T4 (SegNodeCB to SegSubRecv): %.3f ms\n"[m[K
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  219 | [01;35m[K                        "  TOTAL E2E  T0->T4 (ImgPub to SegSubRecv)   : %.3f ms%s"[m[K,
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  220 |                         camera_id.c_str(), packet_seq_num, [32m[Kmsg->header.stamp.sec[m[K, msg->header.stamp.nanosec, // Usar packet_seq_num
+      |                                                            [32m[K~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                              [32m[K|[m[K
+      |                                                                              [32m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_sec_type {aka int}[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:211:83:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  211 |                         "[%s Pkt#%lu] Latency Breakdown (ms) ImgPub OriginalTS: [01;36m[K%ld[m[K.%09ld\n" // Añadido Pkt#
+      |                                                                                 [01;36m[K~~^[m[K
+      |                                                                                   [01;36m[K|[m[K
+      |                                                                                   [01;36m[Klong int[m[K
+      |                                                                                 [32m[K%d[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:1[m[K:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:211:25:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%ld[m[K’ expects argument of type ‘[01m[Klong int[m[K’, but argument 8 has type ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_nanosec_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  211 |                         [01;35m[K"[%s Pkt#%lu] Latency Breakdown (ms) ImgPub OriginalTS: %ld.%09ld\n" // Añadido Pkt#[m[K
+      |                         [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  212 | [01;35m[K                        "  T0_ImgPubTime ....................: %ld.%09ld\n"[m[K
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  213 | [01;35m[K                        "  T1_SegNode_CBCallTime ............: %ld.%09ld  |  T0->T1 (ImgPub to CB): %.3f ms\n"[m[K
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  214 | [01;35m[K                        "  T2_SegNode_BatchProcStartTime ....: %ld.%09ld  |  T1->T2 (CB to BatchStart): %.3f ms\n"[m[K
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  215 | [01;35m[K                        "  T3_SegNode_ResultPubTime .........: %ld.%09ld  |  T2->T3 (BatchStart to ResPub): %.3f ms\n"[m[K
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  216 | [01;35m[K                        "  T4_SegSub_ResultRecvTime .........: %ld.%09ld  |  T3->T4 (ResPub to SegSubRecv): %.3f ms\n"[m[K
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  217 | [01;35m[K                        "  --------------------------------------------------------------------------------------\n"[m[K
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  218 | [01;35m[K                        "  Cumulative T1->T4 (SegNodeCB to SegSubRecv): %.3f ms\n"[m[K
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  219 | [01;35m[K                        "  TOTAL E2E  T0->T4 (ImgPub to SegSubRecv)   : %.3f ms%s"[m[K,
+      |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  220 |                         camera_id.c_str(), packet_seq_num, msg->header.stamp.sec, [32m[Kmsg->header.stamp.nanosec[m[K, // Usar packet_seq_num
+      |                                                                                   [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                                                     [32m[K|[m[K
+      |                                                                                                     [32m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_nanosec_type {aka unsigned int}[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:211:89:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  211 |                         "[%s Pkt#%lu] Latency Breakdown (ms) ImgPub OriginalTS: %ld.[01;36m[K%09ld[m[K\n" // Añadido Pkt#
+      |                                                                                     [01;36m[K~~~~^[m[K
+      |                                                                                         [01;36m[K|[m[K
+      |                                                                                         [01;36m[Klong int[m[K
+      |                                                                                     [32m[K%09d[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:261:13:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kcsv_line_stream[m[K’
+  261 |             [01;31m[Kcsv_line_stream[m[K << "," // Coma antes de las nuevas columnas de pérdida
+      |             [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:260:1:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+  260 | [01;35m[K7[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:126:22:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kt2_batch_key[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  126 |             uint64_t [01;35m[Kt2_batch_key[m[K = static_cast<uint64_t>(ts_t2_segnode_batch_start.tv_sec) * 1000000000ULL + ts_t2_segnode_batch_start.tv_nsec;
+      |                      [01;35m[K^~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/seg_sub_node.dir/build.make:76: CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/seg_sub_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -1,0 +1,21 @@
+file(REMOVE_RECURSE
+  "CMakeFiles/docs_turtlesim__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/docs_turtlesim/msg/detail/keyed_pose__type_support.cpp.o"
+  "CMakeFiles/docs_turtlesim__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/docs_turtlesim/msg/detail/keyed_pose__type_support.cpp.o.d"
+  "CMakeFiles/docs_turtlesim__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/docs_turtlesim/msg/detail/keyed_twist__type_support.cpp.o"
+  "CMakeFiles/docs_turtlesim__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/docs_turtlesim/msg/detail/keyed_twist__type_support.cpp.o.d"
+  "CMakeFiles/docs_turtlesim__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/docs_turtlesim/msg/detail/vector3__type_support.cpp.o"
+  "CMakeFiles/docs_turtlesim__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/docs_turtlesim/msg/detail/vector3__type_support.cpp.o.d"
+  "libdocs_turtlesim__rosidl_typesupport_introspection_cpp.pdb"
+  "libdocs_turtlesim__rosidl_typesupport_introspection_cpp.so"
+  "rosidl_typesupport_introspection_cpp/docs_turtlesim/msg/detail/keyed_pose__rosidl_typesupport_introspection_cpp.hpp"
+  "rosidl_typesupport_introspection_cpp/docs_turtlesim/msg/detail/keyed_pose__type_support.cpp"
+  "rosidl_typesupport_introspection_cpp/docs_turtlesim/msg/detail/keyed_twist__rosidl_typesupport_introspection_cpp.hpp"
+  "rosidl_typesupport_introspection_cpp/docs_turtlesim/msg/detail/keyed_twist__type_support.cpp"
+  "rosidl_typesupport_introspection_cpp/docs_turtlesim/msg/detail/vector3__rosidl_typesupport_introspection_cpp.hpp"
+  "rosidl_typesupport_introspection_cpp/docs_turtlesim/msg/detail/vector3__type_support.cpp"
+)
+
+# Per-language clean rules from dependency scanning.
+foreach(lang CXX)
+  include(CMakeFiles/docs_turtlesim__rosidl_typesupport_introspection_cpp.dir/cmake_clean_${lang}.cmake OPTIONAL)
+endforeach()

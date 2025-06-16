@@ -1,3 +1,4 @@
+/home/david/yolocpp_ws/install/zoe_bringup/share/zoe_bringup/launch/pylon_3_launch.py
 /home/david/yolocpp_ws/install/zoe_bringup/share/zoe_bringup/launch/robosense_ruby_plus.launch.py
 /home/david/yolocpp_ws/install/zoe_bringup/share/zoe_bringup/launch/camera_front_right.launch.py
 /home/david/yolocpp_ws/install/zoe_bringup/share/zoe_bringup/launch/pylon_instant_camera.launch.py

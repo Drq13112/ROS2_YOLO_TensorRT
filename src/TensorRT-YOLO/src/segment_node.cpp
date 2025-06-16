@@ -23,8 +23,9 @@
 #include "deploy/result.hpp"     
 #include <cuda_runtime_api.h>
 #include <image_transport/image_transport.hpp>
-#include <rclcpp/callback_group.hpp> 
+#include <rclcpp/callback_group.hpp> // Añadir include para CallbackGroup
 #include "yolo_custom_interfaces/msg/instance_segmentation_info.hpp"
+
 
 // Helper macro para simplificar la revisión de errores CUDA en el constructor/destructor
 #define LOG_CUDA_ERROR(err, msg_prefix, logger) \
@@ -83,15 +84,12 @@ public:
         RCLCPP_INFO(this->get_logger(), "Subscripciones a: [%s] , [%s] , [%s]",
         topic_names_[0].c_str(), topic_names_[1].c_str(), topic_names_[2].c_str());
 
-        this->declare_parameter<std::string>("_image_transport", "raw");
-        std::string transport_type;
-        if(this->get_parameter("_image_transport", transport_type)){
-            RCLCPP_INFO(this->get_logger(), "Using image_transport: %s", transport_type.c_str());
-        } else {
-            RCLCPP_WARN(this->get_logger(), "No _image_transport parameter set. Using default (raw).");
-        }
+        image_source_seq_ids_.fill(0);
 
-        // Crear QoS profile con política best effort
+        this->declare_parameter<std::string>("_image_transport", "raw");
+        transport_type = this->get_parameter("_image_transport").get_value<std::string>();
+        
+
         rclcpp::QoS qos_sensors(rclcpp::QoSInitialization::from_rmw(rmw_qos_profile_sensor_data));
         qos_sensors.reliability(RMW_QOS_POLICY_RELIABILITY_RELIABLE);
         // qos_sensors.reliability(RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
@@ -154,14 +152,11 @@ public:
 
         // Crear suscriptores para tres tópicos
 
-
         image_callback_group_ = this->create_callback_group(rclcpp::CallbackGroupType::Reentrant);
 
-        
-        for (size_t i = 0; i < 3; i++) {
-            instance_info_pubs_[i] = this->create_publisher<yolo_custom_interfaces::msg::InstanceSegmentationInfo>(
-                "/segmentation/instance_info_" + std::to_string(i + 1), qos_sensors);
-        }
+        instance_info_pubs_[0] = this->create_publisher<yolo_custom_interfaces::msg::InstanceSegmentationInfo>("/segmentation/left/instance_info", qos_sensors);
+        instance_info_pubs_[1] = this->create_publisher<yolo_custom_interfaces::msg::InstanceSegmentationInfo>("/segmentation/front/instance_info", qos_sensors);
+        instance_info_pubs_[2] = this->create_publisher<yolo_custom_interfaces::msg::InstanceSegmentationInfo>("/segmentation/right/instance_info", qos_sensors);
 
         // Iniciar el hilo de procesamiento del modelo
         processing_thread_ = std::thread(&YoloBatchNode::modelProcessingLoop, this);
@@ -169,7 +164,7 @@ public:
 
     void initSubscriptions() {
         image_transport::ImageTransport it(shared_from_this());
-        image_transport::TransportHints hints(this, "raw", "raw"); // o "compressed"
+        image_transport::TransportHints hints(this, "compressed", "compressed"); // "raw" o "compressed"
 
         rclcpp::SubscriptionOptions sub_options;
         sub_options.callback_group = image_callback_group_;
@@ -222,7 +217,8 @@ private:
     int input_channels_ = 3;
     std::string mask_encoding_; 
     static std::chrono::steady_clock::time_point last_publish_time;
-
+    std::string transport_type = "raw"; // Por defecto, raw. Puede ser "compressed" o "theora".
+    std::array<uint32_t, 3> image_source_seq_ids_;
 
     // Variables para escritura de vídeo
     cv::VideoWriter video_writer_inferred_;
@@ -238,14 +234,13 @@ private:
     std::vector<cv::Scalar> class_colors_;
 
     // Subscriptores y publicadores
-    std::array<image_transport::Subscriber, 3> image_subs_; 
+    std::array<image_transport::Subscriber, 3> image_subs_; // Tipo NUEVO y CORRECTO
     std::array<rclcpp::Publisher<yolo_custom_interfaces::msg::InstanceSegmentationInfo>::SharedPtr, 3> instance_info_pubs_;
     rclcpp::CallbackGroup::SharedPtr image_callback_group_; // CallbackGroup para suscriptores de imagen
 
     // Buffers para guardar imágenes recibidas y sus headers
     std::array<cv::Mat, 3> image_buffers_;
     std::array<std_msgs::msg::Header, 3> image_headers_;
-    std::array<timespec, 3> image_monotonic_entry_times_; // para T2_mono
     std::array<bool, 3> received_{false, false, false};
     std::mutex buffer_mutex_;   // Mutex para proteger el acceso a buffers y flags
 
@@ -256,13 +251,15 @@ private:
     std::thread processing_thread_;
     std::condition_variable cv_batch_ready_;
     std::atomic<bool> stop_processing_thread_{false};
+    std::array<timespec, 3> image_monotonic_times_;
+    std::chrono::steady_clock::time_point first_image_time_;
+    bool first_image_set_ = false;
 
-    
     void imageCallback(sensor_msgs::msg::Image::ConstSharedPtr msg, size_t index)
     {
         RCLCPP_INFO(this->get_logger(), "Imagen recibida en cámara %zu, encoding: %s", index, msg->encoding.c_str());
-        auto callback_entry_time = std::chrono::steady_clock::now(); // Tiempo de entrada al callback
-        
+        auto callback_entry_time = std::chrono::steady_clock::now();
+
         cv_bridge::CvImagePtr cv_ptr;
         try {
             cv_ptr = cv_bridge::toCvCopy(msg, "bgr8");
@@ -276,16 +273,35 @@ private:
             RCLCPP_WARN(this->get_logger(), "Received empty image on topic %s", topic_names_[index].c_str());
             return;
         }
+        // Capturar la hora monotónica al recibir la imagen
+        timespec monotonic_time;
+        clock_gettime(CLOCK_MONOTONIC, &monotonic_time);
+        image_monotonic_times_[index] = monotonic_time;
         
         auto t_before_lock = std::chrono::steady_clock::now();
         {
             std::lock_guard<std::mutex> lock(buffer_mutex_);
             auto t_after_lock = std::chrono::steady_clock::now();
-            
-            //image_buffers_[index] = cv_ptr->image.clone(); // Asegurar una copia propia
-            image_buffers_[index] = cv_ptr->image; // Usar la imagen directamente, asumiendo que no se modificará fuera de este contexto
+            if (!first_image_set_) {
+                first_image_time_ = std::chrono::steady_clock::now();
+                first_image_set_ = true;
+            }
+
+            image_buffers_[index] = cv_ptr->image; 
             image_headers_[index] = msg->header;
             received_[index] = true;
+
+            try {
+                image_source_seq_ids_[index] = static_cast<uint32_t>(std::stoul(msg->header.frame_id));
+            } catch (const std::invalid_argument& ia) {
+                RCLCPP_ERROR(this->get_logger(), "[ImageCallback %zu] Invalid argument: Cannot convert frame_id ('%s') to sequence number. %s. Using 0.",
+                             index, msg->header.frame_id.c_str(), ia.what());
+                image_source_seq_ids_[index] = 0; // Valor por defecto en caso de error
+            } catch (const std::out_of_range& oor) {
+                RCLCPP_ERROR(this->get_logger(), "[ImageCallback %zu] Out of range: Cannot convert frame_id ('%s') to sequence number. %s. Using 0.",
+                             index, msg->header.frame_id.c_str(), oor.what());
+                image_source_seq_ids_[index] = 0; // Valor por defecto en caso de error
+            }
             
             auto buffer_write_end_time = std::chrono::steady_clock::now();
 
@@ -325,86 +341,6 @@ private:
         return scaled;
     }
 
-
-    // Funcion que funciona bien
-    //     cv::Mat generateInstanceIdMaskROI(const deploy::SegmentRes &result,
-    //                              const cv::Size &orig_size,
-    //                              const cv::Size &net_input_size)
-    // {
-    //     cv::Mat instance_id_mask;
-    //     // Usar this->mask_encoding_
-    //     if (this->mask_encoding_ == "mono16") {
-    //         instance_id_mask = cv::Mat::zeros(orig_size, CV_16UC1);
-    //     } else { 
-    //         instance_id_mask = cv::Mat::zeros(orig_size, CV_8UC1);
-    //     }
-
-    //     size_t num_detections = static_cast<size_t>(result.num);
-    //     size_t num_items_to_process = std::min({num_detections, result.masks.size(), result.classes.size(), result.boxes.size()});
-
-    //     if (num_detections > 0 && (num_detections != result.masks.size() ||
-    //                                num_detections != result.classes.size() ||
-    //                                num_detections != result.boxes.size())) {
-    //         RCLCPP_WARN(this->get_logger(), "[generateInstanceIdMaskROI] Mismatch between result.num (%d) and vector sizes (masks: %zu, classes: %zu, boxes: %zu). Processing %zu items.",
-    //                     result.num, result.masks.size(), result.classes.size(), result.boxes.size(), num_items_to_process);
-    //     }
-
-    //     double scale_x = static_cast<double>(orig_size.width) / net_input_size.width;
-    //     double scale_y = static_cast<double>(orig_size.height) / net_input_size.height;
-
-    //     for (size_t item_idx = 0; item_idx < num_items_to_process; ++item_idx) {
-    //         if (result.masks[item_idx].data.empty() || result.masks[item_idx].width <= 0 || result.masks[item_idx].height <= 0) {
-    //             RCLCPP_WARN(this->get_logger(), "[generateInstanceIdMaskROI] Item %zu has empty or invalid mask data.", item_idx);
-    //             continue;
-    //         }
-
-    //         const deploy::Box& net_box = result.boxes[item_idx];
-    //         cv::Rect orig_roi_rect(
-    //             static_cast<int>(net_box.left * scale_x),
-    //             static_cast<int>(net_box.top * scale_y),
-    //             static_cast<int>((net_box.right - net_box.left) * scale_x),
-    //             static_cast<int>((net_box.bottom - net_box.top) * scale_y)
-    //         );
-    //         orig_roi_rect &= cv::Rect(0, 0, orig_size.width, orig_size.height); // Clip to image bounds
-
-    //         if (orig_roi_rect.width <= 0 || orig_roi_rect.height <= 0) {
-    //             RCLCPP_WARN(this->get_logger(), "[generateInstanceIdMaskROI] Item %zu has zero or negative ROI width/height after scaling.", item_idx);
-    //             continue;
-    //         }
-
-    //         cv::Mat raw_instance_mask_from_lib(result.masks[item_idx].height, result.masks[item_idx].width, CV_8UC1,
-    //                                   const_cast<void*>(static_cast<const void*>(result.masks[item_idx].data.data())));
-    //         if (raw_instance_mask_from_lib.empty()) {
-    //             RCLCPP_WARN(this->get_logger(), "[generateInstanceIdMaskROI] raw_instance_mask_from_lib for item %zu is empty.", item_idx);
-    //             continue;
-    //         }
-
-    //         // 1. Resize the raw instance mask to the FULL original image size
-    //         cv::Mat instance_mask_at_orig_res;
-    //         cv::resize(raw_instance_mask_from_lib, instance_mask_at_orig_res, orig_size, 0, 0, cv::INTER_NEAREST);
-
-    //         // 2. Get the ROI from this full-sized mask that corresponds to the bounding box
-    //         // This part of the mask is already binary (0 or non-zero) due to INTER_NEAREST and source mask characteristics.
-    //         cv::Mat relevant_part_of_full_mask = instance_mask_at_orig_res(orig_roi_rect);
-
-    //         uint16_t instance_pixel_value = static_cast<uint16_t>(item_idx + 1); // Instance IDs start from 1
-
-    //         cv::Mat final_mask_roi = instance_id_mask(orig_roi_rect);
-            
-    //         // 3. Apply this correctly scaled and cropped part to the output instance_id_mask's ROI
-    //         if (this->mask_encoding_ == "mono16") {
-    //             final_mask_roi.setTo(instance_pixel_value, relevant_part_of_full_mask);
-    //         } else { // mono8
-    //             if (instance_pixel_value > 255) {
-    //                 RCLCPP_WARN_ONCE(this->get_logger(), "[generateInstanceIdMaskROI] Instance ID %u exceeds 255 for mono8 mask. Clamping. Consider using mono16.", instance_pixel_value);
-    //                 final_mask_roi.setTo(static_cast<unsigned char>(255), relevant_part_of_full_mask);
-    //             } else {
-    //                 final_mask_roi.setTo(static_cast<unsigned char>(instance_pixel_value), relevant_part_of_full_mask);
-    //             }
-    //         }
-    //     }
-    //     return instance_id_mask;
-    // }
 
     cv::Mat generateInstanceIdMaskROI(const deploy::SegmentRes &result,
                                     const cv::Size &orig_size,
@@ -508,28 +444,30 @@ private:
     void modelProcessingLoop() {
         RCLCPP_INFO(this->get_logger(), "Model processing thread started.");
         while (rclcpp::ok() && !stop_processing_thread_.load()) {
-            std::unique_lock<std::mutex> lock(buffer_mutex_);
-            cv_batch_ready_.wait(lock, [this] {
-                // Esperar hasta que todas las imágenes sean recibidas O se indique parar
-                return (received_[0] && received_[1] && received_[2]) || stop_processing_thread_.load();
-            });
-
-            if (stop_processing_thread_.load()) {
-                RCLCPP_INFO(this->get_logger(), "Model processing thread stopping...");
-                break; // Salir del bucle si se indica parar
+            {
+                std::unique_lock<std::mutex> lock(buffer_mutex_);
+                // Esperar hasta recibir al menos una imagen
+                cv_batch_ready_.wait(lock, [this] {
+                    return std::any_of(received_.begin(), received_.end(), [](bool v){ return v; }) ||
+                        stop_processing_thread_.load();
+                });
             }
-
-
-            if (!video_writers_initialized_ && (enable_inferred_video_writing_ || enable_mask_video_writing_)) {
-                RCLCPP_INFO(this->get_logger(), "Initializing video writers...");
-                // Inicializar los escritores de vídeo
-                initializeVideoWriters();
+            // Si se ha recibido la primera imagen, esperar hasta que hayan pasado 1ms
+            if (first_image_set_) {
+                auto elapsed = std::chrono::steady_clock::now() - first_image_time_;
+                auto remaining = std::chrono::milliseconds(1) - std::chrono::duration_cast<std::chrono::milliseconds>(elapsed);
+                if (remaining.count() > 0) {
+                    std::this_thread::sleep_for(remaining);
+                }
             }
-
+            // Procesar el lote: se cogerán los últimos valores disponibles en cada buffer
             processBatchSharedMemory();
-
-            std::fill(received_.begin(), received_.end(), false);
-            
+            {
+                std::lock_guard<std::mutex> lock(buffer_mutex_);
+                // Reiniciar bandera para esperar un nuevo comienzo de lote
+                first_image_set_ = false;
+                std::fill(received_.begin(), received_.end(), false);
+            }
         }
         RCLCPP_INFO(this->get_logger(), "Model processing thread finished.");
     }
@@ -546,10 +484,13 @@ private:
         }
         auto t_total_start = clock::now();
         auto t_buffer_copy_start = clock::now(); // Declare t_buffer_copy_start here
+        struct timespec t_processing_entry;
+        clock_gettime(CLOCK_MONOTONIC, &t_processing_entry);
 
         std::array<cv::Mat, 3> originals;
         std::array<cv::Size, 3> orig_sizes;
         std::array<std_msgs::msg::Header, 3> current_batch_headers;
+        std::array<uint32_t, 3> current_batch_seq_ids;
         std::array<cv::Mat, 3> instance_id_masks_for_batch; 
         std::vector<deploy::Image> img_batch; 
         std::vector<cv::Mat> temp_resized_images_for_batch_data;
@@ -563,14 +504,15 @@ private:
             originals[i] = image_buffers_[i].clone(); 
             orig_sizes[i] = originals[i].size();
             current_batch_headers[i] = image_headers_[i]; // Copiar el header para este lote
+            current_batch_seq_ids[i] = image_source_seq_ids_[i]; 
         }
         auto t_buffer_copy_end = clock::now();
         auto dt_buffer_copy_us = std::chrono::duration_cast<std::chrono::microseconds>(t_buffer_copy_end - t_buffer_copy_start).count();
 
-        RCLCPP_INFO(this->get_logger(), "Processing batch with image timestamps: Cam1=%d.%09u, Cam2=%d.%09u, Cam3=%d.%09u",
-                    current_batch_headers[0].stamp.sec, current_batch_headers[0].stamp.nanosec,
-                    current_batch_headers[1].stamp.sec, current_batch_headers[1].stamp.nanosec,
-                    current_batch_headers[2].stamp.sec, current_batch_headers[2].stamp.nanosec);
+                RCLCPP_INFO(this->get_logger(), "Processing batch with image timestamps: Cam1=%d.%09u (Seq:%u), Cam2=%d.%09u (Seq:%u), Cam3=%d.%09u (Seq:%u)",
+                    current_batch_headers[0].stamp.sec, current_batch_headers[0].stamp.nanosec, current_batch_seq_ids[0],
+                    current_batch_headers[1].stamp.sec, current_batch_headers[1].stamp.nanosec, current_batch_seq_ids[1],
+                    current_batch_headers[2].stamp.sec, current_batch_headers[2].stamp.nanosec, current_batch_seq_ids[2]);
         
         // Calcular la diferencia máxima de timestamps en el lote actual
         if (current_batch_headers[0].stamp.sec > 0 && current_batch_headers[1].stamp.sec > 0 && current_batch_headers[2].stamp.sec > 0) {
@@ -647,46 +589,6 @@ private:
         std::array<long, 3> mask_gen_duration_us{};
         std::array<long, 3> msg_creation_duration_us{};
         std::array<long, 3> publish_duration_us{};
-        
-        // for (size_t i = 0; i < results.size() && i < 3; ++i) {
-        //     if (orig_sizes[i].width <= 0 || orig_sizes[i].height <= 0) {
-        //         RCLCPP_ERROR(this->get_logger(), "Original size for image %zu is invalid. Skipping post-processing.", i);
-        //         continue;
-        //     }
-            
-        //     auto t_mask_gen_start = clock::now();
-        //     instance_id_mask_cv = generateInstanceIdMaskROI(results[i], orig_sizes[i], network_input_target_size);
-        //     auto t_mask_gen_end = clock::now();
-        //     mask_gen_duration_us[i] = std::chrono::duration_cast<std::chrono::microseconds>(t_mask_gen_end - t_mask_gen_start).count();
-        
-        //     auto t_msg_create_start = clock::now();
-        //     auto instance_info_msg = std::make_unique<yolo_custom_interfaces::msg::InstanceSegmentationInfo>();
-        //     instance_info_msg->header = current_batch_headers[i]; 
-
-        //     cv_bridge::CvImage cv_img_mask_instance;
-        //     cv_img_mask_instance.header = instance_info_msg->header; 
-        //     cv_img_mask_instance.encoding = this->mask_encoding_; 
-        //     cv_img_mask_instance.image = instance_id_mask_cv;
-        //     instance_info_msg->mask = *cv_img_mask_instance.toImageMsg();
-
-        //     size_t num_detected_instances = static_cast<size_t>(results[i].num);
-        //     num_detected_instances = std::min({num_detected_instances, results[i].scores.size(), results[i].classes.size()});
-
-        //     instance_info_msg->scores.reserve(num_detected_instances);
-        //     instance_info_msg->classes.reserve(num_detected_instances);
-
-        //     for (size_t j = 0; j < num_detected_instances; ++j) {
-        //         instance_info_msg->scores.push_back(results[i].scores[j]);
-        //         instance_info_msg->classes.push_back(results[i].classes[j]);
-        //     }
-        //     auto t_msg_create_end = clock::now();
-        //     msg_creation_duration_us[i] = std::chrono::duration_cast<std::chrono::microseconds>(t_msg_create_end - t_msg_create_start).count();
-            
-        //     auto t_publish_start = clock::now();
-        //     instance_info_pubs_[i]->publish(std::move(instance_info_msg));
-        //     auto t_publish_end = clock::now();
-        //     publish_duration_us[i] = std::chrono::duration_cast<std::chrono::microseconds>(t_publish_end - t_publish_start).count();
-        // }
 
         // Variable para la máscara de la imagen actual en el bucle (usada para el mensaje ROS)
         cv::Mat instance_id_mask_cv; // Esta se genera para cada imagen
@@ -722,14 +624,32 @@ private:
             }
         
             auto t_msg_create_start = clock::now();
-            auto instance_info_msg = std::make_unique<yolo_custom_interfaces::msg::InstanceSegmentationInfo>();
-            instance_info_msg->header = current_batch_headers[i]; 
+        auto instance_info_msg = std::make_unique<yolo_custom_interfaces::msg::InstanceSegmentationInfo>();
+        instance_info_msg->header = current_batch_headers[i];
+
+        // Asignar el packet_sequence_number
+        instance_info_msg->packet_sequence_number = static_cast<uint64_t>(current_batch_seq_ids[i]);
+
+
+        // T1: se mantiene el tiempo de captura (en el callback)
+        instance_info_msg->image_source_monotonic_capture_time.sec = image_monotonic_times_[i].tv_sec;
+        instance_info_msg->image_source_monotonic_capture_time.nanosec = image_monotonic_times_[i].tv_nsec;
+
+        // T2: usar el timestamp único capturado al inicio del procesamiento para el lote
+        instance_info_msg->processing_node_monotonic_entry_time.sec = t_processing_entry.tv_sec;
+        instance_info_msg->processing_node_monotonic_entry_time.nanosec = t_processing_entry.tv_nsec;
+
+        // T3: Justo antes de publicar se captura el timestamp
+        struct timespec ts_publish;
+        clock_gettime(CLOCK_MONOTONIC, &ts_publish);
+        instance_info_msg->processing_node_monotonic_publish_time.sec = ts_publish.tv_sec;
+        instance_info_msg->processing_node_monotonic_publish_time.nanosec = ts_publish.tv_nsec;
 
             cv_bridge::CvImage cv_img_mask_instance;
             cv_img_mask_instance.header = instance_info_msg->header; 
             cv_img_mask_instance.encoding = this->mask_encoding_; 
             
-            if (instance_id_mask_cv.empty()) { // Usar la máscara generada para el mensaje
+            if (instance_id_mask_cv.empty()) {
                  RCLCPP_ERROR(this->get_logger(), "instance_id_mask_cv for image %zu (ROS msg) is EMPTY. Using black mask.", i);
                  cv_img_mask_instance.image = cv::Mat::zeros(orig_sizes[i].empty() ? cv::Size(10,10) : orig_sizes[i], (mask_encoding_ == "mono16" ? CV_16UC1 : CV_8UC1));
             } else {
@@ -737,13 +657,11 @@ private:
             }
             instance_info_msg->mask = *cv_img_mask_instance.toImageMsg();
 
-            if (i < results.size()){ // Solo llenar scores y classes si hay resultado
+            if (i < results.size()){
                 size_t num_detected_instances = static_cast<size_t>(results[i].num);
                 num_detected_instances = std::min({num_detected_instances, results[i].scores.size(), results[i].classes.size()});
-
                 instance_info_msg->scores.reserve(num_detected_instances);
                 instance_info_msg->classes.reserve(num_detected_instances);
-
                 for (size_t j = 0; j < num_detected_instances; ++j) {
                     instance_info_msg->scores.push_back(results[i].scores[j]);
                     instance_info_msg->classes.push_back(results[i].classes[j]);
@@ -751,7 +669,6 @@ private:
             }
             auto t_msg_create_end = clock::now();
             msg_creation_duration_us[i] = std::chrono::duration_cast<std::chrono::microseconds>(t_msg_create_end - t_msg_create_start).count();
-            
             auto t_publish_start = clock::now();
             instance_info_pubs_[i]->publish(std::move(instance_info_msg));
             auto t_publish_end = clock::now();
@@ -1097,8 +1014,6 @@ int main(int argc, char **argv)
     rclcpp::init(argc, argv);
     auto node = std::make_shared<YoloBatchNode>();
     node->initSubscriptions();
-    // Usar un MultiThreadedExecutor para permitir que los callbacks del grupo Reentrant
-    // (y otros callbacks/timers en diferentes grupos) se ejecuten concurrentemente.
     rclcpp::executors::MultiThreadedExecutor executor;
     executor.add_node(node);
     RCLCPP_INFO(node->get_logger(), "Spinning node with MultiThreadedExecutor.");

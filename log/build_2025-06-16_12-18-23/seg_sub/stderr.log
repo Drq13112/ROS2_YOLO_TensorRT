@@ -1,0 +1,55 @@
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:[m[K In lambda function:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:135:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kbatch_t4_mutex_[m[K’ was not declared in this scope; did you mean ‘[01m[Kbatch_data_mutex_[m[K’?
+  135 |                 std::lock_guard<std::mutex> lock([01;31m[Kbatch_t4_mutex_[m[K);
+      |                                                  [01;31m[K^~~~~~~~~~~~~~~[m[K
+      |                                                  [32m[Kbatch_data_mutex_[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:136:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kreceived_batch_t4_timestamps_[m[K’ was not declared in this scope; did you mean ‘[01m[Kpending_batch_t0_timestamps_[m[K’?
+  136 |                 [01;31m[Kreceived_batch_t4_timestamps_[m[K[packet_seq_num][camera_id] = ts_t4_segsub_res_recv;
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                 [32m[Kpending_batch_t0_timestamps_[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:138:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kbatch_t4_reception_spread_ms_[m[K’ was not declared in this scope
+  138 |                 if ([01;31m[Kbatch_t4_reception_spread_ms_[m[K.find(packet_seq_num) == batch_t4_reception_spread_ms_.end()) {
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:159:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kt4_reception_spread_this_batch_ms[m[K’ was not declared in this scope
+  159 |                            [01;31m[Kt4_reception_spread_this_batch_ms[m[K = calculate_latency_ms(*max_t4_it, *min_t4_it);
+      |                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:161:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kt4_spread_calculated_this_call[m[K’ was not declared in this scope; did you mean ‘[01m[Kbatch_offsets_calculated_this_call[m[K’?
+  161 |                            [01;31m[Kt4_spread_calculated_this_call[m[K = true;
+      |                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                            [32m[Kbatch_offsets_calculated_this_call[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:166:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kt4_reception_spread_this_batch_ms[m[K’ was not declared in this scope
+  166 |                     [01;31m[Kt4_reception_spread_this_batch_ms[m[K = batch_t4_reception_spread_ms_[packet_seq_num];
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:202:13:[m[K [01;31m[Kerror: [m[Kunable to find numeric literal operator ‘[01m[Koperator""std[m[K’
+  202 |             [01;31m[K47std[m[K::string offsets_log_str = "";
+      |             [01;31m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:204:17:[m[K [01;31m[Kerror: [m[K‘[01m[Koffsets_log_str[m[K’ was not declared in this scope
+  204 |                 [01;31m[Koffsets_log_str[m[K += " | T0 Offsets (vs Left): Front=" + std::to_string(offset_T0_front_vs_left_ms) + "ms";
+      |                 [01;31m[K^~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:1[m[K:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:228:25:[m[K [01;31m[Kerror: [m[K‘[01m[Koffsets_log_str[m[K’ was not declared in this scope
+  228 |                         [01;31m[Koffsets_log_str[m[K.c_str());
+      |                         [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:262:13:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kcsv_line_stream[m[K’
+  262 |             [01;31m[Kcsv_line_stream[m[K << "," // Coma antes de las nuevas columnas de pérdida
+      |             [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:261:1:[m[K [01;35m[Kwarning: [m[Kstatement has no effect [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-value-Wunused-value]8;;[m[K]
+  261 | [01;35m[K7[m[K
+      | [01;35m[K^[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:126:22:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Kt2_batch_key[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  126 |             uint64_t [01;35m[Kt2_batch_key[m[K = static_cast<uint64_t>(ts_t2_segnode_batch_start.tv_sec) * 1000000000ULL + ts_t2_segnode_batch_start.tv_nsec;
+      |                      [01;35m[K^~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/seg_sub_node.dir/build.make:76: CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/seg_sub_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -92,6 +92,10 @@ max_serialized_size_Time(
 
 // functions for builtin_interfaces::msg::Time already declared above
 
+// functions for builtin_interfaces::msg::Time already declared above
+
+// functions for builtin_interfaces::msg::Time already declared above
+
 
 namespace yolo_custom_interfaces
 {
@@ -132,10 +136,20 @@ cdr_serialize(
   builtin_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize(
     ros_message.processing_node_monotonic_entry_time,
     cdr);
+  // Member: processing_node_inference_start_time
+  builtin_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize(
+    ros_message.processing_node_inference_start_time,
+    cdr);
+  // Member: processing_node_inference_end_time
+  builtin_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize(
+    ros_message.processing_node_inference_end_time,
+    cdr);
   // Member: processing_node_monotonic_publish_time
   builtin_interfaces::msg::typesupport_fastrtps_cpp::cdr_serialize(
     ros_message.processing_node_monotonic_publish_time,
     cdr);
+  // Member: packet_sequence_number
+  cdr << ros_message.packet_sequence_number;
   return true;
 }
 
@@ -171,9 +185,20 @@ cdr_deserialize(
   builtin_interfaces::msg::typesupport_fastrtps_cpp::cdr_deserialize(
     cdr, ros_message.processing_node_monotonic_entry_time);
 
+  // Member: processing_node_inference_start_time
+  builtin_interfaces::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+    cdr, ros_message.processing_node_inference_start_time);
+
+  // Member: processing_node_inference_end_time
+  builtin_interfaces::msg::typesupport_fastrtps_cpp::cdr_deserialize(
+    cdr, ros_message.processing_node_inference_end_time);
+
   // Member: processing_node_monotonic_publish_time
   builtin_interfaces::msg::typesupport_fastrtps_cpp::cdr_deserialize(
     cdr, ros_message.processing_node_monotonic_publish_time);
+
+  // Member: packet_sequence_number
+  cdr >> ros_message.packet_sequence_number;
 
   return true;
 }
@@ -231,11 +256,27 @@ get_serialized_size(
   current_alignment +=
     builtin_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size(
     ros_message.processing_node_monotonic_entry_time, current_alignment);
+  // Member: processing_node_inference_start_time
+
+  current_alignment +=
+    builtin_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size(
+    ros_message.processing_node_inference_start_time, current_alignment);
+  // Member: processing_node_inference_end_time
+
+  current_alignment +=
+    builtin_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size(
+    ros_message.processing_node_inference_end_time, current_alignment);
   // Member: processing_node_monotonic_publish_time
 
   current_alignment +=
     builtin_interfaces::msg::typesupport_fastrtps_cpp::get_serialized_size(
     ros_message.processing_node_monotonic_publish_time, current_alignment);
+  // Member: packet_sequence_number
+  {
+    size_t item_size = sizeof(ros_message.packet_sequence_number);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
 
   return current_alignment - initial_alignment;
 }
@@ -362,6 +403,44 @@ max_serialized_size_InstanceSegmentationInfo(
     }
   }
 
+  // Member: processing_node_inference_start_time
+  {
+    size_t array_size = 1;
+
+
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size =
+        builtin_interfaces::msg::typesupport_fastrtps_cpp::max_serialized_size_Time(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+
+  // Member: processing_node_inference_end_time
+  {
+    size_t array_size = 1;
+
+
+    last_member_size = 0;
+    for (size_t index = 0; index < array_size; ++index) {
+      bool inner_full_bounded;
+      bool inner_is_plain;
+      size_t inner_size =
+        builtin_interfaces::msg::typesupport_fastrtps_cpp::max_serialized_size_Time(
+        inner_full_bounded, inner_is_plain, current_alignment);
+      last_member_size += inner_size;
+      current_alignment += inner_size;
+      full_bounded &= inner_full_bounded;
+      is_plain &= inner_is_plain;
+    }
+  }
+
   // Member: processing_node_monotonic_publish_time
   {
     size_t array_size = 1;
@@ -381,6 +460,15 @@ max_serialized_size_InstanceSegmentationInfo(
     }
   }
 
+  // Member: packet_sequence_number
+  {
+    size_t array_size = 1;
+
+    last_member_size = array_size * sizeof(uint64_t);
+    current_alignment += array_size * sizeof(uint64_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint64_t));
+  }
+
   size_t ret_val = current_alignment - initial_alignment;
   if (is_plain) {
     // All members are plain, and type is not empty.
@@ -389,7 +477,7 @@ max_serialized_size_InstanceSegmentationInfo(
     using DataType = yolo_custom_interfaces::msg::InstanceSegmentationInfo;
     is_plain =
       (
-      offsetof(DataType, processing_node_monotonic_publish_time) +
+      offsetof(DataType, packet_sequence_number) +
       last_member_size
       ) == ret_val;
   }

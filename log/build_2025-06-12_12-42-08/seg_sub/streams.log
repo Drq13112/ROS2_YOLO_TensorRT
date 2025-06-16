@@ -1,0 +1,116 @@
+[0.015s] Invoking command in '/home/david/yolocpp_ws/build/seg_sub': CMAKE_PREFIX_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces:/home/david/yolocpp_ws/install/zoe_bringup:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolocpp_ws/install/seg_sub:/home/david/yolocpp_ws/install/pylon_instant_camera:/home/david/yolocpp_ws/install/image_directory_publisher:/home/david/yolocpp_ws/install/bboxes_ex_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces/lib:/home/david/yolocpp_ws/install/pylon_instant_camera/lib:/home/david/yolocpp_ws/install/image_directory_publisher/lib:/home/david/yolocpp_ws/install/bboxes_ex_msgs/lib:/opt/pylon/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda-11.2/lib64:/usr/local/cuda-11.2/lib64:/home/david/onnxruntime-linux-x64-gpu-1.22.0/lib PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --build /home/david/yolocpp_ws/build/seg_sub -- -j32 -l32
+[0.050s] [ 50%] Built target chrono
+[0.063s] [ 75%] [32mBuilding CXX object CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o[0m
+[1.379s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[1.379s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[1.379s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[1.379s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[1.379s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[1.379s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[1.379s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[1.379s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[1.379s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[1.379s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[1.379s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.379s]                  from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:1[m[K:
+[1.379s] [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:[m[K In lambda function:
+[1.379s] [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:121:25:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%ld[m[K’ expects argument of type ‘[01m[Klong int[m[K’, but argument 6 has type ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_sec_type[m[K’ {aka ‘[01m[Kint[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[1.379s]   121 |                         [01;35m[K"[%s] Latency Breakdown (ms) ImgPub OriginalTS: %ld.%09ld\n"[m[K
+[1.379s]       |                         [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.379s]   122 | [01;35m[K                        "  T0_ImgPubTime ....................: %ld.%09ld\n"[m[K
+[1.379s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.379s]   123 | [01;35m[K                        "  T1_SegNode_CBCallTime ............: %ld.%09ld  |  T0->T1 (ImgPub to CB): %.3f ms\n"[m[K
+[1.379s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.379s]   124 | [01;35m[K                        "  T2_SegNode_BatchProcStartTime ....: %ld.%09ld  |  T1->T2 (CB to BatchStart): %.3f ms\n"[m[K
+[1.379s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.379s]   125 | [01;35m[K                        "  T3_SegNode_ResultPubTime .........: %ld.%09ld  |  T2->T3 (BatchStart to ResPub): %.3f ms\n"[m[K
+[1.379s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.379s]   126 | [01;35m[K                        "  T4_SegSub_ResultRecvTime .........: %ld.%09ld  |  T3->T4 (ResPub to SegSubRecv): %.3f ms\n"[m[K
+[1.379s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.379s]   127 | [01;35m[K                        "  --------------------------------------------------------------------------------------\n"[m[K
+[1.379s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.379s]   128 | [01;35m[K                        "  Cumulative T1->T4 (SegNodeCB to SegSubRecv): %.3f ms\n"[m[K
+[1.379s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.379s]   129 | [01;35m[K                        "  TOTAL E2E  T0->T4 (ImgPub to SegSubRecv)   : %.3f ms"[m[K,
+[1.379s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.380s]   130 |                         camera_id.c_str(), [32m[Kmsg->header.stamp.sec[m[K, msg->header.stamp.nanosec, // Using original image pub TS for context
+[1.380s]       |                                            [32m[K~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.380s]       |                                                              [32m[K|[m[K
+[1.380s]       |                                                              [32m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_sec_type {aka int}[m[K
+[1.380s] [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:121:75:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[1.380s]   121 |                         "[%s] Latency Breakdown (ms) ImgPub OriginalTS: [01;36m[K%ld[m[K.%09ld\n"
+[1.380s]       |                                                                         [01;36m[K~~^[m[K
+[1.380s]       |                                                                           [01;36m[K|[m[K
+[1.380s]       |                                                                           [01;36m[Klong int[m[K
+[1.380s]       |                                                                         [32m[K%d[m[K
+[1.380s] In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+[1.380s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+[1.380s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+[1.380s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+[1.380s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+[1.380s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+[1.380s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+[1.380s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+[1.380s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+[1.380s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+[1.380s]                  from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+[1.380s]                  from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:1[m[K:
+[1.380s] [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:121:25:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%ld[m[K’ expects argument of type ‘[01m[Klong int[m[K’, but argument 7 has type ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_nanosec_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+[1.380s]   121 |                         [01;35m[K"[%s] Latency Breakdown (ms) ImgPub OriginalTS: %ld.%09ld\n"[m[K
+[1.380s]       |                         [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.380s]   122 | [01;35m[K                        "  T0_ImgPubTime ....................: %ld.%09ld\n"[m[K
+[1.380s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.380s]   123 | [01;35m[K                        "  T1_SegNode_CBCallTime ............: %ld.%09ld  |  T0->T1 (ImgPub to CB): %.3f ms\n"[m[K
+[1.380s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.380s]   124 | [01;35m[K                        "  T2_SegNode_BatchProcStartTime ....: %ld.%09ld  |  T1->T2 (CB to BatchStart): %.3f ms\n"[m[K
+[1.380s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.380s]   125 | [01;35m[K                        "  T3_SegNode_ResultPubTime .........: %ld.%09ld  |  T2->T3 (BatchStart to ResPub): %.3f ms\n"[m[K
+[1.380s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.380s]   126 | [01;35m[K                        "  T4_SegSub_ResultRecvTime .........: %ld.%09ld  |  T3->T4 (ResPub to SegSubRecv): %.3f ms\n"[m[K
+[1.380s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.380s]   127 | [01;35m[K                        "  --------------------------------------------------------------------------------------\n"[m[K
+[1.380s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.380s]   128 | [01;35m[K                        "  Cumulative T1->T4 (SegNodeCB to SegSubRecv): %.3f ms\n"[m[K
+[1.380s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.380s]   129 | [01;35m[K                        "  TOTAL E2E  T0->T4 (ImgPub to SegSubRecv)   : %.3f ms"[m[K,
+[1.380s]       |                         [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.380s]   130 |                         camera_id.c_str(), msg->header.stamp.sec, [32m[Kmsg->header.stamp.nanosec[m[K, // Using original image pub TS for context
+[1.380s]       |                                                                   [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[1.380s]       |                                                                                     [32m[K|[m[K
+[1.380s]       |                                                                                     [32m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_nanosec_type {aka unsigned int}[m[K
+[1.380s] [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub.cpp:121:81:[m[K [01;36m[Knote: [m[Kformat string is defined here
+[1.380s]   121 |                         "[%s] Latency Breakdown (ms) ImgPub OriginalTS: %ld.[01;36m[K%09ld[m[K\n"
+[1.380s]       |                                                                             [01;36m[K~~~~^[m[K
+[1.380s]       |                                                                                 [01;36m[K|[m[K
+[1.380s]       |                                                                                 [01;36m[Klong int[m[K
+[1.380s]       |                                                                             [32m[K%09d[m[K
+[4.334s] [100%] [32m[1mLinking CXX executable seg_sub_node[0m
+[4.563s] [100%] Built target seg_sub_node
+[4.569s] Invoked command in '/home/david/yolocpp_ws/build/seg_sub' returned '0': CMAKE_PREFIX_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces:/home/david/yolocpp_ws/install/zoe_bringup:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolocpp_ws/install/seg_sub:/home/david/yolocpp_ws/install/pylon_instant_camera:/home/david/yolocpp_ws/install/image_directory_publisher:/home/david/yolocpp_ws/install/bboxes_ex_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces/lib:/home/david/yolocpp_ws/install/pylon_instant_camera/lib:/home/david/yolocpp_ws/install/image_directory_publisher/lib:/home/david/yolocpp_ws/install/bboxes_ex_msgs/lib:/opt/pylon/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda-11.2/lib64:/usr/local/cuda-11.2/lib64:/home/david/onnxruntime-linux-x64-gpu-1.22.0/lib PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --build /home/david/yolocpp_ws/build/seg_sub -- -j32 -l32
+[4.571s] Invoking command in '/home/david/yolocpp_ws/build/seg_sub': CMAKE_PREFIX_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces:/home/david/yolocpp_ws/install/zoe_bringup:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolocpp_ws/install/seg_sub:/home/david/yolocpp_ws/install/pylon_instant_camera:/home/david/yolocpp_ws/install/image_directory_publisher:/home/david/yolocpp_ws/install/bboxes_ex_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces/lib:/home/david/yolocpp_ws/install/pylon_instant_camera/lib:/home/david/yolocpp_ws/install/image_directory_publisher/lib:/home/david/yolocpp_ws/install/bboxes_ex_msgs/lib:/opt/pylon/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda-11.2/lib64:/usr/local/cuda-11.2/lib64:/home/david/onnxruntime-linux-x64-gpu-1.22.0/lib PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --install /home/david/yolocpp_ws/build/seg_sub
+[4.587s] -- Install configuration: ""
+[4.587s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/lib/seg_sub/libchrono.so
+[4.587s] -- Installing: /home/david/yolocpp_ws/install/seg_sub/lib/seg_sub/seg_sub_node
+[4.589s] -- Set runtime path of "/home/david/yolocpp_ws/install/seg_sub/lib/seg_sub/seg_sub_node" to ""
+[4.589s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/launch
+[4.589s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/launch/seg_sub.launch.py
+[4.589s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/include
+[4.590s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/include/chrono
+[4.590s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/include/chrono/ChronoTimer.hpp
+[4.590s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/include/chrono/ChronoTimer.cpp
+[4.590s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/ament_index/resource_index/package_run_dependencies/seg_sub
+[4.590s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/ament_index/resource_index/parent_prefix_path/seg_sub
+[4.590s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/environment/ament_prefix_path.sh
+[4.590s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/environment/ament_prefix_path.dsv
+[4.590s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/environment/path.sh
+[4.590s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/environment/path.dsv
+[4.590s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/local_setup.bash
+[4.590s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/local_setup.sh
+[4.590s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/local_setup.zsh
+[4.590s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/local_setup.dsv
+[4.590s] -- Installing: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/package.dsv
+[4.590s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/ament_index/resource_index/packages/seg_sub
+[4.590s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/cmake/seg_subConfig.cmake
+[4.590s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/cmake/seg_subConfig-version.cmake
+[4.590s] -- Up-to-date: /home/david/yolocpp_ws/install/seg_sub/share/seg_sub/package.xml
+[4.593s] Invoked command in '/home/david/yolocpp_ws/build/seg_sub' returned '0': CMAKE_PREFIX_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces:/home/david/yolocpp_ws/install/zoe_bringup:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolocpp_ws/install/seg_sub:/home/david/yolocpp_ws/install/pylon_instant_camera:/home/david/yolocpp_ws/install/image_directory_publisher:/home/david/yolocpp_ws/install/bboxes_ex_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces/lib:/home/david/yolocpp_ws/install/pylon_instant_camera/lib:/home/david/yolocpp_ws/install/image_directory_publisher/lib:/home/david/yolocpp_ws/install/bboxes_ex_msgs/lib:/opt/pylon/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda-11.2/lib64:/usr/local/cuda-11.2/lib64:/home/david/onnxruntime-linux-x64-gpu-1.22.0/lib PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --install /home/david/yolocpp_ws/build/seg_sub
