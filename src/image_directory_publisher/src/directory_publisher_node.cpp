@@ -13,6 +13,11 @@
 #include <time.h> 
 #include <string>
 
+// Define target dimensions for publishing
+const int TARGET_WIDTH = 640;
+const int TARGET_HEIGHT = 416;
+
+
 namespace image_directory_publisher {
 
 class DirectoryPublisherNode : public rclcpp::Node {
@@ -121,11 +126,11 @@ private:
         const std::string& packet_sequence_frame_id,
         const std::string& camera_name_log)
     {
-        cv::Mat image_to_publish = cv::imread(image_path, cv::IMREAD_COLOR);
-        if (image_to_publish.empty()) {
-            RCLCPP_ERROR(this->get_logger(), "Failed to read image: %s for %s camera", image_path.c_str(), camera_name_log.c_str());
-            return;
-        }
+        cv::Mat image_read = cv::imread(image_path, cv::IMREAD_COLOR);
+        // if (image_to_publish.empty()) {
+        //     RCLCPP_ERROR(this->get_logger(), "Failed to read image: %s for %s camera", image_path.c_str(), camera_name_log.c_str());
+        //     return;
+        // }
 
         std_msgs::msg::Header header;
         
@@ -136,6 +141,15 @@ private:
         clock_gettime(CLOCK_MONOTONIC, &ts_monotonic_capture);
         header.stamp.sec = ts_monotonic_capture.tv_sec;
         header.stamp.nanosec = ts_monotonic_capture.tv_nsec;
+
+
+        cv::Mat image_to_publish;
+        // Resize the image to the target dimensions if it's not already that size
+        if (image_read.cols != TARGET_WIDTH || image_read.rows != TARGET_HEIGHT) {
+            cv::resize(image_read, image_to_publish, cv::Size(TARGET_WIDTH, TARGET_HEIGHT));
+        } else {
+            image_to_publish = image_read;
+        }
 
         // Convertir cv::Mat a sensor_msgs::msg::Image usando cv_bridge
         // Asumimos que la imagen es BGR8.

@@ -1,4 +1,0 @@
-[ 50%] Built target chrono
-[ 75%] [32mBuilding CXX object CMakeFiles/seg_sub_node.dir/src/seg_sub.cpp.o[0m
-[100%] [32m[1mLinking CXX executable seg_sub_node[0m
-[100%] Built target seg_sub_node

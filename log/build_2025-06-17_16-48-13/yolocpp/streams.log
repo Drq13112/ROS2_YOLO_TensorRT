@@ -1,0 +1,66 @@
+[0.023s] Invoking command in '/home/david/yolocpp_ws/build/yolocpp': CMAKE_PREFIX_PATH=/home/david/yolocpp_ws/install/bboxes_ex_msgs:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolocpp_ws/install/seg_sub:/home/david/yolocpp_ws/install/yolo_custom_interfaces:/home/david/yolocpp_ws/install/pylon_instant_camera:/home/david/yolocpp_ws/install/image_directory_publisher:/opt/ros/humble LD_LIBRARY_PATH=/home/david/yolocpp_ws/install/bboxes_ex_msgs/lib:/home/david/yolocpp_ws/install/yolo_custom_interfaces/lib:/home/david/yolocpp_ws/install/pylon_instant_camera/lib:/home/david/yolocpp_ws/install/image_directory_publisher/lib:/opt/pylon/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda-11.2/lib64:/usr/local/cuda-11.2/lib64:/home/david/onnxruntime-linux-x64-gpu-1.22.0/lib PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --build /home/david/yolocpp_ws/build/yolocpp -- -j32 -l32
+[0.060s] [100%] Built target yolocpp
+[0.068s] Invoked command in '/home/david/yolocpp_ws/build/yolocpp' returned '0': CMAKE_PREFIX_PATH=/home/david/yolocpp_ws/install/bboxes_ex_msgs:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolocpp_ws/install/seg_sub:/home/david/yolocpp_ws/install/yolo_custom_interfaces:/home/david/yolocpp_ws/install/pylon_instant_camera:/home/david/yolocpp_ws/install/image_directory_publisher:/opt/ros/humble LD_LIBRARY_PATH=/home/david/yolocpp_ws/install/bboxes_ex_msgs/lib:/home/david/yolocpp_ws/install/yolo_custom_interfaces/lib:/home/david/yolocpp_ws/install/pylon_instant_camera/lib:/home/david/yolocpp_ws/install/image_directory_publisher/lib:/opt/pylon/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda-11.2/lib64:/usr/local/cuda-11.2/lib64:/home/david/onnxruntime-linux-x64-gpu-1.22.0/lib PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --build /home/david/yolocpp_ws/build/yolocpp -- -j32 -l32
+[0.070s] Invoking command in '/home/david/yolocpp_ws/build/yolocpp': CMAKE_PREFIX_PATH=/home/david/yolocpp_ws/install/bboxes_ex_msgs:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolocpp_ws/install/seg_sub:/home/david/yolocpp_ws/install/yolo_custom_interfaces:/home/david/yolocpp_ws/install/pylon_instant_camera:/home/david/yolocpp_ws/install/image_directory_publisher:/opt/ros/humble LD_LIBRARY_PATH=/home/david/yolocpp_ws/install/bboxes_ex_msgs/lib:/home/david/yolocpp_ws/install/yolo_custom_interfaces/lib:/home/david/yolocpp_ws/install/pylon_instant_camera/lib:/home/david/yolocpp_ws/install/image_directory_publisher/lib:/opt/pylon/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda-11.2/lib64:/usr/local/cuda-11.2/lib64:/home/david/onnxruntime-linux-x64-gpu-1.22.0/lib PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --install /home/david/yolocpp_ws/build/yolocpp
+[0.095s] -- Install configuration: ""
+[0.095s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/launch
+[0.095s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/launch/__pycache__
+[0.095s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/launch/__pycache__/yolocpp_onnx.launch.cpython-310.pyc
+[0.095s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/launch/yolocpp_onnx.launch.py
+[0.095s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include
+[0.095s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files
+[0.095s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/tools
+[0.095s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/tools/Config.hpp
+[0.095s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/tools/BoundedThreadSafeQueue.hpp
+[0.095s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/tools/ScopedTimer.hpp
+[0.095s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/tools/Debug.hpp
+[0.095s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/det
+[0.095s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/det/YOLO9.hpp
+[0.095s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/det/YOLO12.hpp
+[0.095s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/det/YOLO5.hpp
+[0.095s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/det/YOLO7.hpp
+[0.095s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/det/YOLO10.hpp
+[0.095s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/det/YOLO8.hpp
+[0.095s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/det/YOLO11.hpp
+[0.095s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/pose
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/pose/YOLO8-POSE.hpp
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/pose/YOLO11-POSE.hpp
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/quantized_models
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/quantized_models/coco.names
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/quantized_models/yolos_quantization.py
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/quantized_models/your_model.onnx.file
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/obb
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/obb/YOLO8-OBB.hpp
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/obb/YOLO11-OBB.hpp
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/class
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/class/YOLO11CLASS.hpp
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/seg
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/seg/YOLO11Seg.hpp
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/seg/YOLO9Seg.hpp
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/seg/YOLO8Seg.hpp
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/models
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/models/coco.names
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/models/testonnx.py
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/models/yolo11m-seg.onnx
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/models/export_onnx.py
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/models/Dota.names
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/data
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/data/panoramic_02.avi
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/data/test.jpg
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/lib/yolocpp/yolocpp
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/ament_index/resource_index/package_run_dependencies/yolocpp
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/ament_index/resource_index/parent_prefix_path/yolocpp
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/environment/ament_prefix_path.sh
+[0.096s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/environment/ament_prefix_path.dsv
+[0.097s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/environment/path.sh
+[0.097s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/environment/path.dsv
+[0.097s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/local_setup.bash
+[0.097s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/local_setup.sh
+[0.097s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/local_setup.zsh
+[0.097s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/local_setup.dsv
+[0.097s] -- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/package.dsv
+[0.097s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/ament_index/resource_index/packages/yolocpp
+[0.097s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/cmake/yolocppConfig.cmake
+[0.097s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/cmake/yolocppConfig-version.cmake
+[0.097s] -- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/package.xml
+[0.101s] Invoked command in '/home/david/yolocpp_ws/build/yolocpp' returned '0': CMAKE_PREFIX_PATH=/home/david/yolocpp_ws/install/bboxes_ex_msgs:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolocpp_ws/install/seg_sub:/home/david/yolocpp_ws/install/yolo_custom_interfaces:/home/david/yolocpp_ws/install/pylon_instant_camera:/home/david/yolocpp_ws/install/image_directory_publisher:/opt/ros/humble LD_LIBRARY_PATH=/home/david/yolocpp_ws/install/bboxes_ex_msgs/lib:/home/david/yolocpp_ws/install/yolo_custom_interfaces/lib:/home/david/yolocpp_ws/install/pylon_instant_camera/lib:/home/david/yolocpp_ws/install/image_directory_publisher/lib:/opt/pylon/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda-11.2/lib64:/usr/local/cuda-11.2/lib64:/home/david/onnxruntime-linux-x64-gpu-1.22.0/lib PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --install /home/david/yolocpp_ws/build/yolocpp

@@ -1,4 +1,0 @@
-source;share/zoe_bringup/local_setup.bash
-source;share/zoe_bringup/local_setup.dsv
-source;share/zoe_bringup/local_setup.sh
-source;share/zoe_bringup/local_setup.zsh

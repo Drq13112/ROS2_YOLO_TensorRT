@@ -1,4 +1,0 @@
-Invoking command in '/home/david/yolocpp_ws/build/vulcanexus_base': PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --build /home/david/yolocpp_ws/build/vulcanexus_base -- -j32 -l32
-Invoked command in '/home/david/yolocpp_ws/build/vulcanexus_base' returned '0': PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --build /home/david/yolocpp_ws/build/vulcanexus_base -- -j32 -l32
-Invoking command in '/home/david/yolocpp_ws/build/vulcanexus_base': PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --install /home/david/yolocpp_ws/build/vulcanexus_base
-Invoked command in '/home/david/yolocpp_ws/build/vulcanexus_base' returned '0': PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --install /home/david/yolocpp_ws/build/vulcanexus_base

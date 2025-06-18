@@ -4,7 +4,7 @@ camera_front.image_raw.enable_pub_plugins:
 - image_transport/raw
 - image_transport/theora
 camera_front.image_raw.format: jpeg
-camera_front.image_raw.jpeg_quality: 50
+camera_front.image_raw.jpeg_quality: 10
 camera_front.image_raw.png_level: 3
 camera_front.image_raw.tiff.res_unit: inch
 camera_front.image_raw.tiff.xdpi: -1
@@ -15,7 +15,7 @@ camera_front_left.image_raw.enable_pub_plugins:
 - image_transport/raw
 - image_transport/theora
 camera_front_left.image_raw.format: jpeg
-camera_front_left.image_raw.jpeg_quality: 50
+camera_front_left.image_raw.jpeg_quality: 95
 camera_front_left.image_raw.png_level: 3
 camera_front_left.image_raw.tiff.res_unit: inch
 camera_front_left.image_raw.tiff.xdpi: -1
@@ -26,7 +26,7 @@ camera_front_right.image_raw.enable_pub_plugins:
 - image_transport/raw
 - image_transport/theora
 camera_front_right.image_raw.format: jpeg
-camera_front_right.image_raw.jpeg_quality: 50
+camera_front_right.image_raw.jpeg_quality: 95
 camera_front_right.image_raw.png_level: 3
 camera_front_right.image_raw.tiff.res_unit: inch
 camera_front_right.image_raw.tiff.xdpi: -1
@@ -36,7 +36,7 @@ frame_id_left: left_camera_frame
 frame_id_right: right_camera_frame
 front_image_pattern: front*.jpg
 image_directory: /home/david/Documents/Datasets/imagenes_luis/02
-jpeg_quality: 10
+jpeg_quality: 95
 left_image_pattern: front_left*.jpg
 loop_playback: true
 publish_rate: 10.0

@@ -1,2 +1,0 @@
-/home/david/yolocpp_ws/install/vulcanexus_base/share/ament_index/resource_index/packages/vulcanexus_base
-/home/david/yolocpp_ws/install/vulcanexus_base/share/vulcanexus_base/package.dsv

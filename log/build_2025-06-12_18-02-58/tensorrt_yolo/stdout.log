@@ -1,6 +1,0 @@
-[ 14%] Built target chrono
-[ 71%] Built target deploy
-[ 85%] Built target segment_node
-[ 92%] [32mBuilding CXX object CMakeFiles/segment_node_3P.dir/src/segment_node_3P.cpp.o[0m
-[100%] [32m[1mLinking CXX executable segment_node_3P[0m
-[100%] Built target segment_node_3P

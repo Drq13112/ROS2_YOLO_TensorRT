@@ -1,0 +1,58 @@
+[33mCMake Warning:
+  Manually-specified variables were not used by the project:
+
+    CMAKE_CUDA_COMPILER
+    TRT_PATH
+
+[0m
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/image_directory_publisher/src/directory_publisher_node.cpp:1[m[K:
+[01m[K/home/david/yolocpp_ws/src/image_directory_publisher/src/directory_publisher_node.cpp:[m[K In member function ‘[01m[Kvoid image_directory_publisher::DirectoryPublisherNode::publish_image_set(const string&, image_transport::Publisher&, const string&, const string&)[m[K’:
+[01m[K/home/david/yolocpp_ws/src/image_directory_publisher/src/directory_publisher_node.cpp:146:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%ld[m[K’ expects argument of type ‘[01m[Klong int[m[K’, but argument 7 has type ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_sec_type[m[K’ {aka ‘[01m[Kint[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  146 |         RCLCPP_INFO(this->get_logger(), [01;35m[K"Published %s image: %s with MONOTONIC TS: %ld.%09ld"[m[K,
+      |                                         [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  147 |                     camera_name_log.c_str(), image_path.c_str(), [32m[Kheader.stamp.sec[m[K, header.stamp.nanosec);
+      |                                                                  [32m[K~~~~~~~~~~~~~~~~[m[K
+      |                                                                               [32m[K|[m[K
+      |                                                                               [32m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_sec_type {aka int}[m[K
+[01m[K/home/david/yolocpp_ws/src/image_directory_publisher/src/directory_publisher_node.cpp:146:86:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  146 | s->get_logger(), "Published %s image: %s with MONOTONIC TS: [01;36m[K%ld[m[K.%09ld",
+      |                                                             [01;36m[K~~^[m[K
+      |                                                               [01;36m[K|[m[K
+      |                                                               [01;36m[Klong int[m[K
+      |                                                             [32m[K%d[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/image_directory_publisher/src/directory_publisher_node.cpp:1[m[K:
+[01m[K/home/david/yolocpp_ws/src/image_directory_publisher/src/directory_publisher_node.cpp:146:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%ld[m[K’ expects argument of type ‘[01m[Klong int[m[K’, but argument 8 has type ‘[01m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_nanosec_type[m[K’ {aka ‘[01m[Kunsigned int[m[K’} [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  146 |         RCLCPP_INFO(this->get_logger(), [01;35m[K"Published %s image: %s with MONOTONIC TS: %ld.%09ld"[m[K,
+      |                                         [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  147 |                     camera_name_log.c_str(), image_path.c_str(), header.stamp.sec, [32m[Kheader.stamp.nanosec[m[K);
+      |                                                                                    [32m[K~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                                                 [32m[K|[m[K
+      |                                                                                                 [32m[Kbuiltin_interfaces::msg::Time_<std::allocator<void> >::_nanosec_type {aka unsigned int}[m[K
+[01m[K/home/david/yolocpp_ws/src/image_directory_publisher/src/directory_publisher_node.cpp:146:92:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  146 | s->get_logger(), "Published %s image: %s with MONOTONIC TS: %ld.[01;36m[K%09ld[m[K",
+      |                                                                 [01;36m[K~~~~^[m[K
+      |                                                                     [01;36m[K|[m[K
+      |                                                                     [01;36m[Klong int[m[K
+      |                                                                 [32m[K%09d[m[K

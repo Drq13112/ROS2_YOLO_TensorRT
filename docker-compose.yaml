@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  tensorrt_yolo:
+    build: .
+    runtime: nvidia
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+      - NVIDIA_DRIVER_CAPABILITIES=compute,utility,video
+    volumes:
+      - ./:/workspace
+    shm_size: '8gb'
+    network_mode: host
+    command: tail -f /dev/null # Mantiene el contenedor corriendo
+
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all # or specific GPU IDs e.g., "device=0,1"
+              capabilities: [gpu]
+    

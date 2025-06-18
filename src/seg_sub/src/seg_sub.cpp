@@ -91,6 +91,38 @@ public:
         {
             // Initialize tracking for this camera if it's the first time
             initialize_camera_loss_tracking(camera_id);
+
+            // 1. Convertir msg->mask a cv::Mat
+            cv_bridge::CvImagePtr cv_ptr_mask;
+            try {
+                // El encoding de la máscara debe ser el mismo que el publicado por segment_node_3P
+                // (ej. "mono16" o "mono8")
+                cv_ptr_mask = cv_bridge::toCvCopy(msg->mask, msg->mask.encoding);
+            } catch (const cv_bridge::Exception& e) {
+                RCLCPP_ERROR(this->get_logger(), "[%s] cv_bridge exception for mask (MsgT1: %u.%09u): %s",
+                            camera_id.c_str(), msg->header.stamp.sec, msg->header.stamp.nanosec, e.what());
+                return;
+            }
+
+            if (!cv_ptr_mask || cv_ptr_mask->image.empty()) {
+                RCLCPP_ERROR(this->get_logger(), "[%s] Failed to convert mask to CvImage or mask is empty (MsgT1: %u.%09u).",
+                            camera_id.c_str(), msg->header.stamp.sec, msg->header.stamp.nanosec);
+                return;
+            }
+
+            const cv::Mat& instance_id_mask = cv_ptr_mask->image; // Debería ser CV_16UC1 o CV_8UC1
+            cv::Mat colored_mask_display = cv::Mat::zeros(instance_id_mask.size(), CV_8UC3);
+
+            // Resize mask to real size (1920x1200)
+            const cv::Size target_size(1920, 1200);
+            if (!colored_mask_display.empty() && colored_mask_display.size() != target_size) {
+                cv::resize(colored_mask_display, colored_mask_display, target_size, 0, 0, cv::INTER_NEAREST);
+            }
+
+            RCLCPP_INFO(this->get_logger(), "New size of mask for camera %s: %dx%d",
+                        camera_id.c_str(), colored_mask_display.cols, colored_mask_display.rows);
+
+
             timespec ts_t4_segsub_res_recv; // T4 - SegSub Result Reception Time
             clock_gettime(CLOCK_MONOTONIC, &ts_t4_segsub_res_recv);
 
@@ -354,6 +386,11 @@ public:
             log_stream << "  Inference Concurrency (S/P).......: " << (std::isnan(inf_concurrency_factor) ? "N/A" : std::to_string(inf_concurrency_factor)) << "\n";
             log_stream << "======================================================================================\n";
             RCLCPP_INFO(this->get_logger(), "%s", log_stream.str().c_str());
+            
+            // Save anomalous frame and log
+            // save_anomalous_frame_and_log(msg,camera_id,ts_t3_segnode_res_pub,ts_t4_segsub_res_recv,1.0);
+            
+
 
             std::ostringstream csv_line_stream;
             csv_line_stream << std::fixed << std::setprecision(3)

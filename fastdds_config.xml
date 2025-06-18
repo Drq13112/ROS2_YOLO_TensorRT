@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- filepath: /home/david/yolocpp_ws/fastdds_config.xml -->
+<dds xmlns="http://www.eprosima.com/XMLSchemas/fastRTPS_Profiles">
+    <profiles>
+        <!-- Ultra-low latency participant profile -->
+        <participant profile_name="default_ros2_participant_profile" is_default_profile="true">
+            <rtps>
+                <!-- Large socket buffers optimized for 32MB messages -->
+                <sendSocketBufferSize>67108864</sendSocketBufferSize>      <!-- 64MB -->
+                <listenSocketBufferSize>67108864</listenSocketBufferSize>  <!-- 64MB -->
+                
+                <!-- Optimized memory allocation for large segmentation masks -->
+                <allocation>
+                    <initial_samples>10</initial_samples>
+                    <maximum_samples>50</maximum_samples>
+                    <data_limits>
+                        <max_user_data>33554432</max_user_data> <!-- 32MB -->
+                        <max_properties>256</max_properties>
+                    </data_limits>
+                </allocation>
+                
+                <!-- Discovery optimization for low latency -->
+                <builtin>
+                    <discovery_config>
+                        <discoveryProtocol>SIMPLE</discoveryProtocol>
+                        <use_SIMPLE_EndpointDiscoveryProtocol>true</use_SIMPLE_EndpointDiscoveryProtocol>
+                        <!-- Fast discovery intervals -->
+                        <leaseDuration>
+                            <sec>10</sec>
+                            <nanosec>0</nanosec>
+                        </leaseDuration>
+                        <leaseDuration_announcementperiod>
+                            <sec>2</sec>
+                            <nanosec>0</nanosec>
+                        </leaseDuration_announcementperiod>
+                    </discovery_config>
+                </builtin>
+            </rtps>
+        </participant>
+
+        <!-- Ultra-low latency publisher profile -->
+        <publisher profile_name="default_publisher_profile" is_default_profile="true">
+            <qos>
+                <reliability><kind>RELIABLE</kind></reliability>
+                <publishMode><kind>ASYNCHRONOUS</kind></publishMode>
+                <data_sharing><kind>OFF</kind></data_sharing>
+            </qos>
+            
+            <!-- Minimal history for lowest latency -->
+            <historyMemoryPolicy>DYNAMIC</historyMemoryPolicy>
+            <historyQos>
+                <kind>KEEP_LAST</kind>
+                <depth>1</depth>
+            </historyQos>
+            
+            <!-- Optimized resource limits -->
+            <resource_limits>
+                <max_samples>3</max_samples>
+                <max_instances>3</max_instances>
+                <max_samples_per_instance>1</max_samples_per_instance>
+                <allocated_samples>3</allocated_samples>
+            </resource_limits>
+            
+            <!-- Unlimited throughput -->
+            <throughputController>
+                <bytesPerPeriod>0</bytesPerPeriod>
+                <periodMillisecs>0</periodMillisecs>
+            </throughputController>
+            
+            <!-- Ultra-fast heartbeat for minimal latency -->
+            <times>
+                <heartbeatPeriod>
+                    <sec>0</sec>
+                    <nanosec>10000000</nanosec> <!-- 10ms heartbeat -->
+                </heartbeatPeriod>
+                <nackResponseDelay>
+                    <sec>0</sec>
+                    <nanosec>1000000</nanosec>  <!-- 1ms NACK response -->
+                </nackResponseDelay>
+                <nackSuppressionDuration>
+                    <sec>0</sec>
+                    <nanosec>0</nanosec>        <!-- No NACK suppression -->
+                </nackSuppressionDuration>
+            </times>
+        </publisher>
+
+        <!-- Ultra-low latency subscriber profile -->
+        <subscriber profile_name="default_subscriber_profile" is_default_profile="true">
+            <qos>
+                <reliability><kind>RELIABLE</kind></reliability>
+                <data_sharing><kind>OFF</kind></data_sharing>
+            </qos>
+            
+            <!-- Minimal history for lowest latency -->
+            <historyMemoryPolicy>DYNAMIC</historyMemoryPolicy>
+            <historyQos>
+                <kind>KEEP_LAST</kind>
+                <depth>1</depth>
+            </historyQos>
+            
+            <!-- Optimized resource limits -->
+            <resource_limits>
+                <max_samples>3</max_samples>
+                <max_instances>3</max_instances>
+                <max_samples_per_instance>1</max_samples_per_instance>
+                <allocated_samples>3</allocated_samples>
+            </resource_limits>
+            
+            <!-- Fast heartbeat response -->
+            <times>
+                <heartbeatResponseDelay>
+                    <sec>0</sec>
+                    <nanosec>1000000</nanosec>  <!-- 1ms response -->
+                </heartbeatResponseDelay>
+            </times>
+        </subscriber>
+    </profiles>
+</dds>

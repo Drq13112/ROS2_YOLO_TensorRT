@@ -96,15 +96,20 @@ public:
 
         // Crear QoS profile
         rclcpp::QoS qos_sensors(rclcpp::QoSInitialization::from_rmw(rmw_qos_profile_sensor_data));
-        // qos_sensors.reliability(RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
-        // qos_sensors.keep_last(1);
         qos_sensors.reliability(RMW_QOS_POLICY_RELIABILITY_RELIABLE);
+        // qos_sensors.reliability(RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
         qos_sensors.keep_last(1);
+        qos_sensors.durability_volatile();
 
         rclcpp::QoS qos_sensors_pub(rclcpp::QoSInitialization::from_rmw(rmw_qos_profile_sensor_data));
-        // qos_sensors_pub.reliability(RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
         qos_sensors_pub.reliability(RMW_QOS_POLICY_RELIABILITY_RELIABLE);
-        qos_sensors_pub.keep_last(5);
+        // qos_sensors_pub.reliability(RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
+        qos_sensors_pub.keep_last(1);
+        qos_sensors_pub.durability_volatile();
+        // Add this for large messages
+        qos_sensors_pub.liveliness(RMW_QOS_POLICY_LIVELINESS_AUTOMATIC);
+        // qos_sensors_pub.avoid_ros_namespace_conventions(false);
+        
 
         // Inicializar paleta de colores
         class_colors_.push_back(cv::Scalar(255, 0, 0));     // Blue
@@ -575,11 +580,13 @@ private:
         auto t_pre_start = std::chrono::steady_clock::now();
         cv::Mat resized_img;
         cv::Size network_input_target_size(input_width_, input_height_);
-        cv::resize(original_image, resized_img, network_input_target_size, 0, 0, cv::INTER_LINEAR);
-        if (resized_img.empty())
+        if (original_size != network_input_target_size)
         {
-            RCLCPP_ERROR(this->get_logger(), "[%s] Resized image is empty. Skipping inference.", this->get_name());
-            return;
+            cv::resize(original_image, resized_img, network_input_target_size, 0, 0, cv::INTER_LINEAR);
+        }
+        else
+        {
+            resized_img = original_image;
         }
         std::vector<deploy::Image> img_batch;
         unsigned char *image_data_ptr = resized_img.data;
@@ -956,8 +963,8 @@ int main(int argc, char **argv)
     auto executor = std::make_shared<rclcpp::executors::MultiThreadedExecutor>();
 
     // --- Configuración de Vídeo Común ---
-    bool enable_inferred_video_main = false;
-    bool enable_mask_video_main = false;
+    bool enable_inferred_video_main = true;
+    bool enable_mask_video_main = true;
     std::string output_video_path = "/home/david/ros_videos/segment_node_3P_out";
     double video_fps_main = 10.0;
     cv::Size single_cam_video_size(1920, 1200);

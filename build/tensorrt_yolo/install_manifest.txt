@@ -76,6 +76,7 @@
 /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/yolo11s-seg.engine
 /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/yolo11s-seg_03_b1.engine
 /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/yolo11n-seg.engine
+/home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/yolo11s-seg_03_b1_v2.engine
 /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/labels.txt
 /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/data/panoramic_02.avi
 /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/data/test.jpg

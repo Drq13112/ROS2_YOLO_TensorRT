@@ -1,0 +1,14 @@
+build/
+install/
+log/
+*.log
+*.pyc
+__pycache__/
+.git/
+.vscode/
+
+# Excluir paquetes ROS específicos
+src/yolocpp/
+src/pylon_instant_camera-ros2/
+src/bboxes_ex_msgs/
+src/image_directory_publisher/
