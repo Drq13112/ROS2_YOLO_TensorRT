@@ -166,6 +166,15 @@ void CudaGraph::launch(cudaStream_t stream) {
     CHECK(cudaStreamSynchronize(stream));
 }
 
+void CudaGraph::launch_async(cudaStream_t stream) {
+    // 启动执行图，并同步流
+    CHECK(cudaGraphLaunch(graphExec_, stream));
+}
+
+void CudaGraph::synchronize(cudaStream_t stream) {
+    CHECK(cudaStreamSynchronize(stream));
+}
+
 void CudaGraph::initializeNodes(size_t num) {
     // 如果节点数量为0，自动获取图中的节点数量
     if (num == 0) {

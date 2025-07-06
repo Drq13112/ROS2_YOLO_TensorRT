@@ -1,1 +1,15 @@
 colcon build --cmake-args -DTRT_PATH=/usr -DCMAKE_CUDA_ARCHITECTURES="89" -DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc
+
+
+
+# Verificar si ~/.local/bin ya está en tu PATH
+echo $PATH | grep -o ~/.local/bin
+
+# Si no aparece nada, añadirlo al PATH permanentemente
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+
+# Recargar la configuración
+source ~/.bashrc
+
+# Ahora puedes usar trtyolo directamente
+trtyolo export -w models/yolo11s_mapillary_1216_24.pt -v yolo11 -o models -s --imgsz 960,608 -b 1

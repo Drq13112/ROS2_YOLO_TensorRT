@@ -1,2 +1,0 @@
-Invoking command in '/home/david/yolocpp_ws/build/image_directory_publisher': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --build /home/david/yolocpp_ws/build/image_directory_publisher -- -j32 -l32
-Invoked command in '/home/david/yolocpp_ws/build/image_directory_publisher' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --build /home/david/yolocpp_ws/build/image_directory_publisher -- -j32 -l32

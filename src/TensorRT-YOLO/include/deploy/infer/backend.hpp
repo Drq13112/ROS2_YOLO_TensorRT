@@ -61,6 +61,18 @@ public:
      */
     void infer(const std::vector<Image>& inputs);
 
+    /**
+     * @brief Asynchronously performs inference.
+     *
+     * @param inputs Input image vector.
+     */
+    void infer_async(const std::vector<Image>& inputs);
+
+    /**
+     * @brief Synchronizes the stream to wait for inference completion.
+     */
+    void synchronize();
+
     cudaStream_t                 stream;             // < CUDA 流
     InferOption                  option;             // < 推理选项
     std::vector<TensorInfo>      tensor_infos;       // < 张量信息向量
@@ -75,6 +87,8 @@ private:
     void captureCudaGraph();
     void dynamicInfer(const std::vector<Image>& inputs);
     void staticInfer(const std::vector<Image>& inputs);
+    void dynamicInfer_async(const std::vector<Image>& inputs);
+    void staticInfer_async(const std::vector<Image>& inputs);
 
     std::unique_ptr<TRTManager> manager_;        // < TensorRT 管理器对象的智能指针
     CudaGraph                   cuda_graph_;     // < CUDA 图

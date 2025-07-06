@@ -1,1 +1,0 @@
-['-DTRT_PATH=/usr', '-DCMAKE_CUDA_ARCHITECTURES=89', '-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc']

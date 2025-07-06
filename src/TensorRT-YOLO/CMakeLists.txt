@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.17)
-
+set(CMAKE_CUDA_COMPILER /usr/local/cuda-12.9/bin/nvcc)
 project(tensorrt_yolo LANGUAGES C CXX CUDA)
 
 # Encuentra paquetes de ROS 2 y dependencias estándar
@@ -14,6 +14,7 @@ find_package(cv_bridge REQUIRED) # For OpenCV image conversion in ROS 2
 find_package(yolo_custom_interfaces REQUIRED)
 find_package(image_transport REQUIRED) # For image transport in ROS 2
 find_package(image_transport_plugins REQUIRED) # For image transport plugins
+find_package(rclcpp_components REQUIRED)
 #-------------------------------------------------------------------------------
 
 # Configuración estándar de C++ 
@@ -264,27 +265,31 @@ target_link_directories(segment_node PRIVATE ${TRT_LIB_DIR})
 
 # Explicitly set RPATH for the segment_node target
 set_target_properties(segment_node PROPERTIES
-    INSTALL_RPATH "$ORIGIN" # Look in the executable's own directory
-    BUILD_RPATH "$ORIGIN"   # Also useful for running from the build directory
+    INSTALL_RPATH "$ORIGIN:${CUDAToolkit_LIBRARY_DIRS}" # Look in the executable's own directory and CUDA lib dir
+    BUILD_RPATH "$ORIGIN:${CUDAToolkit_LIBRARY_DIRS}"   # Also useful for running from the build directory
 )
+
+
 
 #-------------------------------------------------------------------------------
 # INSTALACIÓN
 #-------------------------------------------------------------------------------
-install(TARGETS
-    deploy          # Instala la librería libdeploy.so
-    chrono
-    segment_node    # Instala el ejecutable del nodo
-    DESTINATION lib/${PROJECT_NAME}
-)
+# install(TARGETS
+#     deploy          # Instala la librería libdeploy.so
+#     chrono
+#     segment_node    # Instala el ejecutable del nodo
+#     DESTINATION lib/${PROJECT_NAME}
+# )
 
-# Link custom plugins if the target exists
-if(TARGET custom_plugins)
-    target_link_libraries(segment_node PRIVATE custom_plugins)
-    message(STATUS "Linking segment_node with custom_plugins.")
-else()
-    message(WARNING "custom_plugins target does not exist. segment_node will not be linked against it.")
-endif()
+# # Link custom plugins if the target exists
+# if(TARGET custom_plugins)
+#     target_link_libraries(segment_node PRIVATE custom_plugins)
+#     message(STATUS "Linking segment_node with custom_plugins.")
+# else()
+#     message(WARNING "custom_plugins target does not exist. segment_node will not be linked against it.")
+# endif()
+
+
 
 #-------------------------------------------------------------------------------
 # CONSTRUCCIÓN DEL NODO ROS 2 'segment_node_3P'
@@ -317,27 +322,89 @@ target_link_directories(segment_node_3P PRIVATE ${TRT_LIB_DIR})
 
 # Explicitly set RPATH for the segment_node target
 set_target_properties(segment_node_3P PROPERTIES
-    INSTALL_RPATH "$ORIGIN" # Look in the executable's own directory
-    BUILD_RPATH "$ORIGIN"   # Also useful for running from the build directory
+    INSTALL_RPATH "$ORIGIN:${CUDAToolkit_LIBRARY_DIRS}" # Look in the executable's own directory and CUDA lib dir
+    BUILD_RPATH "$ORIGIN:${CUDAToolkit_LIBRARY_DIRS}"   # Also useful for running from the build directory
 )
 
 #-------------------------------------------------------------------------------
-# INSTALACIÓN
+# INSTALACIÓN del nodo 'segment_node_3P'
 #-------------------------------------------------------------------------------
-install(TARGETS
-    deploy          # Instala la librería libdeploy.so
+# install(TARGETS
+#     deploy          # Instala la librería libdeploy.so
+#     chrono
+#     segment_node_3P # Instala el ejecutable del nodo
+#     DESTINATION lib/${PROJECT_NAME}
+# )
+
+# # Link custom plugins if the target exists
+# if(TARGET custom_plugins)
+#     target_link_libraries(segment_node_3P PRIVATE custom_plugins)
+#     message(STATUS "Linking segment_node_3P with custom_plugins.")
+# else()
+#     message(WARNING "custom_plugins target does not exist. segment_node_3P will not be linked against it.")
+# endif()
+
+
+
+# -------------------------------------------------------------------------------
+# CONSTRUCCIÓN DEL NODO ROS 2 'segment_node_3P_composable_component'
+# -------------------------------------------------------------------------------
+add_library(segment_node_3P_composable_component SHARED
+  src/segment_node_3P_composable.cpp
+)
+ament_target_dependencies(segment_node_3P_composable_component rclcpp rclcpp_components OpenCV rosidl_default_runtime std_msgs sensor_msgs cv_bridge yolo_custom_interfaces image_transport)
+target_include_directories(segment_node_3P_composable_component PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}/include
+    ${TRT_INCLUDE_DIR}
+    ${PLUGIN_DIR_PATH}
+    ${CMAKE_CURRENT_BINARY_DIR}/rosidl_generator_cpp
+)
+target_link_libraries(segment_node_3P_composable_component
+    deploy
     chrono
-    segment_node_3P # Instala el ejecutable del nodo
+    CUDA::cudart
+    ${TRT_LIBS}
+)
+target_link_directories(segment_node_3P_composable_component PRIVATE ${TRT_LIB_DIR})
+rclcpp_components_register_nodes(segment_node_3P_composable_component "YoloBatchNode")
+
+# Esto le dice al nodo componible que busque sus librerías dependientes
+# (como libdeploy.so) en su propio directorio de instalación.
+set_target_properties(segment_node_3P_composable_component PROPERTIES
+    INSTALL_RPATH "$ORIGIN:${CUDAToolkit_LIBRARY_DIRS}"
+)
+
+if(TARGET custom_plugins)
+    target_link_libraries(segment_node_3P_composable_component PRIVATE custom_plugins)
+endif()
+
+# -------------------------------------------------------------------------------
+install(TARGETS
+    deploy
+    chrono
+    segment_node_3P_composable_component
+    ARCHIVE DESTINATION lib
+    LIBRARY DESTINATION lib
+    RUNTIME DESTINATION bin
+)
+
+install(TARGETS
+    segment_node
+    segment_node_3P
     DESTINATION lib/${PROJECT_NAME}
 )
 
-# Link custom plugins if the target exists
 if(TARGET custom_plugins)
-    target_link_libraries(segment_node_3P PRIVATE custom_plugins)
-    message(STATUS "Linking segment_node_3P with custom_plugins.")
-else()
-    message(WARNING "custom_plugins target does not exist. segment_node_3P will not be linked against it.")
+    install(TARGETS custom_plugins
+        ARCHIVE DESTINATION lib
+        LIBRARY DESTINATION lib
+        RUNTIME DESTINATION bin
+    )
 endif()
+
+# -------------------------------------------------------------------------------
+# FIN DEL BLOQUE AÑADIDO
+# -------------------------------------------------------------------------------
 
 install(
     DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/deploy/

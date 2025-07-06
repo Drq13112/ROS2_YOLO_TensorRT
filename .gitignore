@@ -6,3 +6,6 @@ src/yolocpp/data/panoramic_02.avi
 *.engine
 *.onnx
 *.pt
+*.db3
+*.csv
+*.png

@@ -87,6 +87,23 @@ public:
      */
     int batch_size() const;
 
+
+    /**
+     * @brief Asynchronously runs inference on multiple images.
+     * This function submits the work to the GPU and returns immediately.
+     * @param images Input image vector.
+     */
+    void predict_async(const std::vector<Image>& images);
+
+    /**
+     * @brief Waits for inference to complete and retrieves the results.
+     * This function blocks until the GPU work submitted by `predict_async` is finished.
+     * @return Vector of inference results.
+     */
+    std::vector<ResultType> get_results();
+
+
+
 protected:
     /**
      * @brief 后处理方法，由派生类实现
@@ -97,7 +114,7 @@ protected:
     ResultType postProcess(int idx);
 
     std::unique_ptr<TrtBackend> backend_;         // < TensorRT 后端
-
+    size_t                    last_batch_size_{0};  // < Store batch size for get_results
     unsigned long long        total_request_{0};  // < 总请求数
     std::unique_ptr<GpuTimer> infer_gpu_trace_;   // < GPU推理计时器
     std::unique_ptr<CpuTimer> infer_cpu_trace_;   // < CPU推理计时器

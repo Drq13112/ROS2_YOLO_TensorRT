@@ -76,6 +76,7 @@
         "stack": "cpp",
         "unordered_set": "cpp",
         "__bit_reference": "cpp",
-        "valarray": "cpp"
+        "valarray": "cpp",
+        "ios": "cpp"
     }
 }

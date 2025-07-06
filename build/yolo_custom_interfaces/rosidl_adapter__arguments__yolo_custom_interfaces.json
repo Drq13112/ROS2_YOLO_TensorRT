@@ -1,6 +1,0 @@
-{
-  "package_name": "yolo_custom_interfaces",
-  "non_idl_tuples": [
-    "/home/david/yolocpp_ws/src/yolo_custom_interfaces:msg/InstanceSegmentationInfo.msg"
-  ]
-}

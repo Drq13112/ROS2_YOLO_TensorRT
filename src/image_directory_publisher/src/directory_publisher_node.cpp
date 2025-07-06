@@ -14,9 +14,10 @@
 #include <string>
 
 // Define target dimensions for publishing
-const int TARGET_WIDTH = 640;
-const int TARGET_HEIGHT = 416;
-
+// const int TARGET_WIDTH = 1920/1.5; // 1280
+// const int TARGET_HEIGHT = 1200/1.5; // 800
+const int TARGET_WIDTH = 960; // Ancho objetivo para las imágenes publicadas
+const int TARGET_HEIGHT = 608;  // Alto objetivo para las imágenes publicadas
 
 namespace image_directory_publisher {
 
@@ -63,6 +64,9 @@ public:
         // Crear un perfil QoS personalizado
         rclcpp::QoS custom_qos_profile(rclcpp::KeepLast(1)); // History: KEEP_LAST, Depth: 1
         custom_qos_profile.reliable();                      // Reliability: RELIABLE
+        // custom_qos_profile.best_effort();                // Reliability: BEST_EFFORT (implícito si no se especifica RELIABLE)
+                                                            // Para ser explícito:
+                                                            // custom_qos_profile.reliability(RMW_QOS_POLICY_RELIABILITY_BEST_EFFORT);
         custom_qos_profile.durability_volatile();           // Durability: VOLATILE (implícito si no se especifica TRANSIENT_LOCAL)
                                                             // Para ser explícito:
                                                             // custom_qos_profile.durability(RMW_QOS_POLICY_DURABILITY_VOLATILE);
@@ -146,7 +150,7 @@ private:
         cv::Mat image_to_publish;
         // Resize the image to the target dimensions if it's not already that size
         if (image_read.cols != TARGET_WIDTH || image_read.rows != TARGET_HEIGHT) {
-            cv::resize(image_read, image_to_publish, cv::Size(TARGET_WIDTH, TARGET_HEIGHT));
+            cv::resize(image_read, image_to_publish, cv::Size(TARGET_WIDTH, TARGET_HEIGHT), cv::INTER_AREA);
         } else {
             image_to_publish = image_read;
         }
@@ -185,7 +189,7 @@ private:
             }
         }
 
-        if (current_image_set_index_ < 1500) {
+        if (current_image_set_index_ < 150000) {
         
 
             if (!left_image_files_.empty() && current_image_set_index_ < left_image_files_.size()) {

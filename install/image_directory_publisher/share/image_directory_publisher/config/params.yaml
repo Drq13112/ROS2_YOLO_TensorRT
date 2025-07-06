@@ -1,9 +1,0 @@
-directory: image_directory_publisher
-config:
-  params:
-    image_directory: "/path/to/image/directory"
-    frame_id: "image_frame"
-    left_camera_info: "config/left_camera_info.yaml"
-    front_camera_info: "config/front_camera_info.yaml"
-    right_camera_info: "config/right_camera_info.yaml"
-    publish_rate: 30.0

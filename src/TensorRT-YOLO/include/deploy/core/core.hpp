@@ -216,6 +216,20 @@ public:
     void launch(cudaStream_t stream);
 
     /**
+     * @brief Asynchronously launches the CUDA graph.
+     *
+     * @param stream The CUDA stream to launch the graph on.
+     */
+    void launch_async(cudaStream_t stream);
+
+    /**
+     * @brief Synchronizes the CUDA stream.
+     *
+     * @param stream The CUDA stream to synchronize.
+     */
+    void synchronize(cudaStream_t stream);
+
+    /**
      * @brief 初始化图中的节点
      *
      * 获取并初始化 CUDA 图中的节点。如果 `num` 为 0，则自动获取节点数。

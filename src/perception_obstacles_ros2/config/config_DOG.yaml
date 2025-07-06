@@ -1,0 +1,20 @@
+factor: 1e5 # Es un factor para evitar perdida de precision, se le va a aplicar al peso de las particulas y a las masas
+
+valor_asumible_como_cero_para_codigo: 0.00001
+
+desviacion_vel_movimiento_particulas_ms_ciclo: 1.0 # m/ciclo -> cuanto es el error de la velocidad. 
+
+inicializacion_particulas_nacimiento_solo_en_zonas_con_ocupacion_observada: 1 # bool
+
+tiempoMaxDegradacionLibertad: 0.3 # 
+probabilidad_supervivencia_particula: 0.7 # Durante la predicción el peso de la particula se multiplica por este numero
+max_pred_certainty: 0.99
+probNacimiento: 0.02 # 0.02 # Establece la relación para la masa nueva. Explicación sencillota: Si pones pb = 1 la masa nueva va a ser igual a la masa observada y la masa persistente igual a la masa predicha.
+max_vel_kmh: 40 # km/h se utiliza para inicializar las particulas a una maxima velocidad
+
+calculo_vel_numero_minimo_de_veces_remuestreada: 2 # mayor o igual
+
+threshold_celda_ocupada: 0.3 
+
+write_ficheros_masa_ocupacion: 0 # bool
+

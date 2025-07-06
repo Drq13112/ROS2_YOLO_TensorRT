@@ -15,6 +15,8 @@ sudo sysctl -w net.core.wmem_max=536870912      # 512MB
 sudo sysctl -w net.core.rmem_default=33554432   # 32MB
 sudo sysctl -w net.core.wmem_default=33554432   # 32MB
 sudo sysctl -w net.core.netdev_max_backlog=10000
+sudo sysctl net.ipv4.ipfrag_time=3
+sudo sysctl net.ipv4.ipfrag_high_thresh=134217728     # (128 MB)
 
 # TCP optimizations
 sudo sysctl -w net.ipv4.tcp_rmem="4096 33554432 536870912"
@@ -43,14 +45,16 @@ echo "System optimizations applied!"
 
 
 # FastDDS configuration for maximum performance
-export FASTDDS_BUILTIN_TRANSPORTS="LARGE_DATA?max_msg_size=32MB&sockets_size=64MB&non_blocking=true&tcp_negotiation_timeout=50"
+#export FASTDDS_BUILTIN_TRANSPORTS=LARGE_DATA
 export RMW_IMPLEMENTATION=rmw_fastrtps_cpp
-export FASTDDS_DEFAULT_PROFILES_FILE="/home/david/yolocpp_ws/fastdds_config.xml"
+#export FASTDDS_DEFAULT_PROFILES_FILE="/home/david/yolocpp_ws/fastdds_config.xml"
+export FASTDDS_BUILTIN_TRANSPORTS=UDPv4
 
 # High performance settings
 export RMW_FASTRTPS_PUBLICATION_MODE=ASYNCHRONOUS
 export RCUTILS_LOGGING_BUFFERED_STREAM=1
 export FASTDDS_STATISTICS=OFF
+export ROS_DOMAIN_ID=56
 
 # Memory and CPU optimizations
 export OMP_NUM_THREADS=$(nproc)
@@ -70,6 +74,7 @@ echo "Transport: $FASTDDS_BUILTIN_TRANSPORTS"
 echo "CPU cores: $(nproc)"
 echo "GPU: $CUDA_VISIBLE_DEVICES"
 echo "========================================="
+
 
 
 

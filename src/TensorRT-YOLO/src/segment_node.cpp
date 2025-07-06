@@ -676,6 +676,10 @@ private:
         }
         auto t_post_loop_end = clock::now();
 
+        if (!video_writers_initialized_ && (enable_inferred_video_writing_ || enable_mask_video_writing_)) {
+            initializeVideoWriters();
+        }
+
         // Escritura de vídeo después de que todos los mensajes ROS han sido preparados/publicados para el lote
         if (video_writers_initialized_) {
             if (enable_inferred_video_writing_ && video_writer_inferred_.isOpened()) {

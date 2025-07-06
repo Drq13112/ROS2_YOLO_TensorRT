@@ -1,1 +1,0 @@
-cuda:cv_bridge:image_transport:image_transport_plugins:libnvinfer-dev:libnvinfer-plugin-dev:libnvonnxparser-dev:opencv:rclcpp:rosidl_default_runtime:sensor_msgs:std_msgs:yolo_custom_interfaces

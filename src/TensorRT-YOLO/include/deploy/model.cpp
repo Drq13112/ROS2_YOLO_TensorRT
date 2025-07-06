@@ -28,38 +28,74 @@ std::unique_ptr<BaseModel<ResultType>> BaseModel<ResultType>::clone() const {
     return clone_model;
 }
 
+
+// Version sincrona de predict
+// template <typename ResultType>
+// std::vector<ResultType> BaseModel<ResultType>::predict(const std::vector<Image>& images) {
+
+
+//     // std::cout << "Preprocessing " << images.size() << " images..." << std::endl;
+//     if (backend_->option.enable_performance_report) {
+//         total_request_ += (backend_->dynamic ? images.size() : backend_->max_shape.x);
+//         infer_cpu_trace_->start();
+//         infer_gpu_trace_->start();
+//     }
+
+//     // std::cout << "Predicting " << images.size() << " images..." << std::endl;
+//     backend_->infer(images);  // 调用推理方法
+//     // std::cout << "Inference completed." << std::endl;
+
+//     // CHECK(cudaStreamSynchronize(backend_->stream));
+    
+//     // 预分配结果空间
+//     std::vector<ResultType> results(images.size());
+//     for (auto idx = 0u; idx < images.size(); ++idx) {
+//         results[idx] = postProcess(idx);
+//     }
+
+//     if (backend_->option.enable_performance_report) {
+//         infer_gpu_trace_->stop();
+//         infer_cpu_trace_->stop();
+//     }
+
+//     return results;
+// }
+
 template <typename ResultType>
-std::vector<ResultType> BaseModel<ResultType>::predict(const std::vector<Image>& images) {
-
-
-    // std::cout << "Preprocessing " << images.size() << " images..." << std::endl;
+void BaseModel<ResultType>::predict_async(const std::vector<Image>& images) {
+    last_batch_size_ = images.size();
     if (backend_->option.enable_performance_report) {
         total_request_ += (backend_->dynamic ? images.size() : backend_->max_shape.x);
         infer_cpu_trace_->start();
         infer_gpu_trace_->start();
     }
+    backend_->infer_async(images);
+}
 
-    // std::cout << "Predicting " << images.size() << " images..." << std::endl;
-    backend_->infer(images);  // 调用推理方法
-    // std::cout << "Inference completed." << std::endl;
-
-    // 预分配结果空间
-    std::vector<ResultType> results(images.size());
-    for (auto idx = 0u; idx < images.size(); ++idx) {
-        results[idx] = postProcess(idx);
-    }
+template <typename ResultType>
+std::vector<ResultType> BaseModel<ResultType>::get_results() {
+    backend_->synchronize();
 
     if (backend_->option.enable_performance_report) {
         infer_gpu_trace_->stop();
         infer_cpu_trace_->stop();
     }
 
+    std::vector<ResultType> results(last_batch_size_);
+    for (auto idx = 0u; idx < last_batch_size_; ++idx) {
+        results[idx] = postProcess(idx);
+    }
     return results;
 }
 
 template <typename ResultType>
+std::vector<ResultType> BaseModel<ResultType>::predict(const std::vector<Image>& images) {
+    predict_async(images);
+    return get_results();
+}
+
+template <typename ResultType>
 ResultType BaseModel<ResultType>::predict(const Image& image) {
-    std::cout << "INside deploy" << std::endl;
     return predict(std::vector<Image>{image}).front();
 }
 
