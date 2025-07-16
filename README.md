@@ -67,11 +67,3 @@ This project is built on top of the excellent work by laugh12321. The ROS 2 adap
 
 📃 License
 This repository inherits the license from the original project. See the corresponding LICENSE file or refer to the license used in the source repository.
-
-yaml
-Copy
-Edit
-
----
-
-Let me know if you want the launch file and node skeleton too (`yolo_node.cpp`, `launch.py`, etc.), so you have the base of the ROS 2 package ready to go.
