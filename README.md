@@ -11,59 +11,132 @@ The original code was adapted to work as a ROS 2 node, allowing easy integration
 
 ## ⚙️ Functionality
 
-This package includes:
+This repository implements a modular architecture for instance segmentation in ROS2, using Basler cameras (Pylon), TensorRT-accelerated inference nodes, and a metrics/logging node.
 
-- 📥 Subscription to image streams (`sensor_msgs/msg/Image`)
-- 🧠 Inference using TensorRT-optimized YOLOv11
-- 📤 Publication of detections as `vision_msgs/msg/Detection2DArray`
-- 🧪 Optional debug visualization via RViz or image topics
+## General Architecture
 
-## 🧱 Project Structure
+The system is composed of the following main nodes:
 
-yolo11_ros2/
-├── launch/
-│ └── yolo_inference.launch.py
-├── config/
-│ └── params.yaml
-├── src/
-│ └── yolo_node.cpp
-├── models/
-│ └── <TensorRT optimized models>
-├── CMakeLists.txt
-├── package.xml
-└── README.md
+1. **Camera Node (`PylonCameraNode`)**
+   - Captures real-time images from Basler cameras using the Pylon SDK.
+   - Publishes images to ROS2 topics (e.g., `/camera_front_left/image_raw`, `/camera_front/image_raw`, `/camera_front_right/image_raw`).
+   - Includes calibration and time synchronization information.
 
-bash
-Copy
-Edit
+2. **Segmentation Nodes (`segment_node_3P`)**
+   - One node per camera (e.g., `yolo_segment_node_left`, `yolo_segment_node_front`, `yolo_segment_node_right`).
+   - Each node subscribes to its corresponding camera image topic.
+   - Performs instance segmentation inference using TensorRT and a YOLO model.
+   - Publishes results using the custom `InstanceSegmentationInfo` message to topics like `/segmentation/left/instance_info`.
+   - Optionally, can save inference videos/masks and display real-time results.
 
-## 🚀 Usage
+3. **Subscriber & Metrics Node (`seg_sub`)**
+   - Subscribes to the segmentation result topics from all three cameras.
+   - Reconstructs instance masks from the received flat array.
+   - Calculates latency metrics, packet loss, and camera synchronization.
+   - Can save stitched videos and CSV logs with detailed statistics.
 
-1. **Clone the repository into your ROS 2 workspace**
+   ## Workspace Architecture Overview
 
-   ```bash
-   cd ~/ros2_ws/src
-   git clone https://github.com/your_username/yolo11_ros2.git
-   cd ..
-   colcon build
-Launch the YOLOv11 node
+Below is a diagram of the main packages and their interactions in this workspace:
 
-bash
-Copy
-Edit
-source install/setup.bash
-ros2 launch yolo11_ros2 yolo_inference.launch.py
-Relevant Topics
+```
++---------------------+         +--------------------------+         +-------------------+
+| pylon_instant_camera|         |   TensorRT-YOLO          |         |      seg_sub      |
+|  (camera drivers)   +-------->+  (segment_node_3P x3)    +-------->+ (metrics/logging) |
++---------------------+  image  +--------------------------+ result  +-------------------+
+         |                             |      InstanceSegmentationInfo msg      ^
+         |                             |                                        |
+         |                             v                                        |
+         |                    yolo_custom_interfaces (msg definitions)          |
+         +---------------------------------------------------------------------+
+```
 
-/image_raw → Input image stream
+### Relevant Packages
 
-/detections → Output 2D object detections
+- **pylon_instant_camera-ros2/**  
+  ROS2 node for Basler camera acquisition and publishing.
 
-📂 Model Requirements
-You will need a TensorRT-optimized YOLOv11 model (.engine file). You can generate one by following the instructions in the original repository, or use a precompiled one if available.
+- **TensorRT-YOLO/**  
+  Contains `segment_node_3P` nodes for each camera. Runs YOLO instance segmentation accelerated with TensorRT.
 
-🧾 Credits
-This project is built on top of the excellent work by laugh12321. The ROS 2 adaptation was developed independently to facilitate YOLOv11 deployment in ROS 2 Humble-based environments.
+- **yolo_custom_interfaces/**  
+  Defines the custom ROS2 message `InstanceSegmentationInfo` used for segmentation results.
 
-📃 License
-This repository inherits the license from the original project. See the corresponding LICENSE file or refer to the license used in the source repository.
+- **seg_sub/**  
+  Subscribes to segmentation results, reconstructs masks, computes metrics, and logs data.
+
+- **image_directory_publisher/**  
+  (Optional) Publishes images from a directory for testing or simulation.
+
+---
+
+## Custom Message: InstanceSegmentationInfo
+
+The custom message used to communicate segmentation results is:
+
+```plaintext
+std_msgs/Header header
+uint16 mask_width
+uint16 mask_height
+uint8[] mask_data
+float32[] scores
+uint8[] classes
+builtin_interfaces/Time image_source_monotonic_capture_time
+builtin_interfaces/Time processing_node_monotonic_entry_time
+builtin_interfaces/Time processing_node_inference_start_time
+builtin_interfaces/Time processing_node_inference_end_time
+builtin_interfaces/Time processing_node_monotonic_publish_time
+uint64 packet_sequence_number
+```
+
+- **mask_data**: Flat uint8 array, each element represents the instance ID of a pixel.
+- **mask_width, mask_height**: Mask dimensions.
+- **scores**: Confidence for each detected instance (`float32`, enough for 3 decimal places).
+- **classes**: Class ID for each instance (`uint8`, up to 255 classes).
+- **Timestamps**: Allow detailed latency and synchronization analysis.
+- **packet_sequence_number**: For packet loss detection.
+
+## Data Flow and Communication
+
+1. **Image Capture**
+   - The camera node publishes raw images to its topic.
+
+2. **Inference and Publishing**
+   - Each segmentation node receives images, runs inference, and generates:
+     - An instance mask (flat array).
+     - Lists of scores and classes.
+     - Processing timestamps.
+   - Publishes an `InstanceSegmentationInfo` message to its output topic.
+
+3. **Subscription and Analysis**
+   - The `seg_sub` node subscribes to all three result topics.
+   - Reconstructs the mask using the `arrayToMat` function, colors the instances, and can stitch images from all cameras.
+   - Calculates latency metrics (per stage and end-to-end), inter-camera spread, and packet loss.
+   - Saves logs and videos for further analysis.
+
+## Architecture Advantages
+
+- **Scalability:** Easily add more cameras.
+- **Synchronization:** Monotonic timestamps allow detailed latency and synchronization analysis.
+- **Flexibility:** The custom message transports all relevant information for analysis and visualization.
+- **Efficiency:** Flat arrays for masks reduce serialization/deserialization overhead.
+
+## Requirements
+
+- ROS2 Humble or newer
+- OpenCV
+- TensorRT (for inference nodes)
+- Pylon SDK (for Basler cameras)
+
+## Running
+
+1. Launch the camera nodes.
+2. Launch the segmentation nodes for each camera.
+3. Launch the `seg_sub` node for analysis and logging.
+
+See launch files and example scripts for configuration details.
+
+---
+
+**Contact:**  
+For questions or suggestions, open an issue or contact the repository maintainer.
