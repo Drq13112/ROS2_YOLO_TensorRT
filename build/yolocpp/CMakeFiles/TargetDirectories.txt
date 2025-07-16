@@ -1,0 +1,10 @@
+/home/david/yolocpp_ws/build/yolocpp/CMakeFiles/uninstall.dir
+/home/david/yolocpp_ws/build/yolocpp/CMakeFiles/yolocpp_uninstall.dir
+/home/david/yolocpp_ws/build/yolocpp/CMakeFiles/yolocpp.dir
+/home/david/yolocpp_ws/build/yolocpp/CMakeFiles/test.dir
+/home/david/yolocpp_ws/build/yolocpp/CMakeFiles/edit_cache.dir
+/home/david/yolocpp_ws/build/yolocpp/CMakeFiles/rebuild_cache.dir
+/home/david/yolocpp_ws/build/yolocpp/CMakeFiles/list_install_components.dir
+/home/david/yolocpp_ws/build/yolocpp/CMakeFiles/install.dir
+/home/david/yolocpp_ws/build/yolocpp/CMakeFiles/install/local.dir
+/home/david/yolocpp_ws/build/yolocpp/CMakeFiles/install/strip.dir

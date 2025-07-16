@@ -1,0 +1,25 @@
+[0.011s] Invoking command in '/home/david/yolocpp_ws/build/pylon_instant_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake --build /home/david/yolocpp_ws/build/pylon_instant_camera -- -j32 -l32
+[0.054s] [ 50%] Built target node
+[0.056s] [100%] Built target PylonCameraNode
+[0.070s] Invoked command in '/home/david/yolocpp_ws/build/pylon_instant_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake --build /home/david/yolocpp_ws/build/pylon_instant_camera -- -j32 -l32
+[0.071s] Invoking command in '/home/david/yolocpp_ws/build/pylon_instant_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake --install /home/david/yolocpp_ws/build/pylon_instant_camera
+[0.077s] -- Install configuration: ""
+[0.079s] -- Up-to-date: /home/david/yolocpp_ws/install/pylon_instant_camera/lib/pylon_instant_camera/node
+[0.079s] -- Up-to-date: /home/david/yolocpp_ws/install/pylon_instant_camera/lib/libPylonCameraNode.so
+[0.079s] -- Up-to-date: /home/david/yolocpp_ws/install/pylon_instant_camera/share/ament_index/resource_index/package_run_dependencies/pylon_instant_camera
+[0.079s] -- Up-to-date: /home/david/yolocpp_ws/install/pylon_instant_camera/share/ament_index/resource_index/parent_prefix_path/pylon_instant_camera
+[0.079s] -- Up-to-date: /home/david/yolocpp_ws/install/pylon_instant_camera/share/pylon_instant_camera/environment/ament_prefix_path.sh
+[0.079s] -- Up-to-date: /home/david/yolocpp_ws/install/pylon_instant_camera/share/pylon_instant_camera/environment/ament_prefix_path.dsv
+[0.079s] -- Up-to-date: /home/david/yolocpp_ws/install/pylon_instant_camera/share/pylon_instant_camera/environment/path.sh
+[0.079s] -- Up-to-date: /home/david/yolocpp_ws/install/pylon_instant_camera/share/pylon_instant_camera/environment/path.dsv
+[0.079s] -- Up-to-date: /home/david/yolocpp_ws/install/pylon_instant_camera/share/pylon_instant_camera/local_setup.bash
+[0.079s] -- Up-to-date: /home/david/yolocpp_ws/install/pylon_instant_camera/share/pylon_instant_camera/local_setup.sh
+[0.079s] -- Up-to-date: /home/david/yolocpp_ws/install/pylon_instant_camera/share/pylon_instant_camera/local_setup.zsh
+[0.079s] -- Up-to-date: /home/david/yolocpp_ws/install/pylon_instant_camera/share/pylon_instant_camera/local_setup.dsv
+[0.079s] -- Installing: /home/david/yolocpp_ws/install/pylon_instant_camera/share/pylon_instant_camera/package.dsv
+[0.079s] -- Up-to-date: /home/david/yolocpp_ws/install/pylon_instant_camera/share/ament_index/resource_index/packages/pylon_instant_camera
+[0.079s] -- Up-to-date: /home/david/yolocpp_ws/install/pylon_instant_camera/share/ament_index/resource_index/rclcpp_components/pylon_instant_camera
+[0.079s] -- Up-to-date: /home/david/yolocpp_ws/install/pylon_instant_camera/share/pylon_instant_camera/cmake/pylon_instant_cameraConfig.cmake
+[0.079s] -- Up-to-date: /home/david/yolocpp_ws/install/pylon_instant_camera/share/pylon_instant_camera/cmake/pylon_instant_cameraConfig-version.cmake
+[0.079s] -- Up-to-date: /home/david/yolocpp_ws/install/pylon_instant_camera/share/pylon_instant_camera/package.xml
+[0.091s] Invoked command in '/home/david/yolocpp_ws/build/pylon_instant_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake --install /home/david/yolocpp_ws/build/pylon_instant_camera

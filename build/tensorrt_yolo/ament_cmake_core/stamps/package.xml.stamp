@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>tensorrt_yolo</name>
+  <version>0.0.0</version>
+  <description>ROS 2 package for TensorRT YOLO segmentation inference</description>
+  <maintainer email="davidredquin@gmail.com">david</maintainer>
+  <license>TODO: License declaration</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <build_depend>rosidl_default_generators</build_depend>
+  <exec_depend>rosidl_default_runtime</exec_depend>
+  <member_of_group>rosidl_interface_packages</member_of_group>
+
+  <depend>std_msgs</depend>
+  <depend>sensor_msgs</depend>
+  <depend>rclcpp</depend>
+  <depend>opencv</depend>
+  <depend>cuda</depend>
+  <depend>libnvinfer-dev</depend>
+  <depend>libnvinfer-plugin-dev</depend>
+  <depend>libnvonnxparser-dev</depend>
+  <depend>cv_bridge</depend>
+  <depend>yolo_custom_interfaces</depend>
+  <depend>image_transport</depend>
+  <exec_depend>image_transport_plugins</exec_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

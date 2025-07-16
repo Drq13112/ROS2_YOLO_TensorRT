@@ -1,0 +1,497 @@
+In file included from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.hpp:19[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:15[m[K:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::DeviceBuffer::DeviceBuffer()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:103:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::DeviceBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  103 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:102:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::DeviceBuffer::device_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  102 |     void*  [01;35m[Kdevice_[m[K;  // < 设备内存指针
+      |            [01;35m[K^~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:86:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+   86 |     [01;35m[KDeviceBuffer[m[K() : size_(0), device_(nullptr) {}
+      |     [01;35m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::DiscreteBuffer::DiscreteBuffer()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:130:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::DiscreteBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  130 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:128:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::DiscreteBuffer::host_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  128 |     void*  [01;35m[Khost_[m[K;    // < 主机内存指针
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:112:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  112 |     [01;35m[KDiscreteBuffer[m[K() : size_(0), host_(nullptr), device_(nullptr) {}
+      |     [01;35m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::UnifiedBuffer::UnifiedBuffer()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:157:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::UnifiedBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  157 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:155:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::UnifiedBuffer::host_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  155 |     void*  [01;35m[Khost_[m[K;    // < 主机内存指针
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:139:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  139 |     [01;35m[KUnifiedBuffer[m[K() : size_(0), host_(nullptr), device_(nullptr) {}
+      |     [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::MappedBuffer::MappedBuffer()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:184:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::MappedBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  184 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:182:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::MappedBuffer::host_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  182 |     void*  [01;35m[Khost_[m[K;    // < 主机内存指针
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:166:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  166 |     [01;35m[KMappedBuffer[m[K() : size_(0), host_(nullptr), device_(nullptr) {}
+      |     [01;35m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::TensorInfo::TensorInfo(std::string, const Dims&, nvinfer1::DataType, bool, deploy::BufferType)[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:224:33:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::TensorInfo::shape[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  224 |     nvinfer1::Dims              [01;35m[Kshape[m[K;   // < 张量形状
+      |                                 [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:219:24:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Knvinfer1::DataType deploy::TensorInfo::dtype_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  219 |     nvinfer1::DataType [01;35m[Kdtype_[m[K;           // < 张量数据类型
+      |                        [01;35m[K^~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:236:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  236 |     [01;35m[KTensorInfo[m[K(const std::string name, const nvinfer1::Dims& shape, const nvinfer1::DataType dtype, const bool input, BufferType buffer_type)
+      |     [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:[m[K In member function ‘[01m[Kvoid deploy::TrtBackend::staticInfer(const std::vector<deploy::Image>&)[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:228:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Klong unsigned int[m[K’ and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  228 |     if (num < 1 || [01;35m[Knum > max_shape.x[m[K) {
+      |                    [01;35m[K~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:234:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  234 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:253:36:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  253 |             for (auto idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                                [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:263:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  263 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:273:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  273 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:286:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  286 |         for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                           [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:314:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  314 |     for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                       [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:[m[K In member function ‘[01m[Kvoid deploy::TrtBackend::dynamicInfer(const std::vector<deploy::Image>&)[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:329:13:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Klong unsigned int[m[K’ and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  329 |     if ([01;35m[Knum < min_shape.x[m[K || num > max_shape.x) {
+      |         [01;35m[K~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:329:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Klong unsigned int[m[K’ and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  329 |     if (num < min_shape.x || [01;35m[Knum > max_shape.x[m[K) {
+      |                              [01;35m[K~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:346:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  346 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:352:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  352 |         for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                           [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:369:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  369 |         for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                           [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:383:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  383 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:393:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  393 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:408:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  408 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:[m[K In member function ‘[01m[Kvoid deploy::TrtBackend::staticInfer_async(const std::vector<deploy::Image>&)[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:454:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Klong unsigned int[m[K’ and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  454 |     if (num < 1 || [01;35m[Knum > max_shape.x[m[K) {
+      |                    [01;35m[K~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:461:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  461 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:487:36:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  487 |             for (auto idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                                [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:507:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  507 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:517:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  517 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:538:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  538 |         for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                           [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:567:48:[m[K [01;31m[Kerror: [m[Kno match for ‘[01m[Koperator<<[m[K’ (operand types are ‘[01m[Kstd::basic_ostream<char>[m[K’ and ‘[01m[Kfloat3[m[K’)
+  560 |             [32m[Kstd::cout << "[DEBUG] staticInfer: kernelParams for idx=" << idx[m[K
+      |             [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  561 | [32m[K                      << ", input_ptr=" << (option.cuda_mem ? inputs[idx].ptr : input_ptr)[m[K
+      |                       [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  562 | [32m[K                      << ", width=" << inputs[idx].width[m[K
+      |                       [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  563 | [32m[K                      << ", height=" << inputs[idx].height[m[K
+      |                       [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  564 | [32m[K                      << ", infer_device_ptr=" << infer_device_ptr[m[K
+      |                       [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  565 | [32m[K                      << ", max_shape.w=" << max_shape.w[m[K
+      |                       [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  566 | [32m[K                      << ", max_shape.z=" << max_shape.z[m[K
+      |                       [32m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  567 | [32m[K                      << ", affine_matrix[0]="[m[K [01;31m[K<<[m[K [34m[Kaffine_transforms[idx].matrix[0][m[K
+      |                       [32m[K~~~~~~~~~~~~~~~~~~~~~~~~[m[K [01;31m[K^~[m[K [34m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                       [32m[K|[m[K                                                          [34m[K|[m[K
+      |                       [32m[Kstd::basic_ostream<char>[m[K                                   [34m[Kfloat3[m[K
+In file included from [01m[K/usr/include/c++/11/iostream:39[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/macro.hpp:15[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/core.hpp:20[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:14[m[K:
+[01m[K/usr/include/c++/11/ostream:108:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ostream_type& (*)(std::basic_ostream<_CharT, _Traits>::__ostream_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+  108 |       [01;36m[Koperator[m[K<<(__ostream_type& (*__pf)(__ostream_type&))
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:108:36:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kfloat3[m[K’ to ‘[01m[Kstd::basic_ostream<char>::__ostream_type& (*)(std::basic_ostream<char>::__ostream_type&)[m[K’ {aka ‘[01m[Kstd::basic_ostream<char>& (*)(std::basic_ostream<char>&)[m[K’}
+  108 |       operator<<([01;36m[K__ostream_type& (*__pf)(__ostream_type&)[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:117:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__ios_type& (*)(std::basic_ostream<_CharT, _Traits>::__ios_type&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::basic_ostream<_CharT, _Traits>::__ios_type = std::basic_ios<char>][m[K’
+  117 |       [01;36m[Koperator[m[K<<(__ios_type& (*__pf)(__ios_type&))
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:117:32:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kfloat3[m[K’ to ‘[01m[Kstd::basic_ostream<char>::__ios_type& (*)(std::basic_ostream<char>::__ios_type&)[m[K’ {aka ‘[01m[Kstd::basic_ios<char>& (*)(std::basic_ios<char>&)[m[K’}
+  117 |       operator<<([01;36m[K__ios_type& (*__pf)(__ios_type&)[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:127:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::ios_base& (*)(std::ios_base&)) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+  127 |       [01;36m[Koperator[m[K<<(ios_base& (*__pf) (ios_base&))
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:127:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kfloat3[m[K’ to ‘[01m[Kstd::ios_base& (*)(std::ios_base&)[m[K’
+  127 |       operator<<([01;36m[Kios_base& (*__pf) (ios_base&)[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~^~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:166:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+  166 |       [01;36m[Koperator[m[K<<(long __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:166:23:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kfloat3[m[K’ to ‘[01m[Klong int[m[K’
+  166 |       operator<<([01;36m[Klong __n[m[K)
+      |                  [01;36m[K~~~~~^~~[m[K
+[01m[K/usr/include/c++/11/ostream:170:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+  170 |       [01;36m[Koperator[m[K<<(unsigned long __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:170:32:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kfloat3[m[K’ to ‘[01m[Klong unsigned int[m[K’
+  170 |       operator<<([01;36m[Kunsigned long __n[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/11/ostream:174:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(bool) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+  174 |       [01;36m[Koperator[m[K<<(bool __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:174:23:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kfloat3[m[K’ to ‘[01m[Kbool[m[K’
+  174 |       operator<<([01;36m[Kbool __n[m[K)
+      |                  [01;36m[K~~~~~^~~[m[K
+In file included from [01m[K/usr/include/c++/11/ostream:829[m[K,
+                 from [01m[K/usr/include/c++/11/iostream:39[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/macro.hpp:15[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/core.hpp:20[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:14[m[K:
+[01m[K/usr/include/c++/11/bits/ostream.tcc:91:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_Ch, _Tr>& std::basic_ostream<_CharT, _Traits>::operator<<(short int) [with _CharT = char; _Traits = std::char_traits<char>][m[K’
+   91 |     [01;36m[Kbasic_ostream<_CharT, _Traits>[m[K::
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/ostream.tcc:92:22:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kfloat3[m[K’ to ‘[01m[Kshort int[m[K’
+   92 |     operator<<([01;36m[Kshort __n[m[K)
+      |                [01;36m[K~~~~~~^~~[m[K
+In file included from [01m[K/usr/include/c++/11/iostream:39[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/macro.hpp:15[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/core.hpp:20[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:14[m[K:
+[01m[K/usr/include/c++/11/ostream:181:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(short unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+  181 |       [01;36m[Koperator[m[K<<(unsigned short __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:181:33:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kfloat3[m[K’ to ‘[01m[Kshort unsigned int[m[K’
+  181 |       operator<<([01;36m[Kunsigned short __n[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~~~~^~~[m[K
+In file included from [01m[K/usr/include/c++/11/ostream:829[m[K,
+                 from [01m[K/usr/include/c++/11/iostream:39[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/macro.hpp:15[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/core.hpp:20[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:14[m[K:
+[01m[K/usr/include/c++/11/bits/ostream.tcc:105:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_Ch, _Tr>& std::basic_ostream<_CharT, _Traits>::operator<<(int) [with _CharT = char; _Traits = std::char_traits<char>][m[K’
+  105 |     [01;36m[Kbasic_ostream<_CharT, _Traits>[m[K::
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/ostream.tcc:106:20:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kfloat3[m[K’ to ‘[01m[Kint[m[K’
+  106 |     operator<<([01;36m[Kint __n[m[K)
+      |                [01;36m[K~~~~^~~[m[K
+In file included from [01m[K/usr/include/c++/11/iostream:39[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/macro.hpp:15[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/core.hpp:20[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:14[m[K:
+[01m[K/usr/include/c++/11/ostream:192:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+  192 |       [01;36m[Koperator[m[K<<(unsigned int __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:192:31:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kfloat3[m[K’ to ‘[01m[Kunsigned int[m[K’
+  192 |       operator<<([01;36m[Kunsigned int __n[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/11/ostream:201:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+  201 |       [01;36m[Koperator[m[K<<(long long __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:201:28:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kfloat3[m[K’ to ‘[01m[Klong long int[m[K’
+  201 |       operator<<([01;36m[Klong long __n[m[K)
+      |                  [01;36m[K~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/11/ostream:205:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long long unsigned int) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+  205 |       [01;36m[Koperator[m[K<<(unsigned long long __n)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:205:37:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kfloat3[m[K’ to ‘[01m[Klong long unsigned int[m[K’
+  205 |       operator<<([01;36m[Kunsigned long long __n[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/11/ostream:220:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+  220 |       [01;36m[Koperator[m[K<<(double __f)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:220:25:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kfloat3[m[K’ to ‘[01m[Kdouble[m[K’
+  220 |       operator<<([01;36m[Kdouble __f[m[K)
+      |                  [01;36m[K~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/11/ostream:224:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(float) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+  224 |       [01;36m[Koperator[m[K<<(float __f)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:224:24:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kfloat3[m[K’ to ‘[01m[Kfloat[m[K’
+  224 |       operator<<([01;36m[Kfloat __f[m[K)
+      |                  [01;36m[K~~~~~~^~~[m[K
+[01m[K/usr/include/c++/11/ostream:232:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(long double) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+  232 |       [01;36m[Koperator[m[K<<(long double __f)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:232:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kfloat3[m[K’ to ‘[01m[Klong double[m[K’
+  232 |       operator<<([01;36m[Klong double __f[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/11/ostream:245:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(const void*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>][m[K’
+  245 |       [01;36m[Koperator[m[K<<(const void* __p)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:245:30:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kfloat3[m[K’ to ‘[01m[Kconst void*[m[K’
+  245 |       operator<<([01;36m[Kconst void* __p[m[K)
+      |                  [01;36m[K~~~~~~~~~~~~^~~[m[K
+[01m[K/usr/include/c++/11/ostream:250:7:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_CharT, _Traits>::__ostream_type& std::basic_ostream<_CharT, _Traits>::operator<<(std::nullptr_t) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__ostream_type = std::basic_ostream<char>; std::nullptr_t = std::nullptr_t][m[K’
+  250 |       [01;36m[Koperator[m[K<<(nullptr_t)
+      |       [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:250:18:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kfloat3[m[K’ to ‘[01m[Kstd::nullptr_t[m[K’
+  250 |       operator<<([01;36m[Knullptr_t[m[K)
+      |                  [01;36m[K^~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/ostream:829[m[K,
+                 from [01m[K/usr/include/c++/11/iostream:39[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/macro.hpp:15[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/core.hpp:20[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:14[m[K:
+[01m[K/usr/include/c++/11/bits/ostream.tcc:119:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Kstd::basic_ostream<_Ch, _Tr>& std::basic_ostream<_CharT, _Traits>::operator<<(std::basic_ostream<_CharT, _Traits>::__streambuf_type*) [with _CharT = char; _Traits = std::char_traits<char>; std::basic_ostream<_CharT, _Traits>::__streambuf_type = std::basic_streambuf<char>][m[K’
+  119 |     [01;36m[Kbasic_ostream<_CharT, _Traits>[m[K::
+      |     [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/ostream.tcc:120:34:[m[K [01;36m[Knote: [m[K  no known conversion for argument 1 from ‘[01m[Kfloat3[m[K’ to ‘[01m[Kstd::basic_ostream<char>::__streambuf_type*[m[K’ {aka ‘[01m[Kstd::basic_streambuf<char>*[m[K’}
+  120 |     operator<<([01;36m[K__streambuf_type* __sbin[m[K)
+      |                [01;36m[K~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+In file included from [01m[K/usr/include/x86_64-linux-gnu/NvInferRuntimeBase.h:22[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/NvInferLegacyDims.h:22[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/NvInfer.h:21[m[K,
+                 from [01m[K/usr/include/x86_64-linux-gnu/NvInferPlugin.h:21[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/core.hpp:13[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:14[m[K:
+[01m[K/usr/include/c++/11/cstddef:126:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _IntegerType> constexpr std::__byte_op_t<_IntegerType> std::operator<<(std::byte, _IntegerType)[m[K’
+  126 |     [01;36m[Koperator[m[K<<(byte __b, _IntegerType __shift) noexcept
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/cstddef:126:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:567:23:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[Kstd::operator<< <std::char_traits<char> >((* &(& std::operator<< <std::char_traits<char> >((* &(& std::operator<< <std::char_traits<char> >((* &(& std::operator<< <std::char_traits<char> >((* &(& std::operator<< <std::char_traits<char> >((* &(& std::operator<< <std::char_traits<char> >((* &(& std::operator<< <std::char_traits<char> >((* &(& std::operator<< <std::char_traits<char> >(std::cout, ((const char*)"[DEBUG] staticInfer: kernelParams for idx=")))->std::basic_ostream<char>::operator<<(idx)), ((const char*)", input_ptr=")))->std::basic_ostream<char>::operator<<(((const void*)(((deploy::TrtBackend*)this)->deploy::TrtBackend::option.deploy::InferOption::cuda_mem ? ((void*)(& inputs)->std::vector<deploy::Image>::operator[](((std::vector<deploy::Image>::size_type)idx)).deploy::Image::ptr) : ((void*)input_ptr))))), ((const char*)", width=")))->std::basic_ostream<char>::operator<<(((int)(& inputs)->std::vector<deploy::Image>::operator[](((std::vector<deploy::Image>::size_type)idx)).deploy::Image::width))), ((const char*)", height=")))->std::basic_ostream<char>::operator<<(((int)(& inputs)->std::vector<deploy::Image>::operator[](((std::vector<deploy::Image>::size_type)idx)).deploy::Image::height))), ((const char*)", infer_device_ptr=")))->std::basic_ostream<char>::operator<<(((const void*)((void*)infer_device_ptr)))), ((const char*)", max_shape.w=")))->std::basic_ostream<char>::operator<<(((deploy::TrtBackend*)this)->deploy::TrtBackend::max_shape.int4::w)), ((const char*)", max_shape.z=")))->std::basic_ostream<char>::operator<<(((deploy::TrtBackend*)this)->deploy::TrtBackend::max_shape.int4::z)), ((const char*)", affine_matrix[0]="))[m[K’ (type ‘[01m[Kstd::basic_ostream<char>[m[K’) to type ‘[01m[Kstd::byte[m[K’
+  560 |             [01;36m[Kstd::cout << "[DEBUG] staticInfer: kernelParams for idx=" << idx[m[K
+      |             [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  561 | [01;36m[K                      << ", input_ptr=" << (option.cuda_mem ? inputs[idx].ptr : input_ptr)[m[K
+      |                       [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  562 | [01;36m[K                      << ", width=" << inputs[idx].width[m[K
+      |                       [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  563 | [01;36m[K                      << ", height=" << inputs[idx].height[m[K
+      |                       [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  564 | [01;36m[K                      << ", infer_device_ptr=" << infer_device_ptr[m[K
+      |                       [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  565 | [01;36m[K                      << ", max_shape.w=" << max_shape.w[m[K
+      |                       [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  566 | [01;36m[K                      << ", max_shape.z=" << max_shape.z[m[K
+      |                       [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+  567 | [01;36m[K                      << ", affine_matrix[0]="[m[K << affine_transforms[idx].matrix[0]
+      |                       [01;36m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/usr/include/c++/11/memory:77[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/core.hpp:17[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:14[m[K:
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:70:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Ch, class _Tr, class _Tp, __gnu_cxx::_Lock_policy _Lp> std::basic_ostream<_Ch, _Tr>& std::operator<<(std::basic_ostream<_Ch, _Tr>&, const std::__shared_ptr<_Tp, _Lp>&)[m[K’
+   70 |     [01;36m[Koperator[m[K<<(std::basic_ostream<_Ch, _Tr>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/shared_ptr.h:70:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:567:82:[m[K [01;36m[Knote: [m[K  ‘[01m[Kfloat3[m[K’ is not derived from ‘[01m[Kconst std::__shared_ptr<_Tp, _Lp>[m[K’
+  567 |                       << ", affine_matrix[0]=" << affine_transforms[idx].matrix[0[01;36m[K][m[K
+      |                                                                                  [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/11/bits/basic_string.h:48[m[K,
+                 from [01m[K/usr/include/c++/11/string:55[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/core.hpp:18[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:14[m[K:
+[01m[K/usr/include/c++/11/string_view:667:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_Ch, _Tr>& std::operator<<(std::basic_ostream<_Ch, _Tr>&, std::basic_string_view<_CharT, _Traits>)[m[K’
+  667 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/string_view:667:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:567:82:[m[K [01;36m[Knote: [m[K  ‘[01m[Kfloat3[m[K’ is not derived from ‘[01m[Kstd::basic_string_view<_CharT, _Traits>[m[K’
+  567 |                       << ", affine_matrix[0]=" << affine_transforms[idx].matrix[0[01;36m[K][m[K
+      |                                                                                  [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/11/string:55[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/core.hpp:18[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:14[m[K:
+[01m[K/usr/include/c++/11/bits/basic_string.h:6531:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits, class _Alloc> std::basic_ostream<_Ch, _Tr>& std::operator<<(std::basic_ostream<_Ch, _Tr>&, const std::__cxx11::basic_string<_CharT, _Traits, _Allocator>&)[m[K’
+ 6531 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os,
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/basic_string.h:6531:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:567:82:[m[K [01;36m[Knote: [m[K  ‘[01m[Kfloat3[m[K’ is not derived from ‘[01m[Kconst std::__cxx11::basic_string<_CharT, _Traits, _Allocator>[m[K’
+  567 |                       << ", affine_matrix[0]=" << affine_transforms[idx].matrix[0[01;36m[K][m[K
+      |                                                                                  [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/11/bits/ios_base.h:46[m[K,
+                 from [01m[K/usr/include/c++/11/ios:42[m[K,
+                 from [01m[K/usr/include/c++/11/ostream:38[m[K,
+                 from [01m[K/usr/include/c++/11/iostream:39[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/macro.hpp:15[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/core.hpp:20[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:14[m[K:
+[01m[K/usr/include/c++/11/system_error:279:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_Ch, _Tr>& std::operator<<(std::basic_ostream<_Ch, _Tr>&, const std::error_code&)[m[K’
+  279 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __os, const error_code& __e)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/system_error:279:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:567:82:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((deploy::TrtBackend*)this)->deploy::TrtBackend::affine_transforms.std::vector<deploy::AffineTransform>::operator[](((std::vector<deploy::AffineTransform>::size_type)idx)).deploy::AffineTransform::matrix[0][m[K’ (type ‘[01m[Kfloat3[m[K’) to type ‘[01m[Kconst std::error_code&[m[K’
+  567 |                       << ", affine_matrix[0]=" << [01;36m[Kaffine_transforms[idx].matrix[0][m[K
+      |                                                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/c++/11/iostream:39[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/macro.hpp:15[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/core.hpp:20[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:14[m[K:
+[01m[K/usr/include/c++/11/ostream:513:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_Ch, _Tr>& std::operator<<(std::basic_ostream<_Ch, _Tr>&, _CharT)[m[K’
+  513 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, _CharT __c)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:513:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:567:82:[m[K [01;36m[Knote: [m[K  deduced conflicting types for parameter ‘[01m[K_CharT[m[K’ (‘[01m[Kchar[m[K’ and ‘[01m[Kfloat3[m[K’)
+  567 |                       << ", affine_matrix[0]=" << affine_transforms[idx].matrix[0[01;36m[K][m[K
+      |                                                                                  [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/11/iostream:39[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/macro.hpp:15[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/core.hpp:20[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:14[m[K:
+[01m[K/usr/include/c++/11/ostream:518:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_Ch, _Tr>& std::operator<<(std::basic_ostream<_Ch, _Tr>&, char)[m[K’
+  518 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, char __c)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:518:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:567:82:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((deploy::TrtBackend*)this)->deploy::TrtBackend::affine_transforms.std::vector<deploy::AffineTransform>::operator[](((std::vector<deploy::AffineTransform>::size_type)idx)).deploy::AffineTransform::matrix[0][m[K’ (type ‘[01m[Kfloat3[m[K’) to type ‘[01m[Kchar[m[K’
+  567 |                       << ", affine_matrix[0]=" << [01;36m[Kaffine_transforms[idx].matrix[0][m[K
+      |                                                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/c++/11/iostream:39[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/macro.hpp:15[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/core.hpp:20[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:14[m[K:
+[01m[K/usr/include/c++/11/ostream:524:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, char)[m[K’
+  524 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, char __c)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:524:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:567:82:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((deploy::TrtBackend*)this)->deploy::TrtBackend::affine_transforms.std::vector<deploy::AffineTransform>::operator[](((std::vector<deploy::AffineTransform>::size_type)idx)).deploy::AffineTransform::matrix[0][m[K’ (type ‘[01m[Kfloat3[m[K’) to type ‘[01m[Kchar[m[K’
+  567 |                       << ", affine_matrix[0]=" << [01;36m[Kaffine_transforms[idx].matrix[0][m[K
+      |                                                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/c++/11/iostream:39[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/macro.hpp:15[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/core.hpp:20[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:14[m[K:
+[01m[K/usr/include/c++/11/ostream:530:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, signed char)[m[K’
+  530 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, signed char __c)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:530:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:567:82:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((deploy::TrtBackend*)this)->deploy::TrtBackend::affine_transforms.std::vector<deploy::AffineTransform>::operator[](((std::vector<deploy::AffineTransform>::size_type)idx)).deploy::AffineTransform::matrix[0][m[K’ (type ‘[01m[Kfloat3[m[K’) to type ‘[01m[Ksigned char[m[K’
+  567 |                       << ", affine_matrix[0]=" << [01;36m[Kaffine_transforms[idx].matrix[0][m[K
+      |                                                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/c++/11/iostream:39[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/macro.hpp:15[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/core.hpp:20[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:14[m[K:
+[01m[K/usr/include/c++/11/ostream:535:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, unsigned char)[m[K’
+  535 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, unsigned char __c)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:535:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:567:82:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((deploy::TrtBackend*)this)->deploy::TrtBackend::affine_transforms.std::vector<deploy::AffineTransform>::operator[](((std::vector<deploy::AffineTransform>::size_type)idx)).deploy::AffineTransform::matrix[0][m[K’ (type ‘[01m[Kfloat3[m[K’) to type ‘[01m[Kunsigned char[m[K’
+  567 |                       << ", affine_matrix[0]=" << [01;36m[Kaffine_transforms[idx].matrix[0][m[K
+      |                                                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/c++/11/iostream:39[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/macro.hpp:15[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/core.hpp:20[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:14[m[K:
+[01m[K/usr/include/c++/11/ostream:594:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_Ch, _Tr>& std::operator<<(std::basic_ostream<_Ch, _Tr>&, const _CharT*)[m[K’
+  594 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, const _CharT* __s)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:594:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:567:82:[m[K [01;36m[Knote: [m[K  mismatched types ‘[01m[Kconst _CharT*[m[K’ and ‘[01m[Kfloat3[m[K’
+  567 |                       << ", affine_matrix[0]=" << affine_transforms[idx].matrix[0[01;36m[K][m[K
+      |                                                                                  [01;36m[K^[m[K
+In file included from [01m[K/usr/include/c++/11/ostream:829[m[K,
+                 from [01m[K/usr/include/c++/11/iostream:39[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/macro.hpp:15[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/core.hpp:20[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:14[m[K:
+[01m[K/usr/include/c++/11/bits/ostream.tcc:321:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _CharT, class _Traits> std::basic_ostream<_Ch, _Tr>& std::operator<<(std::basic_ostream<_Ch, _Tr>&, const char*)[m[K’
+  321 |     [01;36m[Koperator[m[K<<(basic_ostream<_CharT, _Traits>& __out, const char* __s)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/bits/ostream.tcc:321:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:567:82:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((deploy::TrtBackend*)this)->deploy::TrtBackend::affine_transforms.std::vector<deploy::AffineTransform>::operator[](((std::vector<deploy::AffineTransform>::size_type)idx)).deploy::AffineTransform::matrix[0][m[K’ (type ‘[01m[Kfloat3[m[K’) to type ‘[01m[Kconst char*[m[K’
+  567 |                       << ", affine_matrix[0]=" << [01;36m[Kaffine_transforms[idx].matrix[0][m[K
+      |                                                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/c++/11/iostream:39[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/macro.hpp:15[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/core.hpp:20[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:14[m[K:
+[01m[K/usr/include/c++/11/ostream:611:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const char*)[m[K’
+  611 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, const char* __s)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:611:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:567:82:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((deploy::TrtBackend*)this)->deploy::TrtBackend::affine_transforms.std::vector<deploy::AffineTransform>::operator[](((std::vector<deploy::AffineTransform>::size_type)idx)).deploy::AffineTransform::matrix[0][m[K’ (type ‘[01m[Kfloat3[m[K’) to type ‘[01m[Kconst char*[m[K’
+  567 |                       << ", affine_matrix[0]=" << [01;36m[Kaffine_transforms[idx].matrix[0][m[K
+      |                                                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/c++/11/iostream:39[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/macro.hpp:15[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/core.hpp:20[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:14[m[K:
+[01m[K/usr/include/c++/11/ostream:624:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const signed char*)[m[K’
+  624 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, const signed char* __s)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:624:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:567:82:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((deploy::TrtBackend*)this)->deploy::TrtBackend::affine_transforms.std::vector<deploy::AffineTransform>::operator[](((std::vector<deploy::AffineTransform>::size_type)idx)).deploy::AffineTransform::matrix[0][m[K’ (type ‘[01m[Kfloat3[m[K’) to type ‘[01m[Kconst signed char*[m[K’
+  567 |                       << ", affine_matrix[0]=" << [01;36m[Kaffine_transforms[idx].matrix[0][m[K
+      |                                                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/c++/11/iostream:39[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/macro.hpp:15[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/core.hpp:20[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:14[m[K:
+[01m[K/usr/include/c++/11/ostream:629:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Traits> std::basic_ostream<char, _Traits>& std::operator<<(std::basic_ostream<char, _Traits>&, const unsigned char*)[m[K’
+  629 |     [01;36m[Koperator[m[K<<(basic_ostream<char, _Traits>& __out, const unsigned char* __s)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:629:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:567:82:[m[K [01;36m[Knote: [m[K  cannot convert ‘[01m[K((deploy::TrtBackend*)this)->deploy::TrtBackend::affine_transforms.std::vector<deploy::AffineTransform>::operator[](((std::vector<deploy::AffineTransform>::size_type)idx)).deploy::AffineTransform::matrix[0][m[K’ (type ‘[01m[Kfloat3[m[K’) to type ‘[01m[Kconst unsigned char*[m[K’
+  567 |                       << ", affine_matrix[0]=" << [01;36m[Kaffine_transforms[idx].matrix[0][m[K
+      |                                                   [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^[m[K
+In file included from [01m[K/usr/include/c++/11/iostream:39[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/macro.hpp:15[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/core.hpp:20[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:14[m[K:
+[01m[K/usr/include/c++/11/ostream:750:5:[m[K [01;36m[Knote: [m[Kcandidate: ‘[01m[Ktemplate<class _Ostream, class _Tp> _Ostream&& std::operator<<(_Ostream&&, const _Tp&)[m[K’
+  750 |     [01;36m[Koperator[m[K<<(_Ostream&& __os, const _Tp& __x)
+      |     [01;36m[K^~~~~~~~[m[K
+[01m[K/usr/include/c++/11/ostream:750:5:[m[K [01;36m[Knote: [m[K  template argument deduction/substitution failed:
+/usr/include/c++/11/ostream: In substitution of ‘[01m[Ktemplate<class _Ostream, class _Tp> _Ostream&& std::operator<<(_Ostream&&, const _Tp&) [with _Ostream = std::basic_ostream<char>&; _Tp = float3][m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:567:82:[m[K   required from here
+[01m[K/usr/include/c++/11/ostream:750:5:[m[K [01;31m[Kerror: [m[Kno type named ‘[01m[Ktype[m[K’ in ‘[01m[Kstruct std::enable_if<false, void>[m[K’
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:590:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  590 |     for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                       [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:[m[K In member function ‘[01m[Kvoid deploy::TrtBackend::dynamicInfer_async(const std::vector<deploy::Image>&)[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:604:13:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Klong unsigned int[m[K’ and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  604 |     if ([01;35m[Knum < min_shape.x[m[K || num > max_shape.x) {
+      |         [01;35m[K~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:604:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Klong unsigned int[m[K’ and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  604 |     if (num < min_shape.x || [01;35m[Knum > max_shape.x[m[K) {
+      |                              [01;35m[K~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:621:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  621 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:627:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  627 |         for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                           [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:649:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  649 |         for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                           [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:663:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  663 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:673:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  673 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:689:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  689 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+gmake[2]: *** [CMakeFiles/deploy.dir/build.make:104: CMakeFiles/deploy.dir/include/deploy/infer/backend.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/deploy.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

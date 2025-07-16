@@ -1,0 +1,607 @@
+[0.009s] Invoking command in '/home/david/yolocpp_ws/build/tensorrt_yolo': CMAKE_PREFIX_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolocpp_ws/install/seg_sub:/home/david/yolocpp_ws/install/sensor_sync_pkg:/home/david/yolocpp_ws/install/pylon_instant_camera:/home/david/yolocpp_ws/install/pidnet_segmentation_cpp:/home/david/yolocpp_ws/install/image_directory_publisher:/home/david/yolocpp_ws/install/bboxes_ex_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces/lib:/home/david/yolocpp_ws/install/tensorrt_yolo/lib:/home/david/yolocpp_ws/install/pylon_instant_camera/lib:/home/david/yolocpp_ws/install/image_directory_publisher/lib:/home/david/yolocpp_ws/install/bboxes_ex_msgs/lib:/usr/local/cuda/lib64:/usr/local/cuda-12.9/lib64:/usr/local/cuda-12.9/lib64:/usr/local/cuda-12.9/lib64:/usr/local/cuda-12.9/lib64:/usr/local/cuda-12.9/lib64:/opt/pylon/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda-11.2/lib64:/usr/local/cuda-11.2/lib64:/home/david/onnxruntime-linux-x64-gpu-1.22.0/lib PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake --build /home/david/yolocpp_ws/build/tensorrt_yolo -- -j32 -l32
+[0.051s] [ 16%] Built target chrono
+[0.052s] [ 25%] [32mBuilding CUDA object CMakeFiles/deploy.dir/include/deploy/infer/warpaffine.cu.o[0m
+[0.674s] [01m[K/tmp/tmpxft_000919f8_00000000-6_warpaffine.cudafe1.cpp:1:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.674s]     1 | # [01;35m[K1[m[K "/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu"
+[0.674s]       |   [01;35m[K^[m[K
+[0.674s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:2:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.674s]     2 |  *[01;35m[K [m[K@file warpaffine.cu
+[0.674s]       |   [01;35m[K^[m[K
+[0.674s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:2:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.674s]     2 |  *[01;35m[K [m[K@file warpaffine.cu
+[0.674s]       |   [01;35m[K^[m[K
+[0.674s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:2:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.674s]     2 |  *[01;35m[K [m[K@file warpaffine.cu
+[0.674s]       |   [01;35m[K^[m[K
+[0.675s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:2:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.675s]     2 |  *[01;35m[K [m[K@file warpaffine.cu
+[0.675s]       |   [01;35m[K^[m[K
+[0.675s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:2:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.675s]     2 |  *[01;35m[K [m[K@file warpaffine.cu
+[0.675s]       |   [01;35m[K^[m[K
+[0.675s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:2:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.675s]     2 |  *[01;35m[K [m[K@file warpaffine.cu
+[0.675s]       |   [01;35m[K^[m[K
+[0.675s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:3:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.675s]     3 |  *[01;35m[K [m[K@author laugh12321 (laugh12321@vip.qq.com)
+[0.675s]       |   [01;35m[K^[m[K
+[0.675s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:7:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.675s]     7 |  *[01;35m[K [m[K@copyright Copyright (c) 2025 laugh12321. All Rights Reserved.
+[0.675s]       |   [01;35m[K^[m[K
+[0.675s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:1:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.675s]     1 | /*[01;35m[K*[m[K
+[0.675s]       |   [01;35m[K^[m[K 
+[0.698s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/macro.hpp:24:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.699s]    24 | 
+[0.699s]       |   [01;35m[K^[m[K 
+[0.699s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/macro.hpp:36:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.699s]    36 |   [01;35m[K  [m[Kif (code != cudaSuccess) {
+[0.699s]       |   [01;35m[K^[m[K 
+[0.699s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/macro.hpp:37:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.699s]    37 |   [01;35m[K  [m[K    std::cerr << "CUDA Failure at " << file << ":" << line << ": "
+[0.699s]       |   [01;35m[K^[m[K 
+[0.699s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/macro.hpp:38:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.699s]    38 |   [01;35m[K  [m[K              << cudaGetErrorString(code) << std::endl;
+[0.699s]       |   [01;35m[K^[m[K 
+[0.699s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/macro.hpp:40:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.699s]    40 |   [01;35m[K  [m[K}
+[0.699s]       |   [01;35m[K^[m[K 
+[0.699s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/macro.hpp:41:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.699s]    41 | }
+[0.699s]       |   [01;35m[K^[m[K 
+[0.699s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/macro.hpp:42:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.699s]    42 | 
+[0.699s]       |   [01;35m[K^[m[K 
+[0.699s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/macro.hpp:63:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.699s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:21:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.699s]    21 | 
+[0.699s]       |   [01;35m[K^[m[K 
+[0.699s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:27:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.699s]    27 |   [01;35m[K  [m[Kbool   swap_rb      = false;                                                  // < 是否交换 R 和 B 通道
+[0.699s]       |   [01;35m[K^[m[K 
+[0.699s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:28:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.699s]    28 |   [01;35m[K  [m[Kfloat  border_value = 114.0f;                                                 // < 边界值，用于填充
+[0.699s]       |   [01;35m[K^[m[K 
+[0.699s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:29:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.699s]    29 |   [01;35m[K  [m[Kfloat3 alpha        = make_float3(1.0 / 255.0f, 1.0 / 255.0f, 1.0 / 255.0f);  // < 归一化系数
+[0.699s]       |   [01;35m[K^[m[K 
+[0.699s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:30:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.699s]    30 |   [01;35m[K  [m[Kfloat3 beta         = make_float3(0.0f, 0.0f, 0.0f);                          // < 偏移量
+[0.699s]       |   [01;35m[K^[m[K 
+[0.699s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:31:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.699s]    31 | 
+[0.699s]       |   [01;35m[K^[m[K 
+[0.700s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:38:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.700s]    38 |   [01;35m[K  [m[K    this->swap_rb = true;
+[0.700s]       |   [01;35m[K^[m[K 
+[0.700s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:39:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.700s]    39 |   [01;35m[K  [m[K}
+[0.700s]       |   [01;35m[K^[m[K 
+[0.700s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:40:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.700s]    40 | 
+[0.700s]       |   [01;35m[K^[m[K 
+[0.700s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:47:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.700s]    47 |   [01;35m[K  [m[K    this->border_value = border_value;
+[0.700s]       |   [01;35m[K^[m[K 
+[0.700s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:48:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.700s]    48 |   [01;35m[K  [m[K}
+[0.700s]       |   [01;35m[K^[m[K 
+[0.700s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:49:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.700s]    49 | 
+[0.700s]       |   [01;35m[K^[m[K 
+[0.700s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:57:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.700s]    57 |   [01;35m[K  [m[K    assert(mean.size() == 3 && std.size() == 3 && "ProcessConfig: requires the size of mean and std to be 3.");
+[0.700s]       |   [01;35m[K^[m[K 
+[0.700s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:60:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.700s]    60 |   [01;35m[K  [m[K    alpha.y = 1.0 / 255.0f / std[1];
+[0.700s]       |   [01;35m[K^[m[K 
+[0.700s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:61:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.700s]    61 |   [01;35m[K  [m[K    alpha.z = 1.0 / 255.0f / std[2];
+[0.700s]       |   [01;35m[K^[m[K 
+[0.700s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:62:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.700s]    62 |   [01;35m[K  [m[K    beta.x  = -mean[0] / std[0];
+[0.700s]       |   [01;35m[K^[m[K 
+[0.700s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:63:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.700s]    63 |   [01;35m[K  [m[K    beta.y  = -mean[1] / std[1];
+[0.700s]       |   [01;35m[K^[m[K 
+[0.700s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:64:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.700s]    64 |   [01;35m[K  [m[K    beta.z  = -mean[2] / std[2];
+[0.700s]       |   [01;35m[K^[m[K 
+[0.700s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:65:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.700s]    65 |   [01;35m[K  [m[K}
+[0.700s]       |   [01;35m[K^[m[K 
+[0.700s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:66:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.700s]    66 | };
+[0.700s]       |   [01;35m[K^[m[K 
+[0.700s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:67:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.700s]    67 | 
+[0.700s]       |   [01;35m[K^[m[K 
+[0.700s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:73:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.700s]    73 |   [01;35m[K  [m[Kint                 device_id                 = 0;      // < GPU ID
+[0.700s]       |   [01;35m[K^[m[K 
+[0.701s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:74:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.701s]    74 |   [01;35m[K  [m[Kbool                cuda_mem                  = false;  // < 推理数据是否已经在 CUDA 显存中
+[0.701s]       |   [01;35m[K^[m[K 
+[0.701s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:75:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.701s]    75 |   [01;35m[K  [m[Kbool                enable_managed_memory     = false;  // < 是否启用统一内存
+[0.701s]       |   [01;35m[K^[m[K 
+[0.701s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:76:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.701s]    76 |   [01;35m[K  [m[Kbool                enable_performance_report = false;  // < 是否启用性能报告
+[0.701s]       |   [01;35m[K^[m[K 
+[0.701s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:77:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.701s]    77 |   [01;35m[K  [m[Kstd::optional<int2> input_shape;                        // < 输入数据的高、宽，未设置时表示宽度可变（用于输入数据宽高确定的任务场景：监控视频分析，AI外挂等）
+[0.701s]       |   [01;35m[K^[m[K 
+[0.701s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:78:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.701s]    78 |   [01;35m[K  [m[KProcessConfig       config;                             // < 图像预处理配置
+[0.701s]       |   [01;35m[K^[m[K 
+[0.701s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:79:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.701s]    79 | 
+[0.701s]       |   [01;35m[K^[m[K 
+[0.701s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:86:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.701s]    86 |   [01;35m[K  [m[K    device_id = id;
+[0.701s]       |   [01;35m[K^[m[K 
+[0.701s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:87:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.701s]    87 |   [01;35m[K  [m[K}
+[0.701s]       |   [01;35m[K^[m[K 
+[0.701s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:88:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.701s]    88 | 
+[0.701s]       |   [01;35m[K^[m[K 
+[0.701s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:94:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.701s]    94 |   [01;35m[K  [m[K    cuda_mem = true;
+[0.701s]       |   [01;35m[K^[m[K 
+[0.701s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:95:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.701s]    95 |   [01;35m[K  [m[K}
+[0.701s]       |   [01;35m[K^[m[K 
+[0.701s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:96:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.701s]    96 | 
+[0.701s]       |   [01;35m[K^[m[K  
+[0.701s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:102:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.701s]   102 |   [01;35m[K   [m[K   enable_managed_memory = true;
+[0.701s]       |   [01;35m[K^[m[K  
+[0.701s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:103:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.701s]   103 |   [01;35m[K  }[m[K
+[0.701s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.701s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:104:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.701s]   104 | 
+[0.701s]       |   [01;35m[K^[m[K  
+[0.702s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:110:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.702s]   110 |   [01;35m[K   [m[K   enable_performance_report = true;
+[0.702s]       |   [01;35m[K^[m[K  
+[0.702s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:111:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.702s]   111 |   [01;35m[K  }[m[K
+[0.702s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.702s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:112:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.702s]   112 | 
+[0.702s]       |   [01;35m[K^[m[K  
+[0.702s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:119:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.702s]   119 |   [01;35m[K   [m[K   config.enableSwapRB();
+[0.702s]       |   [01;35m[K^[m[K  
+[0.702s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:120:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.702s]   120 |   [01;35m[K  }[m[K
+[0.702s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.702s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:121:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.702s]   121 | 
+[0.702s]       |   [01;35m[K^[m[K  
+[0.702s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:128:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.702s]   128 |   [01;35m[K   [m[K   config.setBorderValue(border_value);
+[0.702s]       |   [01;35m[K^[m[K  
+[0.702s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:129:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.702s]   129 |   [01;35m[K  }[m[K
+[0.702s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.702s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:130:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.702s]   130 | 
+[0.702s]       |   [01;35m[K^[m[K  
+[0.702s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:138:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.702s]   138 |   [01;35m[K   [m[K   config.setNormalizeParams(mean, std);
+[0.702s]       |   [01;35m[K^[m[K  
+[0.702s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:139:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.702s]   139 |   [01;35m[K  }[m[K
+[0.702s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.702s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:140:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.702s]   140 | 
+[0.702s]       |   [01;35m[K^[m[K  
+[0.702s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:148:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.702s]   148 |   [01;35m[K   [m[K   input_shape = make_int2(height, width);
+[0.702s]       |   [01;35m[K^[m[K  
+[0.702s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:149:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.702s]   149 |   [01;35m[K  }[m[K
+[0.702s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.702s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:150:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.702s]   150 | };
+[0.702s]       |   [01;35m[K^[m[K  
+[0.702s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:151:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.702s]   151 | 
+[0.703s]       |   [01;35m[K^[m[K  
+[0.703s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/option.hpp:153:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.703s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.hpp:18:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.703s]    18 | 
+[0.703s]       |   [01;35m[K^[m[K 
+[0.703s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.hpp:24:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.703s]    24 |   [01;35m[K  [m[Kfloat3 matrix[2];         // < 用于仿射变换的 2x3 变换矩阵
+[0.703s]       |   [01;35m[K^[m[K 
+[0.703s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.hpp:25:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.703s]    25 |   [01;35m[K  [m[Kint    dst_offset_x;      // < 变换后目标图像的 X 轴偏移量。
+[0.703s]       |   [01;35m[K^[m[K 
+[0.703s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.hpp:26:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.703s]    26 |   [01;35m[K  [m[Kint    dst_offset_y;      // < 变换后目标图像的 Y 轴偏移量。
+[0.703s]       |   [01;35m[K^[m[K 
+[0.703s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.hpp:27:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.703s]    27 |   [01;35m[K  [m[Kint    last_src_width_;   // < 上一次处理的源图像的宽度。
+[0.703s]       |   [01;35m[K^[m[K 
+[0.703s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.hpp:28:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.703s]    28 |   [01;35m[K  [m[Kint    last_src_height_;  // < 上一次处理的源图像的高度。
+[0.703s]       |   [01;35m[K^[m[K 
+[0.703s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.hpp:29:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.703s]    29 | 
+[0.703s]       |   [01;35m[K^[m[K 
+[0.703s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.hpp:39:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.703s]    39 | 
+[0.703s]       |   [01;35m[K^[m[K 
+[0.703s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.hpp:49:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.703s]    49 | };
+[0.703s]       |   [01;35m[K^[m[K 
+[0.703s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.hpp:50:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.703s]    50 | 
+[0.703s]       |   [01;35m[K^[m[K 
+[0.703s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.hpp:66:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.703s]    66 |   [01;35m[K  [m[K                void* dst, const int dst_cols, const int dst_rows,
+[0.703s]       |   [01;35m[K^[m[K 
+[0.703s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.hpp:88:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.703s]    88 |   [01;35m[K  [m[K                     void* dst, const int dst_cols, const int dst_rows,
+[0.703s]       |   [01;35m[K^[m[K 
+[0.703s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.hpp:92:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.703s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:16:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.703s]    16 | 
+[0.703s]       |   [01;35m[K^[m[K 
+[0.703s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:18:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.703s]    18 |   [01;35m[K  [m[Kreturn (a % b != 0) ? (a / b + 1) : (a / b);
+[0.703s]       |   [01;35m[K^[m[K 
+[0.703s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:19:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.704s]    19 | }
+[0.704s]       |   [01;35m[K^[m[K 
+[0.704s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:20:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.704s]    20 | 
+[0.704s]       |   [01;35m[K^[m[K 
+[0.704s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:22:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.704s]    22 |   [01;35m[K  [m[Kfloat3 result;
+[0.704s]       |   [01;35m[K^[m[K 
+[0.704s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:45:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.704s]    45 | __[01;35m[Kde[m[Kvice__ float3 operator+=(float3& value0, const float3& value1) {
+[0.704s]       |   [01;35m[K^~[m[K
+[0.704s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:31:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.704s]    31 |   [01;35m[K  [m[Kfloat3 result;
+[0.704s]       |   [01;35m[K^[m[K 
+[0.704s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:54:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.704s]    54 | }
+[0.704s]       |   [01;35m[K^[m[K 
+[0.704s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:40:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.704s]    40 |   [01;35m[K  [m[Kresult.x += value.x;
+[0.704s]       |   [01;35m[K^[m[K 
+[0.704s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:56:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.704s]    56 | __[01;35m[Kde[m[Kvice__ bool in_bounds(int x, int y, int cols, int rows) {
+[0.704s]       |   [01;35m[K^~[m[K
+[0.704s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:46:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.704s]    46 |   [01;35m[K  [m[Kvalue0.x += value1.x;
+[0.704s]       |   [01;35m[K^[m[K 
+[0.704s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:65:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.704s]    65 | //[01;35m[K  [m[K   }
+[0.704s]       |   [01;35m[K^~[m[K
+[0.704s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:53:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.704s]    53 |   [01;35m[K  [m[Kreturn make_float3(v.x, v.y, v.z);
+[0.704s]       |   [01;35m[K^[m[K 
+[0.704s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:63:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.704s]    63 | //[01;35m[K  [m[K   if (element_x >= dst_cols || element_y >= dst_rows) {
+[0.704s]       |   [01;35m[K^~[m[K
+[0.704s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:57:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.704s]    57 |   [01;35m[K  [m[Kreturn (x >= 0 && x < cols && y >= 0 && y < rows);
+[0.704s]       |   [01;35m[K^[m[K 
+[0.704s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:67:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.704s]    67 | //[01;35m[K   [m[K  float2 src_xy = make_float2(
+[0.704s]       |   [01;35m[K^~~[m[K
+[0.704s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:127:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.704s]   127 |   [01;35m[K   [m[K                                float* dst, const int dst_cols, const int dst_rows,
+[0.704s]       |   [01;35m[K^[m[K  
+[0.704s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:128:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.704s]   128 |   [01;35m[K   [m[K                                const float3 m0, const float3 m1, const ProcessConfig config, int element_x, int element_y, int channels) {
+[0.704s]       |   [01;35m[K^[m[K  
+[0.704s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:129:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.704s]   129 |   [01;35m[K  i[m[Kf (element_x >= dst_cols || element_y >= dst_rows) {
+[0.705s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.705s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:312:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.705s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:200:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.705s]   200 |   [01;35m[K   [m[K                                 void* dst, const int dst_cols, const int dst_rows,
+[0.705s]       |   [01;35m[K^[m[K  
+[0.705s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:201:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.705s]   201 |   [01;35m[K   [m[K                                 const float3 m0, const float3 m1, const ProcessConfig config, int channels) {
+[0.705s]       |   [01;35m[K^[m[K  
+[0.705s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:214:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.705s]   214 |   [01;35m[K   [m[K                                      int num_images, int channels) {
+[0.705s]       |   [01;35m[K^[m[K  
+[0.705s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:212:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.705s]   212 |   [01;35m[K   [m[K                                      void* dst, const int dst_cols, const int dst_rows,
+[0.705s]       |   [01;35m[K^[m[K  
+[0.705s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:213:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.705s]   213 |   [01;35m[K   [m[K                                      const float3 m0, const float3 m1, const ProcessConfig config,
+[0.705s]       |   [01;35m[K^[m[K  
+[0.705s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:214:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.705s]   214 |   [01;35m[K   [m[K                                      int num_images, int channels) {
+[0.705s]       |   [01;35m[K^[m[K  
+[0.705s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:239:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.705s]   239 |   [01;35m[K  d[m[Kouble scale  = std::min(static_cast<double>(dst_width) / src_width, static_cast<double>(dst_height) / src_height);
+[0.705s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.705s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:235:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.705s]   235 |   [01;35m[K  i[m[Kf (src_width == last_src_width_ && src_height == last_src_height_) return;
+[0.705s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.705s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:236:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.705s]   236 |   [01;35m[K  l[m[Kast_src_width_  = src_width;
+[0.705s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.705s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:237:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.705s]   237 |   [01;35m[K  l[m[Kast_src_height_ = src_height;
+[0.705s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.705s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:238:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.705s]   238 | 
+[0.705s]       |   [01;35m[K^[m[K  
+[0.705s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:240:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.705s]   240 |   [01;35m[K  d[m[Kouble offset = 0.5 * scale - 0.5;
+[0.705s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.705s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:241:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.705s]   241 | 
+[0.705s]       |   [01;35m[K^[m[K  
+[0.705s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:243:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.705s]   243 |   [01;35m[K  d[m[Kouble scale_from_height = -0.5 * scale * src_height;
+[0.705s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.705s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:244:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.705s]   244 |   [01;35m[K  d[m[Kouble half_dst_width    = 0.5 * dst_width;
+[0.705s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.705s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:245:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.705s]   245 |   [01;35m[K  d[m[Kouble half_dst_height   = 0.5 * dst_height;
+[0.706s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.706s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:246:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.706s]   246 | 
+[0.706s]       |   [01;35m[K^[m[K  
+[0.706s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:248:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.706s]   248 |   [01;35m[K  d[m[Kouble a     = scale * inv_d;
+[0.706s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.706s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:249:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.706s]   249 | 
+[0.706s]       |   [01;35m[K^[m[K  
+[0.706s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:251:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.706s]   251 |   [01;35m[K  m[m[Katrix[1] = make_float3(0.0, a, -a * (scale_from_height + half_dst_height + offset));
+[0.706s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.706s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:252:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.706s]   252 | 
+[0.706s]       |   [01;35m[K^[m[K  
+[0.706s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:254:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.706s]   254 |   [01;35m[K  d[m[Kst_offset_y = int(dst_height * 0.5 + scale_from_height);
+[0.706s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.706s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:255:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.706s]   255 | }
+[0.706s]       |   [01;35m[K^[m[K  
+[0.706s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:256:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.706s]   256 | 
+[0.706s]       |   [01;35m[K^[m[K  
+[0.706s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:258:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.706s]   258 |   [01;35m[K  *[m[Ktransformed_x = matrix[0].x * x + matrix[0].y * y + matrix[0].z;
+[0.706s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.706s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:259:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.706s]   259 |   [01;35m[K  *[m[Ktransformed_y = matrix[1].x * x + matrix[1].y * y + matrix[1].z;
+[0.706s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.706s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:260:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.706s]   260 | }
+[0.706s]       |   [01;35m[K^[m[K  
+[0.706s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:261:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.706s]   261 | 
+[0.706s]       |   [01;35m[K^[m[K  
+[0.706s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:273:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.706s]   273 |   [01;35m[K   [m[K               void* dst, const int dst_cols, const int dst_rows,
+[0.706s]       |   [01;35m[K^[m[K  
+[0.706s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:274:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.706s]   274 |   [01;35m[K   [m[K               const float3 matrix[2], const ProcessConfig config, cudaStream_t stream) {
+[0.706s]       |   [01;35m[K^[m[K  
+[0.706s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:275:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.706s]   275 |   [01;35m[K  c[m[Konst dim3 blockDim(16, 16);
+[0.706s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.706s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:276:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.706s]   276 |   [01;35m[K  c[m[Konst dim3 gridDim(iDivUp(dst_cols, blockDim.x), iDivUp(dst_rows, blockDim.y));
+[0.706s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.707s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:277:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.707s]   277 |   [01;35m[K  g[m[KpuBilinearWarpAffine<<<gridDim, blockDim, 0, stream>>>(src, src_cols, src_rows, dst, dst_cols, dst_rows, matrix[0], matrix[1], config, 3);
+[0.707s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.707s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:278:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.707s]   278 | }
+[0.707s]       |   [01;35m[K^[m[K  
+[0.707s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:279:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.707s]   279 | 
+[0.707s]       |   [01;35m[K^[m[K  
+[0.707s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:281:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.707s]   281 |   [01;35m[K   [m[K                    void* dst, const int dst_cols, const int dst_rows,
+[0.707s]       |   [01;35m[K^[m[K  
+[0.707s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:282:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.707s]   282 |   [01;35m[K   [m[K                    const float3 matrix[2], const ProcessConfig config, int num_images, cudaStream_t stream) {
+[0.707s]       |   [01;35m[K^[m[K  
+[0.707s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:283:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.707s]   283 |   [01;35m[K  c[m[Konst dim3 blockDim(16, 16);
+[0.707s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.707s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:284:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.707s]   284 |   [01;35m[K  c[m[Konst dim3 gridDim(iDivUp(dst_cols, blockDim.x), iDivUp(dst_rows, blockDim.y), num_images);
+[0.707s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.707s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:285:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.707s]   285 |   [01;35m[K  g[m[KpuMutliBilinearWarpAffine<<<gridDim, blockDim, 0, stream>>>(
+[0.707s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.707s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:286:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.707s]   286 |   [01;35m[K   [m[K   src, src_cols, src_rows, dst, dst_cols, dst_rows, matrix[0], matrix[1], config, num_images, 3);
+[0.707s]       |   [01;35m[K^[m[K  
+[0.707s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:288:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.707s]   288 | 
+[0.707s]       |   [01;35m[K^[m[K  
+[0.707s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:291:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.707s] [01m[Ktmpxft_000919f8_00000000-6_warpaffine.cudafe1.stub.c:4:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.707s] In file included from [01m[Ktmpxft_000919f8_00000000-6_warpaffine.cudafe1.stub.c:1[m[K:
+[0.707s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:200:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.707s]   200 |   [01;35m[K   [m[K                                 void* dst, const int dst_cols, const int dst_rows,
+[0.707s]       |   [01;35m[K^[m[K  
+[0.707s] In file included from [01m[Ktmpxft_000919f8_00000000-6_warpaffine.cudafe1.stub.c:1[m[K:
+[0.707s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:202:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.707s]   202 |   [01;35m[K  i[m[Knt element_x = blockDim.x * blockIdx.x + threadIdx.x;
+[0.707s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.707s] In file included from [01m[Ktmpxft_000919f8_00000000-6_warpaffine.cudafe1.stub.c:1[m[K:
+[0.707s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:210:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.707s]   210 | 
+[0.707s]       |   [01;35m[K^[m[K
+[0.707s] In file included from [01m[Ktmpxft_000919f8_00000000-6_warpaffine.cudafe1.stub.c:1[m[K:
+[0.707s] [01m[K/tmp/tmpxft_000919f8_00000000-6_warpaffine.cudafe1.stub.c:2:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.707s]     2 | #p[01;35m[Krag[m[Kma GCC diagnostic ignored "-Wunused-function"
+[0.708s]       |   [01;35m[K^~~[m[K
+[0.708s] In file included from [01m[Ktmpxft_000919f8_00000000-6_warpaffine.cudafe1.stub.c:1[m[K:
+[0.708s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:212:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.708s]   212 |   [01;35m[K   [m[K                                      void* dst, const int dst_cols, const int dst_rows,
+[0.708s]       |   [01;35m[K^[m[K  
+[0.708s] In file included from [01m[Ktmpxft_000919f8_00000000-6_warpaffine.cudafe1.stub.c:1[m[K:
+[0.708s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:215:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.708s]   215 |   [01;35m[K  i[m[Knt image_idx = blockIdx.z;
+[0.708s]       |   [01;35m[K^[m[K [01;35m[K~[m[K
+[0.708s] In file included from [01m[Ktmpxft_000919f8_00000000-6_warpaffine.cudafe1.stub.c:1[m[K:
+[0.708s] [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu:232:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.708s]   232 | 
+[0.708s]       |   [01;35m[K^[m[K
+[0.708s] [01m[Ktmpxft_000919f8_00000000-6_warpaffine.cudafe1.stub.c:2:3:[m[K [01;35m[Kwarning: [m[Kstyle of line directive is a GCC extension
+[0.889s] [ 33%] [32m[1mLinking CUDA device code CMakeFiles/deploy.dir/cmake_device_link.o[0m
+[0.906s] nvlink warning : Skipping incompatible '/usr/lib/x86_64-linux-gnu/librt.a' when searching for -lrt
+[0.906s] nvlink warning : Skipping incompatible '/lib/x86_64-linux-gnu/librt.a' when searching for -lrt
+[0.906s] nvlink warning : Skipping incompatible '/usr/lib/x86_64-linux-gnu/libpthread.a' when searching for -lpthread
+[0.906s] nvlink warning : Skipping incompatible '/lib/x86_64-linux-gnu/libpthread.a' when searching for -lpthread
+[0.906s] nvlink warning : Skipping incompatible '/usr/lib/x86_64-linux-gnu/libdl.a' when searching for -ldl
+[0.906s] nvlink warning : Skipping incompatible '/lib/x86_64-linux-gnu/libdl.a' when searching for -ldl
+[0.933s] [ 41%] [32m[1mLinking CXX shared library libdeploy.so[0m
+[1.004s] [ 83%] Built target deploy
+[1.025s] [ 91%] [32m[1mLinking CXX executable segment_node_3P[0m
+[1.360s] [100%] Built target segment_node_3P
+[1.368s] Invoked command in '/home/david/yolocpp_ws/build/tensorrt_yolo' returned '0': CMAKE_PREFIX_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolocpp_ws/install/seg_sub:/home/david/yolocpp_ws/install/sensor_sync_pkg:/home/david/yolocpp_ws/install/pylon_instant_camera:/home/david/yolocpp_ws/install/pidnet_segmentation_cpp:/home/david/yolocpp_ws/install/image_directory_publisher:/home/david/yolocpp_ws/install/bboxes_ex_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces/lib:/home/david/yolocpp_ws/install/tensorrt_yolo/lib:/home/david/yolocpp_ws/install/pylon_instant_camera/lib:/home/david/yolocpp_ws/install/image_directory_publisher/lib:/home/david/yolocpp_ws/install/bboxes_ex_msgs/lib:/usr/local/cuda/lib64:/usr/local/cuda-12.9/lib64:/usr/local/cuda-12.9/lib64:/usr/local/cuda-12.9/lib64:/usr/local/cuda-12.9/lib64:/usr/local/cuda-12.9/lib64:/opt/pylon/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda-11.2/lib64:/usr/local/cuda-11.2/lib64:/home/david/onnxruntime-linux-x64-gpu-1.22.0/lib PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake --build /home/david/yolocpp_ws/build/tensorrt_yolo -- -j32 -l32
+[1.369s] Invoking command in '/home/david/yolocpp_ws/build/tensorrt_yolo': CMAKE_PREFIX_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolocpp_ws/install/seg_sub:/home/david/yolocpp_ws/install/sensor_sync_pkg:/home/david/yolocpp_ws/install/pylon_instant_camera:/home/david/yolocpp_ws/install/pidnet_segmentation_cpp:/home/david/yolocpp_ws/install/image_directory_publisher:/home/david/yolocpp_ws/install/bboxes_ex_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces/lib:/home/david/yolocpp_ws/install/tensorrt_yolo/lib:/home/david/yolocpp_ws/install/pylon_instant_camera/lib:/home/david/yolocpp_ws/install/image_directory_publisher/lib:/home/david/yolocpp_ws/install/bboxes_ex_msgs/lib:/usr/local/cuda/lib64:/usr/local/cuda-12.9/lib64:/usr/local/cuda-12.9/lib64:/usr/local/cuda-12.9/lib64:/usr/local/cuda-12.9/lib64:/usr/local/cuda-12.9/lib64:/opt/pylon/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda-11.2/lib64:/usr/local/cuda-11.2/lib64:/home/david/onnxruntime-linux-x64-gpu-1.22.0/lib PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake --install /home/david/yolocpp_ws/build/tensorrt_yolo
+[1.375s] -- Install configuration: ""
+[1.375s] -- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/lib/tensorrt_yolo/libdeploy.so
+[1.376s] -- Set runtime path of "/home/david/yolocpp_ws/install/tensorrt_yolo/lib/tensorrt_yolo/libdeploy.so" to ""
+[1.376s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/lib/tensorrt_yolo/libchrono.so
+[1.376s] -- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/lib/tensorrt_yolo/segment_node_3P
+[1.377s] -- Set runtime path of "/home/david/yolocpp_ws/install/tensorrt_yolo/lib/tensorrt_yolo/segment_node_3P" to "$ORIGIN:"
+[1.377s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy
+[1.377s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/result.hpp
+[1.377s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/pybind.cpp
+[1.377s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/model.hpp
+[1.377s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/option.hpp
+[1.377s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/core
+[1.377s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/core/buffer.cpp
+[1.377s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/core/macro.hpp
+[1.377s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/core/core.cpp
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/core/core.hpp
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/core/buffer.hpp
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/infer
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/infer/warpaffine.hpp
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/infer/backend.cpp
+[1.378s] -- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/infer/warpaffine.cu
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/infer/backend.hpp
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/utils
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/utils/utils.hpp
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/utils/utils.cpp
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/deploy/model.cpp
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/common
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/common/checkMacrosPlugin.h
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/common/plugin.h
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/common/vfcCommon.h
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/common/bboxUtils.h
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSInference.h
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSParameters.h
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSPlugin.h
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSInference.h
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSPlugin.h
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSParameters.h
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/launch
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/launch/componsable_launch.py
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/launch/tensort_yolo.launch.py
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/launch/tensort_yolo_3P.launch.py
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/chrono
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/chrono/ChronoTimer.hpp
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/chrono/ChronoTimer.cpp
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy
+[1.378s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/result.hpp
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/pybind.cpp
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/model.hpp
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/option.hpp
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/core
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/core/buffer.cpp
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/core/macro.hpp
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/core/core.cpp
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/core/core.hpp
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/core/buffer.hpp
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/infer
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/infer/warpaffine.hpp
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/infer/backend.cpp
+[1.379s] -- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/infer/warpaffine.cu
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/infer/backend.hpp
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/utils
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/utils/utils.hpp
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/utils/utils.cpp
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/deploy/model.cpp
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/TensorRT-YOLO
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common/checkMacrosPlugin.h
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common/vfcCommon.cpp
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common/plugin.h
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common/plugin.cpp
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common/vfcCommon.h
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common/checkMacrosPlugin.cpp
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common/common.cu
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/common/bboxUtils.h
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSInference.cu
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSInference.h
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/README.md
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSPlugin.cpp
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSInference.cuh
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSParameters.h
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientRotatedNMSPlugin/efficientRotatedNMSPlugin.h
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/README.md
+[1.379s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSPlugin.cpp
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSInference.cuh
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSInference.h
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSPlugin.h
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSInference.cu
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/include/plugin/efficientIdxNMSPlugin/efficientIdxNMSParameters.h
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/.keep
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/yolo11s-seg_02_b1_v2.engine
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/yolo11s_640_408_gray.engine
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/yolo11s-seg_03_b3_v2.engine
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/yolo11s-seg_960_608_rect_road.engine
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/yolo11s-seg_03_b1_v2.engine
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/labels.txt
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/models/yolo11s-seg_640_416_rect_road.engine
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/data
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/data/panoramic_02.avi
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/data/test.jpg
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/data/test1.jpg
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/data/.gitignore
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/config
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/config/config.yaml
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/ament_index/resource_index/package_run_dependencies/tensorrt_yolo
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/ament_index/resource_index/parent_prefix_path/tensorrt_yolo
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/environment/ament_prefix_path.sh
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/environment/ament_prefix_path.dsv
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/environment/path.sh
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/environment/path.dsv
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/local_setup.bash
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/local_setup.sh
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/local_setup.zsh
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/local_setup.dsv
+[1.380s] -- Installing: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/package.dsv
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/ament_index/resource_index/packages/tensorrt_yolo
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/tensorrt_yoloConfig.cmake
+[1.380s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/cmake/tensorrt_yoloConfig-version.cmake
+[1.381s] -- Up-to-date: /home/david/yolocpp_ws/install/tensorrt_yolo/share/tensorrt_yolo/package.xml
+[1.381s] Invoked command in '/home/david/yolocpp_ws/build/tensorrt_yolo' returned '0': CMAKE_PREFIX_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces:/home/david/yolocpp_ws/install/yolocpp:/home/david/yolocpp_ws/install/tensorrt_yolo:/home/david/yolocpp_ws/install/seg_sub:/home/david/yolocpp_ws/install/sensor_sync_pkg:/home/david/yolocpp_ws/install/pylon_instant_camera:/home/david/yolocpp_ws/install/pidnet_segmentation_cpp:/home/david/yolocpp_ws/install/image_directory_publisher:/home/david/yolocpp_ws/install/bboxes_ex_msgs:/opt/ros/humble LD_LIBRARY_PATH=/home/david/yolocpp_ws/install/yolo_custom_interfaces/lib:/home/david/yolocpp_ws/install/tensorrt_yolo/lib:/home/david/yolocpp_ws/install/pylon_instant_camera/lib:/home/david/yolocpp_ws/install/image_directory_publisher/lib:/home/david/yolocpp_ws/install/bboxes_ex_msgs/lib:/usr/local/cuda/lib64:/usr/local/cuda-12.9/lib64:/usr/local/cuda-12.9/lib64:/usr/local/cuda-12.9/lib64:/usr/local/cuda-12.9/lib64:/usr/local/cuda-12.9/lib64:/opt/pylon/lib:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/local/cuda/lib64:/usr/local/cuda-11.2/lib64:/usr/local/cuda-11.2/lib64:/home/david/onnxruntime-linux-x64-gpu-1.22.0/lib PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake --install /home/david/yolocpp_ws/build/tensorrt_yolo

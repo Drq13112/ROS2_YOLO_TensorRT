@@ -1,0 +1,108 @@
+[0.016s] Invoking command in '/home/david/yolocpp_ws/build/yolo_custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake /home/david/yolocpp_ws/src/yolo_custom_interfaces -DTRT_PATH=/usr -DCMAKE_CUDA_ARCHITECTURES=89 -DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc -DCMAKE_INSTALL_PREFIX=/home/david/yolocpp_ws/install/yolo_custom_interfaces
+[0.060s] -- The C compiler identification is GNU 11.4.0
+[0.101s] -- The CXX compiler identification is GNU 11.4.0
+[0.106s] -- Detecting C compiler ABI info
+[0.159s] -- Detecting C compiler ABI info - done
+[0.163s] -- Check for working C compiler: /bin/cc - skipped
+[0.163s] -- Detecting C compile features
+[0.163s] -- Detecting C compile features - done
+[0.165s] -- Detecting CXX compiler ABI info
+[0.224s] -- Detecting CXX compiler ABI info - done
+[0.229s] -- Check for working CXX compiler: /bin/c++ - skipped
+[0.229s] -- Detecting CXX compile features
+[0.229s] -- Detecting CXX compile features - done
+[0.230s] -- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.512s] -- Found Python3: /bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.586s] -- Found std_msgs: 4.9.0 (/opt/ros/humble/share/std_msgs/cmake)
+[0.608s] -- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.612s] -- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.617s] -- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.625s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.636s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.654s] -- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+[0.676s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.961s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[1.418s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.618s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.648s] -- Found PythonInterp: /bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[1.650s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[1.677s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[1.678s] -- Using PYTHON_EXECUTABLE: /bin/python3
+[1.678s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[1.678s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[1.700s] -- Found PythonExtra: .so  
+[1.814s] -- Configuring done
+[1.847s] -- Generating done
+[1.849s] [33mCMake Warning:
+[1.849s]   Manually-specified variables were not used by the project:
+[1.849s] 
+[1.849s]     CMAKE_CUDA_COMPILER
+[1.849s]     TRT_PATH
+[1.849s] 
+[1.849s] [0m
+[1.858s] -- Build files have been written to: /home/david/yolocpp_ws/build/yolo_custom_interfaces
+[1.866s] Invoked command in '/home/david/yolocpp_ws/build/yolo_custom_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake /home/david/yolocpp_ws/src/yolo_custom_interfaces -DTRT_PATH=/usr -DCMAKE_CUDA_ARCHITECTURES=89 -DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc -DCMAKE_INSTALL_PREFIX=/home/david/yolocpp_ws/install/yolo_custom_interfaces
+[1.868s] Invoking command in '/home/david/yolocpp_ws/build/yolo_custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake --build /home/david/yolocpp_ws/build/yolo_custom_interfaces -- -j32 -l32
+[1.914s] [  2%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.927s] [  5%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.932s] [  5%] Built target ament_cmake_python_copy_yolo_custom_interfaces
+[2.312s] running egg_info
+[2.353s] creating yolo_custom_interfaces.egg-info
+[2.353s] writing yolo_custom_interfaces.egg-info/PKG-INFO
+[2.354s] writing dependency_links to yolo_custom_interfaces.egg-info/dependency_links.txt
+[2.354s] writing top-level names to yolo_custom_interfaces.egg-info/top_level.txt
+[2.354s] writing manifest file 'yolo_custom_interfaces.egg-info/SOURCES.txt'
+[2.406s] [  7%] [32mBuilding C object CMakeFiles/yolo_custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/yolo_custom_interfaces/msg/detail/pidnet_result__functions.c.o[0m
+[2.408s] [ 10%] [32mBuilding C object CMakeFiles/yolo_custom_interfaces__rosidl_generator_c.dir/rosidl_generator_c/yolo_custom_interfaces/msg/detail/instance_segmentation_info__functions.c.o[0m
+[2.464s] [ 12%] [32m[1mLinking C shared library libyolo_custom_interfaces__rosidl_generator_c.so[0m
+[2.467s] reading manifest file 'yolo_custom_interfaces.egg-info/SOURCES.txt'
+[2.468s] writing manifest file 'yolo_custom_interfaces.egg-info/SOURCES.txt'
+[2.506s] [ 12%] Built target ament_cmake_python_build_yolo_custom_interfaces_egg
+[2.510s] [ 12%] Built target yolo_custom_interfaces__rosidl_generator_c
+[2.521s] [ 15%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[2.524s] [ 17%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[2.524s] [ 20%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[2.549s] [ 20%] Built target yolo_custom_interfaces__cpp
+[2.561s] [ 23%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[2.561s] [ 25%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[2.561s] [ 28%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[2.866s] [ 33%] [32mBuilding CXX object CMakeFiles/yolo_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/yolo_custom_interfaces/msg/instance_segmentation_info__type_support.cpp.o[0m
+[2.866s] [ 33%] [32mBuilding CXX object CMakeFiles/yolo_custom_interfaces__rosidl_typesupport_c.dir/rosidl_typesupport_c/yolo_custom_interfaces/msg/pidnet_result__type_support.cpp.o[0m
+[2.896s] [ 35%] [32m[1mLinking CXX shared library libyolo_custom_interfaces__rosidl_typesupport_c.so[0m
+[2.936s] [ 35%] Built target yolo_custom_interfaces__rosidl_typesupport_c
+[2.945s] [ 38%] [32mBuilding CXX object CMakeFiles/yolo_custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/yolo_custom_interfaces/msg/instance_segmentation_info__type_support.cpp.o[0m
+[2.945s] [ 41%] [32mBuilding CXX object CMakeFiles/yolo_custom_interfaces__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/yolo_custom_interfaces/msg/pidnet_result__type_support.cpp.o[0m
+[2.965s] [ 43%] [32mBuilding CXX object CMakeFiles/yolo_custom_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/yolo_custom_interfaces/msg/detail/pidnet_result__type_support_c.cpp.o[0m
+[2.967s] [ 46%] [32mBuilding CXX object CMakeFiles/yolo_custom_interfaces__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/yolo_custom_interfaces/msg/detail/instance_segmentation_info__type_support_c.cpp.o[0m
+[2.991s] [ 48%] [32mBuilding CXX object CMakeFiles/yolo_custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/yolo_custom_interfaces/msg/detail/pidnet_result__type_support.cpp.o[0m
+[2.992s] [ 51%] [32mBuilding CXX object CMakeFiles/yolo_custom_interfaces__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/yolo_custom_interfaces/msg/detail/instance_segmentation_info__type_support.cpp.o[0m
+[3.075s] [ 53%] [32mBuilding C object CMakeFiles/yolo_custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/yolo_custom_interfaces/msg/detail/instance_segmentation_info__type_support.c.o[0m
+[3.076s] [ 56%] [32mBuilding C object CMakeFiles/yolo_custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/yolo_custom_interfaces/msg/detail/pidnet_result__type_support.c.o[0m
+[3.094s] [ 61%] [32mBuilding CXX object CMakeFiles/yolo_custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/yolo_custom_interfaces/msg/detail/dds_fastrtps/instance_segmentation_info__type_support.cpp.o[0m
+[3.094s] [ 61%] [32mBuilding CXX object CMakeFiles/yolo_custom_interfaces__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/yolo_custom_interfaces/msg/detail/dds_fastrtps/pidnet_result__type_support.cpp.o[0m
+[3.124s] [ 64%] [32m[1mLinking C shared library libyolo_custom_interfaces__rosidl_typesupport_introspection_c.so[0m
+[3.168s] [ 64%] Built target yolo_custom_interfaces__rosidl_typesupport_introspection_c
+[3.182s] [ 66%] [32m[1mLinking CXX shared library libyolo_custom_interfaces__rosidl_typesupport_cpp.so[0m
+[3.231s] [ 66%] Built target yolo_custom_interfaces__rosidl_typesupport_cpp
+[3.291s] [ 69%] [32m[1mLinking CXX shared library libyolo_custom_interfaces__rosidl_typesupport_fastrtps_c.so[0m
+[3.359s] [ 69%] Built target yolo_custom_interfaces__rosidl_typesupport_fastrtps_c
+[3.455s] [ 71%] [32m[1mLinking CXX shared library libyolo_custom_interfaces__rosidl_typesupport_introspection_cpp.so[0m
+[3.456s] [ 74%] [32m[1mLinking CXX shared library libyolo_custom_interfaces__rosidl_typesupport_fastrtps_cpp.so[0m
+[3.513s] [ 74%] Built target yolo_custom_interfaces__rosidl_typesupport_introspection_cpp
+[3.516s] [ 74%] Built target yolo_custom_interfaces__rosidl_typesupport_fastrtps_cpp
+[3.537s] [ 74%] Built target yolo_custom_interfaces
+[3.558s] [ 76%] [34m[1mGenerating Python code for ROS interfaces[0m
+[3.963s] [ 76%] Built target yolo_custom_interfaces__py
+[3.979s] [ 82%] [32mBuilding C object CMakeFiles/yolo_custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/yolo_custom_interfaces/msg/_instance_segmentation_info_s.c.o[0m
+[3.980s] [ 82%] [32mBuilding C object CMakeFiles/yolo_custom_interfaces__rosidl_generator_py.dir/rosidl_generator_py/yolo_custom_interfaces/msg/_pidnet_result_s.c.o[0m
+[4.052s] [ 84%] [32m[1mLinking C shared library rosidl_generator_py/yolo_custom_interfaces/libyolo_custom_interfaces__rosidl_generator_py.so[0m
+[4.084s] [ 84%] Built target yolo_custom_interfaces__rosidl_generator_py
+[4.101s] [ 92%] [32mBuilding C object CMakeFiles/yolo_custom_interfaces__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/yolo_custom_interfaces/_yolo_custom_interfaces_s.ep.rosidl_typesupport_c.c.o[0m
+[4.101s] [ 92%] [32mBuilding C object CMakeFiles/yolo_custom_interfaces__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/yolo_custom_interfaces/_yolo_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[4.101s] [ 92%] [32mBuilding C object CMakeFiles/yolo_custom_interfaces__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/yolo_custom_interfaces/_yolo_custom_interfaces_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[4.167s] [ 94%] [32m[1mLinking C shared library rosidl_generator_py/yolo_custom_interfaces/yolo_custom_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.169s] [ 97%] [32m[1mLinking C shared library rosidl_generator_py/yolo_custom_interfaces/yolo_custom_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.170s] [100%] [32m[1mLinking C shared library rosidl_generator_py/yolo_custom_interfaces/yolo_custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.200s] [100%] Built target yolo_custom_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[4.206s] [100%] Built target yolo_custom_interfaces__rosidl_typesupport_introspection_c__pyext
+[4.206s] [100%] Built target yolo_custom_interfaces__rosidl_typesupport_c__pyext

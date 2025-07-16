@@ -1,0 +1,4 @@
+msg/InstanceSegmentationInfo.idl
+msg/InstanceSegmentationInfo.msg
+msg/PidnetResult.idl
+msg/PidnetResult.msg

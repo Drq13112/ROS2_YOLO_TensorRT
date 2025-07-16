@@ -1,0 +1,335 @@
+In file included from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.hpp:19[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:15[m[K:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::DeviceBuffer::DeviceBuffer()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:103:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::DeviceBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  103 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:102:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::DeviceBuffer::device_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  102 |     void*  [01;35m[Kdevice_[m[K;  // < 设备内存指针
+      |            [01;35m[K^~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:86:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+   86 |     [01;35m[KDeviceBuffer[m[K() : size_(0), device_(nullptr) {}
+      |     [01;35m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::DiscreteBuffer::DiscreteBuffer()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:130:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::DiscreteBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  130 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:128:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::DiscreteBuffer::host_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  128 |     void*  [01;35m[Khost_[m[K;    // < 主机内存指针
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:112:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  112 |     [01;35m[KDiscreteBuffer[m[K() : size_(0), host_(nullptr), device_(nullptr) {}
+      |     [01;35m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::UnifiedBuffer::UnifiedBuffer()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:157:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::UnifiedBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  157 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:155:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::UnifiedBuffer::host_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  155 |     void*  [01;35m[Khost_[m[K;    // < 主机内存指针
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:139:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  139 |     [01;35m[KUnifiedBuffer[m[K() : size_(0), host_(nullptr), device_(nullptr) {}
+      |     [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::MappedBuffer::MappedBuffer()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:184:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::MappedBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  184 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:182:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::MappedBuffer::host_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  182 |     void*  [01;35m[Khost_[m[K;    // < 主机内存指针
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:166:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  166 |     [01;35m[KMappedBuffer[m[K() : size_(0), host_(nullptr), device_(nullptr) {}
+      |     [01;35m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::TensorInfo::TensorInfo(std::string, const Dims&, nvinfer1::DataType, bool, deploy::BufferType)[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:224:33:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::TensorInfo::shape[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  224 |     nvinfer1::Dims              [01;35m[Kshape[m[K;   // < 张量形状
+      |                                 [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:219:24:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Knvinfer1::DataType deploy::TensorInfo::dtype_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  219 |     nvinfer1::DataType [01;35m[Kdtype_[m[K;           // < 张量数据类型
+      |                        [01;35m[K^~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:236:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  236 |     [01;35m[KTensorInfo[m[K(const std::string name, const nvinfer1::Dims& shape, const nvinfer1::DataType dtype, const bool input, BufferType buffer_type)
+      |     [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:[m[K In member function ‘[01m[Kvoid deploy::TrtBackend::staticInfer(const std::vector<deploy::Image>&)[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:228:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Klong unsigned int[m[K’ and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  228 |     if (num < 1 || [01;35m[Knum > max_shape.x[m[K) {
+      |                    [01;35m[K~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:234:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  234 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:253:36:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  253 |             for (auto idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                                [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:263:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  263 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:273:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  273 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:286:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  286 |         for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                           [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:314:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  314 |     for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                       [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:[m[K In member function ‘[01m[Kvoid deploy::TrtBackend::dynamicInfer(const std::vector<deploy::Image>&)[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:329:13:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Klong unsigned int[m[K’ and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  329 |     if ([01;35m[Knum < min_shape.x[m[K || num > max_shape.x) {
+      |         [01;35m[K~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:329:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Klong unsigned int[m[K’ and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  329 |     if (num < min_shape.x || [01;35m[Knum > max_shape.x[m[K) {
+      |                              [01;35m[K~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:346:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  346 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:352:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  352 |         for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                           [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:369:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  369 |         for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                           [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:383:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  383 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:393:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  393 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:408:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  408 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:[m[K In member function ‘[01m[Kvoid deploy::TrtBackend::staticInfer_async(const std::vector<deploy::Image>&)[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:454:24:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Klong unsigned int[m[K’ and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  454 |     if (num < 1 || [01;35m[Knum > max_shape.x[m[K) {
+      |                    [01;35m[K~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:461:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  461 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:487:36:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  487 |             for (auto idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                                [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:507:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  507 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:517:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  517 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:540:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  540 |         for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                           [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:586:27:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  586 |     for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                       [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:[m[K In member function ‘[01m[Kvoid deploy::TrtBackend::dynamicInfer_async(const std::vector<deploy::Image>&)[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:600:13:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Klong unsigned int[m[K’ and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  600 |     if ([01;35m[Knum < min_shape.x[m[K || num > max_shape.x) {
+      |         [01;35m[K~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:600:34:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Klong unsigned int[m[K’ and ‘[01m[Kint[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  600 |     if (num < min_shape.x || [01;35m[Knum > max_shape.x[m[K) {
+      |                              [01;35m[K~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:617:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  617 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:623:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  623 |         for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                           [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:645:31:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  645 |         for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                           [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:659:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  659 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:669:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  669 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.cpp:685:35:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Klong unsigned int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wsign-compare-Wsign-compare]8;;[m[K]
+  685 |             for (int idx = 0; [01;35m[Kidx < num[m[K; ++idx) {
+      |                               [01;35m[K~~~~^~~~~[m[K
+nvlink warning : Skipping incompatible '/usr/lib/x86_64-linux-gnu/librt.a' when searching for -lrt
+nvlink warning : Skipping incompatible '/lib/x86_64-linux-gnu/librt.a' when searching for -lrt
+nvlink warning : Skipping incompatible '/usr/lib/x86_64-linux-gnu/libpthread.a' when searching for -lpthread
+nvlink warning : Skipping incompatible '/lib/x86_64-linux-gnu/libpthread.a' when searching for -lpthread
+nvlink warning : Skipping incompatible '/usr/lib/x86_64-linux-gnu/libdl.a' when searching for -ldl
+nvlink warning : Skipping incompatible '/lib/x86_64-linux-gnu/libdl.a' when searching for -ldl
+In file included from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/backend.hpp:19[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/model.hpp:17[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:30[m[K:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::DeviceBuffer::DeviceBuffer()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:103:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::DeviceBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  103 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:102:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::DeviceBuffer::device_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  102 |     void*  [01;35m[Kdevice_[m[K;  // < 设备内存指针
+      |            [01;35m[K^~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:86:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+   86 |     [01;35m[KDeviceBuffer[m[K() : size_(0), device_(nullptr) {}
+      |     [01;35m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::DiscreteBuffer::DiscreteBuffer()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:130:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::DiscreteBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  130 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:128:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::DiscreteBuffer::host_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  128 |     void*  [01;35m[Khost_[m[K;    // < 主机内存指针
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:112:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  112 |     [01;35m[KDiscreteBuffer[m[K() : size_(0), host_(nullptr), device_(nullptr) {}
+      |     [01;35m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::UnifiedBuffer::UnifiedBuffer()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:157:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::UnifiedBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  157 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:155:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::UnifiedBuffer::host_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  155 |     void*  [01;35m[Khost_[m[K;    // < 主机内存指针
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:139:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  139 |     [01;35m[KUnifiedBuffer[m[K() : size_(0), host_(nullptr), device_(nullptr) {}
+      |     [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::MappedBuffer::MappedBuffer()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:184:12:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::MappedBuffer::size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  184 |     size_t [01;35m[Ksize_[m[K;    // < 内存大小
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:182:12:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kvoid* deploy::MappedBuffer::host_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  182 |     void*  [01;35m[Khost_[m[K;    // < 主机内存指针
+      |            [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:166:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  166 |     [01;35m[KMappedBuffer[m[K() : size_(0), host_(nullptr), device_(nullptr) {}
+      |     [01;35m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:[m[K In constructor ‘[01m[Kdeploy::TensorInfo::TensorInfo(std::string, const Dims&, nvinfer1::DataType, bool, deploy::BufferType)[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:224:33:[m[K [01;35m[Kwarning: [m[K‘[01m[Kdeploy::TensorInfo::shape[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  224 |     nvinfer1::Dims              [01;35m[Kshape[m[K;   // < 张量形状
+      |                                 [01;35m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:219:24:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Knvinfer1::DataType deploy::TensorInfo::dtype_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  219 |     nvinfer1::DataType [01;35m[Kdtype_[m[K;           // < 张量数据类型
+      |                        [01;35m[K^~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/core/buffer.hpp:236:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  236 |     [01;35m[KTensorInfo[m[K(const std::string name, const nvinfer1::Dims& shape, const nvinfer1::DataType dtype, const bool input, BufferType buffer_type)
+      |     [01;35m[K^~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:[m[K In constructor ‘[01m[KYoloBatchNode::YoloBatchNode(const string&, const string&, const string&, bool, bool, const string&, double, const Size&, const string&, bool, bool)[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:289:10:[m[K [01;35m[Kwarning: [m[K‘[01m[KYoloBatchNode::enable_mask_video_writing_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  289 |     bool [01;35m[Kenable_mask_video_writing_[m[K = false;
+      |          [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:283:17:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kstd::string YoloBatchNode::video_output_path_str_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  283 |     std::string [01;35m[Kvideo_output_path_str_[m[K;
+      |                 [01;35m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:66:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+   66 |     [01;35m[KYoloBatchNode[m[K(const std::string &node_name,
+      |     [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:287:14:[m[K [01;35m[Kwarning: [m[K‘[01m[KYoloBatchNode::single_video_frame_size_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  287 |     cv::Size [01;35m[Ksingle_video_frame_size_[m[K;
+      |              [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:273:17:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kstd::string YoloBatchNode::image_transport_type_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  273 |     std::string [01;35m[Kimage_transport_type_[m[K = "compressed";
+      |                 [01;35m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:66:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+   66 |     [01;35m[KYoloBatchNode[m[K(const std::string &node_name,
+      |     [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:293:10:[m[K [01;35m[Kwarning: [m[K‘[01m[KYoloBatchNode::enable_measure_times_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  293 |     bool [01;35m[Kenable_measure_times_[m[K = false; // Por defecto, medir tiempos
+      |          [01;35m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:291:10:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kbool YoloBatchNode::enable_realtime_display_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  291 |     bool [01;35m[Kenable_realtime_display_[m[K = false;
+      |          [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:66:5:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+   66 |     [01;35m[KYoloBatchNode[m[K(const std::string &node_name,
+      |     [01;35m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:[m[K In member function ‘[01m[Kvoid YoloBatchNode::inferenceLoop()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:571:23:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktime_in_queue_us[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  571 |             long long [01;35m[Ktime_in_queue_us[m[K = 0;
+      |                       [01;35m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:18[m[K:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:[m[K In member function ‘[01m[Kvoid YoloBatchNode::processImage(const YoloBatchNode::TimedImage&)[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:719:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%lu[m[K’ expects a matching ‘[01m[Klong unsigned int[m[K’ argument [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  719 |         RCLCPP_INFO(this->get_logger(), [01;35m[K"[%s] Publishing InstanceSegmentationInfo with shape: %dx%d, num_instances: %zu, packet_seq: %lu"[m[K,
+      |                                         [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:719:136:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  719 |         RCLCPP_INFO(this->get_logger(), "[%s] Publishing InstanceSegmentationInfo with shape: %dx%d, num_instances: %zu, packet_seq: [01;36m[K%lu[m[K",
+      |                                                                                                                                      [01;36m[K~~^[m[K
+      |                                                                                                                                        [01;36m[K|[m[K
+      |                                                                                                                                        [01;36m[Klong unsigned int[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:628:14:[m[K [01;35m[Kwarning: [m[Kvariable ‘[01m[Kt_read_start[m[K’ set but not used [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-but-set-variable-Wunused-but-set-variable]8;;[m[K]
+  628 |         auto [01;35m[Kt_read_start[m[K = std::chrono::steady_clock::now();
+      |              [01;35m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:18[m[K:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:[m[K In member function ‘[01m[Kvoid YoloBatchNode::processImage_timed(const YoloBatchNode::TimedImage&, long long int, long long int)[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:918:41:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%lu[m[K’ expects a matching ‘[01m[Klong unsigned int[m[K’ argument [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+  918 |         RCLCPP_INFO(this->get_logger(), [01;35m[K"[%s] Publishing InstanceSegmentationInfo with shape: %dx%d, num_instances: %zu, packet_seq: %lu"[m[K,
+      |                                         [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:918:136:[m[K [01;36m[Knote: [m[Kformat string is defined here
+  918 |         RCLCPP_INFO(this->get_logger(), "[%s] Publishing InstanceSegmentationInfo with shape: %dx%d, num_instances: %zu, packet_seq: [01;36m[K%lu[m[K",
+      |                                                                                                                                      [01;36m[K~~^[m[K
+      |                                                                                                                                        [01;36m[K|[m[K
+      |                                                                                                                                        [01;36m[Klong unsigned int[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:18[m[K:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:1011:21:[m[K [01;35m[Kwarning: [m[Kformat ‘[01m[K%ld[m[K’ expects argument of type ‘[01m[Klong int[m[K’, but argument 11 has type ‘[01m[Klong long int[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wformat=-Wformat=]8;;[m[K]
+ 1011 |                     [01;35m[K"[%s] Timings(us): Read=%ld, Pre=%ld, Infer=%ld, Post=%ld, PubCall=%ld. LoopIdle=%ld. QSize=%zu. "[m[K
+      |                     [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+ 1012 | [01;35m[K                    "MsgAge(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "[m[K
+      |                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+ 1013 | [01;35m[K                    "InterCB(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "[m[K
+      |                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+ 1014 | [01;35m[K                    "QueueT(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "[m[K
+      |                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+ 1015 | [01;35m[K                    "E2ELat(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "[m[K
+      |                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+ 1016 | [01;35m[K                    "ProcFunc(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "[m[K
+      |                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+ 1017 | [01;35m[K                    "InterPub(ms): Cur=%.2f,Avg=%.2f,Max=%.2f. "[m[K
+      |                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+ 1018 | [01;35m[K                    "TotalDirPub->Pub(ms): %.2f"[m[K,
+      |                     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+......
+ 1021 |                     [32m[Kloop_idle_time_us[m[K, current_queue_size_.load(),
+      |                     [32m[K~~~~~~~~~~~~~~~~~[m[K
+      |                     [32m[K|[m[K
+      |                     [32m[Klong long int[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:1011:104:[m[K [01;36m[Knote: [m[Kformat string is defined here
+ 1011 |                     "[%s] Timings(us): Read=%ld, Pre=%ld, Infer=%ld, Post=%ld, PubCall=%ld. LoopIdle=[01;36m[K%ld[m[K. QSize=%zu. "
+      |                                                                                                      [01;36m[K~~^[m[K
+      |                                                                                                        [01;36m[K|[m[K
+      |                                                                                                        [01;36m[Klong int[m[K
+      |                                                                                                      [32m[K%lld[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:733:16:[m[K [01;35m[Kwarning: [m[Kunused variable ‘[01m[Ktotal_latency_dirpub_to_processing_ms[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-variable-Wunused-variable]8;;[m[K]
+  733 |         double [01;35m[Ktotal_latency_dirpub_to_processing_ms[m[K =
+      |                [01;35m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:725:97:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Ktime_in_queue_us_val[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  725 |     void processImage_timed(const TimedImage &timed_msg, long long loop_idle_time_us, [01;35m[Klong long time_in_queue_us_val[m[K)
+      |                                                                                       [01;35m[K~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:[m[K In member function ‘[01m[Kvoid YoloBatchNode::writeInferredImageToVideo(const cv::Mat&, const deploy::SegmentRes&, const cv::Mat&, const Size&, const Size&)[m[K’:
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:1090:25:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Koriginal_size[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+ 1090 |         [01;35m[Kconst cv::Size &original_size[m[K,    // Tamaño original de esta imagen
+      |         [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/TensorRT-YOLO/src/segment_node_3P.cpp:1091:25:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Knetwork_input_size[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+ 1091 |         [01;35m[Kconst cv::Size &network_input_size[m[K)
+      |         [01;35m[K~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~[m[K

@@ -35,20 +35,31 @@ target_include_directories(chrono PUBLIC
     $<INSTALL_INTERFACE:include> # Corresponds to the general include install directory
 )
 
-#-------------------------------------------------------------------------------
 
-add_executable(seg_sub_node src/seg_sub.cpp)
-ament_target_dependencies(seg_sub_node OpenCV cv_bridge rclcpp yolo_custom_interfaces)
+#-------------------- Yolo Sub Node --------------------
 
-target_link_libraries(seg_sub_node
+add_executable(seg_sub_yolo_node src/seg_sub_yolo.cpp)
+ament_target_dependencies(seg_sub_yolo_node OpenCV cv_bridge rclcpp yolo_custom_interfaces)
+
+target_link_libraries(seg_sub_yolo_node
     chrono
     ${TRT_LIBS}     # Librerías de TensorRT (si son necesarias directamente por el nodo o por los headers de deploy)
 )
 #-------------------------------------------------------------------------------   
 
+add_executable(seg_sub_pid_node src/seg_sub_pid.cpp)
+ament_target_dependencies(seg_sub_pid_node OpenCV cv_bridge rclcpp yolo_custom_interfaces)
+
+target_link_libraries(seg_sub_pid_node
+    chrono
+    ${TRT_LIBS}     # Librerías de TensorRT (si son necesarias directamente por el nodo o por los headers de deploy)
+)
+
+#----------------- PidNet Sub Node -----------------
 install(TARGETS
   chrono
-  seg_sub_node
+  seg_sub_yolo_node
+  seg_sub_pid_node
   DESTINATION lib/${PROJECT_NAME}
 )
 

@@ -1,0 +1,1 @@
+std_msgs;sensor_msgs;rclcpp;opencv;cuda;libnvinfer-dev;libnvinfer-plugin-dev;libnvonnxparser-dev;cv_bridge;yolo_custom_interfaces;image_transport;rosidl_default_runtime;image_transport_plugins;ament_lint_auto;ament_lint_common

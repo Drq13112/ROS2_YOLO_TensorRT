@@ -1,0 +1,433 @@
+[0.079s] [34mcolcon[0m [1;30mDEBUG[0m [32mCommand line arguments: ['/bin/colcon', 'build', '--cmake-args', '-DTRT_PATH=/usr', '-DCMAKE_CUDA_ARCHITECTURES=89', '-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc'][0m
+[0.079s] [34mcolcon[0m [1;30mDEBUG[0m [32mParsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=32, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=['-DTRT_PATH=/usr', '-DCMAKE_CUDA_ARCHITECTURES=89', '-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc'], cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x78145a54ad10>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x78145a54a410>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x78145a54a410>>)[0m
+[0.097s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) check parameters
+[0.097s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) check parameters
+[0.097s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) check parameters
+[0.097s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) check parameters
+[0.097s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(colcon_meta) discover
+[0.097s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) discover
+[0.097s] [34mcolcon.colcon_core.package_discovery[0m [1;30mINFO[0m Crawling recursively for packages in '/home/david/yolocpp_ws'
+[0.097s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.097s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore'
+[0.097s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ignore_ament_install'
+[0.097s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_pkg']
+[0.097s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_pkg'
+[0.097s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['colcon_meta']
+[0.097s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'colcon_meta'
+[0.097s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['ros']
+[0.097s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'ros'
+[0.108s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['cmake', 'python']
+[0.108s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'cmake'
+[0.108s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python'
+[0.108s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extensions ['python_setup_py']
+[0.108s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(.) by extension 'python_setup_py'
+[0.108s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.108s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) by extension 'ignore'
+[0.108s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(build) ignored
+[0.108s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.108s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) by extension 'ignore'
+[0.108s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(install) ignored
+[0.108s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(latency_plots) by extensions ['ignore', 'ignore_ament_install']
+[0.108s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(latency_plots) by extension 'ignore'
+[0.108s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(latency_plots) by extension 'ignore_ament_install'
+[0.108s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(latency_plots) by extensions ['colcon_pkg']
+[0.108s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(latency_plots) by extension 'colcon_pkg'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(latency_plots) by extensions ['colcon_meta']
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(latency_plots) by extension 'colcon_meta'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(latency_plots) by extensions ['ros']
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(latency_plots) by extension 'ros'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(latency_plots) by extensions ['cmake', 'python']
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(latency_plots) by extension 'cmake'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(latency_plots) by extension 'python'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(latency_plots) by extensions ['python_setup_py']
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(latency_plots) by extension 'python_setup_py'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) by extension 'ignore'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(log) ignored
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_car) by extensions ['ignore', 'ignore_ament_install']
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_car) by extension 'ignore'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_car) by extension 'ignore_ament_install'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_car) by extensions ['colcon_pkg']
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_car) by extension 'colcon_pkg'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_car) by extensions ['colcon_meta']
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_car) by extension 'colcon_meta'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_car) by extensions ['ros']
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_car) by extension 'ros'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_car) by extensions ['cmake', 'python']
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_car) by extension 'cmake'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_car) by extension 'python'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_car) by extensions ['python_setup_py']
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_car) by extension 'python_setup_py'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_local) by extensions ['ignore', 'ignore_ament_install']
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_local) by extension 'ignore'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_local) by extension 'ignore_ament_install'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_local) by extensions ['colcon_pkg']
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_local) by extension 'colcon_pkg'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_local) by extensions ['colcon_meta']
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_local) by extension 'colcon_meta'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_local) by extensions ['ros']
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_local) by extension 'ros'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_local) by extensions ['cmake', 'python']
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_local) by extension 'cmake'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_local) by extension 'python'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_local) by extensions ['python_setup_py']
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(mediciones_local) by extension 'python_setup_py'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos) by extensions ['ignore', 'ignore_ament_install']
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos) by extension 'ignore'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos) by extension 'ignore_ament_install'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos) by extensions ['colcon_pkg']
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos) by extension 'colcon_pkg'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos) by extensions ['colcon_meta']
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos) by extension 'colcon_meta'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos) by extensions ['ros']
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos) by extension 'ros'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos) by extensions ['cmake', 'python']
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos) by extension 'cmake'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos) by extension 'python'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos) by extensions ['python_setup_py']
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos) by extension 'python_setup_py'
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos/segment_node_3P_out) by extensions ['ignore', 'ignore_ament_install']
+[0.109s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos/segment_node_3P_out) by extension 'ignore'
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos/segment_node_3P_out) by extension 'ignore_ament_install'
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos/segment_node_3P_out) by extensions ['colcon_pkg']
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos/segment_node_3P_out) by extension 'colcon_pkg'
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos/segment_node_3P_out) by extensions ['colcon_meta']
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos/segment_node_3P_out) by extension 'colcon_meta'
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos/segment_node_3P_out) by extensions ['ros']
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos/segment_node_3P_out) by extension 'ros'
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos/segment_node_3P_out) by extensions ['cmake', 'python']
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos/segment_node_3P_out) by extension 'cmake'
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos/segment_node_3P_out) by extension 'python'
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos/segment_node_3P_out) by extensions ['python_setup_py']
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(ros_videos/segment_node_3P_out) by extension 'python_setup_py'
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore'
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ignore_ament_install'
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_pkg']
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_pkg'
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['colcon_meta']
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'colcon_meta'
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['ros']
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'ros'
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['cmake', 'python']
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'cmake'
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python'
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extensions ['python_setup_py']
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src) by extension 'python_setup_py'
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ProyectCloud2image) by extensions ['ignore', 'ignore_ament_install']
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ProyectCloud2image) by extension 'ignore'
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/ProyectCloud2image) ignored
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/TensorRT-YOLO) by extensions ['ignore', 'ignore_ament_install']
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/TensorRT-YOLO) by extension 'ignore'
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/TensorRT-YOLO) by extension 'ignore_ament_install'
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/TensorRT-YOLO) by extensions ['colcon_pkg']
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/TensorRT-YOLO) by extension 'colcon_pkg'
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/TensorRT-YOLO) by extensions ['colcon_meta']
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/TensorRT-YOLO) by extension 'colcon_meta'
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/TensorRT-YOLO) by extensions ['ros']
+[0.110s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/TensorRT-YOLO) by extension 'ros'
+[0.112s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/TensorRT-YOLO' with type 'ros.ament_cmake' and name 'tensorrt_yolo'[0m
+[0.112s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bbox_ex_msgs) by extensions ['ignore', 'ignore_ament_install']
+[0.112s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bbox_ex_msgs) by extension 'ignore'
+[0.112s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bbox_ex_msgs) by extension 'ignore_ament_install'
+[0.112s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bbox_ex_msgs) by extensions ['colcon_pkg']
+[0.112s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bbox_ex_msgs) by extension 'colcon_pkg'
+[0.112s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bbox_ex_msgs) by extensions ['colcon_meta']
+[0.112s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bbox_ex_msgs) by extension 'colcon_meta'
+[0.112s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bbox_ex_msgs) by extensions ['ros']
+[0.112s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/bbox_ex_msgs) by extension 'ros'
+[0.112s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/bbox_ex_msgs' with type 'ros.ament_cmake' and name 'bboxes_ex_msgs'[0m
+[0.112s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/image_directory_publisher) by extensions ['ignore', 'ignore_ament_install']
+[0.113s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/image_directory_publisher) by extension 'ignore'
+[0.113s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/image_directory_publisher) by extension 'ignore_ament_install'
+[0.113s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/image_directory_publisher) by extensions ['colcon_pkg']
+[0.113s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/image_directory_publisher) by extension 'colcon_pkg'
+[0.113s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/image_directory_publisher) by extensions ['colcon_meta']
+[0.113s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/image_directory_publisher) by extension 'colcon_meta'
+[0.113s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/image_directory_publisher) by extensions ['ros']
+[0.113s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/image_directory_publisher) by extension 'ros'
+[0.113s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/image_directory_publisher' with type 'ros.ament_cmake' and name 'image_directory_publisher'[0m
+[0.113s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/perception_obstacles_ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.113s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/perception_obstacles_ros2) by extension 'ignore'
+[0.113s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/perception_obstacles_ros2) ignored
+[0.113s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pidnet_segmentation_cpp) by extensions ['ignore', 'ignore_ament_install']
+[0.113s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pidnet_segmentation_cpp) by extension 'ignore'
+[0.113s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pidnet_segmentation_cpp) by extension 'ignore_ament_install'
+[0.113s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pidnet_segmentation_cpp) by extensions ['colcon_pkg']
+[0.113s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pidnet_segmentation_cpp) by extension 'colcon_pkg'
+[0.113s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pidnet_segmentation_cpp) by extensions ['colcon_meta']
+[0.113s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pidnet_segmentation_cpp) by extension 'colcon_meta'
+[0.113s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pidnet_segmentation_cpp) by extensions ['ros']
+[0.113s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pidnet_segmentation_cpp) by extension 'ros'
+[0.113s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/pidnet_segmentation_cpp' with type 'ros.ament_cmake' and name 'pidnet_segmentation_cpp'[0m
+[0.114s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pylon_instant_camera-ros2) by extensions ['ignore', 'ignore_ament_install']
+[0.114s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pylon_instant_camera-ros2) by extension 'ignore'
+[0.114s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pylon_instant_camera-ros2) by extension 'ignore_ament_install'
+[0.114s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pylon_instant_camera-ros2) by extensions ['colcon_pkg']
+[0.114s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pylon_instant_camera-ros2) by extension 'colcon_pkg'
+[0.114s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pylon_instant_camera-ros2) by extensions ['colcon_meta']
+[0.114s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pylon_instant_camera-ros2) by extension 'colcon_meta'
+[0.114s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pylon_instant_camera-ros2) by extensions ['ros']
+[0.114s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/pylon_instant_camera-ros2) by extension 'ros'
+[0.114s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/pylon_instant_camera-ros2' with type 'ros.ament_cmake' and name 'pylon_instant_camera'[0m
+[0.114s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/seg_sub) by extensions ['ignore', 'ignore_ament_install']
+[0.114s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/seg_sub) by extension 'ignore'
+[0.114s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/seg_sub) by extension 'ignore_ament_install'
+[0.114s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/seg_sub) by extensions ['colcon_pkg']
+[0.114s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/seg_sub) by extension 'colcon_pkg'
+[0.114s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/seg_sub) by extensions ['colcon_meta']
+[0.114s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/seg_sub) by extension 'colcon_meta'
+[0.114s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/seg_sub) by extensions ['ros']
+[0.114s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/seg_sub) by extension 'ros'
+[0.115s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/seg_sub' with type 'ros.ament_cmake' and name 'seg_sub'[0m
+[0.115s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sensor_sync_pkg) by extensions ['ignore', 'ignore_ament_install']
+[0.115s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sensor_sync_pkg) by extension 'ignore'
+[0.115s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sensor_sync_pkg) by extension 'ignore_ament_install'
+[0.115s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sensor_sync_pkg) by extensions ['colcon_pkg']
+[0.115s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sensor_sync_pkg) by extension 'colcon_pkg'
+[0.115s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sensor_sync_pkg) by extensions ['colcon_meta']
+[0.115s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sensor_sync_pkg) by extension 'colcon_meta'
+[0.115s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sensor_sync_pkg) by extensions ['ros']
+[0.115s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/sensor_sync_pkg) by extension 'ros'
+[0.115s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/sensor_sync_pkg' with type 'ros.ament_cmake' and name 'sensor_sync_pkg'[0m
+[0.115s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_custom_interfaces) by extensions ['ignore', 'ignore_ament_install']
+[0.115s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_custom_interfaces) by extension 'ignore'
+[0.115s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_custom_interfaces) by extension 'ignore_ament_install'
+[0.115s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_custom_interfaces) by extensions ['colcon_pkg']
+[0.115s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_custom_interfaces) by extension 'colcon_pkg'
+[0.115s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_custom_interfaces) by extensions ['colcon_meta']
+[0.115s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_custom_interfaces) by extension 'colcon_meta'
+[0.115s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_custom_interfaces) by extensions ['ros']
+[0.115s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolo_custom_interfaces) by extension 'ros'
+[0.115s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/yolo_custom_interfaces' with type 'ros.ament_cmake' and name 'yolo_custom_interfaces'[0m
+[0.115s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolocpp) by extensions ['ignore', 'ignore_ament_install']
+[0.115s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolocpp) by extension 'ignore'
+[0.115s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolocpp) by extension 'ignore_ament_install'
+[0.115s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolocpp) by extensions ['colcon_pkg']
+[0.116s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolocpp) by extension 'colcon_pkg'
+[0.116s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolocpp) by extensions ['colcon_meta']
+[0.116s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolocpp) by extension 'colcon_meta'
+[0.116s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolocpp) by extensions ['ros']
+[0.116s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(src/yolocpp) by extension 'ros'
+[0.116s] [34mcolcon.colcon_core.package_identification[0m [1;30mDEBUG[0m [32mPackage 'src/yolocpp' with type 'ros.ament_cmake' and name 'yolocpp'[0m
+[0.116s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests) by extensions ['ignore', 'ignore_ament_install']
+[0.116s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests) by extension 'ignore'
+[0.116s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests) by extension 'ignore_ament_install'
+[0.116s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests) by extensions ['colcon_pkg']
+[0.116s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests) by extension 'colcon_pkg'
+[0.116s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests) by extensions ['colcon_meta']
+[0.116s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests) by extension 'colcon_meta'
+[0.116s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests) by extensions ['ros']
+[0.116s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests) by extension 'ros'
+[0.116s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests) by extensions ['cmake', 'python']
+[0.116s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests) by extension 'cmake'
+[0.116s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests) by extension 'python'
+[0.116s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests) by extensions ['python_setup_py']
+[0.116s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests) by extension 'python_setup_py'
+[0.116s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests/ORGINAL_SIZE_TEST) by extensions ['ignore', 'ignore_ament_install']
+[0.116s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests/ORGINAL_SIZE_TEST) by extension 'ignore'
+[0.116s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests/ORGINAL_SIZE_TEST) by extension 'ignore_ament_install'
+[0.116s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests/ORGINAL_SIZE_TEST) by extensions ['colcon_pkg']
+[0.116s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests/ORGINAL_SIZE_TEST) by extension 'colcon_pkg'
+[0.117s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests/ORGINAL_SIZE_TEST) by extensions ['colcon_meta']
+[0.117s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests/ORGINAL_SIZE_TEST) by extension 'colcon_meta'
+[0.117s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests/ORGINAL_SIZE_TEST) by extensions ['ros']
+[0.117s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests/ORGINAL_SIZE_TEST) by extension 'ros'
+[0.117s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests/ORGINAL_SIZE_TEST) by extensions ['cmake', 'python']
+[0.117s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests/ORGINAL_SIZE_TEST) by extension 'cmake'
+[0.117s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests/ORGINAL_SIZE_TEST) by extension 'python'
+[0.117s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests/ORGINAL_SIZE_TEST) by extensions ['python_setup_py']
+[0.117s] [34mcolcon.colcon_core.package_identification[0m [1;30mLevel 1[0m _identify(tests/ORGINAL_SIZE_TEST) by extension 'python_setup_py'
+[0.117s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(recursive) using defaults
+[0.117s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) discover
+[0.117s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(ignore) using defaults
+[0.117s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) discover
+[0.117s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(path) using defaults
+[0.125s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) check parameters
+[0.125s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) discover
+[0.126s] [34mcolcon.colcon_ros.prefix_path.ament[0m [1;30mWARNING[0m [33mThe path '/home/david/yolocpp_ws/install/yolocpp' in the environment variable AMENT_PREFIX_PATH doesn't exist[0m
+[0.126s] [34mcolcon.colcon_ros.prefix_path.ament[0m [1;30mWARNING[0m [33mThe path '/home/david/yolocpp_ws/install/tensorrt_yolo' in the environment variable AMENT_PREFIX_PATH doesn't exist[0m
+[0.126s] [34mcolcon.colcon_ros.prefix_path.ament[0m [1;30mWARNING[0m [33mThe path '/home/david/yolocpp_ws/install/seg_sub' in the environment variable AMENT_PREFIX_PATH doesn't exist[0m
+[0.126s] [34mcolcon.colcon_ros.prefix_path.ament[0m [1;30mWARNING[0m [33mThe path '/home/david/yolocpp_ws/install/yolo_custom_interfaces' in the environment variable AMENT_PREFIX_PATH doesn't exist[0m
+[0.126s] [34mcolcon.colcon_ros.prefix_path.ament[0m [1;30mWARNING[0m [33mThe path '/home/david/yolocpp_ws/install/sensor_sync_pkg' in the environment variable AMENT_PREFIX_PATH doesn't exist[0m
+[0.126s] [34mcolcon.colcon_ros.prefix_path.ament[0m [1;30mWARNING[0m [33mThe path '/home/david/yolocpp_ws/install/pylon_instant_camera' in the environment variable AMENT_PREFIX_PATH doesn't exist[0m
+[0.126s] [34mcolcon.colcon_ros.prefix_path.ament[0m [1;30mWARNING[0m [33mThe path '/home/david/yolocpp_ws/install/pidnet_segmentation_cpp' in the environment variable AMENT_PREFIX_PATH doesn't exist[0m
+[0.126s] [34mcolcon.colcon_ros.prefix_path.ament[0m [1;30mWARNING[0m [33mThe path '/home/david/yolocpp_ws/install/image_directory_publisher' in the environment variable AMENT_PREFIX_PATH doesn't exist[0m
+[0.126s] [34mcolcon.colcon_ros.prefix_path.ament[0m [1;30mWARNING[0m [33mThe path '/home/david/yolocpp_ws/install/bboxes_ex_msgs' in the environment variable AMENT_PREFIX_PATH doesn't exist[0m
+[0.126s] [34mcolcon.colcon_ros.prefix_path.catkin[0m [1;30mWARNING[0m [33mThe path '/home/david/yolocpp_ws/install/yolocpp' in the environment variable CMAKE_PREFIX_PATH doesn't exist[0m
+[0.126s] [34mcolcon.colcon_ros.prefix_path.catkin[0m [1;30mWARNING[0m [33mThe path '/home/david/yolocpp_ws/install/tensorrt_yolo' in the environment variable CMAKE_PREFIX_PATH doesn't exist[0m
+[0.126s] [34mcolcon.colcon_ros.prefix_path.catkin[0m [1;30mWARNING[0m [33mThe path '/home/david/yolocpp_ws/install/seg_sub' in the environment variable CMAKE_PREFIX_PATH doesn't exist[0m
+[0.126s] [34mcolcon.colcon_ros.prefix_path.catkin[0m [1;30mWARNING[0m [33mThe path '/home/david/yolocpp_ws/install/yolo_custom_interfaces' in the environment variable CMAKE_PREFIX_PATH doesn't exist[0m
+[0.126s] [34mcolcon.colcon_ros.prefix_path.catkin[0m [1;30mWARNING[0m [33mThe path '/home/david/yolocpp_ws/install/sensor_sync_pkg' in the environment variable CMAKE_PREFIX_PATH doesn't exist[0m
+[0.126s] [34mcolcon.colcon_ros.prefix_path.catkin[0m [1;30mWARNING[0m [33mThe path '/home/david/yolocpp_ws/install/pylon_instant_camera' in the environment variable CMAKE_PREFIX_PATH doesn't exist[0m
+[0.126s] [34mcolcon.colcon_ros.prefix_path.catkin[0m [1;30mWARNING[0m [33mThe path '/home/david/yolocpp_ws/install/pidnet_segmentation_cpp' in the environment variable CMAKE_PREFIX_PATH doesn't exist[0m
+[0.126s] [34mcolcon.colcon_ros.prefix_path.catkin[0m [1;30mWARNING[0m [33mThe path '/home/david/yolocpp_ws/install/image_directory_publisher' in the environment variable CMAKE_PREFIX_PATH doesn't exist[0m
+[0.126s] [34mcolcon.colcon_ros.prefix_path.catkin[0m [1;30mWARNING[0m [33mThe path '/home/david/yolocpp_ws/install/bboxes_ex_msgs' in the environment variable CMAKE_PREFIX_PATH doesn't exist[0m
+[0.126s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 0 installed packages in /home/david/yolocpp_ws/install[0m
+[0.127s] [34mcolcon.colcon_installed_package_information.package_discovery[0m [1;30mDEBUG[0m [32mFound 292 installed packages in /opt/ros/humble[0m
+[0.127s] [34mcolcon.colcon_core.package_discovery[0m [1;30mLevel 1[0m discover_packages(prefix_path) using defaults
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'bboxes_ex_msgs' build argument 'cmake_args' from command line to '['-DTRT_PATH=/usr', '-DCMAKE_CUDA_ARCHITECTURES=89', '-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc']'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'bboxes_ex_msgs' build argument 'cmake_target' from command line to 'None'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'bboxes_ex_msgs' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'bboxes_ex_msgs' build argument 'cmake_clean_cache' from command line to 'False'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'bboxes_ex_msgs' build argument 'cmake_clean_first' from command line to 'False'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'bboxes_ex_msgs' build argument 'cmake_force_configure' from command line to 'False'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'bboxes_ex_msgs' build argument 'ament_cmake_args' from command line to 'None'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'bboxes_ex_msgs' build argument 'catkin_cmake_args' from command line to 'None'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'bboxes_ex_msgs' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'bboxes_ex_msgs' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/david/yolocpp_ws/build/bboxes_ex_msgs', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DTRT_PATH=/usr', '-DCMAKE_CUDA_ARCHITECTURES=89', '-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/david/yolocpp_ws/install/bboxes_ex_msgs', 'merge_install': False, 'path': '/home/david/yolocpp_ws/src/bbox_ex_msgs', 'symlink_install': False, 'test_result_base': None}[0m
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'image_directory_publisher' build argument 'cmake_args' from command line to '['-DTRT_PATH=/usr', '-DCMAKE_CUDA_ARCHITECTURES=89', '-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc']'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'image_directory_publisher' build argument 'cmake_target' from command line to 'None'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'image_directory_publisher' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'image_directory_publisher' build argument 'cmake_clean_cache' from command line to 'False'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'image_directory_publisher' build argument 'cmake_clean_first' from command line to 'False'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'image_directory_publisher' build argument 'cmake_force_configure' from command line to 'False'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'image_directory_publisher' build argument 'ament_cmake_args' from command line to 'None'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'image_directory_publisher' build argument 'catkin_cmake_args' from command line to 'None'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'image_directory_publisher' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'image_directory_publisher' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/david/yolocpp_ws/build/image_directory_publisher', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DTRT_PATH=/usr', '-DCMAKE_CUDA_ARCHITECTURES=89', '-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/david/yolocpp_ws/install/image_directory_publisher', 'merge_install': False, 'path': '/home/david/yolocpp_ws/src/image_directory_publisher', 'symlink_install': False, 'test_result_base': None}[0m
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pidnet_segmentation_cpp' build argument 'cmake_args' from command line to '['-DTRT_PATH=/usr', '-DCMAKE_CUDA_ARCHITECTURES=89', '-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc']'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pidnet_segmentation_cpp' build argument 'cmake_target' from command line to 'None'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pidnet_segmentation_cpp' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pidnet_segmentation_cpp' build argument 'cmake_clean_cache' from command line to 'False'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pidnet_segmentation_cpp' build argument 'cmake_clean_first' from command line to 'False'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pidnet_segmentation_cpp' build argument 'cmake_force_configure' from command line to 'False'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pidnet_segmentation_cpp' build argument 'ament_cmake_args' from command line to 'None'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pidnet_segmentation_cpp' build argument 'catkin_cmake_args' from command line to 'None'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pidnet_segmentation_cpp' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'pidnet_segmentation_cpp' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/david/yolocpp_ws/build/pidnet_segmentation_cpp', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DTRT_PATH=/usr', '-DCMAKE_CUDA_ARCHITECTURES=89', '-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/david/yolocpp_ws/install/pidnet_segmentation_cpp', 'merge_install': False, 'path': '/home/david/yolocpp_ws/src/pidnet_segmentation_cpp', 'symlink_install': False, 'test_result_base': None}[0m
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pylon_instant_camera' build argument 'cmake_args' from command line to '['-DTRT_PATH=/usr', '-DCMAKE_CUDA_ARCHITECTURES=89', '-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc']'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pylon_instant_camera' build argument 'cmake_target' from command line to 'None'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pylon_instant_camera' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pylon_instant_camera' build argument 'cmake_clean_cache' from command line to 'False'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pylon_instant_camera' build argument 'cmake_clean_first' from command line to 'False'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pylon_instant_camera' build argument 'cmake_force_configure' from command line to 'False'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pylon_instant_camera' build argument 'ament_cmake_args' from command line to 'None'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pylon_instant_camera' build argument 'catkin_cmake_args' from command line to 'None'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'pylon_instant_camera' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.147s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'pylon_instant_camera' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/david/yolocpp_ws/build/pylon_instant_camera', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DTRT_PATH=/usr', '-DCMAKE_CUDA_ARCHITECTURES=89', '-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/david/yolocpp_ws/install/pylon_instant_camera', 'merge_install': False, 'path': '/home/david/yolocpp_ws/src/pylon_instant_camera-ros2', 'symlink_install': False, 'test_result_base': None}[0m
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'sensor_sync_pkg' build argument 'cmake_args' from command line to '['-DTRT_PATH=/usr', '-DCMAKE_CUDA_ARCHITECTURES=89', '-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc']'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'sensor_sync_pkg' build argument 'cmake_target' from command line to 'None'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'sensor_sync_pkg' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'sensor_sync_pkg' build argument 'cmake_clean_cache' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'sensor_sync_pkg' build argument 'cmake_clean_first' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'sensor_sync_pkg' build argument 'cmake_force_configure' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'sensor_sync_pkg' build argument 'ament_cmake_args' from command line to 'None'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'sensor_sync_pkg' build argument 'catkin_cmake_args' from command line to 'None'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'sensor_sync_pkg' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'sensor_sync_pkg' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/david/yolocpp_ws/build/sensor_sync_pkg', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DTRT_PATH=/usr', '-DCMAKE_CUDA_ARCHITECTURES=89', '-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/david/yolocpp_ws/install/sensor_sync_pkg', 'merge_install': False, 'path': '/home/david/yolocpp_ws/src/sensor_sync_pkg', 'symlink_install': False, 'test_result_base': None}[0m
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolo_custom_interfaces' build argument 'cmake_args' from command line to '['-DTRT_PATH=/usr', '-DCMAKE_CUDA_ARCHITECTURES=89', '-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc']'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolo_custom_interfaces' build argument 'cmake_target' from command line to 'None'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolo_custom_interfaces' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolo_custom_interfaces' build argument 'cmake_clean_cache' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolo_custom_interfaces' build argument 'cmake_clean_first' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolo_custom_interfaces' build argument 'cmake_force_configure' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolo_custom_interfaces' build argument 'ament_cmake_args' from command line to 'None'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolo_custom_interfaces' build argument 'catkin_cmake_args' from command line to 'None'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolo_custom_interfaces' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'yolo_custom_interfaces' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/david/yolocpp_ws/build/yolo_custom_interfaces', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DTRT_PATH=/usr', '-DCMAKE_CUDA_ARCHITECTURES=89', '-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/david/yolocpp_ws/install/yolo_custom_interfaces', 'merge_install': False, 'path': '/home/david/yolocpp_ws/src/yolo_custom_interfaces', 'symlink_install': False, 'test_result_base': None}[0m
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'seg_sub' build argument 'cmake_args' from command line to '['-DTRT_PATH=/usr', '-DCMAKE_CUDA_ARCHITECTURES=89', '-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc']'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'seg_sub' build argument 'cmake_target' from command line to 'None'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'seg_sub' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'seg_sub' build argument 'cmake_clean_cache' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'seg_sub' build argument 'cmake_clean_first' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'seg_sub' build argument 'cmake_force_configure' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'seg_sub' build argument 'ament_cmake_args' from command line to 'None'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'seg_sub' build argument 'catkin_cmake_args' from command line to 'None'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'seg_sub' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'seg_sub' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/david/yolocpp_ws/build/seg_sub', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DTRT_PATH=/usr', '-DCMAKE_CUDA_ARCHITECTURES=89', '-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/david/yolocpp_ws/install/seg_sub', 'merge_install': False, 'path': '/home/david/yolocpp_ws/src/seg_sub', 'symlink_install': False, 'test_result_base': None}[0m
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'tensorrt_yolo' build argument 'cmake_args' from command line to '['-DTRT_PATH=/usr', '-DCMAKE_CUDA_ARCHITECTURES=89', '-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc']'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'tensorrt_yolo' build argument 'cmake_target' from command line to 'None'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'tensorrt_yolo' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'tensorrt_yolo' build argument 'cmake_clean_cache' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'tensorrt_yolo' build argument 'cmake_clean_first' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'tensorrt_yolo' build argument 'cmake_force_configure' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'tensorrt_yolo' build argument 'ament_cmake_args' from command line to 'None'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'tensorrt_yolo' build argument 'catkin_cmake_args' from command line to 'None'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'tensorrt_yolo' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'tensorrt_yolo' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/david/yolocpp_ws/build/tensorrt_yolo', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DTRT_PATH=/usr', '-DCMAKE_CUDA_ARCHITECTURES=89', '-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/david/yolocpp_ws/install/tensorrt_yolo', 'merge_install': False, 'path': '/home/david/yolocpp_ws/src/TensorRT-YOLO', 'symlink_install': False, 'test_result_base': None}[0m
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolocpp' build argument 'cmake_args' from command line to '['-DTRT_PATH=/usr', '-DCMAKE_CUDA_ARCHITECTURES=89', '-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc']'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolocpp' build argument 'cmake_target' from command line to 'None'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolocpp' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolocpp' build argument 'cmake_clean_cache' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolocpp' build argument 'cmake_clean_first' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolocpp' build argument 'cmake_force_configure' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolocpp' build argument 'ament_cmake_args' from command line to 'None'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolocpp' build argument 'catkin_cmake_args' from command line to 'None'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mLevel 5[0m set package 'yolocpp' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.148s] [34mcolcon.colcon_core.verb[0m [1;30mDEBUG[0m [32mBuilding package 'yolocpp' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/david/yolocpp_ws/build/yolocpp', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': ['-DTRT_PATH=/usr', '-DCMAKE_CUDA_ARCHITECTURES=89', '-DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc'], 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/david/yolocpp_ws/install/yolocpp', 'merge_install': False, 'path': '/home/david/yolocpp_ws/src/yolocpp', 'symlink_install': False, 'test_result_base': None}[0m
+[0.149s] [34mcolcon.colcon_core.executor[0m [1;30mINFO[0m Executing jobs using 'parallel' executor
+[0.149s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete[0m
+[0.149s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/david/yolocpp_ws/src/yolo_custom_interfaces' with build type 'ament_cmake'
+[0.149s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/david/yolocpp_ws/src/yolo_custom_interfaces'
+[0.151s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[0.151s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.151s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.153s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/david/yolocpp_ws/src/bbox_ex_msgs' with build type 'ament_cmake'
+[0.153s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/david/yolocpp_ws/src/bbox_ex_msgs'
+[0.153s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.153s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.155s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/david/yolocpp_ws/src/image_directory_publisher' with build type 'ament_cmake'
+[0.155s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/david/yolocpp_ws/src/image_directory_publisher'
+[0.155s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.155s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.157s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/david/yolocpp_ws/src/pidnet_segmentation_cpp' with build type 'ament_cmake'
+[0.157s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/david/yolocpp_ws/src/pidnet_segmentation_cpp'
+[0.157s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.157s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.159s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/david/yolocpp_ws/src/pylon_instant_camera-ros2' with build type 'ament_cmake'
+[0.159s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/david/yolocpp_ws/src/pylon_instant_camera-ros2'
+[0.159s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.159s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.161s] [34mcolcon.colcon_ros.task.ament_cmake.build[0m [1;30mINFO[0m Building ROS package in '/home/david/yolocpp_ws/src/sensor_sync_pkg' with build type 'ament_cmake'
+[0.161s] [34mcolcon.colcon_cmake.task.cmake.build[0m [1;30mINFO[0m Building CMake package in '/home/david/yolocpp_ws/src/sensor_sync_pkg'
+[0.161s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[0.161s] [34mcolcon.colcon_core.shell[0m [1;30mDEBUG[0m [32mSkip shell extension 'dsv' for command environment[0m
+[0.165s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/david/yolocpp_ws/build/yolo_custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake /home/david/yolocpp_ws/src/yolo_custom_interfaces -DTRT_PATH=/usr -DCMAKE_CUDA_ARCHITECTURES=89 -DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc -DCMAKE_INSTALL_PREFIX=/home/david/yolocpp_ws/install/yolo_custom_interfaces[0m
+[0.167s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/david/yolocpp_ws/build/bboxes_ex_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake /home/david/yolocpp_ws/src/bbox_ex_msgs -DTRT_PATH=/usr -DCMAKE_CUDA_ARCHITECTURES=89 -DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc -DCMAKE_INSTALL_PREFIX=/home/david/yolocpp_ws/install/bboxes_ex_msgs[0m
+[0.168s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/david/yolocpp_ws/build/image_directory_publisher': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake /home/david/yolocpp_ws/src/image_directory_publisher -DTRT_PATH=/usr -DCMAKE_CUDA_ARCHITECTURES=89 -DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc -DCMAKE_INSTALL_PREFIX=/home/david/yolocpp_ws/install/image_directory_publisher[0m
+[0.169s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/david/yolocpp_ws/build/pidnet_segmentation_cpp': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake /home/david/yolocpp_ws/src/pidnet_segmentation_cpp -DTRT_PATH=/usr -DCMAKE_CUDA_ARCHITECTURES=89 -DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc -DCMAKE_INSTALL_PREFIX=/home/david/yolocpp_ws/install/pidnet_segmentation_cpp[0m
+[0.171s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/david/yolocpp_ws/build/pylon_instant_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake /home/david/yolocpp_ws/src/pylon_instant_camera-ros2 -DTRT_PATH=/usr -DCMAKE_CUDA_ARCHITECTURES=89 -DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc -DCMAKE_INSTALL_PREFIX=/home/david/yolocpp_ws/install/pylon_instant_camera[0m
+[0.176s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/david/yolocpp_ws/build/sensor_sync_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake /home/david/yolocpp_ws/src/sensor_sync_pkg -DTRT_PATH=/usr -DCMAKE_CUDA_ARCHITECTURES=89 -DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc -DCMAKE_INSTALL_PREFIX=/home/david/yolocpp_ws/install/sensor_sync_pkg[0m
+[1.160s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/david/yolocpp_ws/build/sensor_sync_pkg' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake /home/david/yolocpp_ws/src/sensor_sync_pkg -DTRT_PATH=/usr -DCMAKE_CUDA_ARCHITECTURES=89 -DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc -DCMAKE_INSTALL_PREFIX=/home/david/yolocpp_ws/install/sensor_sync_pkg[0m
+[1.162s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/david/yolocpp_ws/build/sensor_sync_pkg': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake --build /home/david/yolocpp_ws/build/sensor_sync_pkg -- -j32 -l32[0m
+[1.214s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/david/yolocpp_ws/build/image_directory_publisher' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake /home/david/yolocpp_ws/src/image_directory_publisher -DTRT_PATH=/usr -DCMAKE_CUDA_ARCHITECTURES=89 -DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc -DCMAKE_INSTALL_PREFIX=/home/david/yolocpp_ws/install/image_directory_publisher[0m
+[1.214s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/david/yolocpp_ws/build/image_directory_publisher': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake --build /home/david/yolocpp_ws/build/image_directory_publisher -- -j32 -l32[0m
+[1.258s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/david/yolocpp_ws/build/pylon_instant_camera' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake /home/david/yolocpp_ws/src/pylon_instant_camera-ros2 -DTRT_PATH=/usr -DCMAKE_CUDA_ARCHITECTURES=89 -DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc -DCMAKE_INSTALL_PREFIX=/home/david/yolocpp_ws/install/pylon_instant_camera[0m
+[1.259s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/david/yolocpp_ws/build/pylon_instant_camera': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake --build /home/david/yolocpp_ws/build/pylon_instant_camera -- -j32 -l32[0m
+[1.686s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/david/yolocpp_ws/build/bboxes_ex_msgs' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake /home/david/yolocpp_ws/src/bbox_ex_msgs -DTRT_PATH=/usr -DCMAKE_CUDA_ARCHITECTURES=89 -DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc -DCMAKE_INSTALL_PREFIX=/home/david/yolocpp_ws/install/bboxes_ex_msgs[0m
+[1.688s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/david/yolocpp_ws/build/bboxes_ex_msgs': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake --build /home/david/yolocpp_ws/build/bboxes_ex_msgs -- -j32 -l32[0m
+[2.016s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/david/yolocpp_ws/build/yolo_custom_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake /home/david/yolocpp_ws/src/yolo_custom_interfaces -DTRT_PATH=/usr -DCMAKE_CUDA_ARCHITECTURES=89 -DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc -DCMAKE_INSTALL_PREFIX=/home/david/yolocpp_ws/install/yolo_custom_interfaces[0m
+[2.018s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoking command in '/home/david/yolocpp_ws/build/yolo_custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake --build /home/david/yolocpp_ws/build/yolo_custom_interfaces -- -j32 -l32[0m
+[3.001s] [34mcolcon.colcon_core.event_handler.log_command[0m [1;30mDEBUG[0m [32mInvoked command in '/home/david/yolocpp_ws/build/pidnet_segmentation_cpp' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake /home/david/yolocpp_ws/src/pidnet_segmentation_cpp -DTRT_PATH=/usr -DCMAKE_CUDA_ARCHITECTURES=89 -DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc -DCMAKE_INSTALL_PREFIX=/home/david/yolocpp_ws/install/pidnet_segmentation_cpp[0m
+[3.014s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_environment_scripts_only(pidnet_segmentation_cpp)
+[3.018s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/david/yolocpp_ws/install/pidnet_segmentation_cpp' for CMake module files
+[3.018s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/david/yolocpp_ws/install/pidnet_segmentation_cpp' for CMake config files
+[3.018s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/david/yolocpp_ws/install/pidnet_segmentation_cpp/bin'
+[3.018s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/david/yolocpp_ws/install/pidnet_segmentation_cpp/lib/pkgconfig/pidnet_segmentation_cpp.pc'
+[3.019s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/david/yolocpp_ws/install/pidnet_segmentation_cpp/lib/python3.10/site-packages'
+[3.019s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m checking '/home/david/yolocpp_ws/install/pidnet_segmentation_cpp/bin'
+[3.019s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/david/yolocpp_ws/install/pidnet_segmentation_cpp/share/pidnet_segmentation_cpp/package.ps1'
+[3.020s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package descriptor '/home/david/yolocpp_ws/install/pidnet_segmentation_cpp/share/pidnet_segmentation_cpp/package.dsv'
+[3.021s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/david/yolocpp_ws/install/pidnet_segmentation_cpp/share/pidnet_segmentation_cpp/package.sh'
+[3.022s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/david/yolocpp_ws/install/pidnet_segmentation_cpp/share/pidnet_segmentation_cpp/package.bash'
+[3.023s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating package script '/home/david/yolocpp_ws/install/pidnet_segmentation_cpp/share/pidnet_segmentation_cpp/package.zsh'
+[3.024s] [34mcolcon.colcon_core.environment[0m [1;30mLevel 1[0m create_file_with_runtime_dependencies(/home/david/yolocpp_ws/install/pidnet_segmentation_cpp/share/colcon-core/packages/pidnet_segmentation_cpp)
+[7.246s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mclosing loop[0m
+[7.246s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mloop closed[0m
+[7.246s] [34mcolcon.colcon_parallel_executor.executor.parallel[0m [1;30mDEBUG[0m [32mrun_until_complete finished with '1'[0m
+[7.246s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoining thread[0m
+[7.250s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[7.250s] [34mcolcon.colcon_core.plugin_system[0m [1;30mINFO[0m Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[7.250s] [34mcolcon.colcon_notification.desktop_notification[0m [1;30mINFO[0m Sending desktop notification using 'notify2'
+[7.260s] [34mcolcon.colcon_core.event_reactor[0m [1;30mDEBUG[0m [32mjoined thread[0m
+[7.261s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/david/yolocpp_ws/install/local_setup.ps1'
+[7.261s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/david/yolocpp_ws/install/_local_setup_util_ps1.py'
+[7.262s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/david/yolocpp_ws/install/setup.ps1'
+[7.262s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/david/yolocpp_ws/install/local_setup.sh'
+[7.262s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix util module '/home/david/yolocpp_ws/install/_local_setup_util_sh.py'
+[7.263s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/david/yolocpp_ws/install/setup.sh'
+[7.263s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/david/yolocpp_ws/install/local_setup.bash'
+[7.263s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/david/yolocpp_ws/install/setup.bash'
+[7.264s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix script '/home/david/yolocpp_ws/install/local_setup.zsh'
+[7.264s] [34mcolcon.colcon_core.shell[0m [1;30mINFO[0m Creating prefix chain script '/home/david/yolocpp_ws/install/setup.zsh'

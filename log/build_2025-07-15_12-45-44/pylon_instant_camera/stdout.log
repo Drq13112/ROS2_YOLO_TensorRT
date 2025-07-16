@@ -1,0 +1,25 @@
+[35m[1mConsolidate compiler generated dependencies of target node[0m
+[35m[1mConsolidate compiler generated dependencies of target PylonCameraNode[0m
+[ 50%] Built target node
+[100%] Built target PylonCameraNode
+-- Install configuration: ""
+-- Installing: /home/david/yolocpp_ws/install/pylon_instant_camera/lib/pylon_instant_camera/node
+-- Set runtime path of "/home/david/yolocpp_ws/install/pylon_instant_camera/lib/pylon_instant_camera/node" to ""
+-- Installing: /home/david/yolocpp_ws/install/pylon_instant_camera/lib/libPylonCameraNode.so
+-- Set runtime path of "/home/david/yolocpp_ws/install/pylon_instant_camera/lib/libPylonCameraNode.so" to ""
+-- Installing: /home/david/yolocpp_ws/install/pylon_instant_camera/share/ament_index/resource_index/package_run_dependencies/pylon_instant_camera
+-- Installing: /home/david/yolocpp_ws/install/pylon_instant_camera/share/ament_index/resource_index/parent_prefix_path/pylon_instant_camera
+-- Installing: /home/david/yolocpp_ws/install/pylon_instant_camera/share/pylon_instant_camera/environment/ament_prefix_path.sh
+-- Installing: /home/david/yolocpp_ws/install/pylon_instant_camera/share/pylon_instant_camera/environment/ament_prefix_path.dsv
+-- Installing: /home/david/yolocpp_ws/install/pylon_instant_camera/share/pylon_instant_camera/environment/path.sh
+-- Installing: /home/david/yolocpp_ws/install/pylon_instant_camera/share/pylon_instant_camera/environment/path.dsv
+-- Installing: /home/david/yolocpp_ws/install/pylon_instant_camera/share/pylon_instant_camera/local_setup.bash
+-- Installing: /home/david/yolocpp_ws/install/pylon_instant_camera/share/pylon_instant_camera/local_setup.sh
+-- Installing: /home/david/yolocpp_ws/install/pylon_instant_camera/share/pylon_instant_camera/local_setup.zsh
+-- Installing: /home/david/yolocpp_ws/install/pylon_instant_camera/share/pylon_instant_camera/local_setup.dsv
+-- Installing: /home/david/yolocpp_ws/install/pylon_instant_camera/share/pylon_instant_camera/package.dsv
+-- Installing: /home/david/yolocpp_ws/install/pylon_instant_camera/share/ament_index/resource_index/packages/pylon_instant_camera
+-- Installing: /home/david/yolocpp_ws/install/pylon_instant_camera/share/ament_index/resource_index/rclcpp_components/pylon_instant_camera
+-- Installing: /home/david/yolocpp_ws/install/pylon_instant_camera/share/pylon_instant_camera/cmake/pylon_instant_cameraConfig.cmake
+-- Installing: /home/david/yolocpp_ws/install/pylon_instant_camera/share/pylon_instant_camera/cmake/pylon_instant_cameraConfig-version.cmake
+-- Installing: /home/david/yolocpp_ws/install/pylon_instant_camera/share/pylon_instant_camera/package.xml

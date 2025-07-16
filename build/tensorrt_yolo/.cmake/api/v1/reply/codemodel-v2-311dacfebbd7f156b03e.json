@@ -1,0 +1,97 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-7b8d6a6fa4b0ce671134.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.12"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"name" : "",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "tensorrt_yolo",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "chrono::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-chrono-ddbf7040d9a1c28abddb.json",
+					"name" : "chrono",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "deploy::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-deploy-545eb16e212c95e324b9.json",
+					"name" : "deploy",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "segment_node_3P::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-segment_node_3P-37ff4fb93bc11b5fa43c.json",
+					"name" : "segment_node_3P",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "tensorrt_yolo_uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-tensorrt_yolo_uninstall-fcdcd1735f52aab27e45.json",
+					"name" : "tensorrt_yolo_uninstall",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "uninstall::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-uninstall-1cf9cfc05647b11ff60a.json",
+					"name" : "uninstall",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/david/yolocpp_ws/build/tensorrt_yolo",
+		"source" : "/home/david/yolocpp_ws/src/TensorRT-YOLO"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

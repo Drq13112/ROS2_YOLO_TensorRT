@@ -1,0 +1,5 @@
+/bin/ld: libdeploy.so: undefined reference to `deploy::cudaMutliWarpAffine(void const*, int, int, void*, int, int, float3 const*, deploy::ProcessConfig, int, CUstream_st*, int)'
+collect2: error: ld returned 1 exit status
+gmake[2]: *** [CMakeFiles/segment_node_3P.dir/build.make:250: segment_node_3P] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:194: CMakeFiles/segment_node_3P.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

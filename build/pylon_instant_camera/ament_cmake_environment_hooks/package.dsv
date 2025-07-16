@@ -1,0 +1,4 @@
+source;share/pylon_instant_camera/local_setup.bash
+source;share/pylon_instant_camera/local_setup.dsv
+source;share/pylon_instant_camera/local_setup.sh
+source;share/pylon_instant_camera/local_setup.zsh

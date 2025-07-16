@@ -1,0 +1,5 @@
+[33mCMake Warning at CMakeLists.txt:344 (message):
+  custom_plugins target does not exist.  segment_node_3P will not be linked
+  against it.
+
+[0m

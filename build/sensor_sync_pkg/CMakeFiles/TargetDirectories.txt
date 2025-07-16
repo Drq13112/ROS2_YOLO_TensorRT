@@ -1,0 +1,10 @@
+/home/david/yolocpp_ws/build/sensor_sync_pkg/CMakeFiles/uninstall.dir
+/home/david/yolocpp_ws/build/sensor_sync_pkg/CMakeFiles/sensor_sync_pkg_uninstall.dir
+/home/david/yolocpp_ws/build/sensor_sync_pkg/CMakeFiles/sync_node.dir
+/home/david/yolocpp_ws/build/sensor_sync_pkg/CMakeFiles/test.dir
+/home/david/yolocpp_ws/build/sensor_sync_pkg/CMakeFiles/edit_cache.dir
+/home/david/yolocpp_ws/build/sensor_sync_pkg/CMakeFiles/rebuild_cache.dir
+/home/david/yolocpp_ws/build/sensor_sync_pkg/CMakeFiles/list_install_components.dir
+/home/david/yolocpp_ws/build/sensor_sync_pkg/CMakeFiles/install.dir
+/home/david/yolocpp_ws/build/sensor_sync_pkg/CMakeFiles/install/local.dir
+/home/david/yolocpp_ws/build/sensor_sync_pkg/CMakeFiles/install/strip.dir

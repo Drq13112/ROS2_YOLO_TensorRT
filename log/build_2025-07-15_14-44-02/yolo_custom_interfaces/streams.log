@@ -1,0 +1,164 @@
+[0.013s] Invoking command in '/home/david/yolocpp_ws/build/yolo_custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake --build /home/david/yolocpp_ws/build/yolo_custom_interfaces -- -j32 -l32
+[0.053s] [  2%] Built target yolo_custom_interfaces__cpp
+[0.054s] [ 12%] Built target yolo_custom_interfaces__rosidl_generator_c
+[0.062s] [ 12%] Built target ament_cmake_python_copy_yolo_custom_interfaces
+[0.070s] [ 23%] Built target yolo_custom_interfaces__rosidl_typesupport_cpp
+[0.072s] [ 33%] Built target yolo_custom_interfaces__rosidl_typesupport_introspection_cpp
+[0.073s] [ 43%] Built target yolo_custom_interfaces__rosidl_typesupport_fastrtps_cpp
+[0.074s] [ 53%] Built target yolo_custom_interfaces__rosidl_typesupport_c
+[0.076s] [ 64%] Built target yolo_custom_interfaces__rosidl_typesupport_introspection_c
+[0.080s] [ 74%] Built target yolo_custom_interfaces__rosidl_typesupport_fastrtps_c
+[0.095s] [ 74%] Built target yolo_custom_interfaces
+[0.112s] [ 76%] Built target yolo_custom_interfaces__py
+[0.132s] [ 84%] Built target yolo_custom_interfaces__rosidl_generator_py
+[0.151s] [ 97%] Built target yolo_custom_interfaces__rosidl_typesupport_fastrtps_c__pyext
+[0.151s] [100%] Built target yolo_custom_interfaces__rosidl_typesupport_introspection_c__pyext
+[0.151s] [100%] Built target yolo_custom_interfaces__rosidl_typesupport_c__pyext
+[0.214s] running egg_info
+[0.227s] writing yolo_custom_interfaces.egg-info/PKG-INFO
+[0.227s] writing dependency_links to yolo_custom_interfaces.egg-info/dependency_links.txt
+[0.227s] writing top-level names to yolo_custom_interfaces.egg-info/top_level.txt
+[0.264s] reading manifest file 'yolo_custom_interfaces.egg-info/SOURCES.txt'
+[0.265s] writing manifest file 'yolo_custom_interfaces.egg-info/SOURCES.txt'
+[0.285s] [100%] Built target ament_cmake_python_build_yolo_custom_interfaces_egg
+[0.296s] Invoked command in '/home/david/yolocpp_ws/build/yolo_custom_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake --build /home/david/yolocpp_ws/build/yolo_custom_interfaces -- -j32 -l32
+[0.297s] Invoking command in '/home/david/yolocpp_ws/build/yolo_custom_interfaces': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake --install /home/david/yolocpp_ws/build/yolo_custom_interfaces
+[0.303s] -- Install configuration: ""
+[0.303s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/ament_index/resource_index/rosidl_interfaces/yolo_custom_interfaces
+[0.303s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces
+[0.303s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg
+[0.303s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/rosidl_generator_c__visibility_control.h
+[0.303s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/instance_segmentation_info.h
+[0.303s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail
+[0.303s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/pidnet_result__type_support.h
+[0.303s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/instance_segmentation_info__functions.h
+[0.303s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/pidnet_result__functions.h
+[0.303s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/instance_segmentation_info__struct.h
+[0.303s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/pidnet_result__functions.c
+[0.303s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/instance_segmentation_info__functions.c
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/instance_segmentation_info__type_support.h
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/pidnet_result__struct.h
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/pidnet_result.h
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/environment/library_path.sh
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/environment/library_path.dsv
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/lib/libyolo_custom_interfaces__rosidl_generator_c.so
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/pidnet_result__rosidl_typesupport_fastrtps_c.h
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/instance_segmentation_info__rosidl_typesupport_fastrtps_c.h
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/lib/libyolo_custom_interfaces__rosidl_typesupport_fastrtps_c.so
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/instance_segmentation_info.hpp
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/instance_segmentation_info__struct.hpp
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/pidnet_result__builder.hpp
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/pidnet_result__type_support.hpp
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/pidnet_result__struct.hpp
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/pidnet_result__traits.hpp
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/instance_segmentation_info__traits.hpp
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/instance_segmentation_info__type_support.hpp
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/instance_segmentation_info__builder.hpp
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/pidnet_result.hpp
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/pidnet_result__rosidl_typesupport_fastrtps_cpp.hpp
+[0.304s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/instance_segmentation_info__rosidl_typesupport_fastrtps_cpp.hpp
+[0.305s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/dds_fastrtps
+[0.305s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[0.305s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/lib/libyolo_custom_interfaces__rosidl_typesupport_fastrtps_cpp.so
+[0.305s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces
+[0.305s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg
+[0.305s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[0.305s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail
+[0.305s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/pidnet_result__type_support.c
+[0.305s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/instance_segmentation_info__rosidl_typesupport_introspection_c.h
+[0.305s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/pidnet_result__rosidl_typesupport_introspection_c.h
+[0.305s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/instance_segmentation_info__type_support.c
+[0.305s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/lib/libyolo_custom_interfaces__rosidl_typesupport_introspection_c.so
+[0.305s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/lib/libyolo_custom_interfaces__rosidl_typesupport_c.so
+[0.305s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces
+[0.305s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg
+[0.305s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail
+[0.305s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/instance_segmentation_info__type_support.cpp
+[0.305s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/instance_segmentation_info__rosidl_typesupport_introspection_cpp.hpp
+[0.305s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/pidnet_result__rosidl_typesupport_introspection_cpp.hpp
+[0.305s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/pidnet_result__type_support.cpp
+[0.305s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/lib/libyolo_custom_interfaces__rosidl_typesupport_introspection_cpp.so
+[0.305s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/lib/libyolo_custom_interfaces__rosidl_typesupport_cpp.so
+[0.305s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/environment/pythonpath.sh
+[0.305s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/environment/pythonpath.dsv
+[0.305s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages/yolo_custom_interfaces-0.0.0-py3.10.egg-info
+[0.305s] -- Installing: /home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages/yolo_custom_interfaces-0.0.0-py3.10.egg-info/PKG-INFO
+[0.305s] -- Installing: /home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages/yolo_custom_interfaces-0.0.0-py3.10.egg-info/SOURCES.txt
+[0.306s] -- Installing: /home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages/yolo_custom_interfaces-0.0.0-py3.10.egg-info/dependency_links.txt
+[0.306s] -- Installing: /home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages/yolo_custom_interfaces-0.0.0-py3.10.egg-info/top_level.txt
+[0.306s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages/yolo_custom_interfaces
+[0.306s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages/yolo_custom_interfaces/_yolo_custom_interfaces_s.ep.rosidl_typesupport_fastrtps_c.c
+[0.306s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages/yolo_custom_interfaces/_yolo_custom_interfaces_s.ep.rosidl_typesupport_c.c
+[0.306s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages/yolo_custom_interfaces/yolo_custom_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.306s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages/yolo_custom_interfaces/libyolo_custom_interfaces__rosidl_generator_py.so
+[0.306s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages/yolo_custom_interfaces/yolo_custom_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.307s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages/yolo_custom_interfaces/__init__.py
+[0.307s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages/yolo_custom_interfaces/msg
+[0.307s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages/yolo_custom_interfaces/msg/_pidnet_result.py
+[0.307s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages/yolo_custom_interfaces/msg/_instance_segmentation_info.py
+[0.307s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages/yolo_custom_interfaces/msg/_pidnet_result_s.c
+[0.307s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages/yolo_custom_interfaces/msg/__init__.py
+[0.307s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages/yolo_custom_interfaces/msg/_instance_segmentation_info_s.c
+[0.307s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages/yolo_custom_interfaces/yolo_custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.307s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages/yolo_custom_interfaces/_yolo_custom_interfaces_s.ep.rosidl_typesupport_introspection_c.c
+[0.327s] Listing '/home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages/yolo_custom_interfaces'...
+[0.327s] Listing '/home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages/yolo_custom_interfaces/msg'...
+[0.330s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages/yolo_custom_interfaces/yolo_custom_interfaces_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[0.330s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages/yolo_custom_interfaces/yolo_custom_interfaces_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[0.330s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/local/lib/python3.10/dist-packages/yolo_custom_interfaces/yolo_custom_interfaces_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[0.330s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/lib/libyolo_custom_interfaces__rosidl_generator_py.so
+[0.330s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/msg/InstanceSegmentationInfo.idl
+[0.330s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/msg/PidnetResult.idl
+[0.330s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/msg/InstanceSegmentationInfo.msg
+[0.330s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/msg/PidnetResult.msg
+[0.330s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/ament_index/resource_index/package_run_dependencies/yolo_custom_interfaces
+[0.330s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/ament_index/resource_index/parent_prefix_path/yolo_custom_interfaces
+[0.330s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/environment/ament_prefix_path.sh
+[0.330s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/environment/ament_prefix_path.dsv
+[0.330s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/environment/path.sh
+[0.331s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/environment/path.dsv
+[0.331s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/local_setup.bash
+[0.331s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/local_setup.sh
+[0.331s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/local_setup.zsh
+[0.331s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/local_setup.dsv
+[0.331s] -- Installing: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/package.dsv
+[0.331s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/ament_index/resource_index/packages/yolo_custom_interfaces
+[0.331s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake/export_yolo_custom_interfaces__rosidl_generator_cExport.cmake
+[0.331s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake/export_yolo_custom_interfaces__rosidl_generator_cExport-noconfig.cmake
+[0.331s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake/export_yolo_custom_interfaces__rosidl_typesupport_fastrtps_cExport.cmake
+[0.331s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake/export_yolo_custom_interfaces__rosidl_typesupport_fastrtps_cExport-noconfig.cmake
+[0.331s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake/export_yolo_custom_interfaces__rosidl_generator_cppExport.cmake
+[0.331s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake/export_yolo_custom_interfaces__rosidl_typesupport_fastrtps_cppExport.cmake
+[0.331s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake/export_yolo_custom_interfaces__rosidl_typesupport_fastrtps_cppExport-noconfig.cmake
+[0.331s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake/yolo_custom_interfaces__rosidl_typesupport_introspection_cExport.cmake
+[0.331s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake/yolo_custom_interfaces__rosidl_typesupport_introspection_cExport-noconfig.cmake
+[0.331s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake/yolo_custom_interfaces__rosidl_typesupport_cExport.cmake
+[0.331s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake/yolo_custom_interfaces__rosidl_typesupport_cExport-noconfig.cmake
+[0.331s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake/yolo_custom_interfaces__rosidl_typesupport_introspection_cppExport.cmake
+[0.331s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake/yolo_custom_interfaces__rosidl_typesupport_introspection_cppExport-noconfig.cmake
+[0.331s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake/yolo_custom_interfaces__rosidl_typesupport_cppExport.cmake
+[0.331s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake/yolo_custom_interfaces__rosidl_typesupport_cppExport-noconfig.cmake
+[0.331s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake/export_yolo_custom_interfaces__rosidl_generator_pyExport.cmake
+[0.331s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake/export_yolo_custom_interfaces__rosidl_generator_pyExport-noconfig.cmake
+[0.332s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake/rosidl_cmake-extras.cmake
+[0.332s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake/ament_cmake_export_dependencies-extras.cmake
+[0.332s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake/ament_cmake_export_include_directories-extras.cmake
+[0.332s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake/ament_cmake_export_libraries-extras.cmake
+[0.332s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake/ament_cmake_export_targets-extras.cmake
+[0.332s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[0.332s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[0.332s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake/yolo_custom_interfacesConfig.cmake
+[0.332s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/cmake/yolo_custom_interfacesConfig-version.cmake
+[0.332s] -- Up-to-date: /home/david/yolocpp_ws/install/yolo_custom_interfaces/share/yolo_custom_interfaces/package.xml
+[0.335s] Invoked command in '/home/david/yolocpp_ws/build/yolo_custom_interfaces' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /bin/cmake --install /home/david/yolocpp_ws/build/yolo_custom_interfaces

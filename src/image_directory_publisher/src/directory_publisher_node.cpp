@@ -14,8 +14,6 @@
 #include <string>
 
 // Define target dimensions for publishing
-// const int TARGET_WIDTH = 1920/1.5; // 1280
-// const int TARGET_HEIGHT = 1200/1.5; // 800
 const int TARGET_WIDTH = 960; // Ancho objetivo para las imágenes publicadas
 const int TARGET_HEIGHT = 608;  // Alto objetivo para las imágenes publicadas
 

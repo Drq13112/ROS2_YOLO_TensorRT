@@ -218,16 +218,20 @@ public:
         clock_gettime(CLOCK_MONOTONIC, &ts_monotonic_capture);
 
         // Asignar el tiempo monotónico al header del mensaje de imagen
-        img_msg->header.stamp.sec = ts_monotonic_capture.tv_sec;
-        img_msg->header.stamp.nanosec = ts_monotonic_capture.tv_nsec;
-        // img_msg->header.frame_id = frame_id;
-        // Usar frame_id para el número de secuencia
-        img_msg->header.frame_id = std::to_string(image_sequence_counter_++); 
+        // img_msg->header.stamp.sec = ts_monotonic_capture.tv_sec;
+        // img_msg->header.stamp.nanosec = ts_monotonic_capture.tv_nsec;
+        // // img_msg->header.frame_id = frame_id;
+        // // Usar frame_id para el número de secuencia
+        // img_msg->header.frame_id = std::to_string(image_sequence_counter_++); 
 
-        // Asignar el mismo tiempo monotónico al header del mensaje de CameraInfo
-        camera_info_msg.header.stamp.sec = ts_monotonic_capture.tv_sec;
-        camera_info_msg.header.stamp.nanosec = ts_monotonic_capture.tv_nsec;
-        camera_info_msg.header.frame_id = img_msg->header.frame_id; // Mantener consistencia de frame_id también
+        // // Asignar el mismo tiempo monotónico al header del mensaje de CameraInfo
+        // camera_info_msg.header.stamp.sec = ts_monotonic_capture.tv_sec;
+        // camera_info_msg.header.stamp.nanosec = ts_monotonic_capture.tv_nsec;
+        // camera_info_msg.header.frame_id = img_msg->header.frame_id; // Mantener consistencia de frame_id también
+        img_msg->header.stamp = this->now();
+        img_msg->header.frame_id = frame_id;
+        camera_info_msg.header.stamp = img_msg->header.stamp;
+        camera_info_msg.header.frame_id = img_msg->header.frame_id;
 
         image_publisher.publish(*img_msg, camera_info_msg);
     }
@@ -241,6 +245,7 @@ private:
         sensor_msgs::msg::Image * img = ImageBufferFactory::ReinterpretBufferContext(ptrGrabResult->GetBufferContext());
         img->width = ptrGrabResult->GetWidth();
         img->height = ptrGrabResult->GetHeight();
+        uint64_t timestamp_camera = ptrGrabResult->GetTimeStamp();
         size_t stride;
         ptrGrabResult->GetStride(stride);
         img->step = stride;

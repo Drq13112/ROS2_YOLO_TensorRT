@@ -236,38 +236,38 @@ set_target_compile_options_custom(chrono)
 #-------------------------------------------------------------------------------
 # CONSTRUCCIÓN DEL NODO ROS 2 'segment_node'
 #-------------------------------------------------------------------------------
-add_executable(segment_node src/segment_node.cpp)
+# add_executable(segment_node src/segment_node.cpp)
 
 
-# Dependencias de ROS 2 para el nodo
-ament_target_dependencies(segment_node rclcpp OpenCV rosidl_default_runtime std_msgs sensor_msgs cv_bridge yolo_custom_interfaces image_transport)
+# # Dependencias de ROS 2 para el nodo
+# ament_target_dependencies(segment_node rclcpp OpenCV rosidl_default_runtime std_msgs sensor_msgs cv_bridge yolo_custom_interfaces image_transport)
 
-# Directorios de inclusión para el nodo
-target_include_directories(segment_node PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/include  # Donde están "deploy/model.hpp", etc.
-    ${TRT_INCLUDE_DIR}                   # Para los encabezados de TensorRT (NvInfer.h, etc.)
-    ${PLUGIN_DIR_PATH}                   # Si el nodo necesita directamente headers de plugin
-    ${CMAKE_CURRENT_BINARY_DIR}/rosidl_generator_cpp # Para los encabezados de mensajes generados
-)
+# # Directorios de inclusión para el nodo
+# target_include_directories(segment_node PRIVATE
+#     ${CMAKE_CURRENT_SOURCE_DIR}/include  # Donde están "deploy/model.hpp", etc.
+#     ${TRT_INCLUDE_DIR}                   # Para los encabezados de TensorRT (NvInfer.h, etc.)
+#     ${PLUGIN_DIR_PATH}                   # Si el nodo necesita directamente headers de plugin
+#     ${CMAKE_CURRENT_BINARY_DIR}/rosidl_generator_cpp # Para los encabezados de mensajes generados
+# )
 
-# Enlaza las librerías necesarias al nodo
-# `ament_target_dependencies` ya maneja rclcpp y OpenCV.
-# Usamos la signatura "plain" para target_link_libraries para ser compatible con ament_cmake.
-target_link_libraries(segment_node
-    deploy          # Tu librería 'deploy' compilada
-    chrono           
-    CUDA::cudart    # Para el runtime de CUDA (si segment_node.cpp lo usa directamente o vía headers de deploy)
-    ${TRT_LIBS}     # Librerías de TensorRT (si son necesarias directamente por el nodo o por los headers de deploy)
-)
-# Asegura que el enlazador encuentre las librerías de TensorRT
-target_link_directories(segment_node PRIVATE ${TRT_LIB_DIR})
+# # Enlaza las librerías necesarias al nodo
+# # `ament_target_dependencies` ya maneja rclcpp y OpenCV.
+# # Usamos la signatura "plain" para target_link_libraries para ser compatible con ament_cmake.
+# target_link_libraries(segment_node
+#     deploy          # Tu librería 'deploy' compilada
+#     chrono           
+#     CUDA::cudart    # Para el runtime de CUDA (si segment_node.cpp lo usa directamente o vía headers de deploy)
+#     ${TRT_LIBS}     # Librerías de TensorRT (si son necesarias directamente por el nodo o por los headers de deploy)
+# )
+# # Asegura que el enlazador encuentre las librerías de TensorRT
+# target_link_directories(segment_node PRIVATE ${TRT_LIB_DIR})
 
 
-# Explicitly set RPATH for the segment_node target
-set_target_properties(segment_node PROPERTIES
-    INSTALL_RPATH "$ORIGIN:${CUDAToolkit_LIBRARY_DIRS}" # Look in the executable's own directory and CUDA lib dir
-    BUILD_RPATH "$ORIGIN:${CUDAToolkit_LIBRARY_DIRS}"   # Also useful for running from the build directory
-)
+# # Explicitly set RPATH for the segment_node target
+# set_target_properties(segment_node PROPERTIES
+#     INSTALL_RPATH "$ORIGIN:${CUDAToolkit_LIBRARY_DIRS}" # Look in the executable's own directory and CUDA lib dir
+#     BUILD_RPATH "$ORIGIN:${CUDAToolkit_LIBRARY_DIRS}"   # Also useful for running from the build directory
+# )
 
 
 
@@ -329,78 +329,78 @@ set_target_properties(segment_node_3P PROPERTIES
 #-------------------------------------------------------------------------------
 # INSTALACIÓN del nodo 'segment_node_3P'
 #-------------------------------------------------------------------------------
-# install(TARGETS
-#     deploy          # Instala la librería libdeploy.so
-#     chrono
-#     segment_node_3P # Instala el ejecutable del nodo
-#     DESTINATION lib/${PROJECT_NAME}
-# )
+install(TARGETS
+    deploy          # Instala la librería libdeploy.so
+    chrono
+    segment_node_3P # Instala el ejecutable del nodo
+    DESTINATION lib/${PROJECT_NAME}
+)
 
-# # Link custom plugins if the target exists
-# if(TARGET custom_plugins)
-#     target_link_libraries(segment_node_3P PRIVATE custom_plugins)
-#     message(STATUS "Linking segment_node_3P with custom_plugins.")
-# else()
-#     message(WARNING "custom_plugins target does not exist. segment_node_3P will not be linked against it.")
-# endif()
+# Link custom plugins if the target exists
+if(TARGET custom_plugins)
+    target_link_libraries(segment_node_3P PRIVATE custom_plugins)
+    message(STATUS "Linking segment_node_3P with custom_plugins.")
+else()
+    message(WARNING "custom_plugins target does not exist. segment_node_3P will not be linked against it.")
+endif()
 
 
 
 # -------------------------------------------------------------------------------
 # CONSTRUCCIÓN DEL NODO ROS 2 'segment_node_3P_composable_component'
 # -------------------------------------------------------------------------------
-add_library(segment_node_3P_composable_component SHARED
-  src/segment_node_3P_composable.cpp
-)
-ament_target_dependencies(segment_node_3P_composable_component rclcpp rclcpp_components OpenCV rosidl_default_runtime std_msgs sensor_msgs cv_bridge yolo_custom_interfaces image_transport)
-target_include_directories(segment_node_3P_composable_component PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/include
-    ${TRT_INCLUDE_DIR}
-    ${PLUGIN_DIR_PATH}
-    ${CMAKE_CURRENT_BINARY_DIR}/rosidl_generator_cpp
-)
-target_link_libraries(segment_node_3P_composable_component
-    deploy
-    chrono
-    CUDA::cudart
-    ${TRT_LIBS}
-)
-target_link_directories(segment_node_3P_composable_component PRIVATE ${TRT_LIB_DIR})
-rclcpp_components_register_nodes(segment_node_3P_composable_component "YoloBatchNode")
+# add_library(segment_node_3P_composable_component SHARED
+#   src/segment_node_3P_composable.cpp
+# )
+# ament_target_dependencies(segment_node_3P_composable_component rclcpp rclcpp_components OpenCV rosidl_default_runtime std_msgs sensor_msgs cv_bridge yolo_custom_interfaces image_transport)
+# target_include_directories(segment_node_3P_composable_component PRIVATE
+#     ${CMAKE_CURRENT_SOURCE_DIR}/include
+#     ${TRT_INCLUDE_DIR}
+#     ${PLUGIN_DIR_PATH}
+#     ${CMAKE_CURRENT_BINARY_DIR}/rosidl_generator_cpp
+# )
+# target_link_libraries(segment_node_3P_composable_component
+#     deploy
+#     chrono
+#     CUDA::cudart
+#     ${TRT_LIBS}
+# )
+# target_link_directories(segment_node_3P_composable_component PRIVATE ${TRT_LIB_DIR})
+# rclcpp_components_register_nodes(segment_node_3P_composable_component "YoloBatchNode")
 
-# Esto le dice al nodo componible que busque sus librerías dependientes
-# (como libdeploy.so) en su propio directorio de instalación.
-set_target_properties(segment_node_3P_composable_component PROPERTIES
-    INSTALL_RPATH "$ORIGIN:${CUDAToolkit_LIBRARY_DIRS}"
-)
+# # Esto le dice al nodo componible que busque sus librerías dependientes
+# # (como libdeploy.so) en su propio directorio de instalación.
+# set_target_properties(segment_node_3P_composable_component PROPERTIES
+#     INSTALL_RPATH "$ORIGIN:${CUDAToolkit_LIBRARY_DIRS}"
+# )
 
-if(TARGET custom_plugins)
-    target_link_libraries(segment_node_3P_composable_component PRIVATE custom_plugins)
-endif()
+# if(TARGET custom_plugins)
+#     target_link_libraries(segment_node_3P_composable_component PRIVATE custom_plugins)
+# endif()
 
 # -------------------------------------------------------------------------------
-install(TARGETS
-    deploy
-    chrono
-    segment_node_3P_composable_component
-    ARCHIVE DESTINATION lib
-    LIBRARY DESTINATION lib
-    RUNTIME DESTINATION bin
-)
+# install(TARGETS
+#     deploy
+#     chrono
+#     segment_node_3P_composable_component
+#     ARCHIVE DESTINATION lib
+#     LIBRARY DESTINATION lib
+#     RUNTIME DESTINATION bin
+# )
 
-install(TARGETS
-    segment_node
-    segment_node_3P
-    DESTINATION lib/${PROJECT_NAME}
-)
+# install(TARGETS
+#     segment_node
+#     segment_node_3P
+#     DESTINATION lib/${PROJECT_NAME}
+# )
 
-if(TARGET custom_plugins)
-    install(TARGETS custom_plugins
-        ARCHIVE DESTINATION lib
-        LIBRARY DESTINATION lib
-        RUNTIME DESTINATION bin
-    )
-endif()
+# if(TARGET custom_plugins)
+#     install(TARGETS custom_plugins
+#         ARCHIVE DESTINATION lib
+#         LIBRARY DESTINATION lib
+#         RUNTIME DESTINATION bin
+#     )
+# endif()
 
 # -------------------------------------------------------------------------------
 # FIN DEL BLOQUE AÑADIDO

@@ -1,0 +1,8 @@
+[01m[0m[01m/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu(272)[0m: [01;31merror[0m: linkage specification is incompatible with previous [01m"deploy::cudaWarpAffine"[0m[32m (declared at line 65 of /home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.hpp)[0m
+  extern "C" void cudaWarpAffine(const void* src, const int src_cols, const int src_rows,
+                  ^
+
+1 error detected in the compilation of "/home/david/yolocpp_ws/src/TensorRT-YOLO/include/deploy/infer/warpaffine.cu".
+gmake[2]: *** [CMakeFiles/deploy.dir/build.make:118: CMakeFiles/deploy.dir/include/deploy/infer/warpaffine.cu.o] Error 2
+gmake[1]: *** [CMakeFiles/Makefile2:141: CMakeFiles/deploy.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

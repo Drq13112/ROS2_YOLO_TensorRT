@@ -1,0 +1,34 @@
+[35m[1mConsolidate compiler generated dependencies of target directory_publisher_node[0m
+[100%] Built target directory_publisher_node
+-- Install configuration: ""
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/lib/libdirectory_publisher_node.so
+-- Set runtime path of "/home/david/yolocpp_ws/install/image_directory_publisher/lib/libdirectory_publisher_node.so" to ""
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/launch
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/launch/directory_publisher.launch.py
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/include
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/include/chrono
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/include/chrono/ChronoTimer.hpp
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/include/chrono/ChronoTimer.cpp
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/include/image_directory_publisher
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/include/image_directory_publisher/directory_publisher_node.hpp
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/config
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/config/right_camera_info.yaml
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/config/front_camera_info.yaml
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/config/config.yaml
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/config/left_camera_info.yaml
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/ament_index/resource_index/package_run_dependencies/image_directory_publisher
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/ament_index/resource_index/parent_prefix_path/image_directory_publisher
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/environment/ament_prefix_path.sh
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/environment/ament_prefix_path.dsv
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/environment/path.sh
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/environment/path.dsv
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/local_setup.bash
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/local_setup.sh
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/local_setup.zsh
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/local_setup.dsv
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/package.dsv
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/ament_index/resource_index/packages/image_directory_publisher
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/ament_index/resource_index/rclcpp_components/image_directory_publisher
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/cmake/image_directory_publisherConfig.cmake
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/cmake/image_directory_publisherConfig-version.cmake
+-- Installing: /home/david/yolocpp_ws/install/image_directory_publisher/share/image_directory_publisher/package.xml

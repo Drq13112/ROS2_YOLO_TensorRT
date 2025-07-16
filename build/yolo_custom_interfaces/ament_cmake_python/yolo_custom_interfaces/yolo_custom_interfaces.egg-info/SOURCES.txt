@@ -1,0 +1,9 @@
+setup.py
+yolo_custom_interfaces/__init__.py
+yolo_custom_interfaces.egg-info/PKG-INFO
+yolo_custom_interfaces.egg-info/SOURCES.txt
+yolo_custom_interfaces.egg-info/dependency_links.txt
+yolo_custom_interfaces.egg-info/top_level.txt
+yolo_custom_interfaces/msg/__init__.py
+yolo_custom_interfaces/msg/_instance_segmentation_info.py
+yolo_custom_interfaces/msg/_pidnet_result.py
