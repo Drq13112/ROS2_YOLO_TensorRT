@@ -1,19 +1,16 @@
 # YOLOv11 ROS 2 Node (Humble)
 
-This repository provides a ROS 2 Humble integration of YOLOv11, based on the original project [TensorRT-YOLO](https://github.com/laugh12321/TensorRT-YOLO). It wraps the detector in a ROS 2 node, enabling real-time inference through TensorRT acceleration.
+This repository provides a ROS 2 Humble integration of YOLOv11, for instantance Segmentation using Basler cameras and TensorRT acceleration. It includes camera drivers, segmentation nodes, and a metrics/logging node for performance analysis
+and visualization.
 
 ## 📌 Origin
 
 This work is derived from the original repository by `laugh12321`:  
 ➡️ https://github.com/laugh12321/TensorRT-YOLO/tree/main
 
-The original code was adapted to work as a ROS 2 node, allowing easy integration into robotic systems and ROS 2-based pipelines.
+The original code was adapted as a library so that a ROS 2 node could be easily created, allowing for seamless integration into robotic systems and ROS 2-based pipelines. The TensorRT-YOLO library is used by the `segment_node_3P` nodes to perform instance segmentation on images captured by Basler cameras. Therefore you can use it as a standalone script to run inference on images from a directory or from a camera.
 
-## ⚙️ Functionality
-
-This repository implements a modular architecture for instance segmentation in ROS2, using Basler cameras (Pylon), TensorRT-accelerated inference nodes, and a metrics/logging node.
-
-## General Architecture
+##  General Architecture 
 
 The system is composed of the following main nodes:
 
