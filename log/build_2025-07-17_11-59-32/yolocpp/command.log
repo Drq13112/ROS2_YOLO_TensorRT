@@ -1,0 +1,4 @@
+Invoking command in '/home/david/yolocpp_ws/build/yolocpp': CMAKE_PREFIX_PATH=/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --build /home/david/yolocpp_ws/build/yolocpp -- -j32 -l32
+Invoked command in '/home/david/yolocpp_ws/build/yolocpp' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --build /home/david/yolocpp_ws/build/yolocpp -- -j32 -l32
+Invoking command in '/home/david/yolocpp_ws/build/yolocpp': CMAKE_PREFIX_PATH=/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --install /home/david/yolocpp_ws/build/yolocpp
+Invoked command in '/home/david/yolocpp_ws/build/yolocpp' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble PROMPT_COMMAND=echo -n \[$(date +%H:%M:%S)\]\ /home/david/.local/bin/cmake --install /home/david/yolocpp_ws/build/yolocpp

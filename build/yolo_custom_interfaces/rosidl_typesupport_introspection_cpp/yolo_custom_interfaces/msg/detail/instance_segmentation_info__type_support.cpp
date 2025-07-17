@@ -37,6 +37,51 @@ void InstanceSegmentationInfo_fini_function(void * message_memory)
   typed_message->~InstanceSegmentationInfo();
 }
 
+size_t size_function__InstanceSegmentationInfo__mask_data(const void * untyped_member)
+{
+  const auto * member = reinterpret_cast<const std::vector<uint8_t> *>(untyped_member);
+  return member->size();
+}
+
+const void * get_const_function__InstanceSegmentationInfo__mask_data(const void * untyped_member, size_t index)
+{
+  const auto & member =
+    *reinterpret_cast<const std::vector<uint8_t> *>(untyped_member);
+  return &member[index];
+}
+
+void * get_function__InstanceSegmentationInfo__mask_data(void * untyped_member, size_t index)
+{
+  auto & member =
+    *reinterpret_cast<std::vector<uint8_t> *>(untyped_member);
+  return &member[index];
+}
+
+void fetch_function__InstanceSegmentationInfo__mask_data(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const auto & item = *reinterpret_cast<const uint8_t *>(
+    get_const_function__InstanceSegmentationInfo__mask_data(untyped_member, index));
+  auto & value = *reinterpret_cast<uint8_t *>(untyped_value);
+  value = item;
+}
+
+void assign_function__InstanceSegmentationInfo__mask_data(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  auto & item = *reinterpret_cast<uint8_t *>(
+    get_function__InstanceSegmentationInfo__mask_data(untyped_member, index));
+  const auto & value = *reinterpret_cast<const uint8_t *>(untyped_value);
+  item = value;
+}
+
+void resize_function__InstanceSegmentationInfo__mask_data(void * untyped_member, size_t size)
+{
+  auto * member =
+    reinterpret_cast<std::vector<uint8_t> *>(untyped_member);
+  member->resize(size);
+}
+
 size_t size_function__InstanceSegmentationInfo__scores(const void * untyped_member)
 {
   const auto * member = reinterpret_cast<const std::vector<float> *>(untyped_member);
@@ -84,50 +129,50 @@ void resize_function__InstanceSegmentationInfo__scores(void * untyped_member, si
 
 size_t size_function__InstanceSegmentationInfo__classes(const void * untyped_member)
 {
-  const auto * member = reinterpret_cast<const std::vector<int32_t> *>(untyped_member);
+  const auto * member = reinterpret_cast<const std::vector<uint8_t> *>(untyped_member);
   return member->size();
 }
 
 const void * get_const_function__InstanceSegmentationInfo__classes(const void * untyped_member, size_t index)
 {
   const auto & member =
-    *reinterpret_cast<const std::vector<int32_t> *>(untyped_member);
+    *reinterpret_cast<const std::vector<uint8_t> *>(untyped_member);
   return &member[index];
 }
 
 void * get_function__InstanceSegmentationInfo__classes(void * untyped_member, size_t index)
 {
   auto & member =
-    *reinterpret_cast<std::vector<int32_t> *>(untyped_member);
+    *reinterpret_cast<std::vector<uint8_t> *>(untyped_member);
   return &member[index];
 }
 
 void fetch_function__InstanceSegmentationInfo__classes(
   const void * untyped_member, size_t index, void * untyped_value)
 {
-  const auto & item = *reinterpret_cast<const int32_t *>(
+  const auto & item = *reinterpret_cast<const uint8_t *>(
     get_const_function__InstanceSegmentationInfo__classes(untyped_member, index));
-  auto & value = *reinterpret_cast<int32_t *>(untyped_value);
+  auto & value = *reinterpret_cast<uint8_t *>(untyped_value);
   value = item;
 }
 
 void assign_function__InstanceSegmentationInfo__classes(
   void * untyped_member, size_t index, const void * untyped_value)
 {
-  auto & item = *reinterpret_cast<int32_t *>(
+  auto & item = *reinterpret_cast<uint8_t *>(
     get_function__InstanceSegmentationInfo__classes(untyped_member, index));
-  const auto & value = *reinterpret_cast<const int32_t *>(untyped_value);
+  const auto & value = *reinterpret_cast<const uint8_t *>(untyped_value);
   item = value;
 }
 
 void resize_function__InstanceSegmentationInfo__classes(void * untyped_member, size_t size)
 {
   auto * member =
-    reinterpret_cast<std::vector<int32_t> *>(untyped_member);
+    reinterpret_cast<std::vector<uint8_t> *>(untyped_member);
   member->resize(size);
 }
 
-static const ::rosidl_typesupport_introspection_cpp::MessageMember InstanceSegmentationInfo_message_member_array[10] = {
+static const ::rosidl_typesupport_introspection_cpp::MessageMember InstanceSegmentationInfo_message_member_array[12] = {
   {
     "header",  // name
     ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
@@ -146,14 +191,14 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember InstanceSegme
     nullptr  // resize(index) function pointer
   },
   {
-    "mask",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_MESSAGE,  // type
+    "mask_width",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT16,  // type
     0,  // upper bound of string
-    ::rosidl_typesupport_introspection_cpp::get_message_type_support_handle<sensor_msgs::msg::Image>(),  // members of sub message
+    nullptr,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(yolo_custom_interfaces::msg::InstanceSegmentationInfo, mask),  // bytes offset in struct
+    offsetof(yolo_custom_interfaces::msg::InstanceSegmentationInfo, mask_width),  // bytes offset in struct
     nullptr,  // default value
     nullptr,  // size() function pointer
     nullptr,  // get_const(index) function pointer
@@ -161,6 +206,40 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember InstanceSegme
     nullptr,  // fetch(index, &value) function pointer
     nullptr,  // assign(index, value) function pointer
     nullptr  // resize(index) function pointer
+  },
+  {
+    "mask_height",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT16,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(yolo_custom_interfaces::msg::InstanceSegmentationInfo, mask_height),  // bytes offset in struct
+    nullptr,  // default value
+    nullptr,  // size() function pointer
+    nullptr,  // get_const(index) function pointer
+    nullptr,  // get(index) function pointer
+    nullptr,  // fetch(index, &value) function pointer
+    nullptr,  // assign(index, value) function pointer
+    nullptr  // resize(index) function pointer
+  },
+  {
+    "mask_data",  // name
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
+    0,  // upper bound of string
+    nullptr,  // members of sub message
+    true,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(yolo_custom_interfaces::msg::InstanceSegmentationInfo, mask_data),  // bytes offset in struct
+    nullptr,  // default value
+    size_function__InstanceSegmentationInfo__mask_data,  // size() function pointer
+    get_const_function__InstanceSegmentationInfo__mask_data,  // get_const(index) function pointer
+    get_function__InstanceSegmentationInfo__mask_data,  // get(index) function pointer
+    fetch_function__InstanceSegmentationInfo__mask_data,  // fetch(index, &value) function pointer
+    assign_function__InstanceSegmentationInfo__mask_data,  // assign(index, value) function pointer
+    resize_function__InstanceSegmentationInfo__mask_data  // resize(index) function pointer
   },
   {
     "scores",  // name
@@ -181,7 +260,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember InstanceSegme
   },
   {
     "classes",  // name
-    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_INT32,  // type
+    ::rosidl_typesupport_introspection_cpp::ROS_TYPE_UINT8,  // type
     0,  // upper bound of string
     nullptr,  // members of sub message
     true,  // is array
@@ -303,7 +382,7 @@ static const ::rosidl_typesupport_introspection_cpp::MessageMember InstanceSegme
 static const ::rosidl_typesupport_introspection_cpp::MessageMembers InstanceSegmentationInfo_message_members = {
   "yolo_custom_interfaces::msg",  // message namespace
   "InstanceSegmentationInfo",  // message name
-  10,  // number of fields
+  12,  // number of fields
   sizeof(yolo_custom_interfaces::msg::InstanceSegmentationInfo),
   InstanceSegmentationInfo_message_member_array,  // message members
   InstanceSegmentationInfo_init_function,  // function to initialize message memory (memory has to be allocated)

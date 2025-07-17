@@ -1,0 +1,19 @@
+[ 33%] Built target chrono
+[35m[1mConsolidate compiler generated dependencies of target seg_sub_yolo_node[0m
+[ 66%] Built target seg_sub_pid_node
+[ 83%] [32mBuilding CXX object CMakeFiles/seg_sub_yolo_node.dir/src/seg_sub_yolo.cpp.o[0m
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:[m[K In member function ‘[01m[Kvoid FrequencySubscriber::save_anomalous_frame_and_log(const cv::Mat&, const std::vector<unsigned char, std::allocator<unsigned char> >&, const std::vector<float>&, const string&, uint64_t, const SharedPtr&)[m[K’:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:743:78:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kconst std::vector<unsigned char, std::allocator<unsigned char> >[m[K’ to ‘[01m[Kconst std::vector<float>&[m[K’
+  743 |         cv::Mat colored_mask_display = create_colored_mask(instance_id_mask, [01;31m[Kclasses[m[K, scores, camera_id);
+      |                                                                              [01;31m[K^~~~~~~[m[K
+      |                                                                              [01;31m[K|[m[K
+      |                                                                              [01;31m[Kconst std::vector<unsigned char, std::allocator<unsigned char> >[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:847:94:[m[K [01;36m[Knote: [m[K  initializing argument 2 of ‘[01m[Kcv::Mat FrequencySubscriber::create_colored_mask(const cv::Mat&, const std::vector<float>&, const std::vector<unsigned char, std::allocator<unsigned char> >&, const string&)[m[K’
+  847 | Mat create_colored_mask(const cv::Mat& instance_id_mask, [01;36m[Kconst std::vector<float_t>& scores[m[K, const std::vector<uint8_t>& classes, const std::string &camera_id)
+      |                                                          [01;36m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:[m[K In member function ‘[01m[Kcv::Mat FrequencySubscriber::create_colored_mask(const cv::Mat&, const std::vector<float>&, const std::vector<unsigned char, std::allocator<unsigned char> >&, const string&)[m[K’:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:847:94:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kscores[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+gmake[2]: *** [CMakeFiles/seg_sub_yolo_node.dir/build.make:76: CMakeFiles/seg_sub_yolo_node.dir/src/seg_sub_yolo.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/seg_sub_yolo_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

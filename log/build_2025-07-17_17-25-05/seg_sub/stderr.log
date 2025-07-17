@@ -1,0 +1,5 @@
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:[m[K In member function ‘[01m[Kcv::Mat FrequencySubscriber::create_colored_mask(const cv::Mat&, const std::vector<float>&, const std::vector<unsigned char, std::allocator<unsigned char> >&, const string&)[m[K’:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:847:94:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kscores[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  847 | Mat create_colored_mask(const cv::Mat& instance_id_mask, [01;35m[Kconst std::vector<float_t>& scores[m[K, const std::vector<uint8_t>& classes, const std::string &camera_id)
+      |                                                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+

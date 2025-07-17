@@ -1,0 +1,862 @@
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:740:80:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ at end of member declaration
+  740 |     const yolo_custom_interfaces::msg::InstanceSegmentationInfo::SharedPtr& msg[01;31m[K)[m[K
+      |                                                                                [01;31m[K^[m[K
+      |                                                                                 [32m[K;[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:745:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kanomalous_images_path_[m[K’ does not name a type
+  745 |         [01;31m[Kanomalous_images_path_[m[K = "/home/david/yolocpp_ws/anomalous_frames/";
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:1[m[K:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:749:9:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kdo[m[K’
+  749 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "[%s] Saving anomalous frame image to %s (MsgT1: %u.%09u)",
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:749:9:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kwhile[m[K’
+  749 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "[%s] Saving anomalous frame image to %s (MsgT1: %u.%09u)",
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:751:9:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Ktry[m[K’
+  751 |         [01;31m[Ktry[m[K {
+      |         [01;31m[K^~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:758:11:[m[K [01;31m[Kerror: [m[Kexpected unqualified-id before ‘[01m[Kcatch[m[K’
+  758 |         } [01;31m[Kcatch[m[K (const cv::Exception& ex) {
+      |           [01;31m[K^~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:761:6:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ after class definition
+  761 |     }
+      |      [01;31m[K^[m[K
+      |      [32m[K;[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:742:60:[m[K [01;31m[Kerror: [m[K‘[01m[Kinstance_id_mask[m[K’ was not declared in this scope
+  742 |         cv::Mat colored_mask_display = create_colored_mask([01;31m[Kinstance_id_mask[m[K, classes, scores, camera_id);
+      |                                                            [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:742:78:[m[K [01;31m[Kerror: [m[K‘[01m[Kclasses[m[K’ was not declared in this scope; did you mean ‘[01m[Kclass[m[K’?
+  742 |         cv::Mat colored_mask_display = create_colored_mask(instance_id_mask, [01;31m[Kclasses[m[K, scores, camera_id);
+      |                                                                              [01;31m[K^~~~~~~[m[K
+      |                                                                              [32m[Kclass[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:742:87:[m[K [01;31m[Kerror: [m[K‘[01m[Kscores[m[K’ was not declared in this scope
+  742 |        cv::Mat colored_mask_display = create_colored_mask(instance_id_mask, classes, [01;31m[Kscores[m[K, camera_id);
+      |                                                                                      [01;31m[K^~~~~~[m[K
+
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:742:95:[m[K [01;31m[Kerror: [m[K‘[01m[Kcamera_id[m[K’ was not declared in this scope
+  742 | v::Mat colored_mask_display = create_colored_mask(instance_id_mask, classes, scores, [01;31m[Kcamera_id[m[K);
+      |                                                                                      [01;31m[K^~~~~~~~~[m[K
+
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:742:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kcreate_colored_mask[m[K’ was not declared in this scope
+  742 |         cv::Mat colored_mask_display = [01;31m[Kcreate_colored_mask[m[K(instance_id_mask, classes, scores, camera_id);
+      |                                        [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:746:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kanomalous_images_path_[m[K’ was not declared in this scope
+  746 |         std::string image_filename = [01;31m[Kanomalous_images_path_[m[K +
+      |                                      [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:747:38:[m[K [01;31m[Kerror: [m[K‘[01m[Kcamera_id[m[K’ was not declared in this scope
+  747 |                                      [01;31m[Kcamera_id[m[K + "_" + std::to_string(packet_seq_num) + ".png";
+      |                                      [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:747:71:[m[K [01;31m[Kerror: [m[K‘[01m[Kpacket_seq_num[m[K’ was not declared in this scope
+  747 |                                      camera_id + "_" + std::to_string([01;31m[Kpacket_seq_num[m[K) + ".png";
+      |                                                                       [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:[m[K In constructor ‘[01m[KFrequencySubscriber::FrequencySubscriber()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:81:48:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KFrequencySubscriber[m[K’ does not have any field named ‘[01m[Kstop_csv_writer_thread_[m[K’
+   81 |         : Node("result_frequency_subscriber"), [01;31m[Kstop_csv_writer_thread_[m[K(false)
+      |                                                [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:85:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcsv_writer_thread_[m[K’ was not declared in this scope
+   85 |         [01;31m[Kcsv_writer_thread_[m[K = std::thread(&FrequencySubscriber::csvWriterLoop, this);
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:[m[K In lambda function:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:105:40:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_width_[m[K’ was not declared in this scope; did you mean ‘[01m[Ktarget_size[m[K’?
+  105 |             const cv::Size target_size([01;31m[Ktarget_width_[m[K, target_height_);
+      |                                        [01;31m[K^~~~~~~~~~~~~[m[K
+      |                                        [32m[Ktarget_size[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:105:55:[m[K [01;31m[Kerror: [m[K‘[01m[Ktarget_height_[m[K’ was not declared in this scope
+  105 |             const cv::Size target_size(target_width_, [01;31m[Ktarget_height_[m[K);
+      |                                                       [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:197:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kbatch_spread_data_mutex_[m[K’ was not declared in this scope
+  197 |                 std::lock_guard<std::mutex> lock([01;31m[Kbatch_spread_data_mutex_[m[K);
+      |                                                  [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:200:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kreceived_batch_t0_timestamps_[m[K’ was not declared in this scope
+  200 |                 [01;31m[Kreceived_batch_t0_timestamps_[m[K[packet_seq_num][camera_id] = ts_t0_img_pub;
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:201:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kreceived_batch_t1_timestamps_[m[K’ was not declared in this scope
+  201 |                 [01;31m[Kreceived_batch_t1_timestamps_[m[K[packet_seq_num][camera_id] = ts_t1_segnode_cb_entry;
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:202:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kreceived_batch_t2_timestamps_[m[K’ was not declared in this scope
+  202 |                 [01;31m[Kreceived_batch_t2_timestamps_[m[K[packet_seq_num][camera_id] = ts_t2_segnode_batch_start;
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:203:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kreceived_batch_t2a_timestamps_[m[K’ was not declared in this scope
+  203 |                 [01;31m[Kreceived_batch_t2a_timestamps_[m[K[packet_seq_num][camera_id] = ts_t2a_inference_start;
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:204:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kreceived_batch_t2b_timestamps_[m[K’ was not declared in this scope
+  204 |                 [01;31m[Kreceived_batch_t2b_timestamps_[m[K[packet_seq_num][camera_id] = ts_t2b_inference_end;
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:205:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kreceived_batch_t3_timestamps_[m[K’ was not declared in this scope
+  205 |                 [01;31m[Kreceived_batch_t3_timestamps_[m[K[packet_seq_num][camera_id] = ts_t3_segnode_res_pub;
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:206:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kreceived_batch_t4_timestamps_[m[K’ was not declared in this scope
+  206 |                 [01;31m[Kreceived_batch_t4_timestamps_[m[K[packet_seq_num][camera_id] = ts_t4_segsub_res_recv;
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:236:87:[m[K [01;31m[Kerror: [m[K‘[01m[Kbatch_t0_spread_ms_[m[K’ was not declared in this scope; did you mean ‘[01m[Kt0_spread_ms[m[K’?
+  236 |                calculate_stage_spread(packet_seq_num, received_batch_t0_timestamps_, [01;31m[Kbatch_t0_spread_ms_[m[K, t0_spread_ms, t0_spread_calculated_this_call);
+      |                                                                                      [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                                      [32m[Kt0_spread_ms[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:237:87:[m[K [01;31m[Kerror: [m[K‘[01m[Kbatch_t1_spread_ms_[m[K’ was not declared in this scope; did you mean ‘[01m[Kt1_spread_ms[m[K’?
+  237 |                calculate_stage_spread(packet_seq_num, received_batch_t1_timestamps_, [01;31m[Kbatch_t1_spread_ms_[m[K, t1_spread_ms, t1_spread_calculated_this_call);
+      |                                                                                      [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                                      [32m[Kt1_spread_ms[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:238:87:[m[K [01;31m[Kerror: [m[K‘[01m[Kbatch_t2_spread_ms_[m[K’ was not declared in this scope; did you mean ‘[01m[Kt2_spread_ms[m[K’?
+  238 |                calculate_stage_spread(packet_seq_num, received_batch_t2_timestamps_, [01;31m[Kbatch_t2_spread_ms_[m[K, t2_spread_ms, t2_spread_calculated_this_call);
+      |                                                                                      [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                                      [32m[Kt2_spread_ms[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:239:88:[m[K [01;31m[Kerror: [m[K‘[01m[Kbatch_t2a_spread_ms_[m[K’ was not declared in this scope; did you mean ‘[01m[Kt2a_spread_ms[m[K’?
+  239 |               calculate_stage_spread(packet_seq_num, received_batch_t2a_timestamps_, [01;31m[Kbatch_t2a_spread_ms_[m[K, t2a_spread_ms, t2a_spread_calculated_this_call);
+      |                                                                                      [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                                      [32m[Kt2a_spread_ms[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:240:88:[m[K [01;31m[Kerror: [m[K‘[01m[Kbatch_t2b_spread_ms_[m[K’ was not declared in this scope; did you mean ‘[01m[Kt2b_spread_ms[m[K’?
+  240 |               calculate_stage_spread(packet_seq_num, received_batch_t2b_timestamps_, [01;31m[Kbatch_t2b_spread_ms_[m[K, t2b_spread_ms, t2b_spread_calculated_this_call);
+      |                                                                                      [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                                      [32m[Kt2b_spread_ms[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:241:87:[m[K [01;31m[Kerror: [m[K‘[01m[Kbatch_t3_spread_ms_[m[K’ was not declared in this scope; did you mean ‘[01m[Kt3_spread_ms[m[K’?
+  241 |                calculate_stage_spread(packet_seq_num, received_batch_t3_timestamps_, [01;31m[Kbatch_t3_spread_ms_[m[K, t3_spread_ms, t3_spread_calculated_this_call);
+      |                                                                                      [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                                      [32m[Kt3_spread_ms[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:242:87:[m[K [01;31m[Kerror: [m[K‘[01m[Kbatch_t4_spread_ms_[m[K’ was not declared in this scope; did you mean ‘[01m[Kt4_spread_ms[m[K’?
+  242 |                calculate_stage_spread(packet_seq_num, received_batch_t4_timestamps_, [01;31m[Kbatch_t4_spread_ms_[m[K, t4_spread_ms, t4_spread_calculated_this_call);
+      |                                                                                      [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+      |                                                                                      [32m[Kt4_spread_ms[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:246:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kbatch_parallelism_metrics_calculated_[m[K’ was not declared in this scope
+  246 |             if ([01;31m[Kbatch_parallelism_metrics_calculated_[m[K.find(packet_seq_num) == batch_parallelism_metrics_calculated_.end()) {
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:247:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kreceived_batch_t2a_timestamps_[m[K’ was not declared in this scope
+  247 |                 if ([01;31m[Kreceived_batch_t2a_timestamps_[m[K[packet_seq_num].count("left") && received_batch_t2a_timestamps_[packet_seq_num].count("front") && received_batch_t2a_timestamps_[packet_seq_num].count("right") &&
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:248:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kreceived_batch_t2b_timestamps_[m[K’ was not declared in this scope
+  248 |                     [01;31m[Kreceived_batch_t2b_timestamps_[m[K[packet_seq_num].count("left") && received_batch_t2b_timestamps_[packet_seq_num].count("front") && received_batch_t2b_timestamps_[packet_seq_num].count("right")) {
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:288:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kbatch_sum_individual_inf_dur_ms_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksum_individual_inf_dur_ms[m[K’?
+  288 |                     [01;31m[Kbatch_sum_individual_inf_dur_ms_[m[K[packet_seq_num] = sum_individual_inf_dur_ms;
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                     [32m[Ksum_individual_inf_dur_ms[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:289:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kbatch_total_inf_span_ms_[m[K’ was not declared in this scope
+  289 |                     [01;31m[Kbatch_total_inf_span_ms_[m[K[packet_seq_num] = total_batch_inf_span_ms;
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:290:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kbatch_inf_overlap_time_ms_[m[K’ was not declared in this scope; did you mean ‘[01m[Kinf_overlap_time_ms[m[K’?
+  290 |                     [01;31m[Kbatch_inf_overlap_time_ms_[m[K[packet_seq_num] = inf_overlap_time_ms;
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                     [32m[Kinf_overlap_time_ms[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:291:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kbatch_parallel_overlap_pct_[m[K’ was not declared in this scope; did you mean ‘[01m[Kparallel_overlap_pct[m[K’?
+  291 |                     [01;31m[Kbatch_parallel_overlap_pct_[m[K[packet_seq_num] = parallel_overlap_pct;
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                     [32m[Kparallel_overlap_pct[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:292:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kbatch_inf_concurrency_factor_[m[K’ was not declared in this scope; did you mean ‘[01m[Kinf_concurrency_factor[m[K’?
+  292 |                     [01;31m[Kbatch_inf_concurrency_factor_[m[K[packet_seq_num] = inf_concurrency_factor;
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                     [32m[Kinf_concurrency_factor[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:297:45:[m[K [01;31m[Kerror: [m[K‘[01m[Kbatch_sum_individual_inf_dur_ms_[m[K’ was not declared in this scope; did you mean ‘[01m[Ksum_individual_inf_dur_ms[m[K’?
+  297 |                 sum_individual_inf_dur_ms = [01;31m[Kbatch_sum_individual_inf_dur_ms_[m[K[packet_seq_num];
+      |                                             [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                             [32m[Ksum_individual_inf_dur_ms[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:298:43:[m[K [01;31m[Kerror: [m[K‘[01m[Kbatch_total_inf_span_ms_[m[K’ was not declared in this scope
+  298 |                 total_batch_inf_span_ms = [01;31m[Kbatch_total_inf_span_ms_[m[K[packet_seq_num];
+      |                                           [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:299:39:[m[K [01;31m[Kerror: [m[K‘[01m[Kbatch_inf_overlap_time_ms_[m[K’ was not declared in this scope; did you mean ‘[01m[Kinf_overlap_time_ms[m[K’?
+  299 |                 inf_overlap_time_ms = [01;31m[Kbatch_inf_overlap_time_ms_[m[K[packet_seq_num];
+      |                                       [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                       [32m[Kinf_overlap_time_ms[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:300:40:[m[K [01;31m[Kerror: [m[K‘[01m[Kbatch_parallel_overlap_pct_[m[K’ was not declared in this scope; did you mean ‘[01m[Kparallel_overlap_pct[m[K’?
+  300 |                 parallel_overlap_pct = [01;31m[Kbatch_parallel_overlap_pct_[m[K[packet_seq_num];
+      |                                        [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                        [32m[Kparallel_overlap_pct[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:301:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kbatch_inf_concurrency_factor_[m[K’ was not declared in this scope; did you mean ‘[01m[Kinf_concurrency_factor[m[K’?
+  301 |                 inf_concurrency_factor = [01;31m[Kbatch_inf_concurrency_factor_[m[K[packet_seq_num];
+      |                                          [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+      |                                          [32m[Kinf_concurrency_factor[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:314:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kloss_tracking_mutex_[m[K’ was not declared in this scope
+  314 |                 std::lock_guard<std::mutex> lock([01;31m[Kloss_tracking_mutex_[m[K);
+      |                                                  [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:316:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kfirst_packet_received_flag_[m[K’ was not declared in this scope
+  316 |                 if (![01;31m[Kfirst_packet_received_flag_[m[K[camera_id]) {
+      |                      [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:317:21:[m[K [01;31m[Kerror: [m[K‘[01m[Klast_received_seq_num_[m[K’ was not declared in this scope
+  317 |                     [01;31m[Klast_received_seq_num_[m[K[camera_id] = current_seq_num;
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:320:44:[m[K [01;31m[Kerror: [m[K‘[01m[Klast_received_seq_num_[m[K’ was not declared in this scope
+  320 |                     if (current_seq_num == [01;31m[Klast_received_seq_num_[m[K[camera_id] + 1) {
+      |                                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:325:25:[m[K [01;31m[Kerror: [m[K‘[01m[Klost_packets_total_count_[m[K’ was not declared in this scope
+  325 |                         [01;31m[Klost_packets_total_count_[m[K[camera_id] += lost_count_since_last;
+      |                         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:333:21:[m[K [01;31m[Kerror: [m[K‘[01m[Klast_received_seq_num_[m[K’ was not declared in this scope
+  333 |                     [01;31m[Klast_received_seq_num_[m[K[camera_id] = current_seq_num;
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:427:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kloss_tracking_mutex_[m[K’ was not declared in this scope
+  427 |                 std::lock_guard<std::mutex> lock([01;31m[Kloss_tracking_mutex_[m[K);
+      |                                                  [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:428:20:[m[K [01;31m[Kerror: [m[K‘[01m[Klost_packets_total_count_[m[K’ was not declared in this scope
+  428 |                 if([01;31m[Klost_packets_total_count_[m[K.count(camera_id)) {
+      |                    [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:434:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kcsv_queue_mutex_[m[K’ was not declared in this scope
+  434 |             std::lock_guard<std::mutex> csv_lock([01;31m[Kcsv_queue_mutex_[m[K);
+      |                                                  [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:435:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kcsv_data_queue_[m[K’ was not declared in this scope
+  435 |             [01;31m[Kcsv_data_queue_[m[K.push(csv_line_stream.str());
+      |             [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:436:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kcsv_queue_cv_[m[K’ was not declared in this scope
+  436 |             [01;31m[Kcsv_queue_cv_[m[K.notify_one();
+      |             [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:439:42:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass FrequencySubscriber[m[K’ has no member named ‘[01m[Kcreate_colored_mask[m[K’
+  439 |             cv::Mat colored_mask = this->[01;31m[Kcreate_colored_mask[m[K(instance_id_mask,msg->scores,msg->classes,camera_id);
+      |                                          [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:443:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kvideo_writer_mutex_[m[K’ was not declared in this scope
+  443 |                 std::lock_guard<std::mutex> lock([01;31m[Kvideo_writer_mutex_[m[K);
+      |                                                  [01;31m[K^~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:445:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kframe_buffer_[m[K’ was not declared in this scope
+  445 |                 [01;31m[Kframe_buffer_[m[K[packet_seq_num][camera_id] = colored_mask;
+      |                 [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:457:26:[m[K [01;31m[Kerror: [m[K‘[01m[Kvideo_writer_[m[K’ was not declared in this scope
+  457 |                     if (![01;31m[Kvideo_writer_[m[K || !video_writer_->isOpened())
+      |                          [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:464:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kvideo_output_path_[m[K’ was not declared in this scope
+  464 |                             [01;31m[Kvideo_output_path_[m[K,
+      |                             [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:466:29:[m[K [01;31m[Kerror: [m[K‘[01m[KVIDEO_FPS[m[K’ was not declared in this scope
+  466 |                             [01;31m[KVIDEO_FPS[m[K,
+      |                             [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:480:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kvideo_writer_[m[K’ was not declared in this scope
+  480 |                     if ([01;31m[Kvideo_writer_[m[K && video_writer_->isOpened())
+      |                         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:502:56:[m[K [01;31m[Kerror: [m[K‘[01m[Kmetrics_mutex_[m[K’ was not declared in this scope
+  502 |                 std::lock_guard<std::mutex> stats_lock([01;31m[Kmetrics_mutex_[m[K);
+      |                                                        [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:503:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kall_metrics_[m[K’ was not declared in this scope
+  503 |                 if (!std::isnan(lat_t0_t1_ms)) [01;31m[Kall_metrics_[m[K[camera_id]["T0_T1_ImgPubToCB_ms"].update(lat_t0_t1_ms);
+      |                                                [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:504:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kall_metrics_[m[K’ was not declared in this scope
+  504 |                 if (!std::isnan(lat_t1_t2_ms)) [01;31m[Kall_metrics_[m[K[camera_id]["T1_T2_CBToBatchStart_ms"].update(lat_t1_t2_ms);
+      |                                                [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:505:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kall_metrics_[m[K’ was not declared in this scope
+  505 |                 if (!std::isnan(lat_t2_t2a_ms)) [01;31m[Kall_metrics_[m[K[camera_id]["T2_T2a_BatchStartToInfStart_ms"].update(lat_t2_t2a_ms);
+      |                                                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:506:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kall_metrics_[m[K’ was not declared in this scope
+  506 |                 if (!std::isnan(lat_t2a_t2b_ms)) [01;31m[Kall_metrics_[m[K[camera_id]["T2a_T2b_InferenceDuration_ms"].update(lat_t2a_t2b_ms);
+      |                                                  [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:507:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kall_metrics_[m[K’ was not declared in this scope
+  507 |                 if (!std::isnan(lat_t2b_t3_ms)) [01;31m[Kall_metrics_[m[K[camera_id]["T2b_T3_InfEndToResPub_ms"].update(lat_t2b_t3_ms);
+      |                                                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:508:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kall_metrics_[m[K’ was not declared in this scope
+  508 |                 if (!std::isnan(lat_t3_t4_ms)) [01;31m[Kall_metrics_[m[K[camera_id]["T3_T4_ResPubToRecv_ms"].update(lat_t3_t4_ms);
+      |                                                [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:509:68:[m[K [01;31m[Kerror: [m[K‘[01m[Kall_metrics_[m[K’ was not declared in this scope
+  509 |                 if (!std::isnan(lat_segnode_cb_to_segsub_recv_ms)) [01;31m[Kall_metrics_[m[K[camera_id]["Cumulative_T1_T4_ms"].update(lat_segnode_cb_to_segsub_recv_ms);
+      |                                                                    [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:510:52:[m[K [01;31m[Kerror: [m[K‘[01m[Kall_metrics_[m[K’ was not declared in this scope
+  510 |                 if (!std::isnan(lat_total_e2e_ms)) [01;31m[Kall_metrics_[m[K[camera_id]["Cumulative_T0_T4_E2E_ms"].update(lat_total_e2e_ms);
+      |                                                    [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:512:82:[m[K [01;31m[Kerror: [m[K‘[01m[Kall_metrics_[m[K’ was not declared in this scope
+  512 |                 if (t0_spread_calculated_this_call && !std::isnan(t0_spread_ms)) [01;31m[Kall_metrics_[m[K["batch_global"]["T0_Spread_ms"].update(t0_spread_ms);
+      |                                                                                  [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:513:82:[m[K [01;31m[Kerror: [m[K‘[01m[Kall_metrics_[m[K’ was not declared in this scope
+  513 |                 if (t1_spread_calculated_this_call && !std::isnan(t1_spread_ms)) [01;31m[Kall_metrics_[m[K["batch_global"]["T1_Spread_ms"].update(t1_spread_ms);
+      |                                                                                  [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:514:82:[m[K [01;31m[Kerror: [m[K‘[01m[Kall_metrics_[m[K’ was not declared in this scope
+  514 |                 if (t2_spread_calculated_this_call && !std::isnan(t2_spread_ms)) [01;31m[Kall_metrics_[m[K["batch_global"]["T2_Spread_ms"].update(t2_spread_ms);
+      |                                                                                  [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:515:84:[m[K [01;31m[Kerror: [m[K‘[01m[Kall_metrics_[m[K’ was not declared in this scope
+  515 |                 if (t2a_spread_calculated_this_call && !std::isnan(t2a_spread_ms)) [01;31m[Kall_metrics_[m[K["batch_global"]["T2a_Spread_ms"].update(t2a_spread_ms);
+      |                                                                                    [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:516:84:[m[K [01;31m[Kerror: [m[K‘[01m[Kall_metrics_[m[K’ was not declared in this scope
+  516 |                 if (t2b_spread_calculated_this_call && !std::isnan(t2b_spread_ms)) [01;31m[Kall_metrics_[m[K["batch_global"]["T2b_Spread_ms"].update(t2b_spread_ms);
+      |                                                                                    [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:517:82:[m[K [01;31m[Kerror: [m[K‘[01m[Kall_metrics_[m[K’ was not declared in this scope
+  517 |                 if (t3_spread_calculated_this_call && !std::isnan(t3_spread_ms)) [01;31m[Kall_metrics_[m[K["batch_global"]["T3_Spread_ms"].update(t3_spread_ms);
+      |                                                                                  [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:518:82:[m[K [01;31m[Kerror: [m[K‘[01m[Kall_metrics_[m[K’ was not declared in this scope
+  518 |                 if (t4_spread_calculated_this_call && !std::isnan(t4_spread_ms)) [01;31m[Kall_metrics_[m[K["batch_global"]["T4_Spread_ms"].update(t4_spread_ms);
+      |                                                                                  [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:523:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kall_metrics_[m[K’ was not declared in this scope
+  523 |                         [01;31m[Kall_metrics_[m[K["batch_global"]["OffsetT0_FrontVsLeft_ms"].update(offset_T0_front_vs_left_ms);
+      |                         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:526:25:[m[K [01;31m[Kerror: [m[K‘[01m[Kall_metrics_[m[K’ was not declared in this scope
+  526 |                         [01;31m[Kall_metrics_[m[K["batch_global"]["OffsetT0_RightVsLeft_ms"].update(offset_T0_right_vs_left_ms);
+      |                         [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:532:65:[m[K [01;31m[Kerror: [m[K‘[01m[Kall_metrics_[m[K’ was not declared in this scope
+  532 |                     if (!std::isnan(sum_individual_inf_dur_ms)) [01;31m[Kall_metrics_[m[K["batch_global"]["SumIndividualInfDur_ms"].update(sum_individual_inf_dur_ms);
+      |                                                                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:533:63:[m[K [01;31m[Kerror: [m[K‘[01m[Kall_metrics_[m[K’ was not declared in this scope
+  533 |                     if (!std::isnan(total_batch_inf_span_ms)) [01;31m[Kall_metrics_[m[K["batch_global"]["TotalBatchInfSpan_ms"].update(total_batch_inf_span_ms);
+      |                                                               [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:534:59:[m[K [01;31m[Kerror: [m[K‘[01m[Kall_metrics_[m[K’ was not declared in this scope
+  534 |                     if (!std::isnan(inf_overlap_time_ms)) [01;31m[Kall_metrics_[m[K["batch_global"]["InfOverlapTime_ms"].update(inf_overlap_time_ms);
+      |                                                           [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:535:60:[m[K [01;31m[Kerror: [m[K‘[01m[Kall_metrics_[m[K’ was not declared in this scope
+  535 |                     if (!std::isnan(parallel_overlap_pct)) [01;31m[Kall_metrics_[m[K["batch_global"]["ParallelOverlap_pct"].update(parallel_overlap_pct);
+      |                                                            [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:536:62:[m[K [01;31m[Kerror: [m[K‘[01m[Kall_metrics_[m[K’ was not declared in this scope
+  536 |                     if (!std::isnan(inf_concurrency_factor)) [01;31m[Kall_metrics_[m[K["batch_global"]["InfConcurrencyFactor"].update(inf_concurrency_factor);
+      |                                                              [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:543:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg_count_mutex_left_[m[K’ was not declared in this scope
+  543 |                 std::lock_guard<std::mutex> lock([01;31m[Kmsg_count_mutex_left_[m[K);
+      |                                                  [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:544:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kcount_left_[m[K’ was not declared in this scope
+  544 |                 [01;31m[Kcount_left_[m[K++;
+      |                 [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:548:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg_count_mutex_front_[m[K’ was not declared in this scope
+  548 |                 std::lock_guard<std::mutex> lock([01;31m[Kmsg_count_mutex_front_[m[K);
+      |                                                  [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:549:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kcount_front_[m[K’ was not declared in this scope
+  549 |                 [01;31m[Kcount_front_[m[K++;
+      |                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:553:50:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg_count_mutex_right_[m[K’ was not declared in this scope
+  553 |                 std::lock_guard<std::mutex> lock([01;31m[Kmsg_count_mutex_right_[m[K);
+      |                                                  [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:554:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kcount_right_[m[K’ was not declared in this scope
+  554 |                 [01;31m[Kcount_right_[m[K++;
+      |                 [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:[m[K In constructor ‘[01m[KFrequencySubscriber::FrequencySubscriber()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:564:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksub_left_[m[K’ was not declared in this scope
+  564 |         [01;31m[Ksub_left_[m[K = this->create_subscription<yolo_custom_interfaces::msg::InstanceSegmentationInfo>(
+      |         [01;31m[K^~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:571:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksub_front_[m[K’ was not declared in this scope
+  571 |         [01;31m[Ksub_front_[m[K = this->create_subscription<yolo_custom_interfaces::msg::InstanceSegmentationInfo>(
+      |         [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:578:9:[m[K [01;31m[Kerror: [m[K‘[01m[Ksub_right_[m[K’ was not declared in this scope
+  578 |         [01;31m[Ksub_right_[m[K = this->create_subscription<yolo_custom_interfaces::msg::InstanceSegmentationInfo>(
+      |         [01;31m[K^~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:585:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kreport_timer_[m[K’ was not declared in this scope
+  585 |         [01;31m[Kreport_timer_[m[K = this->create_wall_timer(
+      |         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:586:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kreport_metrics[m[K’ is not a member of ‘[01m[KFrequencySubscriber[m[K’
+  586 |             5s, std::bind(&FrequencySubscriber::[01;31m[Kreport_metrics[m[K, this));
+      |                                                 [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:588:9:[m[K [01;31m[Kerror: [m[K‘[01m[Klast_report_time_[m[K’ was not declared in this scope
+  588 |         [01;31m[Klast_report_time_[m[K = this->now();
+      |         [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:[m[K In destructor ‘[01m[Kvirtual FrequencySubscriber::~FrequencySubscriber()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:593:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kstop_csv_writer_thread_[m[K’ was not declared in this scope
+  593 |         [01;31m[Kstop_csv_writer_thread_[m[K = true;
+      |         [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:594:9:[m[K [01;31m[Kerror: [m[K‘[01m[Kcsv_queue_cv_[m[K’ was not declared in this scope
+  594 |         [01;31m[Kcsv_queue_cv_[m[K.notify_all(); // Notificar al hilo de escritura CSV para que termine
+      |         [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:596:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kvideo_writer_[m[K’ was not declared in this scope
+  596 |         if ([01;31m[Kvideo_writer_[m[K && video_writer_->isOpened())
+      |             [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:603:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kcsv_writer_thread_[m[K’ was not declared in this scope
+  603 |         if ([01;31m[Kcsv_writer_thread_[m[K.joinable())
+      |             [01;31m[K^~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:[m[K In member function ‘[01m[Kvoid FrequencySubscriber::initialize_camera_loss_tracking(const string&)[m[K’:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:626:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kfirst_packet_received_flag_[m[K’ was not declared in this scope
+  626 |         if ([01;31m[Kfirst_packet_received_flag_[m[K.find(camera_id) == first_packet_received_flag_.end()) {
+      |             [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:627:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kloss_tracking_mutex_[m[K’ was not declared in this scope
+  627 |             std::lock_guard<std::mutex> lock([01;31m[Kloss_tracking_mutex_[m[K);
+      |                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:630:17:[m[K [01;31m[Kerror: [m[K‘[01m[Klast_received_seq_num_[m[K’ was not declared in this scope
+  630 |                 [01;31m[Klast_received_seq_num_[m[K[camera_id] = 0; // Se ajustará con el primer paquete real
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:631:17:[m[K [01;31m[Kerror: [m[K‘[01m[Klost_packets_total_count_[m[K’ was not declared in this scope
+  631 |                 [01;31m[Klost_packets_total_count_[m[K[camera_id] = 0;
+      |                 [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:[m[K In member function ‘[01m[Kvoid FrequencySubscriber::csvWriterLoop()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:672:51:[m[K [01;31m[Kerror: [m[K‘[01m[Kcsv_queue_mutex_[m[K’ was not declared in this scope
+  672 |                 std::unique_lock<std::mutex> lock([01;31m[Kcsv_queue_mutex_[m[K);
+      |                                                   [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:673:17:[m[K [01;31m[Kerror: [m[K‘[01m[Kcsv_queue_cv_[m[K’ was not declared in this scope
+  673 |                 [01;31m[Kcsv_queue_cv_[m[K.wait(lock, [this] {
+      |                 [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:[m[K In lambda function:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:674:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kstop_csv_writer_thread_[m[K’ was not declared in this scope
+  674 |                     return [01;31m[Kstop_csv_writer_thread_[m[K || !csv_data_queue_.empty();
+      |                            [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:674:56:[m[K [01;31m[Kerror: [m[K‘[01m[Kcsv_data_queue_[m[K’ was not declared in this scope
+  674 |                     return stop_csv_writer_thread_ || ![01;31m[Kcsv_data_queue_[m[K.empty();
+      |                                                        [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:[m[K In member function ‘[01m[Kvoid FrequencySubscriber::csvWriterLoop()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:677:21:[m[K [01;31m[Kerror: [m[K‘[01m[Kstop_csv_writer_thread_[m[K’ was not declared in this scope
+  677 |                 if ([01;31m[Kstop_csv_writer_thread_[m[K && csv_data_queue_.empty())
+      |                     [01;31m[K^~~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:677:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kcsv_data_queue_[m[K’ was not declared in this scope
+  677 |                 if (stop_csv_writer_thread_ && [01;31m[Kcsv_data_queue_[m[K.empty())
+      |                                                [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:682:22:[m[K [01;31m[Kerror: [m[K‘[01m[Kcsv_data_queue_[m[K’ was not declared in this scope
+  682 |                 if (![01;31m[Kcsv_data_queue_[m[K.empty())
+      |                      [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:[m[K In member function ‘[01m[Kvoid FrequencySubscriber::initialize_colors()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:703:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass_colors_[m[K’ was not declared in this scope
+  703 |             [01;31m[Kclass_colors_[m[K.push_back(cv::Scalar(255, 0, 0));     // Blue
+      |             [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:[m[K In function ‘[01m[Kvoid report_metrics()[m[K’:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:766:20:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  766 |         auto now = [01;31m[Kthis[m[K->now();
+      |                    [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:767:37:[m[K [01;31m[Kerror: [m[K‘[01m[Klast_report_time_[m[K’ was not declared in this scope
+  767 |         double elapsed_sec = (now - [01;31m[Klast_report_time_[m[K).seconds();
+      |                                     [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:773:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg_count_mutex_left_[m[K’ was not declared in this scope
+  773 |             std::lock_guard<std::mutex> lock([01;31m[Kmsg_count_mutex_left_[m[K);
+      |                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:774:28:[m[K [01;31m[Kerror: [m[K‘[01m[Kcount_left_[m[K’ was not declared in this scope
+  774 |             current_left = [01;31m[Kcount_left_[m[K;
+      |                            [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:778:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg_count_mutex_front_[m[K’ was not declared in this scope
+  778 |             std::lock_guard<std::mutex> lock([01;31m[Kmsg_count_mutex_front_[m[K);
+      |                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:779:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kcount_front_[m[K’ was not declared in this scope
+  779 |             current_front = [01;31m[Kcount_front_[m[K;
+      |                             [01;31m[K^~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:783:46:[m[K [01;31m[Kerror: [m[K‘[01m[Kmsg_count_mutex_right_[m[K’ was not declared in this scope
+  783 |             std::lock_guard<std::mutex> lock([01;31m[Kmsg_count_mutex_right_[m[K);
+      |                                              [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:784:29:[m[K [01;31m[Kerror: [m[K‘[01m[Kcount_right_[m[K’ was not declared in this scope
+  784 |             current_right = [01;31m[Kcount_right_[m[K;
+      |                             [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:1[m[K:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:792:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  792 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(),
+      |                     [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:792:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:792:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  792 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(),
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:792:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  792 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(),
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:792:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  792 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(),
+      |         [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:1[m[K:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:792:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  792 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(),
+      |                     [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:792:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  792 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(),
+      |                     [01;31m[K^~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:1[m[K:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:794:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  794 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(),
+      |                     [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:794:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:794:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  794 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(),
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:794:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  794 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(),
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:794:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  794 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(),
+      |         [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:1[m[K:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:794:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  794 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(),
+      |                     [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:794:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  794 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(),
+      |                     [01;31m[K^~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:1[m[K:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:797:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  797 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(),
+      |                     [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:797:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:797:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  797 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(),
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:797:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  797 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(),
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:797:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  797 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(),
+      |         [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:1[m[K:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:797:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  797 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(),
+      |                     [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:797:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  797 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(),
+      |                     [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:800:48:[m[K [01;31m[Kerror: [m[K‘[01m[Kmetrics_mutex_[m[K’ was not declared in this scope
+  800 |         std::lock_guard<std::mutex> stats_lock([01;31m[Kmetrics_mutex_[m[K);
+      |                                                [01;31m[K^~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:801:37:[m[K [01;31m[Kerror: [m[K‘[01m[Kall_metrics_[m[K’ was not declared in this scope
+  801 |         for (const auto &cam_pair : [01;31m[Kall_metrics_[m[K)
+      |                                     [01;31m[K^~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:1[m[K:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:804:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  804 |             RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Stats for ID: [%s] (Cumulative)", id_key.c_str());
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:804:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:804:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  804 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Stats for ID: [%s] (Cumulative)", id_key.c_str());
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:804:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  804 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Stats for ID: [%s] (Cumulative)", id_key.c_str());
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:804:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  804 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "Stats for ID: [%s] (Cumulative)", id_key.c_str());
+      |             [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:1[m[K:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:804:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  804 |             RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Stats for ID: [%s] (Cumulative)", id_key.c_str());
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:804:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  804 |             RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "Stats for ID: [%s] (Cumulative)", id_key.c_str());
+      |                         [01;31m[K^~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:1[m[K:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:827:37:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  827 |                         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(),
+      |                                     [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:827:37:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:827:25:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  827 |                         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(),
+      |                         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:827:25:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  827 |                         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(),
+      |                         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:827:25:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  827 |                         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(),
+      |                         [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:1[m[K:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:827:37:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  827 |                         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(),
+      |                                     [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:827:37:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  827 |                         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(),
+      |                                     [01;31m[K^~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:1[m[K:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:832:37:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  832 |                         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "  %-35s: No data yet.", metric_name.c_str());
+      |                                     [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:832:37:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:832:25:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  832 |                         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "  %-35s: No data yet.", metric_name.c_str());
+      |                         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:832:25:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  832 |                         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "  %-35s: No data yet.", metric_name.c_str());
+      |                         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:832:25:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  832 |                         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(), "  %-35s: No data yet.", metric_name.c_str());
+      |                         [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:1[m[K:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:832:37:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  832 |                         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "  %-35s: No data yet.", metric_name.c_str());
+      |                                     [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:832:37:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  832 |                         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(), "  %-35s: No data yet.", metric_name.c_str());
+      |                                     [01;31m[K^~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:1[m[K:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:836:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  836 |             RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(),
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:836:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:836:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  836 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(),
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:836:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  836 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(),
+      |             [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:836:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  836 |             [01;31m[KRCLCPP_INFO[m[K(this->get_logger(),
+      |             [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:1[m[K:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:836:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  836 |             RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(),
+      |                         [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:836:25:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  836 |             RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(),
+      |                         [01;31m[K^~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:1[m[K:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:839:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  839 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(),
+      |                     [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:839:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:839:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  839 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(),
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:839:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  839 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(),
+      |         [01;31m[K^~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:839:9:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  839 |         [01;31m[KRCLCPP_INFO[m[K(this->get_logger(),
+      |         [01;31m[K^~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:1[m[K:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:839:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  839 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(),
+      |                     [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:839:21:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  839 |         RCLCPP_INFO([01;31m[Kthis[m[K->get_logger(),
+      |                     [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:[m[K In function ‘[01m[Kcv::Mat create_colored_mask(const cv::Mat&, const std::vector<float>&, const std::vector<unsigned char, std::allocator<unsigned char> >&, const string&)[m[K’:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:851:13:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass_colors_[m[K’ was not declared in this scope
+  851 |         if ([01;31m[Kclass_colors_[m[K.empty())
+      |             [01;31m[K^~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:1[m[K:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:853:30:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  853 |             RCLCPP_WARN_ONCE([01;31m[Kthis[m[K->get_logger(), "[%s] Color palette is empty. Cannot color frame.", camera_id.c_str());
+      |                              [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:853:30:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:853:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  853 |             [01;31m[KRCLCPP_WARN_ONCE[m[K(this->get_logger(), "[%s] Color palette is empty. Cannot color frame.", camera_id.c_str());
+      |             [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:853:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  853 |             [01;31m[KRCLCPP_WARN_ONCE[m[K(this->get_logger(), "[%s] Color palette is empty. Cannot color frame.", camera_id.c_str());
+      |             [01;31m[K^~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:853:13:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  853 |             [01;31m[KRCLCPP_WARN_ONCE[m[K(this->get_logger(), "[%s] Color palette is empty. Cannot color frame.", camera_id.c_str());
+      |             [01;31m[K^~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:1[m[K:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:853:30:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  853 |             RCLCPP_WARN_ONCE([01;31m[Kthis[m[K->get_logger(), "[%s] Color palette is empty. Cannot color frame.", camera_id.c_str());
+      |                              [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:853:30:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  853 |             RCLCPP_WARN_ONCE([01;31m[Kthis[m[K->get_logger(), "[%s] Color palette is empty. Cannot color frame.", camera_id.c_str());
+      |                              [01;31m[K^~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:1[m[K:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:874:43:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  874 |                         RCLCPP_ERROR_ONCE([01;31m[Kthis[m[K->get_logger(), "[%s] Unexpected mask type", camera_id.c_str());
+      |                                           [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:874:43:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:874:25:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  874 |                         [01;31m[KRCLCPP_ERROR_ONCE[m[K(this->get_logger(), "[%s] Unexpected mask type", camera_id.c_str());
+      |                         [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:874:25:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  874 |                         [01;31m[KRCLCPP_ERROR_ONCE[m[K(this->get_logger(), "[%s] Unexpected mask type", camera_id.c_str());
+      |                         [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:874:25:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+  874 |                         [01;31m[KRCLCPP_ERROR_ONCE[m[K(this->get_logger(), "[%s] Unexpected mask type", camera_id.c_str());
+      |                         [01;31m[K^~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/logging.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/client.hpp:40[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/callback_group.hpp:24[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/any_executable.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategy.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/memory_strategies.hpp:18[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor_options.hpp:20[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executor.hpp:37[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors/multi_threaded_executor.hpp:25[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/executors.hpp:21[m[K,
+                 from [01m[K/opt/ros/humble/include/rclcpp/rclcpp/rclcpp.hpp:155[m[K,
+                 from [01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:1[m[K:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:874:43:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  874 |                         RCLCPP_ERROR_ONCE([01;31m[Kthis[m[K->get_logger(), "[%s] Unexpected mask type", camera_id.c_str());
+      |                                           [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:874:43:[m[K [01;31m[Kerror: [m[Kinvalid use of ‘[01m[Kthis[m[K’ in non-member function
+  874 |                         RCLCPP_ERROR_ONCE([01;31m[Kthis[m[K->get_logger(), "[%s] Unexpected mask type", camera_id.c_str());
+      |                                           [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:885:49:[m[K [01;31m[Kerror: [m[K‘[01m[Kclass_colors_[m[K’ was not declared in this scope; did you mean ‘[01m[Kbase_color[m[K’?
+  885 |                         cv::Scalar base_color = [01;31m[Kclass_colors_[m[K[class_id % class_colors_.size()];
+      |                                                 [01;31m[K^~~~~~~~~~~~~[m[K
+      |                                                 [32m[Kbase_color[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:886:50:[m[K [01;31m[Kerror: [m[K‘[01m[KgetRandomTone[m[K’ was not declared in this scope
+  886 |                         cv::Scalar toned_color = [01;31m[KgetRandomTone[m[K(base_color, instance_id_from_mask);
+      |                                                  [01;31m[K^~~~~~~~~~~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:846:94:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kscores[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+  846 | Mat create_colored_mask(const cv::Mat& instance_id_mask, [01;35m[Kconst std::vector<float_t>& scores[m[K, const std::vector<uint8_t>& classes, const std::string &camera_id)
+      |                                                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~[m[K
+
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:[m[K At global scope:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:977:1:[m[K [01;31m[Kerror: [m[Kexpected declaration before ‘[01m[K}[m[K’ token
+  977 | [01;31m[K}[m[K;
+      | [01;31m[K^[m[K
+gmake[2]: *** [CMakeFiles/seg_sub_yolo_node.dir/build.make:76: CMakeFiles/seg_sub_yolo_node.dir/src/seg_sub_yolo.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/seg_sub_yolo_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

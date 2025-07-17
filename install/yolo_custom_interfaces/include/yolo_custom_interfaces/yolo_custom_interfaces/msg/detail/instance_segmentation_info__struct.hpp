@@ -18,8 +18,6 @@
 // Include directives for member types
 // Member 'header'
 #include "std_msgs/msg/detail/header__struct.hpp"
-// Member 'mask'
-#include "sensor_msgs/msg/detail/image__struct.hpp"
 // Member 'image_source_monotonic_capture_time'
 // Member 'processing_node_monotonic_entry_time'
 // Member 'processing_node_inference_start_time'
@@ -47,7 +45,6 @@ struct InstanceSegmentationInfo_
 
   explicit InstanceSegmentationInfo_(rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   : header(_init),
-    mask(_init),
     image_source_monotonic_capture_time(_init),
     processing_node_monotonic_entry_time(_init),
     processing_node_inference_start_time(_init),
@@ -57,13 +54,14 @@ struct InstanceSegmentationInfo_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->mask_width = 0;
+      this->mask_height = 0;
       this->packet_sequence_number = 0ull;
     }
   }
 
   explicit InstanceSegmentationInfo_(const ContainerAllocator & _alloc, rosidl_runtime_cpp::MessageInitialization _init = rosidl_runtime_cpp::MessageInitialization::ALL)
   : header(_alloc, _init),
-    mask(_alloc, _init),
     image_source_monotonic_capture_time(_alloc, _init),
     processing_node_monotonic_entry_time(_alloc, _init),
     processing_node_inference_start_time(_alloc, _init),
@@ -73,6 +71,8 @@ struct InstanceSegmentationInfo_
     if (rosidl_runtime_cpp::MessageInitialization::ALL == _init ||
       rosidl_runtime_cpp::MessageInitialization::ZERO == _init)
     {
+      this->mask_width = 0;
+      this->mask_height = 0;
       this->packet_sequence_number = 0ull;
     }
   }
@@ -81,14 +81,20 @@ struct InstanceSegmentationInfo_
   using _header_type =
     std_msgs::msg::Header_<ContainerAllocator>;
   _header_type header;
-  using _mask_type =
-    sensor_msgs::msg::Image_<ContainerAllocator>;
-  _mask_type mask;
+  using _mask_width_type =
+    uint16_t;
+  _mask_width_type mask_width;
+  using _mask_height_type =
+    uint16_t;
+  _mask_height_type mask_height;
+  using _mask_data_type =
+    std::vector<uint8_t, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<uint8_t>>;
+  _mask_data_type mask_data;
   using _scores_type =
     std::vector<float, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<float>>;
   _scores_type scores;
   using _classes_type =
-    std::vector<int32_t, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<int32_t>>;
+    std::vector<uint8_t, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<uint8_t>>;
   _classes_type classes;
   using _image_source_monotonic_capture_time_type =
     builtin_interfaces::msg::Time_<ContainerAllocator>;
@@ -116,10 +122,22 @@ struct InstanceSegmentationInfo_
     this->header = _arg;
     return *this;
   }
-  Type & set__mask(
-    const sensor_msgs::msg::Image_<ContainerAllocator> & _arg)
+  Type & set__mask_width(
+    const uint16_t & _arg)
   {
-    this->mask = _arg;
+    this->mask_width = _arg;
+    return *this;
+  }
+  Type & set__mask_height(
+    const uint16_t & _arg)
+  {
+    this->mask_height = _arg;
+    return *this;
+  }
+  Type & set__mask_data(
+    const std::vector<uint8_t, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<uint8_t>> & _arg)
+  {
+    this->mask_data = _arg;
     return *this;
   }
   Type & set__scores(
@@ -129,7 +147,7 @@ struct InstanceSegmentationInfo_
     return *this;
   }
   Type & set__classes(
-    const std::vector<int32_t, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<int32_t>> & _arg)
+    const std::vector<uint8_t, typename std::allocator_traits<ContainerAllocator>::template rebind_alloc<uint8_t>> & _arg)
   {
     this->classes = _arg;
     return *this;
@@ -216,7 +234,13 @@ struct InstanceSegmentationInfo_
     if (this->header != other.header) {
       return false;
     }
-    if (this->mask != other.mask) {
+    if (this->mask_width != other.mask_width) {
+      return false;
+    }
+    if (this->mask_height != other.mask_height) {
+      return false;
+    }
+    if (this->mask_data != other.mask_data) {
       return false;
     }
     if (this->scores != other.scores) {

@@ -26,7 +26,6 @@ struct DEPLOYAPI Image {
     void* ptr;         // < 图像数据指针
     int   width  = 0;  // < 图像宽度
     int   height = 0;  // < 图像高度
-    int   channels = 3; // < 图像通道数，默认为3（RGB）
 
     /**
      * @brief 构造函数，初始化图像数据和尺寸
@@ -34,16 +33,15 @@ struct DEPLOYAPI Image {
      * @param data 图像数据指针
      * @param width 图像宽度
      * @param height 图像高度
-     * @param channels 图像通道数，默认为3（RGB）
      */
-    Image(void* data, int width, int height, int channels) : ptr(data), width(width), height(height), channels(channels) {
-        if (width <= 0 || height <= 0 || channels <= 0) {
-            throw std::invalid_argument(MAKE_ERROR_MESSAGE("Image: width, height and channels must be positive"));
+    Image(void* data, int width, int height) : ptr(data), width(width), height(height) {
+        if (width <= 0 || height <= 0) {
+            throw std::invalid_argument(MAKE_ERROR_MESSAGE("Image: width and height must be positive"));
         }
     }
 
     friend std::ostream& operator<<(std::ostream& os, const Image& img) {
-        os << "Image(width=" << img.width << ", height=" << img.height << ", channels=" << img.channels << ", ptr=" << img.ptr << ")";
+        os << "Image(width=" << img.width << ", height=" << img.height << ", ptr=" << img.ptr << ")";
         return os;
     }
 };

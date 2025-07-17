@@ -1,0 +1,93 @@
+-- Found ament_cmake: 1.3.11 (/opt/ros/humble/share/ament_cmake/cmake)
+-- Found rclcpp: 16.0.12 (/opt/ros/humble/share/rclcpp/cmake)
+-- Found rosidl_generator_c: 3.1.6 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+-- Found rosidl_adapter: 3.1.6 (/opt/ros/humble/share/rosidl_adapter/cmake)
+-- Found rosidl_generator_cpp: 3.1.6 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 6.2.7 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found rclcpp_components: 16.0.12 (/opt/ros/humble/share/rclcpp_components/cmake)
+-- Found sensor_msgs: 4.9.0 (/opt/ros/humble/share/sensor_msgs/cmake)
+-- Found vision_msgs: 4.1.1 (/opt/ros/humble/share/vision_msgs/cmake)
+-- Found image_transport: 3.1.12 (/opt/ros/humble/share/image_transport/cmake)
+-- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+-- Found bboxes_ex_msgs: 0.0.0 (/home/david/yolocpp_ws/install/bboxes_ex_msgs/share/bboxes_ex_msgs/cmake)
+-- Found ament_lint_auto: 0.12.12 (/opt/ros/humble/share/ament_lint_auto/cmake)
+-- Added test 'cppcheck' to perform static code analysis on C / C++ code
+-- Configured cppcheck include dirs: $<BUILD_INTERFACE:/home/david/yolocpp_ws/src/yolocpp/include>
+-- Configured cppcheck exclude dirs and/or files: 
+-- Added test 'flake8' to check Python code syntax and style conventions
+-- Added test 'lint_cmake' to check CMake code style
+-- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+-- Added test 'uncrustify' to check C / C++ code style
+-- Configured uncrustify additional arguments: 
+-- Added test 'xmllint' to check XML markup files
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/david/yolocpp_ws/build/yolocpp
+[35m[1mConsolidate compiler generated dependencies of target yolocpp[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/yolocpp.dir/src/yolocpp.cpp.o[0m
+[100%] [32m[1mLinking CXX executable yolocpp[0m
+[100%] Built target yolocpp
+-- Install configuration: ""
+-- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/launch
+-- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/launch/__pycache__
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/launch/__pycache__/yolocpp_onnx.launch.cpython-310.pyc
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/launch/yolocpp_onnx.launch.py
+-- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include
+-- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files
+-- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/tools
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/tools/Config.hpp
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/tools/BoundedThreadSafeQueue.hpp
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/tools/ScopedTimer.hpp
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/tools/Debug.hpp
+-- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/det
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/det/YOLO9.hpp
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/det/YOLO12.hpp
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/det/YOLO5.hpp
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/det/YOLO7.hpp
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/det/YOLO10.hpp
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/det/YOLO8.hpp
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/det/YOLO11.hpp
+-- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/pose
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/pose/YOLO8-POSE.hpp
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/pose/YOLO11-POSE.hpp
+-- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/quantized_models
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/quantized_models/coco.names
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/quantized_models/yolos_quantization.py
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/quantized_models/your_model.onnx.file
+-- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/obb
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/obb/YOLO8-OBB.hpp
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/obb/YOLO11-OBB.hpp
+-- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/class
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/class/YOLO11CLASS.hpp
+-- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/seg
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/seg/YOLO11Seg.hpp
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/seg/YOLO9Seg.hpp
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/seg/YOLO8Seg.hpp
+-- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/models
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/models/coco.names
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/models/testonnx.py
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/models/export_onnx.py
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/models/Dota.names
+-- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/data
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/data/test.jpg
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/lib/yolocpp/yolocpp
+-- Set runtime path of "/home/david/yolocpp_ws/install/yolocpp/lib/yolocpp/yolocpp" to ""
+-- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/ament_index/resource_index/package_run_dependencies/yolocpp
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/ament_index/resource_index/parent_prefix_path/yolocpp
+-- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/environment/ament_prefix_path.sh
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/environment/path.sh
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/environment/path.dsv
+-- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/local_setup.bash
+-- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/local_setup.sh
+-- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/local_setup.zsh
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/local_setup.dsv
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/package.dsv
+-- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/ament_index/resource_index/packages/yolocpp
+-- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/cmake/yolocppConfig.cmake
+-- Up-to-date: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/cmake/yolocppConfig-version.cmake
+-- Installing: /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/package.xml

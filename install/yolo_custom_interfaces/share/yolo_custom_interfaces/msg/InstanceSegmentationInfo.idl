@@ -3,7 +3,6 @@
 // generated code does not contain a copyright notice
 
 #include "builtin_interfaces/msg/Time.idl"
-#include "sensor_msgs/msg/Image.idl"
 #include "std_msgs/msg/Header.idl"
 
 module yolo_custom_interfaces {
@@ -11,34 +10,26 @@ module yolo_custom_interfaces {
     struct InstanceSegmentationInfo {
       std_msgs::msg::Header header;
 
-      sensor_msgs::msg::Image mask;
+      uint16 mask_width;
+
+      uint16 mask_height;
+
+      sequence<uint8> mask_data;
 
       sequence<float> scores;
 
-      sequence<int32> classes;
+      sequence<uint8> classes;
 
-      @verbatim (language="comment", text=
-        "T0 (SegNode Callback Entry)")
       builtin_interfaces::msg::Time image_source_monotonic_capture_time;
 
-      @verbatim (language="comment", text=
-        "T1 (SegNode Batch Processing Start)")
       builtin_interfaces::msg::Time processing_node_monotonic_entry_time;
 
-      @verbatim (language="comment", text=
-        "T2a (SegNode Inference Start)")
       builtin_interfaces::msg::Time processing_node_inference_start_time;
 
-      @verbatim (language="comment", text=
-        "T2b (SegNode Inference End)")
       builtin_interfaces::msg::Time processing_node_inference_end_time;
 
-      @verbatim (language="comment", text=
-        "T3 (SegNode Result Publish)")
       builtin_interfaces::msg::Time processing_node_monotonic_publish_time;
 
-      @verbatim (language="comment", text=
-        "Corresponds to source_image_seq from TimedImage")
       uint64 packet_sequence_number;
     };
   };

@@ -35,9 +35,8 @@ extern "C"
 #endif
 
 #include "builtin_interfaces/msg/detail/time__functions.h"  // image_source_monotonic_capture_time, processing_node_inference_end_time, processing_node_inference_start_time, processing_node_monotonic_entry_time, processing_node_monotonic_publish_time
-#include "rosidl_runtime_c/primitives_sequence.h"  // classes, scores
-#include "rosidl_runtime_c/primitives_sequence_functions.h"  // classes, scores
-#include "sensor_msgs/msg/detail/image__functions.h"  // mask
+#include "rosidl_runtime_c/primitives_sequence.h"  // classes, mask_data, scores
+#include "rosidl_runtime_c/primitives_sequence_functions.h"  // classes, mask_data, scores
 #include "std_msgs/msg/detail/header__functions.h"  // header
 
 // forward declare type support functions
@@ -55,20 +54,6 @@ size_t max_serialized_size_builtin_interfaces__msg__Time(
 ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_yolo_custom_interfaces
 const rosidl_message_type_support_t *
   ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, builtin_interfaces, msg, Time)();
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_yolo_custom_interfaces
-size_t get_serialized_size_sensor_msgs__msg__Image(
-  const void * untyped_ros_message,
-  size_t current_alignment);
-
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_yolo_custom_interfaces
-size_t max_serialized_size_sensor_msgs__msg__Image(
-  bool & full_bounded,
-  bool & is_plain,
-  size_t current_alignment);
-
-ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_yolo_custom_interfaces
-const rosidl_message_type_support_t *
-  ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_fastrtps_c, sensor_msgs, msg, Image)();
 ROSIDL_TYPESUPPORT_FASTRTPS_C_IMPORT_yolo_custom_interfaces
 size_t get_serialized_size_std_msgs__msg__Header(
   const void * untyped_ros_message,
@@ -110,18 +95,22 @@ static bool _InstanceSegmentationInfo__cdr_serialize(
     }
   }
 
-  // Field name: mask
+  // Field name: mask_width
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, sensor_msgs, msg, Image
-      )()->data);
-    if (!callbacks->cdr_serialize(
-        &ros_message->mask, cdr))
-    {
-      return false;
-    }
+    cdr << ros_message->mask_width;
+  }
+
+  // Field name: mask_height
+  {
+    cdr << ros_message->mask_height;
+  }
+
+  // Field name: mask_data
+  {
+    size_t size = ros_message->mask_data.size;
+    auto array_ptr = ros_message->mask_data.data;
+    cdr << static_cast<uint32_t>(size);
+    cdr.serializeArray(array_ptr, size);
   }
 
   // Field name: scores
@@ -241,18 +230,30 @@ static bool _InstanceSegmentationInfo__cdr_deserialize(
     }
   }
 
-  // Field name: mask
+  // Field name: mask_width
   {
-    const message_type_support_callbacks_t * callbacks =
-      static_cast<const message_type_support_callbacks_t *>(
-      ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(
-        rosidl_typesupport_fastrtps_c, sensor_msgs, msg, Image
-      )()->data);
-    if (!callbacks->cdr_deserialize(
-        cdr, &ros_message->mask))
-    {
+    cdr >> ros_message->mask_width;
+  }
+
+  // Field name: mask_height
+  {
+    cdr >> ros_message->mask_height;
+  }
+
+  // Field name: mask_data
+  {
+    uint32_t cdrSize;
+    cdr >> cdrSize;
+    size_t size = static_cast<size_t>(cdrSize);
+    if (ros_message->mask_data.data) {
+      rosidl_runtime_c__uint8__Sequence__fini(&ros_message->mask_data);
+    }
+    if (!rosidl_runtime_c__uint8__Sequence__init(&ros_message->mask_data, size)) {
+      fprintf(stderr, "failed to create array for field 'mask_data'");
       return false;
     }
+    auto array_ptr = ros_message->mask_data.data;
+    cdr.deserializeArray(array_ptr, size);
   }
 
   // Field name: scores
@@ -277,9 +278,9 @@ static bool _InstanceSegmentationInfo__cdr_deserialize(
     cdr >> cdrSize;
     size_t size = static_cast<size_t>(cdrSize);
     if (ros_message->classes.data) {
-      rosidl_runtime_c__int32__Sequence__fini(&ros_message->classes);
+      rosidl_runtime_c__uint8__Sequence__fini(&ros_message->classes);
     }
-    if (!rosidl_runtime_c__int32__Sequence__init(&ros_message->classes, size)) {
+    if (!rosidl_runtime_c__uint8__Sequence__init(&ros_message->classes, size)) {
       fprintf(stderr, "failed to create array for field 'classes'");
       return false;
     }
@@ -383,10 +384,29 @@ size_t get_serialized_size_yolo_custom_interfaces__msg__InstanceSegmentationInfo
 
   current_alignment += get_serialized_size_std_msgs__msg__Header(
     &(ros_message->header), current_alignment);
-  // field.name mask
-
-  current_alignment += get_serialized_size_sensor_msgs__msg__Image(
-    &(ros_message->mask), current_alignment);
+  // field.name mask_width
+  {
+    size_t item_size = sizeof(ros_message->mask_width);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name mask_height
+  {
+    size_t item_size = sizeof(ros_message->mask_height);
+    current_alignment += item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
+  // field.name mask_data
+  {
+    size_t array_size = ros_message->mask_data.size;
+    auto array_ptr = ros_message->mask_data.data;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+    (void)array_ptr;
+    size_t item_size = sizeof(array_ptr[0]);
+    current_alignment += array_size * item_size +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, item_size);
+  }
   // field.name scores
   {
     size_t array_size = ros_message->scores.size;
@@ -483,24 +503,32 @@ size_t max_serialized_size_yolo_custom_interfaces__msg__InstanceSegmentationInfo
       is_plain &= inner_is_plain;
     }
   }
-  // member: mask
+  // member: mask_width
   {
     size_t array_size = 1;
 
+    last_member_size = array_size * sizeof(uint16_t);
+    current_alignment += array_size * sizeof(uint16_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
+  }
+  // member: mask_height
+  {
+    size_t array_size = 1;
 
-    last_member_size = 0;
-    for (size_t index = 0; index < array_size; ++index) {
-      bool inner_full_bounded;
-      bool inner_is_plain;
-      size_t inner_size;
-      inner_size =
-        max_serialized_size_sensor_msgs__msg__Image(
-        inner_full_bounded, inner_is_plain, current_alignment);
-      last_member_size += inner_size;
-      current_alignment += inner_size;
-      full_bounded &= inner_full_bounded;
-      is_plain &= inner_is_plain;
-    }
+    last_member_size = array_size * sizeof(uint16_t);
+    current_alignment += array_size * sizeof(uint16_t) +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint16_t));
+  }
+  // member: mask_data
+  {
+    size_t array_size = 0;
+    full_bounded = false;
+    is_plain = false;
+    current_alignment += padding +
+      eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
+
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
   }
   // member: scores
   {
@@ -522,9 +550,8 @@ size_t max_serialized_size_yolo_custom_interfaces__msg__InstanceSegmentationInfo
     current_alignment += padding +
       eprosima::fastcdr::Cdr::alignment(current_alignment, padding);
 
-    last_member_size = array_size * sizeof(uint32_t);
-    current_alignment += array_size * sizeof(uint32_t) +
-      eprosima::fastcdr::Cdr::alignment(current_alignment, sizeof(uint32_t));
+    last_member_size = array_size * sizeof(uint8_t);
+    current_alignment += array_size * sizeof(uint8_t);
   }
   // member: image_source_monotonic_capture_time
   {

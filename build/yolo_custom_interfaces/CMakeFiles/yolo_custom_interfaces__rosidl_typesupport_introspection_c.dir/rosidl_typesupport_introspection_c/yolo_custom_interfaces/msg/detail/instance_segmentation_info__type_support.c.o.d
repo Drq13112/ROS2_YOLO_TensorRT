@@ -61,19 +61,12 @@ CMakeFiles/yolo_custom_interfaces__rosidl_typesupport_introspection_c.dir/rosidl
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__struct.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/string.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence.h \
- /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.h \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/header.h \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__functions.h \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_generator_c__visibility_control.h \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__type_support.h \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__rosidl_typesupport_introspection_c.h \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h \
- /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.h \
- /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__functions.h \
- /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_c__visibility_control.h \
- /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__type_support.h \
- /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__rosidl_typesupport_introspection_c.h \
- /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_typesupport_introspection_c__visibility_control.h \
  /opt/ros/humble/include/rosidl_runtime_c/rosidl_runtime_c/primitives_sequence_functions.h \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/time.h \
  /opt/ros/humble/include/builtin_interfaces/builtin_interfaces/msg/detail/time__functions.h \

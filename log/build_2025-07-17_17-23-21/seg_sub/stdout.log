@@ -1,0 +1,4 @@
+[ 33%] Built target chrono
+[35m[1mConsolidate compiler generated dependencies of target seg_sub_yolo_node[0m
+[ 66%] Built target seg_sub_pid_node
+[ 83%] [32mBuilding CXX object CMakeFiles/seg_sub_yolo_node.dir/src/seg_sub_yolo.cpp.o[0m

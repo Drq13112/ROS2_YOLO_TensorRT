@@ -1,7 +1,5 @@
 colcon build --cmake-args -DTRT_PATH=/usr -DCMAKE_CUDA_ARCHITECTURES="89" -DCMAKE_CUDA_COMPILER=/usr/local/cuda-12.9/bin/nvcc
 
-
-
 # Verificar si ~/.local/bin ya está en tu PATH
 echo $PATH | grep -o ~/.local/bin
 

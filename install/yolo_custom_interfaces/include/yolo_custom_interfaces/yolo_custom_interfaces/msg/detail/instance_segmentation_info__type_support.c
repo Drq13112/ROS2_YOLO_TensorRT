@@ -17,10 +17,7 @@
 #include "std_msgs/msg/header.h"
 // Member `header`
 #include "std_msgs/msg/detail/header__rosidl_typesupport_introspection_c.h"
-// Member `mask`
-#include "sensor_msgs/msg/image.h"
-// Member `mask`
-#include "sensor_msgs/msg/detail/image__rosidl_typesupport_introspection_c.h"
+// Member `mask_data`
 // Member `scores`
 // Member `classes`
 #include "rosidl_runtime_c/primitives_sequence_functions.h"
@@ -54,6 +51,61 @@ void yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_i
 void yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_fini_function(void * message_memory)
 {
   yolo_custom_interfaces__msg__InstanceSegmentationInfo__fini(message_memory);
+}
+
+size_t yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__size_function__InstanceSegmentationInfo__mask_data(
+  const void * untyped_member)
+{
+  const rosidl_runtime_c__uint8__Sequence * member =
+    (const rosidl_runtime_c__uint8__Sequence *)(untyped_member);
+  return member->size;
+}
+
+const void * yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__get_const_function__InstanceSegmentationInfo__mask_data(
+  const void * untyped_member, size_t index)
+{
+  const rosidl_runtime_c__uint8__Sequence * member =
+    (const rosidl_runtime_c__uint8__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void * yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__get_function__InstanceSegmentationInfo__mask_data(
+  void * untyped_member, size_t index)
+{
+  rosidl_runtime_c__uint8__Sequence * member =
+    (rosidl_runtime_c__uint8__Sequence *)(untyped_member);
+  return &member->data[index];
+}
+
+void yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__fetch_function__InstanceSegmentationInfo__mask_data(
+  const void * untyped_member, size_t index, void * untyped_value)
+{
+  const uint8_t * item =
+    ((const uint8_t *)
+    yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__get_const_function__InstanceSegmentationInfo__mask_data(untyped_member, index));
+  uint8_t * value =
+    (uint8_t *)(untyped_value);
+  *value = *item;
+}
+
+void yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__assign_function__InstanceSegmentationInfo__mask_data(
+  void * untyped_member, size_t index, const void * untyped_value)
+{
+  uint8_t * item =
+    ((uint8_t *)
+    yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__get_function__InstanceSegmentationInfo__mask_data(untyped_member, index));
+  const uint8_t * value =
+    (const uint8_t *)(untyped_value);
+  *item = *value;
+}
+
+bool yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__resize_function__InstanceSegmentationInfo__mask_data(
+  void * untyped_member, size_t size)
+{
+  rosidl_runtime_c__uint8__Sequence * member =
+    (rosidl_runtime_c__uint8__Sequence *)(untyped_member);
+  rosidl_runtime_c__uint8__Sequence__fini(member);
+  return rosidl_runtime_c__uint8__Sequence__init(member, size);
 }
 
 size_t yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__size_function__InstanceSegmentationInfo__scores(
@@ -114,59 +166,59 @@ bool yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_i
 size_t yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__size_function__InstanceSegmentationInfo__classes(
   const void * untyped_member)
 {
-  const rosidl_runtime_c__int32__Sequence * member =
-    (const rosidl_runtime_c__int32__Sequence *)(untyped_member);
+  const rosidl_runtime_c__uint8__Sequence * member =
+    (const rosidl_runtime_c__uint8__Sequence *)(untyped_member);
   return member->size;
 }
 
 const void * yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__get_const_function__InstanceSegmentationInfo__classes(
   const void * untyped_member, size_t index)
 {
-  const rosidl_runtime_c__int32__Sequence * member =
-    (const rosidl_runtime_c__int32__Sequence *)(untyped_member);
+  const rosidl_runtime_c__uint8__Sequence * member =
+    (const rosidl_runtime_c__uint8__Sequence *)(untyped_member);
   return &member->data[index];
 }
 
 void * yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__get_function__InstanceSegmentationInfo__classes(
   void * untyped_member, size_t index)
 {
-  rosidl_runtime_c__int32__Sequence * member =
-    (rosidl_runtime_c__int32__Sequence *)(untyped_member);
+  rosidl_runtime_c__uint8__Sequence * member =
+    (rosidl_runtime_c__uint8__Sequence *)(untyped_member);
   return &member->data[index];
 }
 
 void yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__fetch_function__InstanceSegmentationInfo__classes(
   const void * untyped_member, size_t index, void * untyped_value)
 {
-  const int32_t * item =
-    ((const int32_t *)
+  const uint8_t * item =
+    ((const uint8_t *)
     yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__get_const_function__InstanceSegmentationInfo__classes(untyped_member, index));
-  int32_t * value =
-    (int32_t *)(untyped_value);
+  uint8_t * value =
+    (uint8_t *)(untyped_value);
   *value = *item;
 }
 
 void yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__assign_function__InstanceSegmentationInfo__classes(
   void * untyped_member, size_t index, const void * untyped_value)
 {
-  int32_t * item =
-    ((int32_t *)
+  uint8_t * item =
+    ((uint8_t *)
     yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__get_function__InstanceSegmentationInfo__classes(untyped_member, index));
-  const int32_t * value =
-    (const int32_t *)(untyped_value);
+  const uint8_t * value =
+    (const uint8_t *)(untyped_value);
   *item = *value;
 }
 
 bool yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__resize_function__InstanceSegmentationInfo__classes(
   void * untyped_member, size_t size)
 {
-  rosidl_runtime_c__int32__Sequence * member =
-    (rosidl_runtime_c__int32__Sequence *)(untyped_member);
-  rosidl_runtime_c__int32__Sequence__fini(member);
-  return rosidl_runtime_c__int32__Sequence__init(member, size);
+  rosidl_runtime_c__uint8__Sequence * member =
+    (rosidl_runtime_c__uint8__Sequence *)(untyped_member);
+  rosidl_runtime_c__uint8__Sequence__fini(member);
+  return rosidl_runtime_c__uint8__Sequence__init(member, size);
 }
 
-static rosidl_typesupport_introspection_c__MessageMember yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_message_member_array[10] = {
+static rosidl_typesupport_introspection_c__MessageMember yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_message_member_array[12] = {
   {
     "header",  // name
     rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
@@ -185,14 +237,14 @@ static rosidl_typesupport_introspection_c__MessageMember yolo_custom_interfaces_
     NULL  // resize(index) function pointer
   },
   {
-    "mask",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_MESSAGE,  // type
+    "mask_width",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_UINT16,  // type
     0,  // upper bound of string
-    NULL,  // members of sub message (initialized later)
+    NULL,  // members of sub message
     false,  // is array
     0,  // array size
     false,  // is upper bound
-    offsetof(yolo_custom_interfaces__msg__InstanceSegmentationInfo, mask),  // bytes offset in struct
+    offsetof(yolo_custom_interfaces__msg__InstanceSegmentationInfo, mask_width),  // bytes offset in struct
     NULL,  // default value
     NULL,  // size() function pointer
     NULL,  // get_const(index) function pointer
@@ -200,6 +252,40 @@ static rosidl_typesupport_introspection_c__MessageMember yolo_custom_interfaces_
     NULL,  // fetch(index, &value) function pointer
     NULL,  // assign(index, value) function pointer
     NULL  // resize(index) function pointer
+  },
+  {
+    "mask_height",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_UINT16,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    false,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(yolo_custom_interfaces__msg__InstanceSegmentationInfo, mask_height),  // bytes offset in struct
+    NULL,  // default value
+    NULL,  // size() function pointer
+    NULL,  // get_const(index) function pointer
+    NULL,  // get(index) function pointer
+    NULL,  // fetch(index, &value) function pointer
+    NULL,  // assign(index, value) function pointer
+    NULL  // resize(index) function pointer
+  },
+  {
+    "mask_data",  // name
+    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
+    0,  // upper bound of string
+    NULL,  // members of sub message
+    true,  // is array
+    0,  // array size
+    false,  // is upper bound
+    offsetof(yolo_custom_interfaces__msg__InstanceSegmentationInfo, mask_data),  // bytes offset in struct
+    NULL,  // default value
+    yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__size_function__InstanceSegmentationInfo__mask_data,  // size() function pointer
+    yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__get_const_function__InstanceSegmentationInfo__mask_data,  // get_const(index) function pointer
+    yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__get_function__InstanceSegmentationInfo__mask_data,  // get(index) function pointer
+    yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__fetch_function__InstanceSegmentationInfo__mask_data,  // fetch(index, &value) function pointer
+    yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__assign_function__InstanceSegmentationInfo__mask_data,  // assign(index, value) function pointer
+    yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__resize_function__InstanceSegmentationInfo__mask_data  // resize(index) function pointer
   },
   {
     "scores",  // name
@@ -220,7 +306,7 @@ static rosidl_typesupport_introspection_c__MessageMember yolo_custom_interfaces_
   },
   {
     "classes",  // name
-    rosidl_typesupport_introspection_c__ROS_TYPE_INT32,  // type
+    rosidl_typesupport_introspection_c__ROS_TYPE_UINT8,  // type
     0,  // upper bound of string
     NULL,  // members of sub message
     true,  // is array
@@ -342,7 +428,7 @@ static rosidl_typesupport_introspection_c__MessageMember yolo_custom_interfaces_
 static const rosidl_typesupport_introspection_c__MessageMembers yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_message_members = {
   "yolo_custom_interfaces__msg",  // message namespace
   "InstanceSegmentationInfo",  // message name
-  10,  // number of fields
+  12,  // number of fields
   sizeof(yolo_custom_interfaces__msg__InstanceSegmentationInfo),
   yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_message_member_array,  // message members
   yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_init_function,  // function to initialize message memory (memory has to be allocated)
@@ -362,17 +448,15 @@ const rosidl_message_type_support_t *
 ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, yolo_custom_interfaces, msg, InstanceSegmentationInfo)() {
   yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_message_member_array[0].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, std_msgs, msg, Header)();
-  yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_message_member_array[1].members_ =
-    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, sensor_msgs, msg, Image)();
-  yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_message_member_array[4].members_ =
-    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, builtin_interfaces, msg, Time)();
-  yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_message_member_array[5].members_ =
-    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, builtin_interfaces, msg, Time)();
   yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_message_member_array[6].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, builtin_interfaces, msg, Time)();
   yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_message_member_array[7].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, builtin_interfaces, msg, Time)();
   yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_message_member_array[8].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, builtin_interfaces, msg, Time)();
+  yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_message_member_array[9].members_ =
+    ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, builtin_interfaces, msg, Time)();
+  yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_message_member_array[10].members_ =
     ROSIDL_TYPESUPPORT_INTERFACE__MESSAGE_SYMBOL_NAME(rosidl_typesupport_introspection_c, builtin_interfaces, msg, Time)();
   if (!yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_message_type_support_handle.typesupport_identifier) {
     yolo_custom_interfaces__msg__InstanceSegmentationInfo__rosidl_typesupport_introspection_c__InstanceSegmentationInfo_message_type_support_handle.typesupport_identifier =

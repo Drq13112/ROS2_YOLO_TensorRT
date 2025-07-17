@@ -20,8 +20,7 @@ extern "C"
 // Include directives for member types
 // Member 'header'
 #include "std_msgs/msg/detail/header__struct.h"
-// Member 'mask'
-#include "sensor_msgs/msg/detail/image__struct.h"
+// Member 'mask_data'
 // Member 'scores'
 // Member 'classes'
 #include "rosidl_runtime_c/primitives_sequence.h"
@@ -36,20 +35,16 @@ extern "C"
 typedef struct yolo_custom_interfaces__msg__InstanceSegmentationInfo
 {
   std_msgs__msg__Header header;
-  sensor_msgs__msg__Image mask;
+  uint16_t mask_width;
+  uint16_t mask_height;
+  rosidl_runtime_c__uint8__Sequence mask_data;
   rosidl_runtime_c__float__Sequence scores;
-  rosidl_runtime_c__int32__Sequence classes;
-  /// T0 (SegNode Callback Entry)
+  rosidl_runtime_c__uint8__Sequence classes;
   builtin_interfaces__msg__Time image_source_monotonic_capture_time;
-  /// T1 (SegNode Batch Processing Start)
   builtin_interfaces__msg__Time processing_node_monotonic_entry_time;
-  /// T2a (SegNode Inference Start)
   builtin_interfaces__msg__Time processing_node_inference_start_time;
-  /// T2b (SegNode Inference End)
   builtin_interfaces__msg__Time processing_node_inference_end_time;
-  /// T3 (SegNode Result Publish)
   builtin_interfaces__msg__Time processing_node_monotonic_publish_time;
-  /// Corresponds to source_image_seq from TimedImage
   uint64_t packet_sequence_number;
 } yolo_custom_interfaces__msg__InstanceSegmentationInfo;
 

@@ -149,16 +149,48 @@ private:
   ::yolo_custom_interfaces::msg::InstanceSegmentationInfo msg_;
 };
 
-class Init_InstanceSegmentationInfo_mask
+class Init_InstanceSegmentationInfo_mask_data
 {
 public:
-  explicit Init_InstanceSegmentationInfo_mask(::yolo_custom_interfaces::msg::InstanceSegmentationInfo & msg)
+  explicit Init_InstanceSegmentationInfo_mask_data(::yolo_custom_interfaces::msg::InstanceSegmentationInfo & msg)
   : msg_(msg)
   {}
-  Init_InstanceSegmentationInfo_scores mask(::yolo_custom_interfaces::msg::InstanceSegmentationInfo::_mask_type arg)
+  Init_InstanceSegmentationInfo_scores mask_data(::yolo_custom_interfaces::msg::InstanceSegmentationInfo::_mask_data_type arg)
   {
-    msg_.mask = std::move(arg);
+    msg_.mask_data = std::move(arg);
     return Init_InstanceSegmentationInfo_scores(msg_);
+  }
+
+private:
+  ::yolo_custom_interfaces::msg::InstanceSegmentationInfo msg_;
+};
+
+class Init_InstanceSegmentationInfo_mask_height
+{
+public:
+  explicit Init_InstanceSegmentationInfo_mask_height(::yolo_custom_interfaces::msg::InstanceSegmentationInfo & msg)
+  : msg_(msg)
+  {}
+  Init_InstanceSegmentationInfo_mask_data mask_height(::yolo_custom_interfaces::msg::InstanceSegmentationInfo::_mask_height_type arg)
+  {
+    msg_.mask_height = std::move(arg);
+    return Init_InstanceSegmentationInfo_mask_data(msg_);
+  }
+
+private:
+  ::yolo_custom_interfaces::msg::InstanceSegmentationInfo msg_;
+};
+
+class Init_InstanceSegmentationInfo_mask_width
+{
+public:
+  explicit Init_InstanceSegmentationInfo_mask_width(::yolo_custom_interfaces::msg::InstanceSegmentationInfo & msg)
+  : msg_(msg)
+  {}
+  Init_InstanceSegmentationInfo_mask_height mask_width(::yolo_custom_interfaces::msg::InstanceSegmentationInfo::_mask_width_type arg)
+  {
+    msg_.mask_width = std::move(arg);
+    return Init_InstanceSegmentationInfo_mask_height(msg_);
   }
 
 private:
@@ -171,10 +203,10 @@ public:
   Init_InstanceSegmentationInfo_header()
   : msg_(::rosidl_runtime_cpp::MessageInitialization::SKIP)
   {}
-  Init_InstanceSegmentationInfo_mask header(::yolo_custom_interfaces::msg::InstanceSegmentationInfo::_header_type arg)
+  Init_InstanceSegmentationInfo_mask_width header(::yolo_custom_interfaces::msg::InstanceSegmentationInfo::_header_type arg)
   {
     msg_.header = std::move(arg);
-    return Init_InstanceSegmentationInfo_mask(msg_);
+    return Init_InstanceSegmentationInfo_mask_width(msg_);
   }
 
 private:

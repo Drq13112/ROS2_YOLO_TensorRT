@@ -621,11 +621,9 @@ CMakeFiles/seg_sub_yolo_node.dir/src/seg_sub_yolo.cpp.o: \
  /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/instance_segmentation_info.hpp \
  /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/instance_segmentation_info__struct.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__struct.hpp \
- /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp \
  /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/instance_segmentation_info__builder.hpp \
  /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/instance_segmentation_info__traits.hpp \
  /opt/ros/humble/include/std_msgs/std_msgs/msg/detail/header__traits.hpp \
- /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__traits.hpp \
  /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/detail/instance_segmentation_info__type_support.hpp \
  /home/david/yolocpp_ws/install/yolo_custom_interfaces/include/yolo_custom_interfaces/yolo_custom_interfaces/msg/rosidl_generator_cpp__visibility_control.hpp \
  /usr/include/c++/11/fstream \
@@ -636,7 +634,9 @@ CMakeFiles/seg_sub_yolo_node.dir/src/seg_sub_yolo.cpp.o: \
  /usr/include/c++/11/bits/fs_dir.h /usr/include/c++/11/bits/fs_ops.h \
  /opt/ros/humble/include/cv_bridge/cv_bridge/cv_bridge.h \
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/image.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp \
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__builder.hpp \
+ /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__traits.hpp \
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/detail/image__type_support.hpp \
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/rosidl_generator_cpp__visibility_control.hpp \
  /opt/ros/humble/include/sensor_msgs/sensor_msgs/msg/compressed_image.hpp \

@@ -14,8 +14,7 @@
 // Include directives for member types
 // Member `header`
 #include "std_msgs/msg/detail/header__functions.h"
-// Member `mask`
-#include "sensor_msgs/msg/detail/image__functions.h"
+// Member `mask_data`
 // Member `scores`
 // Member `classes`
 #include "rosidl_runtime_c/primitives_sequence_functions.h"
@@ -37,8 +36,10 @@ yolo_custom_interfaces__msg__InstanceSegmentationInfo__init(yolo_custom_interfac
     yolo_custom_interfaces__msg__InstanceSegmentationInfo__fini(msg);
     return false;
   }
-  // mask
-  if (!sensor_msgs__msg__Image__init(&msg->mask)) {
+  // mask_width
+  // mask_height
+  // mask_data
+  if (!rosidl_runtime_c__uint8__Sequence__init(&msg->mask_data, 0)) {
     yolo_custom_interfaces__msg__InstanceSegmentationInfo__fini(msg);
     return false;
   }
@@ -48,7 +49,7 @@ yolo_custom_interfaces__msg__InstanceSegmentationInfo__init(yolo_custom_interfac
     return false;
   }
   // classes
-  if (!rosidl_runtime_c__int32__Sequence__init(&msg->classes, 0)) {
+  if (!rosidl_runtime_c__uint8__Sequence__init(&msg->classes, 0)) {
     yolo_custom_interfaces__msg__InstanceSegmentationInfo__fini(msg);
     return false;
   }
@@ -89,12 +90,14 @@ yolo_custom_interfaces__msg__InstanceSegmentationInfo__fini(yolo_custom_interfac
   }
   // header
   std_msgs__msg__Header__fini(&msg->header);
-  // mask
-  sensor_msgs__msg__Image__fini(&msg->mask);
+  // mask_width
+  // mask_height
+  // mask_data
+  rosidl_runtime_c__uint8__Sequence__fini(&msg->mask_data);
   // scores
   rosidl_runtime_c__float__Sequence__fini(&msg->scores);
   // classes
-  rosidl_runtime_c__int32__Sequence__fini(&msg->classes);
+  rosidl_runtime_c__uint8__Sequence__fini(&msg->classes);
   // image_source_monotonic_capture_time
   builtin_interfaces__msg__Time__fini(&msg->image_source_monotonic_capture_time);
   // processing_node_monotonic_entry_time
@@ -120,9 +123,17 @@ yolo_custom_interfaces__msg__InstanceSegmentationInfo__are_equal(const yolo_cust
   {
     return false;
   }
-  // mask
-  if (!sensor_msgs__msg__Image__are_equal(
-      &(lhs->mask), &(rhs->mask)))
+  // mask_width
+  if (lhs->mask_width != rhs->mask_width) {
+    return false;
+  }
+  // mask_height
+  if (lhs->mask_height != rhs->mask_height) {
+    return false;
+  }
+  // mask_data
+  if (!rosidl_runtime_c__uint8__Sequence__are_equal(
+      &(lhs->mask_data), &(rhs->mask_data)))
   {
     return false;
   }
@@ -133,7 +144,7 @@ yolo_custom_interfaces__msg__InstanceSegmentationInfo__are_equal(const yolo_cust
     return false;
   }
   // classes
-  if (!rosidl_runtime_c__int32__Sequence__are_equal(
+  if (!rosidl_runtime_c__uint8__Sequence__are_equal(
       &(lhs->classes), &(rhs->classes)))
   {
     return false;
@@ -189,9 +200,13 @@ yolo_custom_interfaces__msg__InstanceSegmentationInfo__copy(
   {
     return false;
   }
-  // mask
-  if (!sensor_msgs__msg__Image__copy(
-      &(input->mask), &(output->mask)))
+  // mask_width
+  output->mask_width = input->mask_width;
+  // mask_height
+  output->mask_height = input->mask_height;
+  // mask_data
+  if (!rosidl_runtime_c__uint8__Sequence__copy(
+      &(input->mask_data), &(output->mask_data)))
   {
     return false;
   }
@@ -202,7 +217,7 @@ yolo_custom_interfaces__msg__InstanceSegmentationInfo__copy(
     return false;
   }
   // classes
-  if (!rosidl_runtime_c__int32__Sequence__copy(
+  if (!rosidl_runtime_c__uint8__Sequence__copy(
       &(input->classes), &(output->classes)))
   {
     return false;

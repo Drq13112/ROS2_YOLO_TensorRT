@@ -24,10 +24,8 @@
 /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/include/onnx_files/seg/YOLO8Seg.hpp
 /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/models/coco.names
 /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/models/testonnx.py
-/home/david/yolocpp_ws/install/yolocpp/share/yolocpp/models/yolo11m-seg.onnx
 /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/models/export_onnx.py
 /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/models/Dota.names
-/home/david/yolocpp_ws/install/yolocpp/share/yolocpp/data/panoramic_02.avi
 /home/david/yolocpp_ws/install/yolocpp/share/yolocpp/data/test.jpg
 /home/david/yolocpp_ws/install/yolocpp/lib/yolocpp/yolocpp
 /home/david/yolocpp_ws/install/yolocpp/share/ament_index/resource_index/package_run_dependencies/yolocpp

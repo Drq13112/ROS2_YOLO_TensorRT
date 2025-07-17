@@ -5,6 +5,7 @@
 
 # Import statements for member types
 
+# Member 'mask_data'
 # Member 'scores'
 # Member 'classes'
 import array  # noqa: E402, I100
@@ -52,10 +53,6 @@ class Metaclass_InstanceSegmentationInfo(type):
             if Time.__class__._TYPE_SUPPORT is None:
                 Time.__class__.__import_type_support__()
 
-            from sensor_msgs.msg import Image
-            if Image.__class__._TYPE_SUPPORT is None:
-                Image.__class__.__import_type_support__()
-
             from std_msgs.msg import Header
             if Header.__class__._TYPE_SUPPORT is None:
                 Header.__class__.__import_type_support__()
@@ -74,7 +71,9 @@ class InstanceSegmentationInfo(metaclass=Metaclass_InstanceSegmentationInfo):
 
     __slots__ = [
         '_header',
-        '_mask',
+        '_mask_width',
+        '_mask_height',
+        '_mask_data',
         '_scores',
         '_classes',
         '_image_source_monotonic_capture_time',
@@ -87,9 +86,11 @@ class InstanceSegmentationInfo(metaclass=Metaclass_InstanceSegmentationInfo):
 
     _fields_and_field_types = {
         'header': 'std_msgs/Header',
-        'mask': 'sensor_msgs/Image',
+        'mask_width': 'uint16',
+        'mask_height': 'uint16',
+        'mask_data': 'sequence<uint8>',
         'scores': 'sequence<float>',
-        'classes': 'sequence<int32>',
+        'classes': 'sequence<uint8>',
         'image_source_monotonic_capture_time': 'builtin_interfaces/Time',
         'processing_node_monotonic_entry_time': 'builtin_interfaces/Time',
         'processing_node_inference_start_time': 'builtin_interfaces/Time',
@@ -100,9 +101,11 @@ class InstanceSegmentationInfo(metaclass=Metaclass_InstanceSegmentationInfo):
 
     SLOT_TYPES = (
         rosidl_parser.definition.NamespacedType(['std_msgs', 'msg'], 'Header'),  # noqa: E501
-        rosidl_parser.definition.NamespacedType(['sensor_msgs', 'msg'], 'Image'),  # noqa: E501
+        rosidl_parser.definition.BasicType('uint16'),  # noqa: E501
+        rosidl_parser.definition.BasicType('uint16'),  # noqa: E501
+        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('uint8')),  # noqa: E501
         rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('float')),  # noqa: E501
-        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('int32')),  # noqa: E501
+        rosidl_parser.definition.UnboundedSequence(rosidl_parser.definition.BasicType('uint8')),  # noqa: E501
         rosidl_parser.definition.NamespacedType(['builtin_interfaces', 'msg'], 'Time'),  # noqa: E501
         rosidl_parser.definition.NamespacedType(['builtin_interfaces', 'msg'], 'Time'),  # noqa: E501
         rosidl_parser.definition.NamespacedType(['builtin_interfaces', 'msg'], 'Time'),  # noqa: E501
@@ -117,10 +120,11 @@ class InstanceSegmentationInfo(metaclass=Metaclass_InstanceSegmentationInfo):
             ', '.join(sorted(k for k in kwargs.keys() if '_' + k not in self.__slots__))
         from std_msgs.msg import Header
         self.header = kwargs.get('header', Header())
-        from sensor_msgs.msg import Image
-        self.mask = kwargs.get('mask', Image())
+        self.mask_width = kwargs.get('mask_width', int())
+        self.mask_height = kwargs.get('mask_height', int())
+        self.mask_data = array.array('B', kwargs.get('mask_data', []))
         self.scores = array.array('f', kwargs.get('scores', []))
-        self.classes = array.array('i', kwargs.get('classes', []))
+        self.classes = array.array('B', kwargs.get('classes', []))
         from builtin_interfaces.msg import Time
         self.image_source_monotonic_capture_time = kwargs.get('image_source_monotonic_capture_time', Time())
         from builtin_interfaces.msg import Time
@@ -164,7 +168,11 @@ class InstanceSegmentationInfo(metaclass=Metaclass_InstanceSegmentationInfo):
             return False
         if self.header != other.header:
             return False
-        if self.mask != other.mask:
+        if self.mask_width != other.mask_width:
+            return False
+        if self.mask_height != other.mask_height:
+            return False
+        if self.mask_data != other.mask_data:
             return False
         if self.scores != other.scores:
             return False
@@ -204,18 +212,62 @@ class InstanceSegmentationInfo(metaclass=Metaclass_InstanceSegmentationInfo):
         self._header = value
 
     @builtins.property
-    def mask(self):
-        """Message field 'mask'."""
-        return self._mask
+    def mask_width(self):
+        """Message field 'mask_width'."""
+        return self._mask_width
 
-    @mask.setter
-    def mask(self, value):
+    @mask_width.setter
+    def mask_width(self, value):
         if __debug__:
-            from sensor_msgs.msg import Image
             assert \
-                isinstance(value, Image), \
-                "The 'mask' field must be a sub message of type 'Image'"
-        self._mask = value
+                isinstance(value, int), \
+                "The 'mask_width' field must be of type 'int'"
+            assert value >= 0 and value < 65536, \
+                "The 'mask_width' field must be an unsigned integer in [0, 65535]"
+        self._mask_width = value
+
+    @builtins.property
+    def mask_height(self):
+        """Message field 'mask_height'."""
+        return self._mask_height
+
+    @mask_height.setter
+    def mask_height(self, value):
+        if __debug__:
+            assert \
+                isinstance(value, int), \
+                "The 'mask_height' field must be of type 'int'"
+            assert value >= 0 and value < 65536, \
+                "The 'mask_height' field must be an unsigned integer in [0, 65535]"
+        self._mask_height = value
+
+    @builtins.property
+    def mask_data(self):
+        """Message field 'mask_data'."""
+        return self._mask_data
+
+    @mask_data.setter
+    def mask_data(self, value):
+        if isinstance(value, array.array):
+            assert value.typecode == 'B', \
+                "The 'mask_data' array.array() must have the type code of 'B'"
+            self._mask_data = value
+            return
+        if __debug__:
+            from collections.abc import Sequence
+            from collections.abc import Set
+            from collections import UserList
+            from collections import UserString
+            assert \
+                ((isinstance(value, Sequence) or
+                  isinstance(value, Set) or
+                  isinstance(value, UserList)) and
+                 not isinstance(value, str) and
+                 not isinstance(value, UserString) and
+                 all(isinstance(v, int) for v in value) and
+                 all(val >= 0 and val < 256 for val in value)), \
+                "The 'mask_data' field must be a set or sequence and each value of type 'int' and each unsigned integer in [0, 255]"
+        self._mask_data = array.array('B', value)
 
     @builtins.property
     def scores(self):
@@ -253,8 +305,8 @@ class InstanceSegmentationInfo(metaclass=Metaclass_InstanceSegmentationInfo):
     @classes.setter
     def classes(self, value):
         if isinstance(value, array.array):
-            assert value.typecode == 'i', \
-                "The 'classes' array.array() must have the type code of 'i'"
+            assert value.typecode == 'B', \
+                "The 'classes' array.array() must have the type code of 'B'"
             self._classes = value
             return
         if __debug__:
@@ -269,9 +321,9 @@ class InstanceSegmentationInfo(metaclass=Metaclass_InstanceSegmentationInfo):
                  not isinstance(value, str) and
                  not isinstance(value, UserString) and
                  all(isinstance(v, int) for v in value) and
-                 all(val >= -2147483648 and val < 2147483648 for val in value)), \
-                "The 'classes' field must be a set or sequence and each value of type 'int' and each integer in [-2147483648, 2147483647]"
-        self._classes = array.array('i', value)
+                 all(val >= 0 and val < 256 for val in value)), \
+                "The 'classes' field must be a set or sequence and each value of type 'int' and each unsigned integer in [0, 255]"
+        self._classes = array.array('B', value)
 
     @builtins.property
     def image_source_monotonic_capture_time(self):

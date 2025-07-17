@@ -17,8 +17,6 @@
 // Include directives for member types
 // Member 'header'
 #include "std_msgs/msg/detail/header__traits.hpp"
-// Member 'mask'
-#include "sensor_msgs/msg/detail/image__traits.hpp"
 // Member 'image_source_monotonic_capture_time'
 // Member 'processing_node_monotonic_entry_time'
 // Member 'processing_node_inference_start_time'
@@ -44,10 +42,35 @@ inline void to_flow_style_yaml(
     out << ", ";
   }
 
-  // member: mask
+  // member: mask_width
   {
-    out << "mask: ";
-    to_flow_style_yaml(msg.mask, out);
+    out << "mask_width: ";
+    rosidl_generator_traits::value_to_yaml(msg.mask_width, out);
+    out << ", ";
+  }
+
+  // member: mask_height
+  {
+    out << "mask_height: ";
+    rosidl_generator_traits::value_to_yaml(msg.mask_height, out);
+    out << ", ";
+  }
+
+  // member: mask_data
+  {
+    if (msg.mask_data.size() == 0) {
+      out << "mask_data: []";
+    } else {
+      out << "mask_data: [";
+      size_t pending_items = msg.mask_data.size();
+      for (auto item : msg.mask_data) {
+        rosidl_generator_traits::value_to_yaml(item, out);
+        if (--pending_items > 0) {
+          out << ", ";
+        }
+      }
+      out << "]";
+    }
     out << ", ";
   }
 
@@ -143,13 +166,44 @@ inline void to_block_style_yaml(
     to_block_style_yaml(msg.header, out, indentation + 2);
   }
 
-  // member: mask
+  // member: mask_width
   {
     if (indentation > 0) {
       out << std::string(indentation, ' ');
     }
-    out << "mask:\n";
-    to_block_style_yaml(msg.mask, out, indentation + 2);
+    out << "mask_width: ";
+    rosidl_generator_traits::value_to_yaml(msg.mask_width, out);
+    out << "\n";
+  }
+
+  // member: mask_height
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    out << "mask_height: ";
+    rosidl_generator_traits::value_to_yaml(msg.mask_height, out);
+    out << "\n";
+  }
+
+  // member: mask_data
+  {
+    if (indentation > 0) {
+      out << std::string(indentation, ' ');
+    }
+    if (msg.mask_data.size() == 0) {
+      out << "mask_data: []\n";
+    } else {
+      out << "mask_data:\n";
+      for (auto item : msg.mask_data) {
+        if (indentation > 0) {
+          out << std::string(indentation, ' ');
+        }
+        out << "- ";
+        rosidl_generator_traits::value_to_yaml(item, out);
+        out << "\n";
+      }
+    }
   }
 
   // member: scores

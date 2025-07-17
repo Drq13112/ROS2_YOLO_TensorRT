@@ -1,0 +1,25 @@
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:[m[K In lambda function:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:99:56:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct yolo_custom_interfaces::msg::InstanceSegmentationInfo_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct yolo_custom_interfaces::msg::InstanceSegmentationInfo_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kmask[m[K’
+   99 |                 cv_ptr_mask = cv_bridge::toCvCopy(msg->[01;31m[Kmask[m[K, msg->mask.encoding);
+      |                                                        [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:99:67:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct yolo_custom_interfaces::msg::InstanceSegmentationInfo_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct yolo_custom_interfaces::msg::InstanceSegmentationInfo_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kmask[m[K’
+   99 |                 cv_ptr_mask = cv_bridge::toCvCopy(msg->mask, msg->[01;31m[Kmask[m[K.encoding);
+      |                                                                   [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:[m[K In member function ‘[01m[Kvoid FrequencySubscriber::save_anomalous_frame_and_log(const SharedPtr&, const string&, const timespec&, const timespec&, double)[m[K’:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:767:52:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct yolo_custom_interfaces::msg::InstanceSegmentationInfo_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct yolo_custom_interfaces::msg::InstanceSegmentationInfo_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kmask[m[K’
+  767 |             cv_ptr_mask = cv_bridge::toCvCopy(msg->[01;31m[Kmask[m[K, msg->mask.encoding);
+      |                                                    [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:767:63:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct yolo_custom_interfaces::msg::InstanceSegmentationInfo_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct yolo_custom_interfaces::msg::InstanceSegmentationInfo_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kmask[m[K’
+  767 |             cv_ptr_mask = cv_bridge::toCvCopy(msg->mask, msg->[01;31m[Kmask[m[K.encoding);
+      |                                                               [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:[m[K In member function ‘[01m[Kcv::Mat FrequencySubscriber::create_colored_mask(const SharedPtr&, const string&)[m[K’:
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:959:66:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct yolo_custom_interfaces::msg::InstanceSegmentationInfo_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct yolo_custom_interfaces::msg::InstanceSegmentationInfo_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kmask[m[K’
+  959 |     cv_bridge::CvImagePtr cv_ptr_mask = cv_bridge::toCvCopy(msg->[01;31m[Kmask[m[K, msg->mask.encoding);
+      |                                                                  [01;31m[K^~~~[m[K
+[01m[K/home/david/yolocpp_ws/src/seg_sub/src/seg_sub_yolo.cpp:959:77:[m[K [01;31m[Kerror: [m[K‘[01m[Kusing element_type = struct yolo_custom_interfaces::msg::InstanceSegmentationInfo_<std::allocator<void> >[m[K’ {aka ‘[01m[Kstruct yolo_custom_interfaces::msg::InstanceSegmentationInfo_<std::allocator<void> >[m[K’} has no member named ‘[01m[Kmask[m[K’
+  959 |     cv_bridge::CvImagePtr cv_ptr_mask = cv_bridge::toCvCopy(msg->mask, msg->[01;31m[Kmask[m[K.encoding);
+      |                                                                             [01;31m[K^~~~[m[K
+gmake[2]: *** [CMakeFiles/seg_sub_yolo_node.dir/build.make:76: CMakeFiles/seg_sub_yolo_node.dir/src/seg_sub_yolo.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:167: CMakeFiles/seg_sub_yolo_node.dir/all] Error 2
+gmake[1]: *** Waiting for unfinished jobs....
+gmake: *** [Makefile:146: all] Error 2
