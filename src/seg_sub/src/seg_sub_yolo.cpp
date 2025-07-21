@@ -72,6 +72,8 @@ static bool timespec_less_than(const timespec& a, const timespec& b) {
     return a.tv_nsec < b.tv_nsec;
 }
 
+
+
 class FrequencySubscriber : public rclcpp::Node
 {
 public:
@@ -89,31 +91,18 @@ public:
             [this](const yolo_custom_interfaces::msg::InstanceSegmentationInfo::SharedPtr msg, const std::string &camera_id)
         {
             // Initialize tracking for this camera if it's the first time
-            initialize_camera_loss_tracking(camera_id);
+            // initialize_camera_loss_tracking(camera_id);
 
-            // 1. Convertir msg->mask a cv::Mat
-            cv_bridge::CvImagePtr cv_ptr_mask;
-            try {
-                // El encoding de la máscara debe ser el mismo que el publicado por segment_node_3P
-                // (ej. "mono16" o "mono8")
-                cv_ptr_mask = cv_bridge::toCvCopy(msg->mask, msg->mask.encoding);
-            } catch (const cv_bridge::Exception& e) {
-                RCLCPP_ERROR(this->get_logger(), "[%s] cv_bridge exception for mask (MsgT1: %u.%09u): %s",
-                            camera_id.c_str(), msg->header.stamp.sec, msg->header.stamp.nanosec, e.what());
-                return;
-            }
-
-            if (!cv_ptr_mask || cv_ptr_mask->image.empty()) {
-                RCLCPP_ERROR(this->get_logger(), "[%s] Failed to convert mask to CvImage or mask is empty (MsgT1: %u.%09u).",
-                            camera_id.c_str(), msg->header.stamp.sec, msg->header.stamp.nanosec);
-                return;
-            }
-
-            const cv::Mat& instance_id_mask = cv_ptr_mask->image; // Debería ser CV_16UC1 o CV_8UC1
+            // Crear la máscara desde los datos planos del mensaje
+            cv::Mat instance_id_mask = arrayToMat(msg->mask_data, msg->mask_height, msg->mask_width);
             cv::Mat colored_mask_display = cv::Mat::zeros(instance_id_mask.size(), CV_8UC3);
 
+            
+            RCLCPP_INFO(this->get_logger(), "[%s] recieved mask size: %dx%d",
+                        camera_id.c_str(), instance_id_mask.cols, instance_id_mask.rows);
+
             // Resize mask to real size (1920x1200)
-            const cv::Size target_size(1920, 1200);
+            const cv::Size target_size(target_width_, target_height_);
             if (!colored_mask_display.empty() && colored_mask_display.size() != target_size) {
                 cv::resize(colored_mask_display, colored_mask_display, target_size, 0, 0, cv::INTER_NEAREST);
             }
@@ -385,9 +374,7 @@ public:
             log_stream << "  Inference Concurrency (S/P).......: " << (std::isnan(inf_concurrency_factor) ? "N/A" : std::to_string(inf_concurrency_factor)) << "\n";
             log_stream << "======================================================================================\n";
             RCLCPP_INFO(this->get_logger(), "%s", log_stream.str().c_str());
-            
-            // Save anomalous frame and log
-            // save_anomalous_frame_and_log(msg,camera_id,ts_t3_segnode_res_pub,ts_t4_segsub_res_recv,1.0);
+        
             
 
 
@@ -449,65 +436,65 @@ public:
             csv_queue_cv_.notify_one();
 
             // --- Lógica para unir y escribir video ---
-            cv::Mat colored_mask = this->create_colored_mask(msg, camera_id);
+            cv::Mat colored_mask = this->create_colored_mask(instance_id_mask,msg->scores,msg->classes,camera_id);
 
-            // if (!colored_mask.empty())
-            // {
-            //     std::lock_guard<std::mutex> lock(video_writer_mutex_);
+            if (!colored_mask.empty())
+            {
+                std::lock_guard<std::mutex> lock(video_writer_mutex_);
 
-            //     frame_buffer_[packet_seq_num][camera_id] = colored_mask;
+                frame_buffer_[packet_seq_num][camera_id] = colored_mask;
 
-            //     if (frame_buffer_.count(packet_seq_num) &&
-            //         frame_buffer_[packet_seq_num].count("left") &&
-            //         frame_buffer_[packet_seq_num].count("front") &&
-            //         frame_buffer_[packet_seq_num].count("right"))
-            //     {
+                if (frame_buffer_.count(packet_seq_num) &&
+                    frame_buffer_[packet_seq_num].count("left") &&
+                    frame_buffer_[packet_seq_num].count("front") &&
+                    frame_buffer_[packet_seq_num].count("right"))
+                {
 
-            //         cv::Mat &left_frame = frame_buffer_[packet_seq_num]["left"];
-            //         cv::Mat &front_frame = frame_buffer_[packet_seq_num]["front"];
-            //         cv::Mat &right_frame = frame_buffer_[packet_seq_num]["right"];
+                    cv::Mat &left_frame = frame_buffer_[packet_seq_num]["left"];
+                    cv::Mat &front_frame = frame_buffer_[packet_seq_num]["front"];
+                    cv::Mat &right_frame = frame_buffer_[packet_seq_num]["right"];
 
-            //         if (!video_writer_ || !video_writer_->isOpened())
-            //         {
-            //             cv::Size frame_size(left_frame.cols, left_frame.rows);
-            //             cv::Size stitched_size(frame_size.width * 3, frame_size.height);
-            //             RCLCPP_INFO(this->get_logger(), "Inicializando escritor de video. Tamaño del cuadro unido: %dx%d", stitched_size.width, stitched_size.height);
+                    if (!video_writer_ || !video_writer_->isOpened())
+                    {
+                        cv::Size frame_size(left_frame.cols, left_frame.rows);
+                        cv::Size stitched_size(frame_size.width * 3, frame_size.height);
+                        RCLCPP_INFO(this->get_logger(), "Inicializando escritor de video. Tamaño del cuadro unido: %dx%d", stitched_size.width, stitched_size.height);
 
-            //             video_writer_ = std::make_unique<cv::VideoWriter>(
-            //                 video_output_path_,
-            //                 cv::VideoWriter::fourcc('M', 'J', 'P', 'G'),
-            //                 VIDEO_FPS,
-            //                 stitched_size,
-            //                 true);
-            //             if (!video_writer_->isOpened())
-            //             {
-            //                 RCLCPP_ERROR(this->get_logger(), "No se pudo abrir el archivo de video de salida para escritura: %s", video_output_path_.c_str());
-            //                 video_writer_.reset();
-            //             }
-            //             else
-            //             {
-            //                 RCLCPP_INFO(this->get_logger(), "Escritor de video abierto con éxito. Guardando en %s", video_output_path_.c_str());
-            //             }
-            //         }
+                        video_writer_ = std::make_unique<cv::VideoWriter>(
+                            video_output_path_,
+                            cv::VideoWriter::fourcc('M', 'J', 'P', 'G'),
+                            VIDEO_FPS,
+                            stitched_size,
+                            true);
+                        if (!video_writer_->isOpened())
+                        {
+                            RCLCPP_ERROR(this->get_logger(), "No se pudo abrir el archivo de video de salida para escritura: %s", video_output_path_.c_str());
+                            video_writer_.reset();
+                        }
+                        else
+                        {
+                            RCLCPP_INFO(this->get_logger(), "Escritor de video abierto con éxito. Guardando en %s", video_output_path_.c_str());
+                        }
+                    }
 
-            //         if (video_writer_ && video_writer_->isOpened())
-            //         {
-            //             if (!left_frame.empty() && !front_frame.empty() && !right_frame.empty())
-            //             {
-            //                 cv::Mat stitched_frame;
-            //                 std::vector<cv::Mat> images_to_stitch = {left_frame, front_frame, right_frame};
-            //                 cv::hconcat(images_to_stitch, stitched_frame);
-            //                 video_writer_->write(stitched_frame);
-            //             }
-            //             else
-            //             {
-            //                 RCLCPP_WARN(this->get_logger(), "Uno o más cuadros para Pkt#%lu están vacíos. Omitiendo cuadro de video.", packet_seq_num);
-            //             }
-            //         }
+                    if (video_writer_ && video_writer_->isOpened())
+                    {
+                        if (!left_frame.empty() && !front_frame.empty() && !right_frame.empty())
+                        {
+                            cv::Mat stitched_frame;
+                            std::vector<cv::Mat> images_to_stitch = {left_frame, front_frame, right_frame};
+                            cv::hconcat(images_to_stitch, stitched_frame);
+                            video_writer_->write(stitched_frame);
+                        }
+                        else
+                        {
+                            RCLCPP_WARN(this->get_logger(), "Uno o más cuadros para Pkt#%lu están vacíos. Omitiendo cuadro de video.", packet_seq_num);
+                        }
+                    }
 
-            //         frame_buffer_.erase(packet_seq_num);
-            //     }
-            // }
+                    frame_buffer_.erase(packet_seq_num);
+                }
+            }
 
             
             // Actualizar estadísticas
@@ -569,9 +556,8 @@ public:
         };
 
         // Suscribirse a los tres tópicos referentes a resultados
-        rclcpp::QoS qos_profile(rclcpp::KeepLast(1)); 
+        rclcpp::QoS qos_profile(rclcpp::KeepLast(5)); 
         qos_profile.reliable();
-        // qos_profile.best_effort();
         qos_profile.durability_volatile();
 
 
@@ -625,6 +611,15 @@ public:
     }
 
 private:
+
+cv::Mat arrayToMat(const std::vector<uint8_t>& data, int height, int width) {
+    if (data.empty() || height <= 0 || width <= 0 || static_cast<int>(data.size()) < height * width) {
+        RCLCPP_WARN(this->get_logger(), "arrayToMat: Datos vacíos o dimensiones inválidas.");
+        return cv::Mat();
+    }
+    // Usar clone() para asegurar que la memoria de Mat sea independiente del vector
+    return cv::Mat(height, width, CV_8UC1, const_cast<uint8_t*>(data.data())).clone();
+}
 
  void initialize_camera_loss_tracking(const std::string& camera_id) {
         // Se llama cuando se recibe el primer paquete de una cámara
@@ -726,109 +721,31 @@ private:
 
     cv::Scalar getRandomTone(const cv::Scalar &base_color, int seed)
     {
-        // Convertir el color base BGR a HSV para manipular el Tono (Hue)
-        cv::Mat bgr_color_mat(1, 1, CV_8UC3, base_color);
-        cv::Mat hsv_color_mat;
-        cv::cvtColor(bgr_color_mat, hsv_color_mat, cv::COLOR_BGR2HSV);
-        cv::Vec3b hsv_color = hsv_color_mat.at<cv::Vec3b>(0, 0);
-
-        // El Tono (Hue) en OpenCV va de 0 a 179.
-        // Usamos el 'seed' (que es el ID de la instancia) para generar un desplazamiento
-        // grande y predecible en el Tono. Esto asegura colores muy distintos para cada ID.
-        // Se suma un desplazamiento de 45 grados en el círculo cromático por cada ID.
-        int hue_offset = (seed * 45) % 180;
-        hsv_color[0] = (hsv_color[0] + hue_offset) % 180;
-
-        // Aseguramos alta saturación y brillo para que los colores sean vivos.
-        hsv_color[1] = 220; // Saturación
-        hsv_color[2] = 220; // Valor/Brillo
-
-        // Volver a convertir de HSV a BGR para mostrarlo
-        hsv_color_mat.at<cv::Vec3b>(0, 0) = hsv_color;
-        cv::Mat final_bgr_mat;
-        cv::cvtColor(hsv_color_mat, final_bgr_mat, cv::COLOR_HSV2BGR);
-        cv::Vec3b final_bgr = final_bgr_mat.at<cv::Vec3b>(0, 0);
-
-        return cv::Scalar(final_bgr[0], final_bgr[1], final_bgr[2]);
+        cv::RNG rng(static_cast<uint64_t>(seed)); // Usar uint64_t para el seed de RNG
+        double variation_range = 60.0;
+        cv::Scalar toned_color;
+        for (int i = 0; i < 3; ++i)
+        {
+            toned_color[i] = cv::saturate_cast<uchar>(base_color[i] + rng.uniform(-variation_range, variation_range));
+        }
+        return toned_color;
     }
 
     void save_anomalous_frame_and_log(
-        const yolo_custom_interfaces::msg::InstanceSegmentationInfo::SharedPtr& msg,
-        const std::string& camera_id,
-        const timespec& ts_t3_mono, // Timestamp de publicación del nodo de procesamiento
-        const timespec& ts_t4_mono, // Timestamp de recepción en este subscriptor
-        double lat_t3_t4_ms)
+    const cv::Mat& instance_id_mask,
+    const std::vector<uint8_t>& classes,
+    const std::vector<float_t>& scores,
+    const std::string& camera_id,
+    uint64_t packet_seq_num,
+    const yolo_custom_interfaces::msg::InstanceSegmentationInfo::SharedPtr& msg)
     {
-        // 1. Convertir msg->mask a cv::Mat
-        cv_bridge::CvImagePtr cv_ptr_mask;
-        try {
-            // El encoding de la máscara debe ser el mismo que el publicado por segment_node_3P
-            // (ej. "mono16" o "mono8")
-            cv_ptr_mask = cv_bridge::toCvCopy(msg->mask, msg->mask.encoding);
-        } catch (const cv_bridge::Exception& e) {
-            RCLCPP_ERROR(this->get_logger(), "[%s] cv_bridge exception for mask (MsgT1: %u.%09u): %s",
-                         camera_id.c_str(), msg->header.stamp.sec, msg->header.stamp.nanosec, e.what());
-            return;
-        }
 
-        if (!cv_ptr_mask || cv_ptr_mask->image.empty()) {
-            RCLCPP_ERROR(this->get_logger(), "[%s] Failed to convert mask to CvImage or mask is empty (MsgT1: %u.%09u).",
-                         camera_id.c_str(), msg->header.stamp.sec, msg->header.stamp.nanosec);
-            return;
-        }
-        const cv::Mat& instance_id_mask = cv_ptr_mask->image; // Debería ser CV_16UC1 o CV_8UC1
-
-        // 2. Crear imagen coloreada
-        cv::Mat colored_mask_display = cv::Mat::zeros(instance_id_mask.size(), CV_8UC3);
-        size_t num_instances_in_msg = msg->classes.size();
-
-        if (class_colors_.empty()) {
-            RCLCPP_INFO(this->get_logger(), "[%s] Color palette is empty. Cannot color anomalous frame.", camera_id.c_str());
-            return; // No se puede colorear
-        }
-
-        for (int r = 0; r < instance_id_mask.rows; ++r) {
-            for (int c = 0; c < instance_id_mask.cols; ++c) {
-                uint16_t instance_id_from_mask = 0;
-                if (instance_id_mask.type() == CV_16UC1) { // mono16
-                    instance_id_from_mask = instance_id_mask.at<uint16_t>(r, c);
-                } else if (instance_id_mask.type() == CV_8UC1) { // mono8
-                    instance_id_from_mask = static_cast<uint16_t>(instance_id_mask.at<uchar>(r, c));
-                } else {
-                    if (r == 0 && c == 0) { // Loguear solo una vez por imagen
-                         RCLCPP_ERROR_ONCE(this->get_logger(), "[%s] Unexpected mask type: %d for MsgT1: %u.%09u. Cannot color.",
-                                          camera_id.c_str(), instance_id_mask.type(), msg->header.stamp.sec, msg->header.stamp.nanosec);
-                    }
-                   // No se puede procesar, salir de los bucles de coloreado
-                   goto end_coloring_loops;
-                }
-
-                if (instance_id_from_mask > 0) { // ID 0 es fondo
-                    size_t item_idx = static_cast<size_t>(instance_id_from_mask - 1); // IDs son 1-based
-                    if (item_idx < num_instances_in_msg && item_idx < msg->classes.size()) {
-                        int class_id = msg->classes[item_idx];
-                        cv::Scalar base_color = class_colors_[class_id % class_colors_.size()];
-                        // Usar el ID de instancia para el seed del color asegura consistencia para la misma instancia
-                        cv::Scalar toned_color = getRandomTone(base_color, instance_id_from_mask);
-                        colored_mask_display.at<cv::Vec3b>(r, c) = cv::Vec3b(
-                            static_cast<uchar>(toned_color[0]),
-                            static_cast<uchar>(toned_color[1]),
-                            static_cast<uchar>(toned_color[2])
-                        );
-                    }
-                }
-            }
-        }
-        end_coloring_loops:;
-
+        cv::Mat colored_mask_display = create_colored_mask(instance_id_mask, scores, classes, camera_id);
 
         // 3. Guardar imagen
-        // Usar el timestamp T1 del header del mensaje para un nombre de archivo único
         anomalous_images_path_ = "/home/david/yolocpp_ws/anomalous_frames/";
         std::string image_filename = anomalous_images_path_ +
-                                     camera_id + "_" +
-                                     std::to_string(msg->header.stamp.sec) + "_" +
-                                     std::to_string(msg->header.stamp.nanosec) + ".png";
+                                     camera_id + "_" + std::to_string(packet_seq_num) + ".png";
 
         RCLCPP_INFO(this->get_logger(), "[%s] Saving anomalous frame image to %s (MsgT1: %u.%09u)",
                          camera_id.c_str(), image_filename.c_str(), msg->header.stamp.sec, msg->header.stamp.nanosec);
@@ -837,35 +754,10 @@ private:
                 cv::imwrite(image_filename, colored_mask_display);
                 // RCLCPP_INFO(this->get_logger(), "[%s] Saved anomalous frame image to %s", camera_id.c_str(), image_filename.c_str());
             } else {
-                RCLCPP_WARN(this->get_logger(), "[%s] Colored mask display is empty for MsgT1: %u.%09u. Not saving image.",
-                            camera_id.c_str(), msg->header.stamp.sec, msg->header.stamp.nanosec);
+                RCLCPP_WARN(this->get_logger(), "[%s] Colored mask display is empty", camera_id.c_str());
             }
         } catch (const cv::Exception& ex) {
-            RCLCPP_ERROR(this->get_logger(), "[%s] OpenCV Exception saving image %s (MsgT1: %u.%09u): %s",
-                         camera_id.c_str(), image_filename.c_str(), msg->header.stamp.sec, msg->header.stamp.nanosec, ex.what());
-        }
-
-        // 4. Registrar info adicional en el log CSV de anomalías
-        if (anomalous_t3_t4_log_file_.is_open()) {
-            std::lock_guard<std::mutex> anomalous_lock(anomalous_log_mutex_);
-            anomalous_t3_t4_log_file_ << std::fixed << std::setprecision(3)
-                                      << camera_id << ","
-                                      << msg->header.stamp.sec << "," << msg->header.stamp.nanosec << "," // T1 del header del mensaje
-                                      << ts_t3_mono.tv_sec << "," << std::setfill('0') << std::setw(9) << ts_t3_mono.tv_nsec << ","
-                                      << ts_t4_mono.tv_sec << "," << std::setfill('0') << std::setw(9) << ts_t4_mono.tv_nsec << ","
-                                      << lat_t3_t4_ms << ",\""; // Abrir comillas para listas
-
-            // Clases
-            for (size_t i = 0; i < msg->classes.size(); ++i) {
-                anomalous_t3_t4_log_file_ << msg->classes[i] << (i == msg->classes.size() - 1 ? "" : ";");
-            }
-            anomalous_t3_t4_log_file_ << "\",\""; // Cerrar comillas de clases, abrir para scores
-
-            // Scores
-            for (size_t i = 0; i < msg->scores.size(); ++i) {
-                anomalous_t3_t4_log_file_ << std::fixed << std::setprecision(2) << msg->scores[i] << (i == msg->scores.size() - 1 ? "" : ";");
-            }
-            anomalous_t3_t4_log_file_ << "\"\n"; // Cerrar comillas de scores y nueva línea
+            RCLCPP_ERROR(this->get_logger(), "[%s] OpenCV Exception saving image", camera_id.c_str());
         }
     }
     
@@ -952,67 +844,59 @@ private:
     }
     
 
-    cv::Mat create_colored_mask(const yolo_custom_interfaces::msg::InstanceSegmentationInfo::SharedPtr &msg, const std::string &camera_id)
-{
-    // ADVERTENCIA: Se omite el bloque try-catch por petición del usuario.
-    // Si `toCvCopy` falla (p.ej. por un encoding incorrecto), el nodo se cerrará inesperadamente.
-    cv_bridge::CvImagePtr cv_ptr_mask = cv_bridge::toCvCopy(msg->mask, msg->mask.encoding);
+    cv::Mat create_colored_mask(const cv::Mat& instance_id_mask, const std::vector<float_t>& scores, const std::vector<uint8_t>& classes, const std::string &camera_id)
+    {
+        cv::Mat colored_mask_display = cv::Mat::zeros(instance_id_mask.size(), CV_8UC3);
+        size_t num_instances_in_msg = classes.size();
 
-    if (!cv_ptr_mask || cv_ptr_mask->image.empty()) {
-        RCLCPP_ERROR(this->get_logger(), "[%s] Fallo al convertir la máscara o la máscara está vacía.", camera_id.c_str());
-        return cv::Mat(); // Devolver matriz vacía en caso de error.
-    }
-    const cv::Mat &instance_id_mask = cv_ptr_mask->image;
+        if (class_colors_.empty())
+        {
+            RCLCPP_WARN_ONCE(this->get_logger(), "[%s] Color palette is empty. Cannot color frame.", camera_id.c_str());
+            return cv::Mat(); // No se puede colorear
+        }
 
-    cv::Mat colored_mask_display = cv::Mat::zeros(instance_id_mask.size(), CV_8UC3);
-    size_t num_instances_in_msg = msg->classes.size();
-
-    if (class_colors_.empty()) {
-        RCLCPP_WARN_ONCE(this->get_logger(), "[%s] La paleta de colores está vacía. No se puede colorear el fotograma.", camera_id.c_str());
-        return instance_id_mask.clone(); // Devuelve la máscara original si no hay colores.
-    }
-    bool unsupported_type = false; // Bandera para salir de los bucles anidados.
-    for (int r = 0; r < instance_id_mask.rows; ++r) {
-        for (int c = 0; c < instance_id_mask.cols; ++c) {
-            uint16_t instance_id_from_mask = 0;
-            if (instance_id_mask.type() == CV_16UC1) {
-                instance_id_from_mask = instance_id_mask.at<uint16_t>(r, c);
-            } else if (instance_id_mask.type() == CV_8UC1) {
-                instance_id_from_mask = static_cast<uint16_t>(instance_id_mask.at<uchar>(r, c));
-            } else {
-                if (r == 0 && c == 0) { // Loguear solo una vez por imagen.
-                    RCLCPP_ERROR_ONCE(this->get_logger(), "[%s] Tipo de máscara no esperado: %d. No se puede colorear.", camera_id.c_str(), instance_id_mask.type());
+        for (int r = 0; r < instance_id_mask.rows; ++r)
+        {
+            for (int c = 0; c < instance_id_mask.cols; ++c)
+            {
+                uint16_t instance_id_from_mask = 0;
+                if (instance_id_mask.type() == CV_16UC1)
+                {
+                    instance_id_from_mask = instance_id_mask.at<uint16_t>(r, c);
                 }
-                unsupported_type = true; // Activar la bandera.
-                break; // Salir del bucle interior.
-            }
+                else if (instance_id_mask.type() == CV_8UC1)
+                {
+                    instance_id_from_mask = static_cast<uint16_t>(instance_id_mask.at<uchar>(r, c));
+                }
+                else
+                {
+                    if (r == 0 && c == 0)
+                    {
+                        RCLCPP_ERROR_ONCE(this->get_logger(), "[%s] Unexpected mask type", camera_id.c_str());
+                    }
+                    goto end_coloring_loops_cm;
+                }
 
-            if (instance_id_from_mask > 0) { // ID 0 es el fondo.
-                size_t item_idx = static_cast<size_t>(instance_id_from_mask - 1); // IDs son 1-based.
-                if (item_idx < num_instances_in_msg) {
-                    int class_id = msg->classes[item_idx];
-                    cv::Scalar base_color = class_colors_[class_id % class_colors_.size()];
-                    cv::Scalar toned_color = getRandomTone(base_color, instance_id_from_mask);
-                    colored_mask_display.at<cv::Vec3b>(r, c) = cv::Vec3b(
-                        static_cast<uchar>(toned_color[0]),
-                        static_cast<uchar>(toned_color[1]),
-                        static_cast<uchar>(toned_color[2]));
+                if (instance_id_from_mask > 0)
+                { // ID 0 es fondo
+                    size_t item_idx = static_cast<size_t>(instance_id_from_mask - 1); // IDs son 1-based
+                    if (item_idx < num_instances_in_msg && item_idx < classes.size())
+                    {
+                        int class_id = classes[item_idx];
+                        cv::Scalar base_color = class_colors_[class_id % class_colors_.size()];
+                        cv::Scalar toned_color = getRandomTone(base_color, instance_id_from_mask);
+                        colored_mask_display.at<cv::Vec3b>(r, c) = cv::Vec3b(
+                            static_cast<uchar>(toned_color[0]),
+                            static_cast<uchar>(toned_color[1]),
+                            static_cast<uchar>(toned_color[2]));
+                    }
                 }
             }
         }
-        if (unsupported_type) {
-            break;
-        }
-    }
+    end_coloring_loops_cm:;
 
-    // Opcional: Redimensionar la máscara a un tamaño de visualización estándar.
-    const cv::Size target_size(1920, 1200);
-    if (colored_mask_display.size() != target_size) {
-        cv::resize(colored_mask_display, colored_mask_display, target_size, 0, 0, cv::INTER_NEAREST);
+        return colored_mask_display;
     }
-
-    return colored_mask_display;
-}
 
     rclcpp::Subscription<yolo_custom_interfaces::msg::InstanceSegmentationInfo>::SharedPtr sub_left_;
     rclcpp::Subscription<yolo_custom_interfaces::msg::InstanceSegmentationInfo>::SharedPtr sub_front_;
@@ -1020,6 +904,9 @@ private:
     rclcpp::TimerBase::SharedPtr report_timer_;
 
     rclcpp::Time last_report_time_;
+
+    uint16_t target_height_ = 1200; // Altura objetivo para redimensionar imágenes
+    uint16_t target_width_ = 1920;  // Ancho objetivo para redimensionar imágenes
 
     // Para conteo de frecuencia de mensajes
     std::mutex msg_count_mutex_left_;
@@ -1084,7 +971,7 @@ private:
     // Para escritura de video
     std::mutex video_writer_mutex_;
     std::unique_ptr<cv::VideoWriter> video_writer_;
-    std::string video_output_path_ = "/home/david/ros_videos/stitched_video.avi";
+    std::string video_output_path_ = "/home/david/yolocpp_ws/ros_videos/stitched_video.avi";
     std::map<uint64_t, std::map<std::string, cv::Mat>> frame_buffer_;
     static constexpr int VIDEO_FPS = 10;
 
