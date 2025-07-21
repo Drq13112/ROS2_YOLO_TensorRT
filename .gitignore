@@ -9,3 +9,4 @@ src/yolocpp/data/panoramic_02.avi
 *.db3
 *.csv
 *.png
+*.tar.gz
