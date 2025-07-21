@@ -627,7 +627,7 @@ private:
         // --- Lectura de imagen ---
         auto t_read_start = std::chrono::steady_clock::now();
         cv_bridge::CvImagePtr cv_ptr;
-        cv_ptr = cv_bridge::toCvCopy(timed_msg.msg, timed_msg.msg->encoding);
+        cv_ptr = cv_bridge::toCvCopy(timed_msg.msg, sensor_msgs::image_encodings::BGR8);
 
         // Validar que la imagen no esté vacía
         if (!cv_ptr || cv_ptr->image.empty())
@@ -638,12 +638,6 @@ private:
 
         // --- Procesamiento de imagen ---
         cv::Mat original_image = cv_ptr->image;
-        if (original_image.channels() == 1 && input_channels_ == 3) {
-            cv::cvtColor(original_image, original_image, cv::COLOR_GRAY2BGR);
-        }
-        if(original_image.channels() == 3 && input_channels_ == 1) {
-            cv::cvtColor(original_image, original_image, cv::COLOR_BGR2GRAY);
-        }
         cv::Size original_size = original_image.size();
         std_msgs::msg::Header current_header = timed_msg.msg->header;
         auto instance_info_msg = std::make_unique<yolo_custom_interfaces::msg::InstanceSegmentationInfo>();
@@ -677,15 +671,12 @@ private:
                 RCLCPP_WARN_ONCE(this->get_logger(), "[%s] Resized image properties not suitable for pinned memory. Using its own data.", this->get_name());
             }
         }
-        RCLCPP_INFO(this->get_logger(), "[%s] Resized image to %dx%d with %d channels.",
-                    this->get_name(), resized_img.cols, resized_img.rows, resized_img.channels());
-        // Esto asegura que el backend de inferencia sepa que está manejando una imagen de 1 canal.
-        img_batch.emplace_back(image_data_ptr, resized_img.cols, resized_img.rows, input_channels_);
+        img_batch.emplace_back(image_data_ptr, resized_img.cols, resized_img.rows);
 
         // ------- Inferencia --------
         std::vector<deploy::SegmentRes> results;
 
-        model_->predict(img_batch);
+        model_->predict_async(img_batch);
         results = model_->get_results();
 
         if (results.empty())
@@ -757,7 +748,7 @@ private:
         cv_bridge::CvImagePtr cv_ptr;
         try
         {
-            cv_ptr = cv_bridge::toCvCopy(timed_msg.msg, timed_msg.msg->encoding);
+            cv_ptr = cv_bridge::toCvCopy(timed_msg.msg, sensor_msgs::image_encodings::BGR8);
         }
         catch (cv_bridge::Exception &e)
         {
@@ -774,20 +765,6 @@ private:
             return;
         }
         cv::Mat original_image = cv_ptr->image;
-
-        RCLCPP_INFO(this->get_logger(), "[%s] Received image encoding: %s, width: %d, height: %d, channels: %d",
-            this->get_name(),
-            timed_msg.msg->encoding.c_str(),
-            timed_msg.msg->width,
-            timed_msg.msg->height,
-            cv_ptr ? cv_ptr->image.channels() : -1);
-
-        if (original_image.channels() == 1 && input_channels_ == 3) {
-            cv::cvtColor(original_image, original_image, cv::COLOR_GRAY2BGR);
-        }
-        if(original_image.channels() == 3 && input_channels_ == 1) {
-            cv::cvtColor(original_image, original_image, cv::COLOR_BGR2GRAY);
-        }
         cv::Size original_size = original_image.size();
         std_msgs::msg::Header current_header = timed_msg.msg->header;
         auto instance_info_msg = std::make_unique<yolo_custom_interfaces::msg::InstanceSegmentationInfo>();
@@ -819,9 +796,7 @@ private:
                 RCLCPP_WARN_ONCE(this->get_logger(), "[%s] Resized image properties not suitable for pinned memory. Using its own data.", this->get_name());
             }
         }
-        RCLCPP_INFO(this->get_logger(), "[%s] Resized image to %dx%d with %d channels.",
-            this->get_name(), resized_img.cols, resized_img.rows, resized_img.channels());
-        img_batch.emplace_back(image_data_ptr, resized_img.cols, resized_img.rows, input_channels_);     
+        img_batch.emplace_back(image_data_ptr, resized_img.cols, resized_img.rows);
         auto t_pre_end = std::chrono::steady_clock::now();
         auto t_preproc = std::chrono::duration_cast<std::chrono::microseconds>(t_pre_end - t_pre_start).count();
 
@@ -832,7 +807,7 @@ private:
         timespec inference_start_ts;
         clock_gettime(CLOCK_MONOTONIC, &inference_start_ts);
 
-        model_->predict(img_batch);
+        model_->predict_async(img_batch);
         results = model_->get_results();
 
         timespec inference_end_ts;
@@ -1268,8 +1243,8 @@ int main(int argc, char **argv)
     // --- Configuración
     param_node->declare_parameter<bool>("enable_inferred_video", false);
     param_node->declare_parameter<bool>("enable_mask_video", false);
-    param_node->declare_parameter<bool>("measure_times", false);
-    param_node->declare_parameter<bool>("realtime_display", false);
+    param_node->declare_parameter<bool>("measure_times", true);
+    param_node->declare_parameter<bool>("realtime_display", true);
     param_node->declare_parameter<std::string>("output_video_path", "/home/david/ros_videos/segment_node_3P_out");
     param_node->declare_parameter<double>("video_fps", 10.0);
     param_node->declare_parameter<int>("video_width", 1920);
@@ -1334,8 +1309,8 @@ int main(int argc, char **argv)
                                                       RealtimeDisplay);
 
     executor->add_node(left_node);
-    // executor->add_node(front_node);
-    // executor->add_node(right_node);
+    executor->add_node(front_node);
+    executor->add_node(right_node);
 
     // Hilo para la visualización combinada
     std::thread display_thread;

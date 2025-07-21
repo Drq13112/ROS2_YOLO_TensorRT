@@ -1,0 +1,30 @@
+# Temporal files
+*~
+
+
+
+# Codigo que no corresponde a este proyecto
+include/autopia_lcm/
+
+# Excluir todos los sub-directorios salvo el src y el include
+/*/ 
+!/src/
+!/include/
+!/config
+
+# Archivos matlab
+*.mat
+*.fig
+*.asv
+
+# Zip
+*.zip
+
+# Imagenes o videos
+*.avi
+*.mp4
+*.eps
+*.tif
+*.png
+*.jpg
+*.pdf
