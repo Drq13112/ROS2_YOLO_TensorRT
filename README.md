@@ -5,7 +5,7 @@ and visualization.
 
 ![Demo Video](assets/demo.gif)
 
-![Workspace Architecture](assets/picture1.png)
+![Demo Picture](assets/picture1.png)
 
 ## 📌 Origin
 
