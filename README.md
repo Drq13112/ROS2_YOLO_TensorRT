@@ -3,7 +3,7 @@
 This repository provides a ROS 2 Humble integration of YOLOv11, for instantance Segmentation using Basler cameras and TensorRT acceleration. It includes camera drivers, segmentation nodes, and a metrics/logging node for performance analysis
 and visualization.
 
-![Demo Video](assets/demo.gif)
+<!-- ![Demo Video](assets/demo.gif) -->
 
 ![Demo Picture](assets/picture1.png)
 
