@@ -4,6 +4,7 @@ uint16 mask_height
 uint8[] mask_data
 float32[] scores
 uint8[] classes
+
 builtin_interfaces/Time image_source_monotonic_capture_time
 builtin_interfaces/Time processing_node_monotonic_entry_time
 builtin_interfaces/Time processing_node_inference_start_time
