@@ -638,12 +638,21 @@ private:
 
         // --- Procesamiento de imagen ---
         cv::Mat original_image = cv_ptr->image;
-        if (original_image.channels() == 1 && input_channels_ == 3) {
-            cv::cvtColor(original_image, original_image, cv::COLOR_GRAY2BGR);
+        // if (original_image.channels() == 1 && input_channels_ == 3)
+        // {
+        //     cv::cvtColor(original_image, original_image, cv::COLOR_GRAY2BGR);
+        // }
+        // if (original_image.channels() == 3 && input_channels_ == 1)
+        // {
+        //     cv::cvtColor(original_image, original_image, cv::COLOR_BGR2GRAY);
+        // }
+        if (timed_msg.msg->encoding == "bayer_rggb8")
+        {
+            cv::Mat rgb_image;
+            cv::cvtColor(original_image, rgb_image, cv::COLOR_BayerRG2RGB);
+            original_image = rgb_image;
         }
-        if(original_image.channels() == 3 && input_channels_ == 1) {
-            cv::cvtColor(original_image, original_image, cv::COLOR_BGR2GRAY);
-        }
+
         cv::Size original_size = original_image.size();
         std_msgs::msg::Header current_header = timed_msg.msg->header;
         auto instance_info_msg = std::make_unique<yolo_custom_interfaces::msg::InstanceSegmentationInfo>();
@@ -677,15 +686,13 @@ private:
                 RCLCPP_WARN_ONCE(this->get_logger(), "[%s] Resized image properties not suitable for pinned memory. Using its own data.", this->get_name());
             }
         }
-        RCLCPP_INFO(this->get_logger(), "[%s] Resized image to %dx%d with %d channels.",
-                    this->get_name(), resized_img.cols, resized_img.rows, resized_img.channels());
         // Esto asegura que el backend de inferencia sepa que está manejando una imagen de 1 canal.
-        img_batch.emplace_back(image_data_ptr, resized_img.cols, resized_img.rows, input_channels_);
+        img_batch.emplace_back(image_data_ptr, resized_img.cols, resized_img.rows);
 
         // ------- Inferencia --------
         std::vector<deploy::SegmentRes> results;
 
-        model_->predict(img_batch);
+        model_->predict_async(img_batch);
         results = model_->get_results();
 
         if (results.empty())
@@ -701,9 +708,12 @@ private:
         cv_bridge::CvImage cv_img_mask_instance;
         cv_img_mask_instance.header = instance_info_msg->header;
         cv_img_mask_instance.encoding = this->mask_encoding_;
-        cv_img_mask_instance.image = instance_id_mask_cv;
+        // cv_img_mask_instance.image = instance_id_mask_cv;
+        instance_info_msg->mask_width = instance_id_mask_cv.cols;
+        instance_info_msg->mask_height = instance_id_mask_cv.rows;  
+        instance_info_msg->mask_data.assign(instance_id_mask_cv.datastart, instance_id_mask_cv.dataend);
 
-        instance_info_msg->mask = *cv_img_mask_instance.toImageMsg();
+        // instance_info_msg->mask = *cv_img_mask_instance.toImageMsg();
 
         size_t num_detected_instances = static_cast<size_t>(result.num);
         num_detected_instances = std::min({num_detected_instances, result.scores.size(), result.classes.size()});
@@ -775,19 +785,21 @@ private:
         }
         cv::Mat original_image = cv_ptr->image;
 
-        RCLCPP_INFO(this->get_logger(), "[%s] Received image encoding: %s, width: %d, height: %d, channels: %d",
-            this->get_name(),
-            timed_msg.msg->encoding.c_str(),
-            timed_msg.msg->width,
-            timed_msg.msg->height,
-            cv_ptr ? cv_ptr->image.channels() : -1);
+        // if (original_image.channels() == 1 && input_channels_ == 3)
+        // {
+        //     cv::cvtColor(original_image, original_image, cv::COLOR_GRAY2BGR);
+        // }
+        // if (original_image.channels() == 3 && input_channels_ == 1)
+        // {
+        //     cv::cvtColor(original_image, original_image, cv::COLOR_BGR2GRAY);
+        // }
+        if (timed_msg.msg->encoding == "bayer_rggb8")
+        {
+            cv::Mat rgb_image;
+            cv::cvtColor(original_image, rgb_image, cv::COLOR_BayerRG2RGB);
+            original_image = rgb_image;
+        }
 
-        if (original_image.channels() == 1 && input_channels_ == 3) {
-            cv::cvtColor(original_image, original_image, cv::COLOR_GRAY2BGR);
-        }
-        if(original_image.channels() == 3 && input_channels_ == 1) {
-            cv::cvtColor(original_image, original_image, cv::COLOR_BGR2GRAY);
-        }
         cv::Size original_size = original_image.size();
         std_msgs::msg::Header current_header = timed_msg.msg->header;
         auto instance_info_msg = std::make_unique<yolo_custom_interfaces::msg::InstanceSegmentationInfo>();
@@ -819,9 +831,7 @@ private:
                 RCLCPP_WARN_ONCE(this->get_logger(), "[%s] Resized image properties not suitable for pinned memory. Using its own data.", this->get_name());
             }
         }
-        RCLCPP_INFO(this->get_logger(), "[%s] Resized image to %dx%d with %d channels.",
-            this->get_name(), resized_img.cols, resized_img.rows, resized_img.channels());
-        img_batch.emplace_back(image_data_ptr, resized_img.cols, resized_img.rows, input_channels_);     
+        img_batch.emplace_back(image_data_ptr, resized_img.cols, resized_img.rows);
         auto t_pre_end = std::chrono::steady_clock::now();
         auto t_preproc = std::chrono::duration_cast<std::chrono::microseconds>(t_pre_end - t_pre_start).count();
 
@@ -832,7 +842,7 @@ private:
         timespec inference_start_ts;
         clock_gettime(CLOCK_MONOTONIC, &inference_start_ts);
 
-        model_->predict(img_batch);
+        model_->predict_async(img_batch);
         results = model_->get_results();
 
         timespec inference_end_ts;
@@ -869,9 +879,12 @@ private:
         cv_bridge::CvImage cv_img_mask_instance;
         cv_img_mask_instance.header = instance_info_msg->header;
         cv_img_mask_instance.encoding = this->mask_encoding_;
-        cv_img_mask_instance.image = instance_id_mask_cv;
+        // cv_img_mask_instance.image = instance_id_mask_cv;
+        instance_info_msg->mask_width = instance_id_mask_cv.cols;
+        instance_info_msg->mask_height = instance_id_mask_cv.rows;  
+        instance_info_msg->mask_data.assign(instance_id_mask_cv.datastart, instance_id_mask_cv.dataend);
 
-        instance_info_msg->mask = *cv_img_mask_instance.toImageMsg();
+        // instance_info_msg->mask = *cv_img_mask_instance.toImageMsg();
 
         size_t num_detected_instances = static_cast<size_t>(result.num);
         num_detected_instances = std::min({num_detected_instances, result.scores.size(), result.classes.size()});
@@ -1077,7 +1090,8 @@ private:
         cv::RNG rng(static_cast<uint64_t>(seed));
         double variation_range = 60.0;
         cv::Scalar toned_color;
-        for (int i = 0; i < 3; ++i) {
+        for (int i = 0; i < 3; ++i)
+        {
             toned_color[i] = cv::saturate_cast<uchar>(base_color[i] + rng.uniform(-variation_range, variation_range));
         }
         return toned_color;
@@ -1264,7 +1278,6 @@ int main(int argc, char **argv)
     // Nodo temporal para obtener los parámetros de lanzamiento
     auto param_node = std::make_shared<rclcpp::Node>("yolo_param_node_for_main");
 
-
     // --- Configuración
     param_node->declare_parameter<bool>("enable_inferred_video", false);
     param_node->declare_parameter<bool>("enable_mask_video", false);
@@ -1288,8 +1301,7 @@ int main(int argc, char **argv)
     double video_fps_main = param_node->get_parameter("video_fps").as_double();
     cv::Size single_cam_video_size(
         param_node->get_parameter("video_width").as_int(),
-        param_node->get_parameter("video_height").as_int()
-    );
+        param_node->get_parameter("video_height").as_int());
     std::string image_transport_type = param_node->get_parameter("image_transport_type").as_string();
     std::string left_topic = param_node->get_parameter("left_camera_topic").as_string();
     std::string front_topic = param_node->get_parameter("front_camera_topic").as_string();
@@ -1334,8 +1346,8 @@ int main(int argc, char **argv)
                                                       RealtimeDisplay);
 
     executor->add_node(left_node);
-    // executor->add_node(front_node);
-    // executor->add_node(right_node);
+    executor->add_node(front_node);
+    executor->add_node(right_node);
 
     // Hilo para la visualización combinada
     std::thread display_thread;
@@ -1419,8 +1431,8 @@ int main(int argc, char **argv)
     }
     if (RealtimeDisplay)
     {
-        g_stop_display_thread.store(true);  // Detener el hilo de visualización
-        g_display_cv.notify_all();          // Despertar al hilo para que pueda terminar
+        g_stop_display_thread.store(true); // Detener el hilo de visualización
+        g_display_cv.notify_all();         // Despertar al hilo para que pueda terminar
         if (display_thread.joinable())
         {
             display_thread.join();
