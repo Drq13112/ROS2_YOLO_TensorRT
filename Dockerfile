@@ -55,7 +55,7 @@ RUN apt-get update && apt-get install -y \
     ros-humble-sensor-msgs \
     && rm -rf /var/lib/apt/lists/*
 
-# Instala dependencias adicionales de ROS 2
+#Instala dependencias adicionales de ROS 2
 RUN apt-get install -y ros-humble-image-transport-plugins
 
 RUN apt-get update && apt-get install -y \
@@ -104,7 +104,6 @@ RUN pip install opencv-python
 # RUN git clone https://github.com/laugh12321/TensorRT-YOLO.git src/TensorRT-YOLO
 COPY --chown=david:david TensorRT-YOLO ./TensorRT-YOLO/
 RUN cd TensorRT-YOLO && \
-    rm -rf build && \
     pip install "pybind11[global]" && \
     cmake -S . -B build -DTRT_PATH=/usr/local/tensorrt -DBUILD_PYTHON=ON && \
     cmake --build build -j$(nproc) --config Release && \
