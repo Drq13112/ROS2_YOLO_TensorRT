@@ -30,6 +30,8 @@ The system is composed of the following main nodes:
    - Publishes results using the custom `InstanceSegmentationInfo` message to topics like `/segmentation/left/instance_info`.
    - Optionally, can save inference videos/masks and display real-time results.
 
+   The actual implementation allows a 960 x 760 pixel image to be segmented in 15 ms, taking into account H2D and H2D times!
+
 3. **Subscriber & Metrics Node (`seg_sub`)**
    - Subscribes to the segmentation result topics from all three cameras.
    - Reconstructs instance masks from the received flat array.
